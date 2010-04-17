@@ -154,3 +154,108 @@ Migrating to AddBodyToRecipe (20100417160708)
 Migrating to AddCreatedAtToRecipes (20100417161458)
   [4;36;1mSQL (0.1ms)[0m   [0;1mselect sqlite_version(*)[0m
   [4;35;1mSQL (0.0ms)[0m   [0mSQLite3::SQLException: duplicate column name: created_at: ALTER TABLE "recipes" ADD "created_at" datetime[0m
+
+
+Processing RecipesController#index (for 127.0.0.1 at 2010-04-17 12:31:41) [GET]
+  [4;35;1mRecipe Load (1.0ms)[0m   [0mSELECT * FROM "recipes" ORDER BY created_at DESC[0m
+Rendering template within layouts/application
+Rendering recipes/index
+Completed in 9ms (View: 1, DB: 1) | 200 OK [http://localhost/recipes]
+
+
+Processing RecipesController#index (for 127.0.0.1 at 2010-04-17 12:31:53) [GET]
+  [4;36;1mRecipe Load (0.7ms)[0m   [0;1mSELECT * FROM "recipes" ORDER BY created_at DESC[0m
+Rendering template within layouts/application
+Rendering recipes/index
+Completed in 6ms (View: 1, DB: 1) | 200 OK [http://localhost/recipes]
+
+
+Processing RecipesController#index (for 127.0.0.1 at 2010-04-17 12:32:01) [GET]
+  [4;36;1mRecipe Load (1.0ms)[0m   [0;1mSELECT * FROM "recipes" ORDER BY created_at DESC[0m
+Rendering template within layouts/application
+Rendering recipes/index
+Completed in 79ms (View: 49, DB: 1) | 200 OK [http://localhost/recipes]
+
+
+Processing RecipesController#index (for 127.0.0.1 at 2010-04-17 12:32:53) [GET]
+  [4;35;1mRecipe Load (0.8ms)[0m   [0mSELECT * FROM "recipes" ORDER BY created_at DESC[0m
+
+NameError (uninitialized constant Mime::HAML):
+  app/controllers/recipes_controller.rb:5:in `index'
+  app/controllers/recipes_controller.rb:4:in `index'
+
+Rendered rescues/_trace (35.7ms)
+Rendered rescues/_request_and_response (1.5ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing RecipesController#index (for 127.0.0.1 at 2010-04-17 12:36:57) [GET]
+  [4;36;1mRecipe Load (0.9ms)[0m   [0;1mSELECT * FROM "recipes" ORDER BY created_at DESC[0m
+
+NameError (uninitialized constant Mime::HAML):
+  app/controllers/recipes_controller.rb:5:in `index'
+  app/controllers/recipes_controller.rb:4:in `index'
+
+Rendered rescues/_trace (36.1ms)
+Rendered rescues/_request_and_response (1.6ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing RecipesController#index (for 127.0.0.1 at 2010-04-17 12:36:58) [GET]
+  [4;35;1mRecipe Load (0.7ms)[0m   [0mSELECT * FROM "recipes" ORDER BY created_at DESC[0m
+
+NameError (uninitialized constant Mime::HAML):
+  app/controllers/recipes_controller.rb:5:in `index'
+  app/controllers/recipes_controller.rb:4:in `index'
+
+Rendered rescues/_trace (34.4ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing RecipesController#index (for 127.0.0.1 at 2010-04-17 12:40:15) [GET]
+  [4;36;1mRecipe Load (1.1ms)[0m   [0;1mSELECT * FROM "recipes" ORDER BY created_at DESC[0m
+
+NameError (uninitialized constant Mime::HAML):
+  app/controllers/recipes_controller.rb:5:in `index'
+  app/controllers/recipes_controller.rb:4:in `index'
+
+Rendered rescues/_trace (33.2ms)
+Rendered rescues/_request_and_response (1.5ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing RecipesController#index (for 127.0.0.1 at 2010-04-17 12:41:08) [GET]
+  [4;36;1mRecipe Load (0.9ms)[0m   [0;1mSELECT * FROM "recipes" ORDER BY created_at DESC[0m
+Rendering template within layouts/application
+Rendering recipes/index
+Completed in 80ms (View: 66, DB: 1) | 200 OK [http://localhost/recipes]
+
+
+Processing RecipesController#index (for 127.0.0.1 at 2010-04-17 12:41:33) [GET]
+  [4;35;1mRecipe Load (0.8ms)[0m   [0mSELECT * FROM "recipes" ORDER BY created_at DESC[0m
+Rendering recipes/index
+Completed in 7ms (View: 1, DB: 1) | 200 OK [http://localhost/recipes]
+
+
+Processing RecipesController#index (for 127.0.0.1 at 2010-04-17 12:41:53) [GET]
+  [4;36;1mRecipe Load (0.8ms)[0m   [0;1mSELECT * FROM "recipes" ORDER BY created_at DESC[0m
+
+ActionView::MissingTemplate (Missing template recipes/index.erb in view path app/views):
+  
+
+Rendering rescues/layout (internal_server_error)
+
+
+Processing RecipesController#index (for 127.0.0.1 at 2010-04-17 12:46:31) [GET]
+  [4;36;1mRecipe Load (0.9ms)[0m   [0;1mSELECT * FROM "recipes" ORDER BY created_at DESC[0m
+Rendering template within layouts/application
+Rendering recipes/index
+Completed in 25ms (View: 12, DB: 1) | 200 OK [http://localhost/recipes]
+
+
+Processing RecipesController#index (for 127.0.0.1 at 2010-04-17 12:46:32) [GET]
+  [4;35;1mRecipe Load (0.8ms)[0m   [0mSELECT * FROM "recipes" ORDER BY created_at DESC[0m
+Rendering template within layouts/application
+Rendering recipes/index
+Completed in 6ms (View: 1, DB: 1) | 200 OK [http://localhost/recipes]
