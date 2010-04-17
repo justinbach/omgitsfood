@@ -1,2 +1,12 @@
-<h1>Meals#new</h1>
-<p>Find me in app/views/meals/new.html.erb</p>
+%h2= "Adding a meal to " + @meal.day.strftime("%B %d, %Y")
+#mealForm
+  - form_for @meal, :url => { :action => "create"} do |meal_form|
+    = hidden_field(:meal, :day)
+    - meal_form.fields_for :recipe do |recipe_form|
+      = label(:recipe, :title)
+      = recipe_form.text_field :title 
+      %br
+      = label(:recipe, :body)
+      = recipe_form.text_area :body
+      %br
+    = submit_tag 'Add meal'
