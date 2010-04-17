@@ -83,3 +83,53 @@ Migrating to AddRecipeToMeal (20100417160001)
   [4;35;1mSQL (0.0ms)[0m   [0mPRAGMA index_list("ingredientships")[0m
   [4;36;1mSQL (0.0ms)[0m   [0;1mPRAGMA index_list("meals")[0m
   [4;35;1mSQL (0.0ms)[0m   [0mPRAGMA index_list("recipes")[0m
+
+
+Processing RecipesController#index (for 127.0.0.1 at 2010-04-17 12:02:38) [GET]
+  [4;36;1mRecipe Load (0.9ms)[0m   [0;1mSELECT * FROM "recipes" ORDER BY created_at DESC[0m
+
+ActionView::MissingTemplate (Missing template recipes/index.erb in view path app/views):
+  app/controllers/recipes_controller.rb:4:in `index'
+
+Rendering rescues/layout (internal_server_error)
+
+
+Processing RecipesController#index (for 127.0.0.1 at 2010-04-17 12:04:11) [GET]
+  [4;35;1mRecipe Load (0.9ms)[0m   [0mSELECT * FROM "recipes" ORDER BY created_at DESC[0m
+Rendering template within layouts/application
+Rendering recipes/index
+Completed in 73ms (View: 68, DB: 1) | 200 OK [http://localhost/recipes]
+
+
+Processing RecipesController#index (for 127.0.0.1 at 2010-04-17 12:04:26) [GET]
+  [4;36;1mRecipe Load (57.0ms)[0m   [0;1mSELECT * FROM "recipes" ORDER BY created_at DESC[0m
+Rendering template within layouts/application
+Rendering recipes/index
+Completed in 68ms (View: 6, DB: 57) | 200 OK [http://localhost/recipes]
+  [4;36;1mSQL (0.6ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreateRecipes (20100417153810)
+Migrating to CreateIngredients (20100417153832)
+Migrating to CreateMeals (20100417153847)
+Migrating to CreateIngredientships (20100417155529)
+Migrating to AddRecipeToMeal (20100417160001)
+Migrating to AddBodyToRecipe (20100417160708)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;35;1mSQL (0.5ms)[0m   [0mALTER TABLE "recipes" ADD "body" text[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20100417160708')[0m
+  [4;35;1mSQL (0.3ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (0.2ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mPRAGMA index_list("ingredients")[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mPRAGMA index_list("ingredientships")[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mPRAGMA index_list("meals")[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mPRAGMA index_list("recipes")[0m
