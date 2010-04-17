@@ -259,3 +259,24 @@ Processing RecipesController#index (for 127.0.0.1 at 2010-04-17 12:46:32) [GET]
 Rendering template within layouts/application
 Rendering recipes/index
 Completed in 6ms (View: 1, DB: 1) | 200 OK [http://localhost/recipes]
+
+
+Processing RecipesController#index (for 127.0.0.1 at 2010-04-17 12:49:18) [GET]
+  [4;36;1mRecipe Load (0.9ms)[0m   [0;1mSELECT * FROM "recipes" ORDER BY created_at DESC[0m
+Rendering template within layouts/application
+Rendering recipes/index
+Completed in 28ms (View: 14, DB: 1) | 200 OK [http://localhost/recipes]
+
+
+Processing RecipesController#index (for 127.0.0.1 at 2010-04-17 12:49:19) [GET]
+  [4;35;1mRecipe Load (0.7ms)[0m   [0mSELECT * FROM "recipes" ORDER BY created_at DESC[0m
+Rendering template within layouts/application
+Rendering recipes/index
+Completed in 6ms (View: 1, DB: 1) | 200 OK [http://localhost/recipes]
+
+
+Processing RecipesController#index (for 127.0.0.1 at 2010-04-17 12:49:20) [GET]
+  [4;36;1mRecipe Load (0.7ms)[0m   [0;1mSELECT * FROM "recipes" ORDER BY created_at DESC[0m
+Rendering template within layouts/application
+Rendering recipes/index
+Completed in 6ms (View: 1, DB: 1) | 200 OK [http://localhost/recipes]
