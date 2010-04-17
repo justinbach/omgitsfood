@@ -133,3 +133,24 @@ Migrating to AddBodyToRecipe (20100417160708)
   [4;35;1mSQL (0.0ms)[0m   [0mPRAGMA index_list("ingredientships")[0m
   [4;36;1mSQL (0.1ms)[0m   [0;1mPRAGMA index_list("meals")[0m
   [4;35;1mSQL (0.1ms)[0m   [0mPRAGMA index_list("recipes")[0m
+
+
+Processing RecipesController#index (for 127.0.0.1 at 2010-04-17 12:13:11) [GET]
+  [4;36;1mRecipe Load (0.9ms)[0m   [0;1mSELECT * FROM "recipes" ORDER BY created_at DESC[0m
+Rendering template within layouts/application
+Rendering recipes/index
+Completed in 80ms (View: 51, DB: 1) | 200 OK [http://localhost/recipes]
+  [4;36;1mSQL (0.6ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreateRecipes (20100417153810)
+Migrating to CreateIngredients (20100417153832)
+Migrating to CreateMeals (20100417153847)
+Migrating to CreateIngredientships (20100417155529)
+Migrating to AddRecipeToMeal (20100417160001)
+Migrating to AddBodyToRecipe (20100417160708)
+Migrating to AddCreatedAtToRecipes (20100417161458)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSQLite3::SQLException: duplicate column name: created_at: ALTER TABLE "recipes" ADD "created_at" datetime[0m
