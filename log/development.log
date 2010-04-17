@@ -280,3 +280,889 @@ Processing RecipesController#index (for 127.0.0.1 at 2010-04-17 12:49:20) [GET]
 Rendering template within layouts/application
 Rendering recipes/index
 Completed in 6ms (View: 1, DB: 1) | 200 OK [http://localhost/recipes]
+
+
+Processing RecipesController#index (for 127.0.0.1 at 2010-04-17 13:37:28) [GET]
+  [4;35;1mRecipe Load (0.9ms)[0m   [0mSELECT * FROM "recipes" ORDER BY created_at DESC[0m
+Rendering template within layouts/application
+Rendering recipes/index
+Completed in 6ms (View: 1, DB: 1) | 200 OK [http://localhost/recipes]
+  [4;36;1mRecipe Create (20.5ms)[0m   [0;1mINSERT INTO "recipes" ("updated_at", "title", "body", "created_at") VALUES('2010-04-17 17:38:01', 'Test recipe 1', 'do some cooking type stuff', '2010-04-17 17:38:01')[0m
+
+
+Processing RecipesController#index (for 127.0.0.1 at 2010-04-17 13:38:03) [GET]
+  [4;36;1mRecipe Load (1.1ms)[0m   [0;1mSELECT * FROM "recipes" ORDER BY created_at DESC[0m
+Rendering template within layouts/application
+Rendering recipes/index
+Completed in 63ms (View: 1, DB: 1) | 200 OK [http://localhost/recipes]
+
+
+Processing RecipesController#index (for 127.0.0.1 at 2010-04-17 13:39:34) [GET]
+  [4;35;1mRecipe Load (0.9ms)[0m   [0mSELECT * FROM "recipes" ORDER BY created_at DESC[0m
+Rendering template within layouts/application
+Rendering recipes/index
+
+ActionView::TemplateError (undefined local variable or method `recipes' for #<ActionView::Base:0x26478f8>) on line #2 of app/views/recipes/index.html.haml:
+1: %h1 Recipes
+2: - recipes.each do |r|
+3:   %h2= r.title
+4:   %p= r.body
+
+    app/views/recipes/index.html.haml:2:in `_run_haml_app47views47recipes47index46html46haml'
+    haml (2.2.23) lib/haml/helpers/action_view_mods.rb:13:in `render'
+    haml (2.2.23) lib/haml/helpers/action_view_mods.rb:13:in `render'
+    haml (2.2.23) lib/sass/plugin/rails.rb:20:in `process'
+
+Rendered rescues/_trace (37.9ms)
+Rendered rescues/_request_and_response (1.5ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing RecipesController#index (for 127.0.0.1 at 2010-04-17 13:39:56) [GET]
+  [4;36;1mRecipe Load (0.9ms)[0m   [0;1mSELECT * FROM "recipes" ORDER BY created_at DESC[0m
+Rendering template within layouts/application
+Rendering recipes/index
+Completed in 12ms (View: 7, DB: 1) | 200 OK [http://localhost/recipes]
+
+
+Processing RecipesController#index (for 127.0.0.1 at 2010-04-17 13:40:24) [GET]
+  [4;35;1mRecipe Load (0.8ms)[0m   [0mSELECT * FROM "recipes" ORDER BY created_at DESC[0m
+Rendering template within layouts/application
+Rendering recipes/index
+Completed in 8ms (View: 3, DB: 1) | 200 OK [http://localhost/recipes]
+  [4;35;1mRecipe Create (0.7ms)[0m   [0mINSERT INTO "recipes" ("updated_at", "title", "body", "created_at") VALUES('2010-04-17 17:40:26', 'gorgonzola sausage', 'make some sausage you guys', '2010-04-17 17:40:26')[0m
+
+
+Processing RecipesController#index (for 127.0.0.1 at 2010-04-17 13:40:27) [GET]
+  [4;36;1mRecipe Load (0.9ms)[0m   [0;1mSELECT * FROM "recipes" ORDER BY created_at DESC[0m
+Rendering template within layouts/application
+Rendering recipes/index
+Completed in 8ms (View: 2, DB: 1) | 200 OK [http://localhost/recipes]
+
+
+Processing RecipesController#index (for 127.0.0.1 at 2010-04-17 14:04:14) [GET]
+  [4;35;1mRecipe Load (1.0ms)[0m   [0mSELECT * FROM "recipes" ORDER BY created_at DESC[0m
+Rendering template within layouts/application
+Rendering recipes/index
+Completed in 13ms (View: 8, DB: 1) | 200 OK [http://localhost/recipes]
+
+
+Processing RecipesController#index (for 127.0.0.1 at 2010-04-17 14:04:23) [GET]
+  [4;36;1mRecipe Load (0.9ms)[0m   [0;1mSELECT * FROM "recipes" ORDER BY created_at DESC[0m
+Rendering template within layouts/application
+Rendering recipes/index
+Completed in 77ms (View: 7, DB: 1) | 200 OK [http://localhost/recipes]
+
+
+Processing RecipesController#index (for 127.0.0.1 at 2010-04-17 14:04:28) [GET]
+  [4;35;1mRecipe Load (1.0ms)[0m   [0mSELECT * FROM "recipes" ORDER BY created_at DESC[0m
+Rendering template within layouts/application
+Rendering recipes/index
+Completed in 13ms (View: 7, DB: 1) | 200 OK [http://localhost/recipes]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-04-17 14:08:56) [GET]
+
+ActionController::RoutingError (No route matches "/meals" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing MealsController#index (for 127.0.0.1 at 2010-04-17 14:09:41) [GET]
+Rendering template within layouts/application
+Rendering meals/index
+Completed in 8ms (View: 7, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing MealsController#index (for 127.0.0.1 at 2010-04-17 14:10:22) [GET]
+Rendering template within layouts/application
+Rendering meals/index
+Completed in 8ms (View: 7, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing MealsController#index (for 127.0.0.1 at 2010-04-17 14:10:24) [GET]
+Rendering template within layouts/application
+Rendering meals/index
+Completed in 2ms (View: 1, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing MealsController#index (for 127.0.0.1 at 2010-04-17 14:10:24) [GET]
+Rendering template within layouts/application
+Rendering meals/index
+Completed in 2ms (View: 1, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing MealsController#index (for 127.0.0.1 at 2010-04-17 14:10:40) [GET]
+Rendering template within layouts/application
+Rendering meals/index
+Completed in 8ms (View: 6, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing MealsController#index (for 127.0.0.1 at 2010-04-17 14:11:11) [GET]
+Rendering template within layouts/application
+Rendering meals/index
+Completed in 10ms (View: 7, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing MealsController#index (for 127.0.0.1 at 2010-04-17 14:15:29) [GET]
+Rendering template within layouts/application
+Rendering meals/index
+Completed in 2ms (View: 1, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing MealsController#index (for 127.0.0.1 at 2010-04-17 14:16:58) [GET]
+Rendering template within layouts/application
+Rendering meals/index
+
+ActionView::TemplateError (Missing template meals/_header.erb in view path app/views) on line #6 of app/views/layouts/application.html.haml:
+3:   %head
+4:     %title OMGitsfood
+5:   %body
+6:     - render :partial => "header"
+7:     #mainContent= yield
+
+    haml (2.2.23) lib/haml/helpers/action_view_mods.rb:11:in `render'
+    haml (2.2.23) lib/haml/helpers.rb:96:in `non_haml'
+    haml (2.2.23) lib/haml/helpers/action_view_mods.rb:11:in `render'
+    app/views/layouts/application.html.haml:6:in `_run_haml_app47views47layouts47application46html46haml'
+    haml (2.2.23) lib/haml/helpers/action_view_mods.rb:13:in `render'
+    haml (2.2.23) lib/haml/helpers/action_view_mods.rb:13:in `render'
+    haml (2.2.23) lib/sass/plugin/rails.rb:20:in `process'
+
+Rendered rescues/_trace (42.7ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing MealsController#index (for 127.0.0.1 at 2010-04-17 14:17:12) [GET]
+Rendering template within layouts/application
+Rendering meals/index
+
+ActionView::TemplateError (Missing template meals/_header.erb in view path app/views) on line #6 of app/views/layouts/application.html.haml:
+3:   %head
+4:     %title OMGitsfood
+5:   %body
+6:     - render :partial => "header"
+7:     #mainContent= yield
+
+    haml (2.2.23) lib/haml/helpers/action_view_mods.rb:11:in `render'
+    haml (2.2.23) lib/haml/helpers.rb:96:in `non_haml'
+    haml (2.2.23) lib/haml/helpers/action_view_mods.rb:11:in `render'
+    app/views/layouts/application.html.haml:6:in `_run_haml_app47views47layouts47application46html46haml'
+    haml (2.2.23) lib/haml/helpers/action_view_mods.rb:13:in `render'
+    haml (2.2.23) lib/haml/helpers/action_view_mods.rb:13:in `render'
+    haml (2.2.23) lib/sass/plugin/rails.rb:20:in `process'
+
+Rendered rescues/_trace (42.3ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing MealsController#index (for 127.0.0.1 at 2010-04-17 14:17:13) [GET]
+Rendering template within layouts/application
+Rendering meals/index
+
+ActionView::TemplateError (Missing template meals/_header.erb in view path app/views) on line #6 of app/views/layouts/application.html.haml:
+3:   %head
+4:     %title OMGitsfood
+5:   %body
+6:     - render :partial => "header"
+7:     #mainContent= yield
+
+    haml (2.2.23) lib/haml/helpers/action_view_mods.rb:11:in `render'
+    haml (2.2.23) lib/haml/helpers.rb:96:in `non_haml'
+    haml (2.2.23) lib/haml/helpers/action_view_mods.rb:11:in `render'
+    app/views/layouts/application.html.haml:6:in `_run_haml_app47views47layouts47application46html46haml'
+    haml (2.2.23) lib/haml/helpers/action_view_mods.rb:13:in `render'
+    haml (2.2.23) lib/haml/helpers/action_view_mods.rb:13:in `render'
+    haml (2.2.23) lib/sass/plugin/rails.rb:20:in `process'
+
+Rendered rescues/_trace (42.3ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing MealsController#index (for 127.0.0.1 at 2010-04-17 14:18:09) [GET]
+Rendering template within layouts/application
+Rendering meals/index
+Rendered layouts/_header (0.5ms)
+Completed in 12ms (View: 11, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing MealsController#index (for 127.0.0.1 at 2010-04-17 14:18:35) [GET]
+Rendering template within layouts/application
+Rendering meals/index
+Rendered layouts/_header (0.1ms)
+Completed in 7ms (View: 5, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing MealsController#index (for 127.0.0.1 at 2010-04-17 14:19:27) [GET]
+Rendering template within layouts/application
+Rendering meals/index
+Rendered layouts/_header (1.6ms)
+Completed in 8ms (View: 7, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing MealsController#index (for 127.0.0.1 at 2010-04-17 14:19:30) [GET]
+Rendering template within layouts/application
+Rendering meals/index
+Rendered layouts/_header (0.1ms)
+Completed in 3ms (View: 2, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing MealsController#index (for 127.0.0.1 at 2010-04-17 14:19:41) [GET]
+Rendering template within layouts/application
+Rendering meals/index
+Rendered layouts/_header (0.8ms)
+Completed in 6ms (View: 5, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing MealsController#index (for 127.0.0.1 at 2010-04-17 14:19:42) [GET]
+Rendering template within layouts/application
+Rendering meals/index
+Rendered layouts/_header (0.1ms)
+Completed in 3ms (View: 1, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing MealsController#index (for 127.0.0.1 at 2010-04-17 14:20:22) [GET]
+Rendering template within layouts/application
+Rendering meals/index
+Rendered layouts/_header (0.1ms)
+Completed in 3ms (View: 1, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing MealsController#index (for 127.0.0.1 at 2010-04-17 14:22:06) [GET]
+Rendering template within layouts/application
+Rendering meals/index
+Rendered layouts/_header (0.9ms)
+Completed in 7ms (View: 6, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing MealsController#index (for 127.0.0.1 at 2010-04-17 14:22:30) [GET]
+Rendering template within layouts/application
+Rendering meals/index
+Rendered layouts/_header (0.1ms)
+Completed in 3ms (View: 2, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing MealsController#index (for 127.0.0.1 at 2010-04-17 14:22:54) [GET]
+Rendering template within layouts/application
+Rendering meals/index
+Rendered layouts/_header (0.1ms)
+Completed in 7ms (View: 6, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing MealsController#index (for 127.0.0.1 at 2010-04-17 14:23:57) [GET]
+Rendering template within layouts/application
+Rendering meals/index
+
+ActionView::TemplateError (Illegal nesting: content can't be both given on the same line as %h1 and nested within it.) on line #2 of app/views/meals/index.html.haml:
+1: %h1 Plan your meals
+2:   #yesterday
+3:   #today
+4:   #tomorrow
+5:   
+
+    app/views/meals/index.html.haml:2
+    haml (2.2.23) lib/haml/precompiler.rb:759:in `render_tag'
+    haml (2.2.23) lib/haml/precompiler.rb:231:in `process_line'
+    haml (2.2.23) lib/haml/precompiler.rb:195:in `precompile'
+    haml (2.2.23) lib/haml/engine.rb:114:in `initialize'
+    haml (2.2.23) lib/haml/template/plugin.rb:27:in `new'
+    haml (2.2.23) lib/haml/template/plugin.rb:27:in `compile'
+    haml (2.2.23) lib/haml/helpers/action_view_mods.rb:13:in `render'
+    haml (2.2.23) lib/haml/helpers/action_view_mods.rb:13:in `render'
+    haml (2.2.23) lib/sass/plugin/rails.rb:20:in `process'
+
+Rendered rescues/_trace (40.6ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing MealsController#index (for 127.0.0.1 at 2010-04-17 14:24:07) [GET]
+Rendering template within layouts/application
+Rendering meals/index
+Rendered layouts/_header (0.1ms)
+Completed in 8ms (View: 7, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing MealsController#index (for 127.0.0.1 at 2010-04-17 14:24:29) [GET]
+Rendering template within layouts/application
+Rendering meals/index
+Rendered layouts/_header (0.1ms)
+Completed in 7ms (View: 5, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing MealsController#index (for 127.0.0.1 at 2010-04-17 14:26:04) [GET]
+Rendering template within layouts/application
+Rendering meals/index
+Rendered layouts/_header (0.1ms)
+Completed in 7ms (View: 6, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing MealsController#meals/new (for 127.0.0.1 at 2010-04-17 14:26:06) [POST]
+  Parameters: {"authenticity_token"=>"ZQprnFhiEDQE2JydwSZpm6JkCF90Ve7UYIDdMPm4Kdo="}
+Rendering template within layouts/application
+Rendering meals/new
+Rendered layouts/_header (0.1ms)
+Completed in 68ms (View: 66, DB: 0) | 200 OK [http://localhost/meals/meals%2Fnew]
+
+
+Processing MealsController#index (for 127.0.0.1 at 2010-04-17 14:26:21) [GET]
+Rendering template within layouts/application
+Rendering meals/index
+Rendered layouts/_header (0.1ms)
+Completed in 9ms (View: 8, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing MealsController#index (for 127.0.0.1 at 2010-04-17 14:30:25) [GET]
+Rendering template within layouts/application
+Rendering meals/index
+ERROR: compiling _run_haml_app47views47meals47index46html46haml RAISED compile error
+/Users/justinbachorik/Documents/Coursework/CSCI-E250/projects/omgitsfood/src/omgitsfood/app/views/meals/index.html.haml:4: odd number list for Hash
+...for :meal, :url => { :action = "new" } do |f|
+                              ^
+/Users/justinbachorik/Documents/Coursework/CSCI-E250/projects/omgitsfood/src/omgitsfood/app/views/meals/index.html.haml:4: syntax error, unexpected '=', expecting '}'
+...for :meal, :url => { :action = "new" } do |f|
+                              ^
+Function body:           def _run_haml_app47views47meals47index46html46haml(local_assigns)
+            old_output_buffer = output_buffer;;begin;extend Haml::Helpers;_hamlout = @haml_buffer = Haml::Buffer.new(@haml_buffer, {:attr_wrapper=>"'", :autoclose=>["meta", "img", "link", "br", "hr", "input", "area", "param", "col", "base"], :escape_html=>false, :format=>:xhtml, :ugly=>false, :encoding=>nil, :preserve=>["textarea", "pre", "code"]});_erbout = _hamlout.buffer;__in_erb_template = true;;
+
+
+_hamlout.push_text("<h1>Plan your meals</h1>\n<div id='yesterday'>\n  <h2>Yesterday</h2>\n  #{_hamlout.adjust_tabs(1); haml_temp =  form_for :meal, :url => { :action = "new" } do |f|
+_hamlout.format_script_false_false_false_false_false_true_false((haml_very_temp = haml_temp; haml_temp = nil; haml_very_temp));}\n  #{haml_temp =  hidden_field(:meal, :date)
+_hamlout.format_script_false_false_false_false_false_true_false((haml_very_temp = haml_temp; haml_temp = nil; haml_very_temp));}\n  #{haml_temp =  button_to "New", :action => "meals/new"
+_hamlout.format_script_false_false_false_false_false_true_false((haml_very_temp = haml_temp; haml_temp = nil; haml_very_temp));}\n</div>\n<div id='today'>\n", 0, false);
+
+_hamlout.push_text("  <h2>Today</h2>\n  #{haml_temp =  button_to "New", :action => "meals/new"
+_hamlout.format_script_false_false_false_false_false_true_false((haml_very_temp = haml_temp; haml_temp = nil; haml_very_temp));}\n</div>\n<div id='tomorrow'>\n", 0, false);
+
+_hamlout.push_text("  <h2>Tomorrow</h2>\n  #{haml_temp =  button_to "New", :action => "meals/new"
+_hamlout.format_script_false_false_false_false_false_true_false((haml_very_temp = haml_temp; haml_temp = nil; haml_very_temp));}\n</div>\n", -1, false);_erbout;ensure;@haml_buffer = @haml_buffer.upper;end;
+          ensure
+            self.output_buffer = old_output_buffer
+          end
+Backtrace: /Users/justinbachorik/Documents/Coursework/CSCI-E250/projects/omgitsfood/src/omgitsfood/app/views/meals/index.html.haml:16:in `compile!'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.5/lib/action_view/renderable.rb:61:in `compile'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.5/lib/action_view/renderable.rb:28:in `render'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.5/lib/action_view/template.rb:205:in `render_template'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.5/lib/action_view/base.rb:265:in `render_without_haml'
+/Users/justinbachorik/.gem/ruby/1.8/gems/haml-2.2.23/lib/haml/helpers/action_view_mods.rb:13:in `render'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.5/lib/action_view/base.rb:348:in `_render_with_layout'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.5/lib/action_view/base.rb:262:in `render_without_haml'
+/Users/justinbachorik/.gem/ruby/1.8/gems/haml-2.2.23/lib/haml/helpers/action_view_mods.rb:13:in `render'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.5/lib/action_controller/base.rb:1250:in `render_for_file'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.5/lib/action_controller/base.rb:945:in `render_without_benchmark'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.5/lib/action_controller/benchmarking.rb:51:in `render'
+/Library/Ruby/Gems/1.8/gems/activesupport-2.3.5/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+/Library/Ruby/Gems/1.8/gems/activesupport-2.3.5/lib/active_support/core_ext/benchmark.rb:10:in `realtime'
+/Library/Ruby/Gems/1.8/gems/activesupport-2.3.5/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.5/lib/action_controller/benchmarking.rb:51:in `render'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.5/lib/action_controller/base.rb:1326:in `default_render'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.5/lib/action_controller/base.rb:1332:in `perform_action_without_filters'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.5/lib/action_controller/filters.rb:617:in `call_filters'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.5/lib/action_controller/filters.rb:610:in `perform_action_without_benchmark'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.5/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+/Library/Ruby/Gems/1.8/gems/activesupport-2.3.5/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+/Library/Ruby/Gems/1.8/gems/activesupport-2.3.5/lib/active_support/core_ext/benchmark.rb:10:in `realtime'
+/Library/Ruby/Gems/1.8/gems/activesupport-2.3.5/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.5/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.5/lib/action_controller/rescue.rb:160:in `perform_action_without_flash'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.5/lib/action_controller/flash.rb:146:in `perform_action'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.5/lib/action_controller/base.rb:532:in `send'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.5/lib/action_controller/base.rb:532:in `process_without_filters'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.5/lib/action_controller/filters.rb:606:in `sass_old_process'
+/Users/justinbachorik/.gem/ruby/1.8/gems/haml-2.2.23/lib/sass/plugin/rails.rb:20:in `process'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.5/lib/action_controller/base.rb:391:in `process'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.5/lib/action_controller/base.rb:386:in `call'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.5/lib/action_controller/routing/route_set.rb:437:in `call'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.5/lib/action_controller/dispatcher.rb:87:in `dispatch'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.5/lib/action_controller/dispatcher.rb:121:in `_call'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.5/lib/action_controller/dispatcher.rb:130:in `build_middleware_stack'
+/Library/Ruby/Gems/1.8/gems/activerecord-2.3.5/lib/active_record/query_cache.rb:29:in `call'
+/Library/Ruby/Gems/1.8/gems/activerecord-2.3.5/lib/active_record/query_cache.rb:29:in `call'
+/Library/Ruby/Gems/1.8/gems/activerecord-2.3.5/lib/active_record/connection_adapters/abstract/query_cache.rb:34:in `cache'
+/Library/Ruby/Gems/1.8/gems/activerecord-2.3.5/lib/active_record/query_cache.rb:9:in `cache'
+/Library/Ruby/Gems/1.8/gems/activerecord-2.3.5/lib/active_record/query_cache.rb:28:in `call'
+/Library/Ruby/Gems/1.8/gems/activerecord-2.3.5/lib/active_record/connection_adapters/abstract/connection_pool.rb:361:in `call'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.5/lib/action_controller/string_coercion.rb:25:in `call'
+/Library/Ruby/Gems/1.8/gems/rack-1.0.1/lib/rack/head.rb:9:in `call'
+/Library/Ruby/Gems/1.8/gems/rack-1.0.1/lib/rack/methodoverride.rb:24:in `call'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.5/lib/action_controller/params_parser.rb:15:in `call'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.5/lib/action_controller/session/cookie_store.rb:93:in `call'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.5/lib/action_controller/failsafe.rb:26:in `call'
+/Library/Ruby/Gems/1.8/gems/rack-1.0.1/lib/rack/lock.rb:11:in `call'
+/Library/Ruby/Gems/1.8/gems/rack-1.0.1/lib/rack/lock.rb:11:in `synchronize'
+/Library/Ruby/Gems/1.8/gems/rack-1.0.1/lib/rack/lock.rb:11:in `call'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.5/lib/action_controller/dispatcher.rb:114:in `call'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.5/lib/action_controller/reloader.rb:34:in `run'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.5/lib/action_controller/dispatcher.rb:108:in `call'
+/Library/Ruby/Gems/1.8/gems/rails-2.3.5/lib/rails/rack/static.rb:31:in `call'
+/Library/Ruby/Gems/1.8/gems/rack-1.0.1/lib/rack/urlmap.rb:46:in `call'
+/Library/Ruby/Gems/1.8/gems/rack-1.0.1/lib/rack/urlmap.rb:40:in `each'
+/Library/Ruby/Gems/1.8/gems/rack-1.0.1/lib/rack/urlmap.rb:40:in `call'
+/Library/Ruby/Gems/1.8/gems/rails-2.3.5/lib/rails/rack/log_tailer.rb:17:in `call'
+/Library/Ruby/Gems/1.8/gems/rack-1.0.1/lib/rack/content_length.rb:13:in `call'
+/Library/Ruby/Gems/1.8/gems/rack-1.0.1/lib/rack/chunked.rb:15:in `call'
+/Library/Ruby/Gems/1.8/gems/rack-1.0.1/lib/rack/handler/mongrel.rb:64:in `process'
+/Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:159:in `process_client'
+/Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:158:in `each'
+/Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:158:in `process_client'
+/Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `run'
+/Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `initialize'
+/Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `new'
+/Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `run'
+/Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `initialize'
+/Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `new'
+/Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `run'
+/Library/Ruby/Gems/1.8/gems/rack-1.0.1/lib/rack/handler/mongrel.rb:34:in `run'
+/Library/Ruby/Gems/1.8/gems/rails-2.3.5/lib/commands/server.rb:111
+/Library/Ruby/Site/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+/Library/Ruby/Site/1.8/rubygems/custom_require.rb:31:in `require'
+script/server:3
+
+ActionView::TemplateError (compile error
+/Users/justinbachorik/Documents/Coursework/CSCI-E250/projects/omgitsfood/src/omgitsfood/app/views/meals/index.html.haml:4: odd number list for Hash
+...for :meal, :url => { :action = "new" } do |f|
+                              ^
+/Users/justinbachorik/Documents/Coursework/CSCI-E250/projects/omgitsfood/src/omgitsfood/app/views/meals/index.html.haml:4: syntax error, unexpected '=', expecting '}'
+...for :meal, :url => { :action = "new" } do |f|
+                              ^) on line #4 of app/views/meals/index.html.haml:
+1: %h1 Plan your meals
+2: #yesterday
+3:   %h2 Yesterday
+4:   = form_for :meal, :url => { :action = "new" } do |f|
+5:   = hidden_field(:meal, :date)
+6:   = button_to "New", :action => "meals/new"
+7: #today
+
+    app/views/meals/index.html.haml:16:in `compile!'
+    haml (2.2.23) lib/haml/helpers/action_view_mods.rb:13:in `render'
+    haml (2.2.23) lib/haml/helpers/action_view_mods.rb:13:in `render'
+    haml (2.2.23) lib/sass/plugin/rails.rb:20:in `process'
+
+Rendered rescues/_trace (36.1ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing MealsController#index (for 127.0.0.1 at 2010-04-17 14:30:50) [GET]
+Rendering template within layouts/application
+Rendering meals/index
+
+ActionView::TemplateError (You don't need to use "- end" in Haml. Un-indent to close a block:
+- if foo?
+  %strong Foo!
+- else
+  Not foo.
+%p This line is un-indented, so it isn't part of the "if" block) on line #7 of app/views/meals/index.html.haml:
+4:   = form_for :meal, :url => { :action = "new" } do |f|
+5:   = hidden_field(:meal, :date)
+6:   = button_to "New", :action => "meals/new"
+7:   - end
+8: #today
+9:   %h2 Today
+10:   = button_to "New", :action => "meals/new"
+
+    app/views/meals/index.html.haml:7
+    haml (2.2.23) lib/haml/precompiler.rb:246:in `process_line'
+    haml (2.2.23) lib/haml/precompiler.rb:195:in `precompile'
+    haml (2.2.23) lib/haml/engine.rb:114:in `initialize'
+    haml (2.2.23) lib/haml/template/plugin.rb:27:in `new'
+    haml (2.2.23) lib/haml/template/plugin.rb:27:in `compile'
+    haml (2.2.23) lib/haml/helpers/action_view_mods.rb:13:in `render'
+    haml (2.2.23) lib/haml/helpers/action_view_mods.rb:13:in `render'
+    haml (2.2.23) lib/sass/plugin/rails.rb:20:in `process'
+
+Rendered rescues/_trace (109.4ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing MealsController#index (for 127.0.0.1 at 2010-04-17 14:30:59) [GET]
+Rendering template within layouts/application
+Rendering meals/index
+ERROR: compiling _run_haml_app47views47meals47index46html46haml RAISED compile error
+/Users/justinbachorik/Documents/Coursework/CSCI-E250/projects/omgitsfood/src/omgitsfood/app/views/meals/index.html.haml:4: odd number list for Hash
+...for :meal, :url => { :action = "new" } do |f|
+                              ^
+/Users/justinbachorik/Documents/Coursework/CSCI-E250/projects/omgitsfood/src/omgitsfood/app/views/meals/index.html.haml:4: syntax error, unexpected '=', expecting '}'
+...for :meal, :url => { :action = "new" } do |f|
+                              ^
+Function body:           def _run_haml_app47views47meals47index46html46haml(local_assigns)
+            old_output_buffer = output_buffer;;begin;extend Haml::Helpers;_hamlout = @haml_buffer = Haml::Buffer.new(@haml_buffer, {:attr_wrapper=>"'", :autoclose=>["meta", "img", "link", "br", "hr", "input", "area", "param", "col", "base"], :escape_html=>false, :format=>:xhtml, :ugly=>false, :encoding=>nil, :preserve=>["textarea", "pre", "code"]});_erbout = _hamlout.buffer;__in_erb_template = true;;
+
+
+_hamlout.push_text("<h1>Plan your meals</h1>\n<div id='yesterday'>\n  <h2>Yesterday</h2>\n  #{_hamlout.adjust_tabs(1); haml_temp =  form_for :meal, :url => { :action = "new" } do |f|
+_hamlout.format_script_false_false_false_false_false_true_false((haml_very_temp = haml_temp; haml_temp = nil; haml_very_temp));}\n  #{haml_temp =  hidden_field(:meal, :date)
+_hamlout.format_script_false_false_false_false_false_true_false((haml_very_temp = haml_temp; haml_temp = nil; haml_very_temp));}\n  #{haml_temp =  button_to "New", :action => "meals/new"
+_hamlout.format_script_false_false_false_false_false_true_false((haml_very_temp = haml_temp; haml_temp = nil; haml_very_temp));}\n</div>\n<div id='today'>\n", 0, false);
+
+_hamlout.push_text("  <h2>Today</h2>\n  #{haml_temp =  button_to "New", :action => "meals/new"
+_hamlout.format_script_false_false_false_false_false_true_false((haml_very_temp = haml_temp; haml_temp = nil; haml_very_temp));}\n</div>\n<div id='tomorrow'>\n", 0, false);
+
+_hamlout.push_text("  <h2>Tomorrow</h2>\n  #{haml_temp =  button_to "New", :action => "meals/new"
+_hamlout.format_script_false_false_false_false_false_true_false((haml_very_temp = haml_temp; haml_temp = nil; haml_very_temp));}\n</div>\n", -1, false);_erbout;ensure;@haml_buffer = @haml_buffer.upper;end;
+          ensure
+            self.output_buffer = old_output_buffer
+          end
+Backtrace: /Users/justinbachorik/Documents/Coursework/CSCI-E250/projects/omgitsfood/src/omgitsfood/app/views/meals/index.html.haml:16:in `compile!'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.5/lib/action_view/renderable.rb:61:in `compile'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.5/lib/action_view/renderable.rb:28:in `render'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.5/lib/action_view/template.rb:205:in `render_template'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.5/lib/action_view/base.rb:265:in `render_without_haml'
+/Users/justinbachorik/.gem/ruby/1.8/gems/haml-2.2.23/lib/haml/helpers/action_view_mods.rb:13:in `render'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.5/lib/action_view/base.rb:348:in `_render_with_layout'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.5/lib/action_view/base.rb:262:in `render_without_haml'
+/Users/justinbachorik/.gem/ruby/1.8/gems/haml-2.2.23/lib/haml/helpers/action_view_mods.rb:13:in `render'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.5/lib/action_controller/base.rb:1250:in `render_for_file'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.5/lib/action_controller/base.rb:945:in `render_without_benchmark'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.5/lib/action_controller/benchmarking.rb:51:in `render'
+/Library/Ruby/Gems/1.8/gems/activesupport-2.3.5/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+/Library/Ruby/Gems/1.8/gems/activesupport-2.3.5/lib/active_support/core_ext/benchmark.rb:10:in `realtime'
+/Library/Ruby/Gems/1.8/gems/activesupport-2.3.5/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.5/lib/action_controller/benchmarking.rb:51:in `render'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.5/lib/action_controller/base.rb:1326:in `default_render'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.5/lib/action_controller/base.rb:1332:in `perform_action_without_filters'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.5/lib/action_controller/filters.rb:617:in `call_filters'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.5/lib/action_controller/filters.rb:610:in `perform_action_without_benchmark'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.5/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+/Library/Ruby/Gems/1.8/gems/activesupport-2.3.5/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+/Library/Ruby/Gems/1.8/gems/activesupport-2.3.5/lib/active_support/core_ext/benchmark.rb:10:in `realtime'
+/Library/Ruby/Gems/1.8/gems/activesupport-2.3.5/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.5/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.5/lib/action_controller/rescue.rb:160:in `perform_action_without_flash'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.5/lib/action_controller/flash.rb:146:in `perform_action'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.5/lib/action_controller/base.rb:532:in `send'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.5/lib/action_controller/base.rb:532:in `process_without_filters'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.5/lib/action_controller/filters.rb:606:in `sass_old_process'
+/Users/justinbachorik/.gem/ruby/1.8/gems/haml-2.2.23/lib/sass/plugin/rails.rb:20:in `process'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.5/lib/action_controller/base.rb:391:in `process'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.5/lib/action_controller/base.rb:386:in `call'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.5/lib/action_controller/routing/route_set.rb:437:in `call'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.5/lib/action_controller/dispatcher.rb:87:in `dispatch'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.5/lib/action_controller/dispatcher.rb:121:in `_call'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.5/lib/action_controller/dispatcher.rb:130:in `build_middleware_stack'
+/Library/Ruby/Gems/1.8/gems/activerecord-2.3.5/lib/active_record/query_cache.rb:29:in `call'
+/Library/Ruby/Gems/1.8/gems/activerecord-2.3.5/lib/active_record/query_cache.rb:29:in `call'
+/Library/Ruby/Gems/1.8/gems/activerecord-2.3.5/lib/active_record/connection_adapters/abstract/query_cache.rb:34:in `cache'
+/Library/Ruby/Gems/1.8/gems/activerecord-2.3.5/lib/active_record/query_cache.rb:9:in `cache'
+/Library/Ruby/Gems/1.8/gems/activerecord-2.3.5/lib/active_record/query_cache.rb:28:in `call'
+/Library/Ruby/Gems/1.8/gems/activerecord-2.3.5/lib/active_record/connection_adapters/abstract/connection_pool.rb:361:in `call'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.5/lib/action_controller/string_coercion.rb:25:in `call'
+/Library/Ruby/Gems/1.8/gems/rack-1.0.1/lib/rack/head.rb:9:in `call'
+/Library/Ruby/Gems/1.8/gems/rack-1.0.1/lib/rack/methodoverride.rb:24:in `call'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.5/lib/action_controller/params_parser.rb:15:in `call'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.5/lib/action_controller/session/cookie_store.rb:93:in `call'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.5/lib/action_controller/failsafe.rb:26:in `call'
+/Library/Ruby/Gems/1.8/gems/rack-1.0.1/lib/rack/lock.rb:11:in `call'
+/Library/Ruby/Gems/1.8/gems/rack-1.0.1/lib/rack/lock.rb:11:in `synchronize'
+/Library/Ruby/Gems/1.8/gems/rack-1.0.1/lib/rack/lock.rb:11:in `call'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.5/lib/action_controller/dispatcher.rb:114:in `call'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.5/lib/action_controller/reloader.rb:34:in `run'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.5/lib/action_controller/dispatcher.rb:108:in `call'
+/Library/Ruby/Gems/1.8/gems/rails-2.3.5/lib/rails/rack/static.rb:31:in `call'
+/Library/Ruby/Gems/1.8/gems/rack-1.0.1/lib/rack/urlmap.rb:46:in `call'
+/Library/Ruby/Gems/1.8/gems/rack-1.0.1/lib/rack/urlmap.rb:40:in `each'
+/Library/Ruby/Gems/1.8/gems/rack-1.0.1/lib/rack/urlmap.rb:40:in `call'
+/Library/Ruby/Gems/1.8/gems/rails-2.3.5/lib/rails/rack/log_tailer.rb:17:in `call'
+/Library/Ruby/Gems/1.8/gems/rack-1.0.1/lib/rack/content_length.rb:13:in `call'
+/Library/Ruby/Gems/1.8/gems/rack-1.0.1/lib/rack/chunked.rb:15:in `call'
+/Library/Ruby/Gems/1.8/gems/rack-1.0.1/lib/rack/handler/mongrel.rb:64:in `process'
+/Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:159:in `process_client'
+/Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:158:in `each'
+/Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:158:in `process_client'
+/Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `run'
+/Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `initialize'
+/Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `new'
+/Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `run'
+/Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `initialize'
+/Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `new'
+/Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `run'
+/Library/Ruby/Gems/1.8/gems/rack-1.0.1/lib/rack/handler/mongrel.rb:34:in `run'
+/Library/Ruby/Gems/1.8/gems/rails-2.3.5/lib/commands/server.rb:111
+/Library/Ruby/Site/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+/Library/Ruby/Site/1.8/rubygems/custom_require.rb:31:in `require'
+script/server:3
+
+ActionView::TemplateError (compile error
+/Users/justinbachorik/Documents/Coursework/CSCI-E250/projects/omgitsfood/src/omgitsfood/app/views/meals/index.html.haml:4: odd number list for Hash
+...for :meal, :url => { :action = "new" } do |f|
+                              ^
+/Users/justinbachorik/Documents/Coursework/CSCI-E250/projects/omgitsfood/src/omgitsfood/app/views/meals/index.html.haml:4: syntax error, unexpected '=', expecting '}'
+...for :meal, :url => { :action = "new" } do |f|
+                              ^) on line #4 of app/views/meals/index.html.haml:
+1: %h1 Plan your meals
+2: #yesterday
+3:   %h2 Yesterday
+4:   = form_for :meal, :url => { :action = "new" } do |f|
+5:   = hidden_field(:meal, :date)
+6:   = button_to "New", :action => "meals/new"
+7: #today
+
+    app/views/meals/index.html.haml:16:in `compile!'
+    haml (2.2.23) lib/haml/helpers/action_view_mods.rb:13:in `render'
+    haml (2.2.23) lib/haml/helpers/action_view_mods.rb:13:in `render'
+    haml (2.2.23) lib/sass/plugin/rails.rb:20:in `process'
+
+Rendered rescues/_trace (35.0ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing MealsController#index (for 127.0.0.1 at 2010-04-17 14:31:53) [GET]
+Rendering template within layouts/application
+Rendering meals/index
+ERROR: compiling _run_haml_app47views47meals47index46html46haml RAISED compile error
+/Users/justinbachorik/Documents/Coursework/CSCI-E250/projects/omgitsfood/src/omgitsfood/app/views/meals/index.html.haml:4: odd number list for Hash
+...for :meal, :url => { :action = "new" } do |f|
+                              ^
+/Users/justinbachorik/Documents/Coursework/CSCI-E250/projects/omgitsfood/src/omgitsfood/app/views/meals/index.html.haml:4: syntax error, unexpected '=', expecting '}'
+...for :meal, :url => { :action = "new" } do |f|
+                              ^
+Function body:           def _run_haml_app47views47meals47index46html46haml(local_assigns)
+            old_output_buffer = output_buffer;;begin;extend Haml::Helpers;_hamlout = @haml_buffer = Haml::Buffer.new(@haml_buffer, {:attr_wrapper=>"'", :autoclose=>["meta", "img", "link", "br", "hr", "input", "area", "param", "col", "base"], :escape_html=>false, :format=>:xhtml, :ugly=>false, :encoding=>nil, :preserve=>["textarea", "pre", "code"]});_erbout = _hamlout.buffer;__in_erb_template = true;;
+
+
+_hamlout.push_text("<h1>Plan your meals</h1>\n<div id='yesterday'>\n  <h2>Yesterday</h2>\n  #{_hamlout.adjust_tabs(1); haml_temp =  form_for :meal, :url => { :action = "new" } do |f|
+_hamlout.format_script_false_false_false_false_false_true_false((haml_very_temp = haml_temp; haml_temp = nil; haml_very_temp));}\n  #{haml_temp =  f.hidden_field(:meal, :date)
+_hamlout.format_script_false_false_false_false_false_true_false((haml_very_temp = haml_temp; haml_temp = nil; haml_very_temp));}\n  #{haml_temp =  button_to "New", :action => "meals/new"
+_hamlout.format_script_false_false_false_false_false_true_false((haml_very_temp = haml_temp; haml_temp = nil; haml_very_temp));}\n</div>\n<div id='today'>\n", 0, false);
+
+_hamlout.push_text("  <h2>Today</h2>\n  #{haml_temp =  button_to "New", :action => "meals/new"
+_hamlout.format_script_false_false_false_false_false_true_false((haml_very_temp = haml_temp; haml_temp = nil; haml_very_temp));}\n</div>\n<div id='tomorrow'>\n", 0, false);
+
+_hamlout.push_text("  <h2>Tomorrow</h2>\n  #{haml_temp =  button_to "New", :action => "meals/new"
+_hamlout.format_script_false_false_false_false_false_true_false((haml_very_temp = haml_temp; haml_temp = nil; haml_very_temp));}\n</div>\n", -1, false);_erbout;ensure;@haml_buffer = @haml_buffer.upper;end;
+          ensure
+            self.output_buffer = old_output_buffer
+          end
+Backtrace: /Users/justinbachorik/Documents/Coursework/CSCI-E250/projects/omgitsfood/src/omgitsfood/app/views/meals/index.html.haml:16:in `compile!'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.5/lib/action_view/renderable.rb:61:in `compile'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.5/lib/action_view/renderable.rb:28:in `render'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.5/lib/action_view/template.rb:205:in `render_template'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.5/lib/action_view/base.rb:265:in `render_without_haml'
+/Users/justinbachorik/.gem/ruby/1.8/gems/haml-2.2.23/lib/haml/helpers/action_view_mods.rb:13:in `render'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.5/lib/action_view/base.rb:348:in `_render_with_layout'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.5/lib/action_view/base.rb:262:in `render_without_haml'
+/Users/justinbachorik/.gem/ruby/1.8/gems/haml-2.2.23/lib/haml/helpers/action_view_mods.rb:13:in `render'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.5/lib/action_controller/base.rb:1250:in `render_for_file'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.5/lib/action_controller/base.rb:945:in `render_without_benchmark'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.5/lib/action_controller/benchmarking.rb:51:in `render'
+/Library/Ruby/Gems/1.8/gems/activesupport-2.3.5/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+/Library/Ruby/Gems/1.8/gems/activesupport-2.3.5/lib/active_support/core_ext/benchmark.rb:10:in `realtime'
+/Library/Ruby/Gems/1.8/gems/activesupport-2.3.5/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.5/lib/action_controller/benchmarking.rb:51:in `render'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.5/lib/action_controller/base.rb:1326:in `default_render'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.5/lib/action_controller/base.rb:1332:in `perform_action_without_filters'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.5/lib/action_controller/filters.rb:617:in `call_filters'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.5/lib/action_controller/filters.rb:610:in `perform_action_without_benchmark'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.5/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+/Library/Ruby/Gems/1.8/gems/activesupport-2.3.5/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+/Library/Ruby/Gems/1.8/gems/activesupport-2.3.5/lib/active_support/core_ext/benchmark.rb:10:in `realtime'
+/Library/Ruby/Gems/1.8/gems/activesupport-2.3.5/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.5/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.5/lib/action_controller/rescue.rb:160:in `perform_action_without_flash'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.5/lib/action_controller/flash.rb:146:in `perform_action'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.5/lib/action_controller/base.rb:532:in `send'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.5/lib/action_controller/base.rb:532:in `process_without_filters'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.5/lib/action_controller/filters.rb:606:in `sass_old_process'
+/Users/justinbachorik/.gem/ruby/1.8/gems/haml-2.2.23/lib/sass/plugin/rails.rb:20:in `process'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.5/lib/action_controller/base.rb:391:in `process'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.5/lib/action_controller/base.rb:386:in `call'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.5/lib/action_controller/routing/route_set.rb:437:in `call'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.5/lib/action_controller/dispatcher.rb:87:in `dispatch'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.5/lib/action_controller/dispatcher.rb:121:in `_call'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.5/lib/action_controller/dispatcher.rb:130:in `build_middleware_stack'
+/Library/Ruby/Gems/1.8/gems/activerecord-2.3.5/lib/active_record/query_cache.rb:29:in `call'
+/Library/Ruby/Gems/1.8/gems/activerecord-2.3.5/lib/active_record/query_cache.rb:29:in `call'
+/Library/Ruby/Gems/1.8/gems/activerecord-2.3.5/lib/active_record/connection_adapters/abstract/query_cache.rb:34:in `cache'
+/Library/Ruby/Gems/1.8/gems/activerecord-2.3.5/lib/active_record/query_cache.rb:9:in `cache'
+/Library/Ruby/Gems/1.8/gems/activerecord-2.3.5/lib/active_record/query_cache.rb:28:in `call'
+/Library/Ruby/Gems/1.8/gems/activerecord-2.3.5/lib/active_record/connection_adapters/abstract/connection_pool.rb:361:in `call'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.5/lib/action_controller/string_coercion.rb:25:in `call'
+/Library/Ruby/Gems/1.8/gems/rack-1.0.1/lib/rack/head.rb:9:in `call'
+/Library/Ruby/Gems/1.8/gems/rack-1.0.1/lib/rack/methodoverride.rb:24:in `call'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.5/lib/action_controller/params_parser.rb:15:in `call'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.5/lib/action_controller/session/cookie_store.rb:93:in `call'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.5/lib/action_controller/failsafe.rb:26:in `call'
+/Library/Ruby/Gems/1.8/gems/rack-1.0.1/lib/rack/lock.rb:11:in `call'
+/Library/Ruby/Gems/1.8/gems/rack-1.0.1/lib/rack/lock.rb:11:in `synchronize'
+/Library/Ruby/Gems/1.8/gems/rack-1.0.1/lib/rack/lock.rb:11:in `call'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.5/lib/action_controller/dispatcher.rb:114:in `call'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.5/lib/action_controller/reloader.rb:34:in `run'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.5/lib/action_controller/dispatcher.rb:108:in `call'
+/Library/Ruby/Gems/1.8/gems/rails-2.3.5/lib/rails/rack/static.rb:31:in `call'
+/Library/Ruby/Gems/1.8/gems/rack-1.0.1/lib/rack/urlmap.rb:46:in `call'
+/Library/Ruby/Gems/1.8/gems/rack-1.0.1/lib/rack/urlmap.rb:40:in `each'
+/Library/Ruby/Gems/1.8/gems/rack-1.0.1/lib/rack/urlmap.rb:40:in `call'
+/Library/Ruby/Gems/1.8/gems/rails-2.3.5/lib/rails/rack/log_tailer.rb:17:in `call'
+/Library/Ruby/Gems/1.8/gems/rack-1.0.1/lib/rack/content_length.rb:13:in `call'
+/Library/Ruby/Gems/1.8/gems/rack-1.0.1/lib/rack/chunked.rb:15:in `call'
+/Library/Ruby/Gems/1.8/gems/rack-1.0.1/lib/rack/handler/mongrel.rb:64:in `process'
+/Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:159:in `process_client'
+/Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:158:in `each'
+/Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:158:in `process_client'
+/Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `run'
+/Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `initialize'
+/Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `new'
+/Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `run'
+/Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `initialize'
+/Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `new'
+/Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `run'
+/Library/Ruby/Gems/1.8/gems/rack-1.0.1/lib/rack/handler/mongrel.rb:34:in `run'
+/Library/Ruby/Gems/1.8/gems/rails-2.3.5/lib/commands/server.rb:111
+/Library/Ruby/Site/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+/Library/Ruby/Site/1.8/rubygems/custom_require.rb:31:in `require'
+script/server:3
+
+ActionView::TemplateError (compile error
+/Users/justinbachorik/Documents/Coursework/CSCI-E250/projects/omgitsfood/src/omgitsfood/app/views/meals/index.html.haml:4: odd number list for Hash
+...for :meal, :url => { :action = "new" } do |f|
+                              ^
+/Users/justinbachorik/Documents/Coursework/CSCI-E250/projects/omgitsfood/src/omgitsfood/app/views/meals/index.html.haml:4: syntax error, unexpected '=', expecting '}'
+...for :meal, :url => { :action = "new" } do |f|
+                              ^) on line #4 of app/views/meals/index.html.haml:
+1: %h1 Plan your meals
+2: #yesterday
+3:   %h2 Yesterday
+4:   = form_for :meal, :url => { :action = "new" } do |f|
+5:   = f.hidden_field(:meal, :date)
+6:   = button_to "New", :action => "meals/new"
+7: #today
+
+    app/views/meals/index.html.haml:16:in `compile!'
+    haml (2.2.23) lib/haml/helpers/action_view_mods.rb:13:in `render'
+    haml (2.2.23) lib/haml/helpers/action_view_mods.rb:13:in `render'
+    haml (2.2.23) lib/sass/plugin/rails.rb:20:in `process'
+
+Rendered rescues/_trace (36.1ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing MealsController#index (for 127.0.0.1 at 2010-04-17 14:33:44) [GET]
+Rendering template within layouts/application
+Rendering meals/index
+
+ActionView::TemplateError (undefined local variable or method `f' for #<ActionView::Base:0x267c058>) on line #4 of app/views/meals/index.html.haml:
+1: %h1 Plan your meals
+2: #yesterday
+3:   %h2 Yesterday
+4:   = f.hidden_field(:meal, :date)
+5:   = button_to "New", :action => "meals/new/"+Time.now
+6: #today
+7:   %h2 Today
+
+    app/views/meals/index.html.haml:4:in `_run_haml_app47views47meals47index46html46haml'
+    haml (2.2.23) lib/haml/helpers/action_view_mods.rb:13:in `render'
+    haml (2.2.23) lib/haml/helpers/action_view_mods.rb:13:in `render'
+    haml (2.2.23) lib/sass/plugin/rails.rb:20:in `process'
+
+Rendered rescues/_trace (36.7ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing MealsController#index (for 127.0.0.1 at 2010-04-17 14:33:51) [GET]
+Rendering template within layouts/application
+Rendering meals/index
+
+ActionView::TemplateError (can't convert Time into String) on line #4 of app/views/meals/index.html.haml:
+1: %h1 Plan your meals
+2: #yesterday
+3:   %h2 Yesterday
+4:   = button_to "New", :action => "meals/new/"+Time.now
+5: #today
+6:   %h2 Today
+7:   = button_to "New", :action => "meals/new"
+
+    app/views/meals/index.html.haml:4:in `_run_haml_app47views47meals47index46html46haml'
+    haml (2.2.23) lib/haml/helpers/action_view_mods.rb:13:in `render'
+    haml (2.2.23) lib/haml/helpers/action_view_mods.rb:13:in `render'
+    haml (2.2.23) lib/sass/plugin/rails.rb:20:in `process'
+
+Rendered rescues/_trace (37.3ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing MealsController#index (for 127.0.0.1 at 2010-04-17 14:39:14) [GET]
+Rendering template within layouts/application
+Rendering meals/index
+Rendered layouts/_header (0.1ms)
+Completed in 9ms (View: 8, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing MealsController#meals/new/ (for 127.0.0.1 at 2010-04-17 14:39:16) [POST]
+  Parameters: {"authenticity_token"=>"ZQprnFhiEDQE2JydwSZpm6JkCF90Ve7UYIDdMPm4Kdo="}
+
+ActionController::UnknownAction (No action responded to meals/new/. Actions: create, destroy, index, new, and update):
+  haml (2.2.23) lib/sass/plugin/rails.rb:20:in `process'
+
+Rendering rescues/layout (not_found)
+
+
+Processing MealsController#index (for 127.0.0.1 at 2010-04-17 14:40:43) [GET]
+Rendering template within layouts/application
+Rendering meals/index
+Rendered layouts/_header (0.1ms)
+Completed in 8ms (View: 7, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing MealsController#meals/new/Fri Apr 16 14:40:43 -0400 2010 (for 127.0.0.1 at 2010-04-17 14:40:45) [POST]
+  Parameters: {"authenticity_token"=>"ZQprnFhiEDQE2JydwSZpm6JkCF90Ve7UYIDdMPm4Kdo="}
+
+ActionController::UnknownAction (No action responded to meals/new/Fri Apr 16 14:40:43 -0400 2010. Actions: create, destroy, index, new, and update):
+  haml (2.2.23) lib/sass/plugin/rails.rb:20:in `process'
+
+Rendering rescues/layout (not_found)
+
+
+Processing MealsController#index (for 127.0.0.1 at 2010-04-17 14:42:10) [GET]
+Rendering template within layouts/application
+Rendering meals/index
+
+ActionView::TemplateError (can't convert Bignum into String) on line #4 of app/views/meals/index.html.haml:
+1: %h1 Plan your meals
+2: #yesterday
+3:   %h2 Yesterday
+4:   = button_to "New", :action => "meals/new/" + (Time.now-60*60*24).to_i
+5: #today
+6:   %h2 Today
+7:   = button_to "New", :action => "meals/new"
+
+    app/views/meals/index.html.haml:4:in `_run_haml_app47views47meals47index46html46haml'
+    haml (2.2.23) lib/haml/helpers/action_view_mods.rb:13:in `render'
+    haml (2.2.23) lib/haml/helpers/action_view_mods.rb:13:in `render'
+    haml (2.2.23) lib/sass/plugin/rails.rb:20:in `process'
+
+Rendered rescues/_trace (37.6ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing MealsController#index (for 127.0.0.1 at 2010-04-17 14:42:28) [GET]
+Rendering template within layouts/application
+Rendering meals/index
+Rendered layouts/_header (0.1ms)
+Completed in 8ms (View: 7, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing MealsController#meals/new/1271443348 (for 127.0.0.1 at 2010-04-17 14:42:30) [POST]
+  Parameters: {"authenticity_token"=>"ZQprnFhiEDQE2JydwSZpm6JkCF90Ve7UYIDdMPm4Kdo="}
+
+ActionController::UnknownAction (No action responded to meals/new/1271443348. Actions: create, destroy, index, new, and update):
+  haml (2.2.23) lib/sass/plugin/rails.rb:20:in `process'
+
+Rendering rescues/layout (not_found)
+
+
+Processing MealsController#meals/new/1271443348 (for 127.0.0.1 at 2010-04-17 14:43:08) [POST]
+  Parameters: {"authenticity_token"=>"ZQprnFhiEDQE2JydwSZpm6JkCF90Ve7UYIDdMPm4Kdo="}
+
+ActionController::UnknownAction (No action responded to meals/new/1271443348. Actions: create, destroy, index, new, and update):
+  haml (2.2.23) lib/sass/plugin/rails.rb:20:in `process'
+
+Rendering rescues/layout (not_found)

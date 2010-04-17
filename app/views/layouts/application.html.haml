@@ -2,4 +2,7 @@
 %html
   %head
     %title OMGitsfood
-  %body= yield
+  %body
+    #wrapper
+      = render :partial => "layouts/header"
+      #mainContent= yield

@@ -1,0 +1,11 @@
+%h1 Plan your meals
+#yesterday
+  %h2 Yesterday
+  = button_to "New", :action => "meals/new/" + (Time.now-60*60*24).to_i.to_s
+#today
+  %h2 Today
+  = button_to "New", :action => "meals/new" + Time.now.to_i.to_s
+#tomorrow
+  %h2 Tomorrow
+  = button_to "New", :action => "meals/new" + (Time.now+60*60*24).to_i.to_s
+  
