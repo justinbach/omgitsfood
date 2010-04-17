@@ -1,3 +1,3 @@
 class Meal < ActiveRecord::Base
-  :has_one recipe
+  has_one :recipe
 end
