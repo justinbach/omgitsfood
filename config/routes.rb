@@ -41,7 +41,7 @@ ActionController::Routing::Routes.draw do |map|
   map.connect ':controller/:action/:id'
   map.connect ':controller/:action/:id.:format'
   map.connect ':controller/:action'
-  map.meals ':day/meals/new', :controller => 'meals', :action => 'new', :day => :day
+  map.meals ':day/meals/new', :controller => 'meals', :action => 'new'
   map.resources :meals
   map.root :controller => "meals"
 end

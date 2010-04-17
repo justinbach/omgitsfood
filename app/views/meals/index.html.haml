@@ -2,9 +2,15 @@
 #yesterday
   %h2 Yesterday
   = button_to "New", "/"+(Time.now-60*60*24).strftime("%b-%d-%Y").downcase+"/meals/new/", :method => :get
+  - @yesterdays_meals.each do |m|
+    .meal= m.recipe.title
 #today
   %h2 Today
   = button_to "New", "/"+Time.now.strftime("%b-%d-%Y").downcase+"/meals/new/", :method => :get
+  - @todays_meals.each do |m|
+    .meal= m.recipe.title
 #tomorrow
   %h2 Tomorrow
   = button_to "New", "/"+(Time.now+60*60*24).strftime("%b-%d-%Y").downcase+"/meals/new/", :method => :get
+  - @tomorrows_meals.each do |m|
+    .meal= m.recipe.title

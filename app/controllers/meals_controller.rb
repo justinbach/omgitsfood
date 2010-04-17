@@ -1,5 +1,8 @@
 class MealsController < ApplicationController
   def index
+    @yesterdays_meals = Meal.find_all_by_day(Date.yesterday)
+    @todays_meals = Meal.find_all_by_day(Date.today)
+    @tomorrows_meals = Meal.find_all_by_day(Date.tomorrow)
   end
 
   def new
