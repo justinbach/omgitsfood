@@ -6232,3 +6232,1427 @@ Rendering meals/index
   [4;36;1mRecipe Load (0.3ms)[0m   [0;1mSELECT * FROM "recipes" WHERE ("recipes".meal_id = 8) LIMIT 1[0m
 Rendered layouts/_header (0.1ms)
 Completed in 86ms (View: 76, DB: 2) | 200 OK [http://localhost/meals]
+
+
+Processing MealsController#index (for 127.0.0.1 at 2010-04-18 11:09:55) [GET]
+  [4;35;1mMeal Load (0.1ms)[0m   [0mSELECT * FROM "meals" WHERE ("meals"."day" = '2010-04-17') [0m
+  [4;36;1mMeal Load (0.2ms)[0m   [0;1mSELECT * FROM "meals" WHERE ("meals"."day" = '2010-04-18') [0m
+  [4;35;1mMeal Load (0.3ms)[0m   [0mSELECT * FROM "meals" WHERE ("meals"."day" = '2010-04-19') [0m
+Rendering template within layouts/application
+Rendering meals/index
+  [4;36;1mRecipe Load (0.3ms)[0m   [0;1mSELECT * FROM "recipes" WHERE ("recipes".meal_id = 6) LIMIT 1[0m
+  [4;35;1mRecipe Load (0.3ms)[0m   [0mSELECT * FROM "recipes" WHERE ("recipes".meal_id = 7) LIMIT 1[0m
+  [4;36;1mRecipe Load (0.3ms)[0m   [0;1mSELECT * FROM "recipes" WHERE ("recipes".meal_id = 8) LIMIT 1[0m
+Rendered layouts/_header (0.1ms)
+Completed in 23ms (View: 13, DB: 2) | 200 OK [http://localhost/meals]
+
+
+Processing RecipesController#edit (for 127.0.0.1 at 2010-04-18 11:09:57) [GET]
+  Parameters: {"id"=>"10"}
+  [4;35;1mRecipe Load (0.3ms)[0m   [0mSELECT * FROM "recipes" WHERE ("recipes"."id" = 10) [0m
+Rendering template within layouts/application
+Rendering recipes/edit
+Rendered layouts/_header (0.1ms)
+Completed in 13ms (View: 5, DB: 0) | 200 OK [http://localhost/recipes/edit/10]
+
+
+Processing RecipesController#edit (for 127.0.0.1 at 2010-04-18 11:09:59) [GET]
+  Parameters: {"id"=>"10"}
+  [4;36;1mRecipe Load (0.3ms)[0m   [0;1mSELECT * FROM "recipes" WHERE ("recipes"."id" = 10) [0m
+Rendering template within layouts/application
+Rendering recipes/edit
+Rendered layouts/_header (0.1ms)
+Completed in 13ms (View: 5, DB: 0) | 200 OK [http://localhost/recipes/edit/10]
+
+
+Processing RecipesController#edit (for 127.0.0.1 at 2010-04-18 11:10:05) [GET]
+  Parameters: {"id"=>"10"}
+  [4;35;1mRecipe Load (0.2ms)[0m   [0mSELECT * FROM "recipes" WHERE ("recipes"."id" = 10) [0m
+Rendering template within layouts/application
+Rendering recipes/edit
+Rendered layouts/_header (0.1ms)
+Completed in 13ms (View: 5, DB: 0) | 200 OK [http://localhost/recipes/edit/10]
+
+
+Processing MealsController#index (for 127.0.0.1 at 2010-04-18 11:17:12) [GET]
+  [4;36;1mMeal Load (0.1ms)[0m   [0;1mSELECT * FROM "meals" WHERE ("meals"."day" = '2010-04-17') [0m
+  [4;35;1mMeal Load (0.2ms)[0m   [0mSELECT * FROM "meals" WHERE ("meals"."day" = '2010-04-18') [0m
+  [4;36;1mMeal Load (0.9ms)[0m   [0;1mSELECT * FROM "meals" WHERE ("meals"."day" = '2010-04-19') [0m
+Rendering template within layouts/application
+Rendering meals/index
+  [4;35;1mRecipe Load (0.4ms)[0m   [0mSELECT * FROM "recipes" WHERE ("recipes".meal_id = 6) LIMIT 1[0m
+  [4;36;1mRecipe Load (0.4ms)[0m   [0;1mSELECT * FROM "recipes" WHERE ("recipes".meal_id = 7) LIMIT 1[0m
+  [4;35;1mRecipe Load (0.2ms)[0m   [0mSELECT * FROM "recipes" WHERE ("recipes".meal_id = 8) LIMIT 1[0m
+
+ActionView::TemplateError (undefined local variable or method `style' for #<ActionView::Base:0x2417b64>) on line #5 of app/views/layouts/application.html.haml:
+2: %html
+3:   %head
+4:     %title OMGitsfood
+5:     = stylesheet_link_tag style, :media => "screen"
+6:   %body
+7:     #wrapper
+8:       = render :partial => "layouts/header"
+
+    app/views/layouts/application.html.haml:5:in `_run_haml_app47views47layouts47application46html46haml'
+    haml (2.2.23) lib/haml/helpers/action_view_mods.rb:13:in `render'
+    haml (2.2.23) lib/haml/helpers/action_view_mods.rb:13:in `render'
+    haml (2.2.23) lib/sass/plugin/rails.rb:20:in `process'
+
+Rendered rescues/_trace (115.4ms)
+Rendered rescues/_request_and_response (0.4ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing MealsController#index (for 127.0.0.1 at 2010-04-18 11:17:20) [GET]
+  [4;36;1mMeal Load (0.2ms)[0m   [0;1mSELECT * FROM "meals" WHERE ("meals"."day" = '2010-04-17') [0m
+  [4;35;1mMeal Load (0.3ms)[0m   [0mSELECT * FROM "meals" WHERE ("meals"."day" = '2010-04-18') [0m
+  [4;36;1mMeal Load (0.3ms)[0m   [0;1mSELECT * FROM "meals" WHERE ("meals"."day" = '2010-04-19') [0m
+Rendering template within layouts/application
+Rendering meals/index
+  [4;35;1mRecipe Load (0.4ms)[0m   [0mSELECT * FROM "recipes" WHERE ("recipes".meal_id = 6) LIMIT 1[0m
+  [4;36;1mRecipe Load (0.3ms)[0m   [0;1mSELECT * FROM "recipes" WHERE ("recipes".meal_id = 7) LIMIT 1[0m
+  [4;35;1mRecipe Load (0.3ms)[0m   [0mSELECT * FROM "recipes" WHERE ("recipes".meal_id = 8) LIMIT 1[0m
+Rendered layouts/_header (0.1ms)
+Completed in 29ms (View: 18, DB: 2) | 200 OK [http://localhost/meals]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-04-18 11:17:20) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/style.css" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing MealsController#index (for 127.0.0.1 at 2010-04-18 11:18:32) [GET]
+  [4;36;1mMeal Load (0.1ms)[0m   [0;1mSELECT * FROM "meals" WHERE ("meals"."day" = '2010-04-17') [0m
+  [4;35;1mMeal Load (0.3ms)[0m   [0mSELECT * FROM "meals" WHERE ("meals"."day" = '2010-04-18') [0m
+  [4;36;1mMeal Load (1.6ms)[0m   [0;1mSELECT * FROM "meals" WHERE ("meals"."day" = '2010-04-19') [0m
+Rendering template within layouts/application
+Rendering meals/index
+  [4;35;1mRecipe Load (0.4ms)[0m   [0mSELECT * FROM "recipes" WHERE ("recipes".meal_id = 6) LIMIT 1[0m
+  [4;36;1mRecipe Load (0.3ms)[0m   [0;1mSELECT * FROM "recipes" WHERE ("recipes".meal_id = 7) LIMIT 1[0m
+  [4;35;1mRecipe Load (0.4ms)[0m   [0mSELECT * FROM "recipes" WHERE ("recipes".meal_id = 8) LIMIT 1[0m
+Rendered layouts/_header (0.2ms)
+Completed in 26ms (View: 13, DB: 3) | 200 OK [http://localhost/meals]
+
+
+Processing MealsController#index (for 127.0.0.1 at 2010-04-18 11:19:11) [GET]
+  [4;36;1mMeal Load (0.1ms)[0m   [0;1mSELECT * FROM "meals" WHERE ("meals"."day" = '2010-04-17') [0m
+  [4;35;1mMeal Load (0.2ms)[0m   [0mSELECT * FROM "meals" WHERE ("meals"."day" = '2010-04-18') [0m
+  [4;36;1mMeal Load (0.3ms)[0m   [0;1mSELECT * FROM "meals" WHERE ("meals"."day" = '2010-04-19') [0m
+Rendering template within layouts/application
+Rendering meals/index
+  [4;35;1mRecipe Load (0.4ms)[0m   [0mSELECT * FROM "recipes" WHERE ("recipes".meal_id = 6) LIMIT 1[0m
+  [4;36;1mRecipe Load (0.3ms)[0m   [0;1mSELECT * FROM "recipes" WHERE ("recipes".meal_id = 7) LIMIT 1[0m
+  [4;35;1mRecipe Load (0.2ms)[0m   [0mSELECT * FROM "recipes" WHERE ("recipes".meal_id = 8) LIMIT 1[0m
+Rendered layouts/_header (0.1ms)
+Completed in 21ms (View: 12, DB: 2) | 200 OK [http://localhost/meals]
+
+
+Processing MealsController#index (for 127.0.0.1 at 2010-04-18 11:19:19) [GET]
+  [4;36;1mMeal Load (0.1ms)[0m   [0;1mSELECT * FROM "meals" WHERE ("meals"."day" = '2010-04-17') [0m
+  [4;35;1mMeal Load (0.2ms)[0m   [0mSELECT * FROM "meals" WHERE ("meals"."day" = '2010-04-18') [0m
+  [4;36;1mMeal Load (0.7ms)[0m   [0;1mSELECT * FROM "meals" WHERE ("meals"."day" = '2010-04-19') [0m
+Rendering template within layouts/application
+Rendering meals/index
+  [4;35;1mRecipe Load (0.4ms)[0m   [0mSELECT * FROM "recipes" WHERE ("recipes".meal_id = 6) LIMIT 1[0m
+  [4;36;1mRecipe Load (0.3ms)[0m   [0;1mSELECT * FROM "recipes" WHERE ("recipes".meal_id = 7) LIMIT 1[0m
+  [4;35;1mRecipe Load (0.2ms)[0m   [0mSELECT * FROM "recipes" WHERE ("recipes".meal_id = 8) LIMIT 1[0m
+Rendered layouts/_header (0.1ms)
+Completed in 22ms (View: 12, DB: 2) | 200 OK [http://localhost/meals]
+
+
+Processing MealsController#index (for 127.0.0.1 at 2010-04-18 11:19:30) [GET]
+  [4;36;1mMeal Load (0.1ms)[0m   [0;1mSELECT * FROM "meals" WHERE ("meals"."day" = '2010-04-17') [0m
+  [4;35;1mMeal Load (0.2ms)[0m   [0mSELECT * FROM "meals" WHERE ("meals"."day" = '2010-04-18') [0m
+  [4;36;1mMeal Load (0.4ms)[0m   [0;1mSELECT * FROM "meals" WHERE ("meals"."day" = '2010-04-19') [0m
+Rendering template within layouts/application
+Rendering meals/index
+  [4;35;1mRecipe Load (0.3ms)[0m   [0mSELECT * FROM "recipes" WHERE ("recipes".meal_id = 6) LIMIT 1[0m
+  [4;36;1mRecipe Load (0.3ms)[0m   [0;1mSELECT * FROM "recipes" WHERE ("recipes".meal_id = 7) LIMIT 1[0m
+  [4;35;1mRecipe Load (0.3ms)[0m   [0mSELECT * FROM "recipes" WHERE ("recipes".meal_id = 8) LIMIT 1[0m
+Rendered layouts/_header (0.1ms)
+Completed in 22ms (View: 12, DB: 2) | 200 OK [http://localhost/meals]
+
+
+Processing MealsController#index (for 127.0.0.1 at 2010-04-18 11:22:12) [GET]
+  [4;36;1mMeal Load (0.1ms)[0m   [0;1mSELECT * FROM "meals" WHERE ("meals"."day" = '2010-04-17') [0m
+  [4;35;1mMeal Load (0.3ms)[0m   [0mSELECT * FROM "meals" WHERE ("meals"."day" = '2010-04-18') [0m
+  [4;36;1mMeal Load (0.4ms)[0m   [0;1mSELECT * FROM "meals" WHERE ("meals"."day" = '2010-04-19') [0m
+Rendering template within layouts/application
+Rendering meals/index
+  [4;35;1mRecipe Load (0.3ms)[0m   [0mSELECT * FROM "recipes" WHERE ("recipes".meal_id = 6) LIMIT 1[0m
+  [4;36;1mRecipe Load (0.3ms)[0m   [0;1mSELECT * FROM "recipes" WHERE ("recipes".meal_id = 7) LIMIT 1[0m
+  [4;35;1mRecipe Load (0.3ms)[0m   [0mSELECT * FROM "recipes" WHERE ("recipes".meal_id = 8) LIMIT 1[0m
+Rendered layouts/_header (0.1ms)
+Completed in 28ms (View: 18, DB: 2) | 200 OK [http://localhost/meals]
+
+
+Processing MealsController#index (for 127.0.0.1 at 2010-04-18 11:23:25) [GET]
+  [4;36;1mMeal Load (0.1ms)[0m   [0;1mSELECT * FROM "meals" WHERE ("meals"."day" = '2010-04-17') [0m
+  [4;35;1mMeal Load (0.2ms)[0m   [0mSELECT * FROM "meals" WHERE ("meals"."day" = '2010-04-18') [0m
+  [4;36;1mMeal Load (0.3ms)[0m   [0;1mSELECT * FROM "meals" WHERE ("meals"."day" = '2010-04-19') [0m
+Rendering template within layouts/application
+Rendering meals/index
+  [4;35;1mRecipe Load (0.4ms)[0m   [0mSELECT * FROM "recipes" WHERE ("recipes".meal_id = 6) LIMIT 1[0m
+  [4;36;1mRecipe Load (0.3ms)[0m   [0;1mSELECT * FROM "recipes" WHERE ("recipes".meal_id = 7) LIMIT 1[0m
+  [4;35;1mRecipe Load (0.3ms)[0m   [0mSELECT * FROM "recipes" WHERE ("recipes".meal_id = 8) LIMIT 1[0m
+Rendered layouts/_header (0.1ms)
+Completed in 25ms (View: 13, DB: 2) | 200 OK [http://localhost/meals]
+
+
+Processing MealsController#index (for 127.0.0.1 at 2010-04-18 11:23:28) [GET]
+  [4;36;1mMeal Load (0.1ms)[0m   [0;1mSELECT * FROM "meals" WHERE ("meals"."day" = '2010-04-17') [0m
+  [4;35;1mMeal Load (0.2ms)[0m   [0mSELECT * FROM "meals" WHERE ("meals"."day" = '2010-04-18') [0m
+  [4;36;1mMeal Load (0.3ms)[0m   [0;1mSELECT * FROM "meals" WHERE ("meals"."day" = '2010-04-19') [0m
+Rendering template within layouts/application
+Rendering meals/index
+  [4;35;1mRecipe Load (0.3ms)[0m   [0mSELECT * FROM "recipes" WHERE ("recipes".meal_id = 6) LIMIT 1[0m
+  [4;36;1mRecipe Load (0.3ms)[0m   [0;1mSELECT * FROM "recipes" WHERE ("recipes".meal_id = 7) LIMIT 1[0m
+  [4;35;1mRecipe Load (0.2ms)[0m   [0mSELECT * FROM "recipes" WHERE ("recipes".meal_id = 8) LIMIT 1[0m
+Rendered layouts/_header (0.1ms)
+Completed in 22ms (View: 12, DB: 2) | 200 OK [http://localhost/meals]
+
+
+Processing MealsController#index (for 127.0.0.1 at 2010-04-18 11:23:42) [GET]
+  [4;36;1mMeal Load (0.1ms)[0m   [0;1mSELECT * FROM "meals" WHERE ("meals"."day" = '2010-04-17') [0m
+  [4;35;1mMeal Load (0.2ms)[0m   [0mSELECT * FROM "meals" WHERE ("meals"."day" = '2010-04-18') [0m
+  [4;36;1mMeal Load (0.6ms)[0m   [0;1mSELECT * FROM "meals" WHERE ("meals"."day" = '2010-04-19') [0m
+Rendering template within layouts/application
+Rendering meals/index
+  [4;35;1mRecipe Load (0.3ms)[0m   [0mSELECT * FROM "recipes" WHERE ("recipes".meal_id = 6) LIMIT 1[0m
+  [4;36;1mRecipe Load (0.3ms)[0m   [0;1mSELECT * FROM "recipes" WHERE ("recipes".meal_id = 7) LIMIT 1[0m
+  [4;35;1mRecipe Load (0.3ms)[0m   [0mSELECT * FROM "recipes" WHERE ("recipes".meal_id = 8) LIMIT 1[0m
+Rendered layouts/_header (0.1ms)
+Completed in 22ms (View: 12, DB: 2) | 200 OK [http://localhost/meals]
+
+
+Processing MealsController#index (for 127.0.0.1 at 2010-04-18 11:24:08) [GET]
+  [4;36;1mMeal Load (0.2ms)[0m   [0;1mSELECT * FROM "meals" WHERE ("meals"."day" = '2010-04-17') [0m
+  [4;35;1mMeal Load (0.4ms)[0m   [0mSELECT * FROM "meals" WHERE ("meals"."day" = '2010-04-18') [0m
+  [4;36;1mMeal Load (0.3ms)[0m   [0;1mSELECT * FROM "meals" WHERE ("meals"."day" = '2010-04-19') [0m
+Rendering template within layouts/application
+Rendering meals/index
+  [4;35;1mRecipe Load (0.3ms)[0m   [0mSELECT * FROM "recipes" WHERE ("recipes".meal_id = 6) LIMIT 1[0m
+  [4;36;1mRecipe Load (0.3ms)[0m   [0;1mSELECT * FROM "recipes" WHERE ("recipes".meal_id = 7) LIMIT 1[0m
+  [4;35;1mRecipe Load (0.2ms)[0m   [0mSELECT * FROM "recipes" WHERE ("recipes".meal_id = 8) LIMIT 1[0m
+Rendered layouts/_header (0.1ms)
+Completed in 23ms (View: 12, DB: 2) | 200 OK [http://localhost/meals]
+
+
+Processing MealsController#index (for 127.0.0.1 at 2010-04-18 11:24:08) [GET]
+  [4;36;1mMeal Load (0.1ms)[0m   [0;1mSELECT * FROM "meals" WHERE ("meals"."day" = '2010-04-17') [0m
+  [4;35;1mMeal Load (0.3ms)[0m   [0mSELECT * FROM "meals" WHERE ("meals"."day" = '2010-04-18') [0m
+  [4;36;1mMeal Load (0.4ms)[0m   [0;1mSELECT * FROM "meals" WHERE ("meals"."day" = '2010-04-19') [0m
+Rendering template within layouts/application
+Rendering meals/index
+  [4;35;1mRecipe Load (0.4ms)[0m   [0mSELECT * FROM "recipes" WHERE ("recipes".meal_id = 6) LIMIT 1[0m
+  [4;36;1mRecipe Load (0.3ms)[0m   [0;1mSELECT * FROM "recipes" WHERE ("recipes".meal_id = 7) LIMIT 1[0m
+  [4;35;1mRecipe Load (0.6ms)[0m   [0mSELECT * FROM "recipes" WHERE ("recipes".meal_id = 8) LIMIT 1[0m
+Rendered layouts/_header (0.1ms)
+Completed in 28ms (View: 14, DB: 2) | 200 OK [http://localhost/meals]
+
+
+Processing MealsController#index (for 127.0.0.1 at 2010-04-18 11:24:23) [GET]
+  [4;36;1mMeal Load (0.2ms)[0m   [0;1mSELECT * FROM "meals" WHERE ("meals"."day" = '2010-04-17') [0m
+  [4;35;1mMeal Load (0.4ms)[0m   [0mSELECT * FROM "meals" WHERE ("meals"."day" = '2010-04-18') [0m
+  [4;36;1mMeal Load (0.4ms)[0m   [0;1mSELECT * FROM "meals" WHERE ("meals"."day" = '2010-04-19') [0m
+Rendering template within layouts/application
+Rendering meals/index
+  [4;35;1mRecipe Load (0.3ms)[0m   [0mSELECT * FROM "recipes" WHERE ("recipes".meal_id = 6) LIMIT 1[0m
+  [4;36;1mRecipe Load (0.3ms)[0m   [0;1mSELECT * FROM "recipes" WHERE ("recipes".meal_id = 7) LIMIT 1[0m
+  [4;35;1mRecipe Load (0.3ms)[0m   [0mSELECT * FROM "recipes" WHERE ("recipes".meal_id = 8) LIMIT 1[0m
+Rendered layouts/_header (0.1ms)
+Completed in 24ms (View: 12, DB: 2) | 200 OK [http://localhost/meals]
+
+
+Processing MealsController#index (for 127.0.0.1 at 2010-04-18 11:24:50) [GET]
+  [4;36;1mMeal Load (0.1ms)[0m   [0;1mSELECT * FROM "meals" WHERE ("meals"."day" = '2010-04-17') [0m
+  [4;35;1mMeal Load (0.3ms)[0m   [0mSELECT * FROM "meals" WHERE ("meals"."day" = '2010-04-18') [0m
+  [4;36;1mMeal Load (0.4ms)[0m   [0;1mSELECT * FROM "meals" WHERE ("meals"."day" = '2010-04-19') [0m
+Rendering template within layouts/application
+Rendering meals/index
+  [4;35;1mRecipe Load (0.3ms)[0m   [0mSELECT * FROM "recipes" WHERE ("recipes".meal_id = 6) LIMIT 1[0m
+  [4;36;1mRecipe Load (0.3ms)[0m   [0;1mSELECT * FROM "recipes" WHERE ("recipes".meal_id = 7) LIMIT 1[0m
+  [4;35;1mRecipe Load (0.2ms)[0m   [0mSELECT * FROM "recipes" WHERE ("recipes".meal_id = 8) LIMIT 1[0m
+Rendered layouts/_header (0.1ms)
+Completed in 26ms (View: 13, DB: 2) | 200 OK [http://localhost/meals]
+
+
+Processing MealsController#index (for 127.0.0.1 at 2010-04-18 11:59:33) [GET]
+  [4;36;1mMeal Load (0.1ms)[0m   [0;1mSELECT * FROM "meals" WHERE ("meals"."day" = '2010-04-17') [0m
+  [4;35;1mMeal Load (0.2ms)[0m   [0mSELECT * FROM "meals" WHERE ("meals"."day" = '2010-04-18') [0m
+  [4;36;1mMeal Load (0.3ms)[0m   [0;1mSELECT * FROM "meals" WHERE ("meals"."day" = '2010-04-19') [0m
+Rendering template within layouts/application
+Rendering meals/index
+  [4;35;1mRecipe Load (0.4ms)[0m   [0mSELECT * FROM "recipes" WHERE ("recipes".meal_id = 6) LIMIT 1[0m
+  [4;36;1mRecipe Load (0.3ms)[0m   [0;1mSELECT * FROM "recipes" WHERE ("recipes".meal_id = 7) LIMIT 1[0m
+  [4;35;1mRecipe Load (0.2ms)[0m   [0mSELECT * FROM "recipes" WHERE ("recipes".meal_id = 8) LIMIT 1[0m
+Rendered layouts/_header (0.3ms)
+Completed in 24ms (View: 13, DB: 2) | 200 OK [http://localhost/meals]
+
+
+Processing MealsController#index (for 127.0.0.1 at 2010-04-18 11:59:55) [GET]
+  [4;36;1mMeal Load (0.1ms)[0m   [0;1mSELECT * FROM "meals" WHERE ("meals"."day" = '2010-04-17') [0m
+  [4;35;1mMeal Load (0.2ms)[0m   [0mSELECT * FROM "meals" WHERE ("meals"."day" = '2010-04-18') [0m
+  [4;36;1mMeal Load (0.3ms)[0m   [0;1mSELECT * FROM "meals" WHERE ("meals"."day" = '2010-04-19') [0m
+Rendering template within layouts/application
+Rendering meals/index
+  [4;35;1mRecipe Load (0.3ms)[0m   [0mSELECT * FROM "recipes" WHERE ("recipes".meal_id = 6) LIMIT 1[0m
+  [4;36;1mRecipe Load (0.3ms)[0m   [0;1mSELECT * FROM "recipes" WHERE ("recipes".meal_id = 7) LIMIT 1[0m
+  [4;35;1mRecipe Load (0.3ms)[0m   [0mSELECT * FROM "recipes" WHERE ("recipes".meal_id = 8) LIMIT 1[0m
+Rendered layouts/_header (0.1ms)
+Completed in 28ms (View: 17, DB: 2) | 200 OK [http://localhost/meals]
+
+
+Processing MealsController#index (for 127.0.0.1 at 2010-04-18 12:00:03) [GET]
+  [4;36;1mMeal Load (0.1ms)[0m   [0;1mSELECT * FROM "meals" WHERE ("meals"."day" = '2010-04-17') [0m
+  [4;35;1mMeal Load (0.2ms)[0m   [0mSELECT * FROM "meals" WHERE ("meals"."day" = '2010-04-18') [0m
+  [4;36;1mMeal Load (0.3ms)[0m   [0;1mSELECT * FROM "meals" WHERE ("meals"."day" = '2010-04-19') [0m
+Rendering template within layouts/application
+Rendering meals/index
+  [4;35;1mRecipe Load (0.4ms)[0m   [0mSELECT * FROM "recipes" WHERE ("recipes".meal_id = 6) LIMIT 1[0m
+  [4;36;1mRecipe Load (0.4ms)[0m   [0;1mSELECT * FROM "recipes" WHERE ("recipes".meal_id = 7) LIMIT 1[0m
+  [4;35;1mRecipe Load (0.3ms)[0m   [0mSELECT * FROM "recipes" WHERE ("recipes".meal_id = 8) LIMIT 1[0m
+Rendered layouts/_header (0.1ms)
+Completed in 81ms (View: 71, DB: 2) | 200 OK [http://localhost/meals]
+
+
+Processing MealsController#index (for 127.0.0.1 at 2010-04-18 12:01:14) [GET]
+  [4;36;1mMeal Load (0.1ms)[0m   [0;1mSELECT * FROM "meals" WHERE ("meals"."day" = '2010-04-17') [0m
+  [4;35;1mMeal Load (0.2ms)[0m   [0mSELECT * FROM "meals" WHERE ("meals"."day" = '2010-04-18') [0m
+  [4;36;1mMeal Load (0.3ms)[0m   [0;1mSELECT * FROM "meals" WHERE ("meals"."day" = '2010-04-19') [0m
+Rendering template within layouts/application
+Rendering meals/index
+  [4;35;1mRecipe Load (0.3ms)[0m   [0mSELECT * FROM "recipes" WHERE ("recipes".meal_id = 6) LIMIT 1[0m
+  [4;36;1mRecipe Load (0.3ms)[0m   [0;1mSELECT * FROM "recipes" WHERE ("recipes".meal_id = 7) LIMIT 1[0m
+  [4;35;1mRecipe Load (0.3ms)[0m   [0mSELECT * FROM "recipes" WHERE ("recipes".meal_id = 8) LIMIT 1[0m
+Rendered layouts/_header (0.1ms)
+Completed in 21ms (View: 12, DB: 2) | 200 OK [http://localhost/meals]
+
+
+Processing MealsController#index (for 127.0.0.1 at 2010-04-18 12:03:11) [GET]
+  [4;36;1mMeal Load (0.6ms)[0m   [0;1mSELECT * FROM "meals" WHERE ("meals"."day" = '2010-04-17') [0m
+  [4;35;1mMeal Load (0.3ms)[0m   [0mSELECT * FROM "meals" WHERE ("meals"."day" = '2010-04-18') [0m
+  [4;36;1mMeal Load (0.3ms)[0m   [0;1mSELECT * FROM "meals" WHERE ("meals"."day" = '2010-04-19') [0m
+Rendering template within layouts/application
+Rendering meals/index
+  [4;35;1mRecipe Load (0.4ms)[0m   [0mSELECT * FROM "recipes" WHERE ("recipes".meal_id = 6) LIMIT 1[0m
+  [4;36;1mRecipe Load (0.3ms)[0m   [0;1mSELECT * FROM "recipes" WHERE ("recipes".meal_id = 7) LIMIT 1[0m
+  [4;35;1mRecipe Load (0.4ms)[0m   [0mSELECT * FROM "recipes" WHERE ("recipes".meal_id = 8) LIMIT 1[0m
+Rendered layouts/_header (0.1ms)
+Completed in 24ms (View: 13, DB: 2) | 200 OK [http://localhost/meals]
+
+
+Processing MealsController#index (for 127.0.0.1 at 2010-04-18 12:03:35) [GET]
+  [4;36;1mMeal Load (0.2ms)[0m   [0;1mSELECT * FROM "meals" WHERE ("meals"."day" = '2010-04-17') [0m
+  [4;35;1mMeal Load (0.2ms)[0m   [0mSELECT * FROM "meals" WHERE ("meals"."day" = '2010-04-18') [0m
+  [4;36;1mMeal Load (0.3ms)[0m   [0;1mSELECT * FROM "meals" WHERE ("meals"."day" = '2010-04-19') [0m
+Rendering template within layouts/application
+Rendering meals/index
+  [4;35;1mRecipe Load (0.4ms)[0m   [0mSELECT * FROM "recipes" WHERE ("recipes".meal_id = 6) LIMIT 1[0m
+  [4;36;1mRecipe Load (0.3ms)[0m   [0;1mSELECT * FROM "recipes" WHERE ("recipes".meal_id = 7) LIMIT 1[0m
+  [4;35;1mRecipe Load (0.2ms)[0m   [0mSELECT * FROM "recipes" WHERE ("recipes".meal_id = 8) LIMIT 1[0m
+Rendered layouts/_header (0.1ms)
+Completed in 22ms (View: 12, DB: 2) | 200 OK [http://localhost/meals]
+
+
+Processing MealsController#index (for 127.0.0.1 at 2010-04-18 12:03:55) [GET]
+  [4;36;1mMeal Load (0.4ms)[0m   [0;1mSELECT * FROM "meals" WHERE ("meals"."day" = '2010-04-17') [0m
+  [4;35;1mMeal Load (0.3ms)[0m   [0mSELECT * FROM "meals" WHERE ("meals"."day" = '2010-04-18') [0m
+  [4;36;1mMeal Load (0.4ms)[0m   [0;1mSELECT * FROM "meals" WHERE ("meals"."day" = '2010-04-19') [0m
+Rendering template within layouts/application
+Rendering meals/index
+  [4;35;1mRecipe Load (0.4ms)[0m   [0mSELECT * FROM "recipes" WHERE ("recipes".meal_id = 6) LIMIT 1[0m
+  [4;36;1mRecipe Load (0.3ms)[0m   [0;1mSELECT * FROM "recipes" WHERE ("recipes".meal_id = 7) LIMIT 1[0m
+  [4;35;1mRecipe Load (0.3ms)[0m   [0mSELECT * FROM "recipes" WHERE ("recipes".meal_id = 8) LIMIT 1[0m
+Rendered layouts/_header (0.1ms)
+Completed in 87ms (View: 76, DB: 2) | 200 OK [http://localhost/meals]
+
+
+Processing MealsController#index (for 127.0.0.1 at 2010-04-18 12:04:31) [GET]
+  [4;36;1mMeal Load (0.2ms)[0m   [0;1mSELECT * FROM "meals" WHERE ("meals"."day" = '2010-04-17') [0m
+  [4;35;1mMeal Load (0.2ms)[0m   [0mSELECT * FROM "meals" WHERE ("meals"."day" = '2010-04-18') [0m
+  [4;36;1mMeal Load (0.3ms)[0m   [0;1mSELECT * FROM "meals" WHERE ("meals"."day" = '2010-04-19') [0m
+Rendering template within layouts/application
+Rendering meals/index
+  [4;35;1mRecipe Load (0.4ms)[0m   [0mSELECT * FROM "recipes" WHERE ("recipes".meal_id = 6) LIMIT 1[0m
+  [4;36;1mRecipe Load (0.3ms)[0m   [0;1mSELECT * FROM "recipes" WHERE ("recipes".meal_id = 7) LIMIT 1[0m
+  [4;35;1mRecipe Load (0.2ms)[0m   [0mSELECT * FROM "recipes" WHERE ("recipes".meal_id = 8) LIMIT 1[0m
+Rendered layouts/_header (0.1ms)
+Completed in 29ms (View: 18, DB: 2) | 200 OK [http://localhost/meals]
+
+
+Processing MealsController#index (for 127.0.0.1 at 2010-04-18 12:04:45) [GET]
+  [4;36;1mMeal Load (0.2ms)[0m   [0;1mSELECT * FROM "meals" WHERE ("meals"."day" = '2010-04-17') [0m
+  [4;35;1mMeal Load (0.4ms)[0m   [0mSELECT * FROM "meals" WHERE ("meals"."day" = '2010-04-18') [0m
+  [4;36;1mMeal Load (0.3ms)[0m   [0;1mSELECT * FROM "meals" WHERE ("meals"."day" = '2010-04-19') [0m
+Rendering template within layouts/application
+Rendering meals/index
+  [4;35;1mRecipe Load (0.3ms)[0m   [0mSELECT * FROM "recipes" WHERE ("recipes".meal_id = 6) LIMIT 1[0m
+  [4;36;1mRecipe Load (0.3ms)[0m   [0;1mSELECT * FROM "recipes" WHERE ("recipes".meal_id = 7) LIMIT 1[0m
+  [4;35;1mRecipe Load (0.2ms)[0m   [0mSELECT * FROM "recipes" WHERE ("recipes".meal_id = 8) LIMIT 1[0m
+Rendered layouts/_header (0.1ms)
+Completed in 23ms (View: 12, DB: 2) | 200 OK [http://localhost/meals]
+
+
+Processing MealsController#index (for 127.0.0.1 at 2010-04-18 12:05:01) [GET]
+  [4;36;1mMeal Load (0.2ms)[0m   [0;1mSELECT * FROM "meals" WHERE ("meals"."day" = '2010-04-17') [0m
+  [4;35;1mMeal Load (0.2ms)[0m   [0mSELECT * FROM "meals" WHERE ("meals"."day" = '2010-04-18') [0m
+  [4;36;1mMeal Load (0.3ms)[0m   [0;1mSELECT * FROM "meals" WHERE ("meals"."day" = '2010-04-19') [0m
+Rendering template within layouts/application
+Rendering meals/index
+  [4;35;1mRecipe Load (0.3ms)[0m   [0mSELECT * FROM "recipes" WHERE ("recipes".meal_id = 6) LIMIT 1[0m
+  [4;36;1mRecipe Load (0.3ms)[0m   [0;1mSELECT * FROM "recipes" WHERE ("recipes".meal_id = 7) LIMIT 1[0m
+  [4;35;1mRecipe Load (0.3ms)[0m   [0mSELECT * FROM "recipes" WHERE ("recipes".meal_id = 8) LIMIT 1[0m
+Rendered layouts/_header (0.1ms)
+Completed in 23ms (View: 11, DB: 2) | 200 OK [http://localhost/meals]
+
+
+Processing MealsController#index (for 127.0.0.1 at 2010-04-18 12:05:03) [GET]
+  [4;36;1mMeal Load (0.1ms)[0m   [0;1mSELECT * FROM "meals" WHERE ("meals"."day" = '2010-04-17') [0m
+  [4;35;1mMeal Load (0.3ms)[0m   [0mSELECT * FROM "meals" WHERE ("meals"."day" = '2010-04-18') [0m
+  [4;36;1mMeal Load (0.3ms)[0m   [0;1mSELECT * FROM "meals" WHERE ("meals"."day" = '2010-04-19') [0m
+Rendering template within layouts/application
+Rendering meals/index
+  [4;35;1mRecipe Load (0.4ms)[0m   [0mSELECT * FROM "recipes" WHERE ("recipes".meal_id = 6) LIMIT 1[0m
+  [4;36;1mRecipe Load (0.3ms)[0m   [0;1mSELECT * FROM "recipes" WHERE ("recipes".meal_id = 7) LIMIT 1[0m
+  [4;35;1mRecipe Load (0.2ms)[0m   [0mSELECT * FROM "recipes" WHERE ("recipes".meal_id = 8) LIMIT 1[0m
+Rendered layouts/_header (0.1ms)
+Completed in 23ms (View: 13, DB: 2) | 200 OK [http://localhost/meals]
+
+
+Processing MealsController#index (for 127.0.0.1 at 2010-04-18 12:05:26) [GET]
+  [4;36;1mMeal Load (0.2ms)[0m   [0;1mSELECT * FROM "meals" WHERE ("meals"."day" = '2010-04-17') [0m
+  [4;35;1mMeal Load (0.2ms)[0m   [0mSELECT * FROM "meals" WHERE ("meals"."day" = '2010-04-18') [0m
+  [4;36;1mMeal Load (0.3ms)[0m   [0;1mSELECT * FROM "meals" WHERE ("meals"."day" = '2010-04-19') [0m
+Rendering template within layouts/application
+Rendering meals/index
+  [4;35;1mRecipe Load (0.3ms)[0m   [0mSELECT * FROM "recipes" WHERE ("recipes".meal_id = 6) LIMIT 1[0m
+  [4;36;1mRecipe Load (0.3ms)[0m   [0;1mSELECT * FROM "recipes" WHERE ("recipes".meal_id = 7) LIMIT 1[0m
+  [4;35;1mRecipe Load (0.3ms)[0m   [0mSELECT * FROM "recipes" WHERE ("recipes".meal_id = 8) LIMIT 1[0m
+Rendered layouts/_header (0.1ms)
+Completed in 24ms (View: 11, DB: 2) | 200 OK [http://localhost/meals]
+
+
+Processing MealsController#index (for 127.0.0.1 at 2010-04-18 12:05:34) [GET]
+  [4;36;1mMeal Load (0.2ms)[0m   [0;1mSELECT * FROM "meals" WHERE ("meals"."day" = '2010-04-17') [0m
+  [4;35;1mMeal Load (0.2ms)[0m   [0mSELECT * FROM "meals" WHERE ("meals"."day" = '2010-04-18') [0m
+  [4;36;1mMeal Load (0.3ms)[0m   [0;1mSELECT * FROM "meals" WHERE ("meals"."day" = '2010-04-19') [0m
+Rendering template within layouts/application
+Rendering meals/index
+  [4;35;1mRecipe Load (0.4ms)[0m   [0mSELECT * FROM "recipes" WHERE ("recipes".meal_id = 6) LIMIT 1[0m
+  [4;36;1mRecipe Load (0.3ms)[0m   [0;1mSELECT * FROM "recipes" WHERE ("recipes".meal_id = 7) LIMIT 1[0m
+  [4;35;1mRecipe Load (0.3ms)[0m   [0mSELECT * FROM "recipes" WHERE ("recipes".meal_id = 8) LIMIT 1[0m
+Rendered layouts/_header (0.1ms)
+Completed in 23ms (View: 12, DB: 2) | 200 OK [http://localhost/meals]
+
+
+Processing MealsController#index (for 127.0.0.1 at 2010-04-18 12:05:48) [GET]
+  [4;36;1mMeal Load (0.1ms)[0m   [0;1mSELECT * FROM "meals" WHERE ("meals"."day" = '2010-04-17') [0m
+  [4;35;1mMeal Load (0.2ms)[0m   [0mSELECT * FROM "meals" WHERE ("meals"."day" = '2010-04-18') [0m
+  [4;36;1mMeal Load (0.4ms)[0m   [0;1mSELECT * FROM "meals" WHERE ("meals"."day" = '2010-04-19') [0m
+Rendering template within layouts/application
+Rendering meals/index
+  [4;35;1mRecipe Load (0.9ms)[0m   [0mSELECT * FROM "recipes" WHERE ("recipes".meal_id = 6) LIMIT 1[0m
+  [4;36;1mRecipe Load (0.3ms)[0m   [0;1mSELECT * FROM "recipes" WHERE ("recipes".meal_id = 7) LIMIT 1[0m
+  [4;35;1mRecipe Load (0.3ms)[0m   [0mSELECT * FROM "recipes" WHERE ("recipes".meal_id = 8) LIMIT 1[0m
+Rendered layouts/_header (0.1ms)
+Completed in 90ms (View: 14, DB: 2) | 200 OK [http://localhost/meals]
+
+
+Processing MealsController#index (for 127.0.0.1 at 2010-04-18 12:05:57) [GET]
+  [4;36;1mMeal Load (0.2ms)[0m   [0;1mSELECT * FROM "meals" WHERE ("meals"."day" = '2010-04-17') [0m
+  [4;35;1mMeal Load (0.3ms)[0m   [0mSELECT * FROM "meals" WHERE ("meals"."day" = '2010-04-18') [0m
+  [4;36;1mMeal Load (0.5ms)[0m   [0;1mSELECT * FROM "meals" WHERE ("meals"."day" = '2010-04-19') [0m
+Rendering template within layouts/application
+Rendering meals/index
+  [4;35;1mRecipe Load (0.4ms)[0m   [0mSELECT * FROM "recipes" WHERE ("recipes".meal_id = 6) LIMIT 1[0m
+  [4;36;1mRecipe Load (0.3ms)[0m   [0;1mSELECT * FROM "recipes" WHERE ("recipes".meal_id = 7) LIMIT 1[0m
+  [4;35;1mRecipe Load (0.3ms)[0m   [0mSELECT * FROM "recipes" WHERE ("recipes".meal_id = 8) LIMIT 1[0m
+Rendered layouts/_header (0.1ms)
+Completed in 23ms (View: 13, DB: 2) | 200 OK [http://localhost/meals]
+
+
+Processing MealsController#index (for 127.0.0.1 at 2010-04-18 12:06:07) [GET]
+  [4;36;1mMeal Load (0.2ms)[0m   [0;1mSELECT * FROM "meals" WHERE ("meals"."day" = '2010-04-17') [0m
+  [4;35;1mMeal Load (0.2ms)[0m   [0mSELECT * FROM "meals" WHERE ("meals"."day" = '2010-04-18') [0m
+  [4;36;1mMeal Load (0.3ms)[0m   [0;1mSELECT * FROM "meals" WHERE ("meals"."day" = '2010-04-19') [0m
+Rendering template within layouts/application
+Rendering meals/index
+  [4;35;1mRecipe Load (0.3ms)[0m   [0mSELECT * FROM "recipes" WHERE ("recipes".meal_id = 6) LIMIT 1[0m
+  [4;36;1mRecipe Load (0.3ms)[0m   [0;1mSELECT * FROM "recipes" WHERE ("recipes".meal_id = 7) LIMIT 1[0m
+  [4;35;1mRecipe Load (0.2ms)[0m   [0mSELECT * FROM "recipes" WHERE ("recipes".meal_id = 8) LIMIT 1[0m
+Rendered layouts/_header (0.1ms)
+Completed in 23ms (View: 12, DB: 2) | 200 OK [http://localhost/meals]
+
+
+Processing MealsController#index (for 127.0.0.1 at 2010-04-18 12:06:12) [GET]
+  [4;36;1mMeal Load (0.2ms)[0m   [0;1mSELECT * FROM "meals" WHERE ("meals"."day" = '2010-04-17') [0m
+  [4;35;1mMeal Load (0.4ms)[0m   [0mSELECT * FROM "meals" WHERE ("meals"."day" = '2010-04-18') [0m
+  [4;36;1mMeal Load (0.3ms)[0m   [0;1mSELECT * FROM "meals" WHERE ("meals"."day" = '2010-04-19') [0m
+Rendering template within layouts/application
+Rendering meals/index
+  [4;35;1mRecipe Load (0.3ms)[0m   [0mSELECT * FROM "recipes" WHERE ("recipes".meal_id = 6) LIMIT 1[0m
+  [4;36;1mRecipe Load (0.3ms)[0m   [0;1mSELECT * FROM "recipes" WHERE ("recipes".meal_id = 7) LIMIT 1[0m
+  [4;35;1mRecipe Load (0.2ms)[0m   [0mSELECT * FROM "recipes" WHERE ("recipes".meal_id = 8) LIMIT 1[0m
+Rendered layouts/_header (0.1ms)
+Completed in 22ms (View: 12, DB: 2) | 200 OK [http://localhost/meals]
+
+
+Processing MealsController#index (for 127.0.0.1 at 2010-04-18 12:06:16) [GET]
+  [4;36;1mMeal Load (0.2ms)[0m   [0;1mSELECT * FROM "meals" WHERE ("meals"."day" = '2010-04-17') [0m
+  [4;35;1mMeal Load (0.3ms)[0m   [0mSELECT * FROM "meals" WHERE ("meals"."day" = '2010-04-18') [0m
+  [4;36;1mMeal Load (0.6ms)[0m   [0;1mSELECT * FROM "meals" WHERE ("meals"."day" = '2010-04-19') [0m
+Rendering template within layouts/application
+Rendering meals/index
+  [4;35;1mRecipe Load (0.5ms)[0m   [0mSELECT * FROM "recipes" WHERE ("recipes".meal_id = 6) LIMIT 1[0m
+  [4;36;1mRecipe Load (0.3ms)[0m   [0;1mSELECT * FROM "recipes" WHERE ("recipes".meal_id = 7) LIMIT 1[0m
+  [4;35;1mRecipe Load (0.2ms)[0m   [0mSELECT * FROM "recipes" WHERE ("recipes".meal_id = 8) LIMIT 1[0m
+Rendered layouts/_header (0.1ms)
+Completed in 25ms (View: 13, DB: 2) | 200 OK [http://localhost/meals]
+
+
+Processing MealsController#index (for 127.0.0.1 at 2010-04-18 12:06:21) [GET]
+  [4;36;1mMeal Load (0.1ms)[0m   [0;1mSELECT * FROM "meals" WHERE ("meals"."day" = '2010-04-17') [0m
+  [4;35;1mMeal Load (0.2ms)[0m   [0mSELECT * FROM "meals" WHERE ("meals"."day" = '2010-04-18') [0m
+  [4;36;1mMeal Load (1.0ms)[0m   [0;1mSELECT * FROM "meals" WHERE ("meals"."day" = '2010-04-19') [0m
+Rendering template within layouts/application
+Rendering meals/index
+  [4;35;1mRecipe Load (0.3ms)[0m   [0mSELECT * FROM "recipes" WHERE ("recipes".meal_id = 6) LIMIT 1[0m
+  [4;36;1mRecipe Load (0.3ms)[0m   [0;1mSELECT * FROM "recipes" WHERE ("recipes".meal_id = 7) LIMIT 1[0m
+  [4;35;1mRecipe Load (0.2ms)[0m   [0mSELECT * FROM "recipes" WHERE ("recipes".meal_id = 8) LIMIT 1[0m
+Rendered layouts/_header (0.1ms)
+Completed in 22ms (View: 12, DB: 2) | 200 OK [http://localhost/meals]
+
+
+Processing MealsController#index (for 127.0.0.1 at 2010-04-18 12:06:43) [GET]
+  [4;36;1mMeal Load (0.2ms)[0m   [0;1mSELECT * FROM "meals" WHERE ("meals"."day" = '2010-04-17') [0m
+  [4;35;1mMeal Load (0.2ms)[0m   [0mSELECT * FROM "meals" WHERE ("meals"."day" = '2010-04-18') [0m
+  [4;36;1mMeal Load (0.3ms)[0m   [0;1mSELECT * FROM "meals" WHERE ("meals"."day" = '2010-04-19') [0m
+Rendering template within layouts/application
+Rendering meals/index
+  [4;35;1mRecipe Load (0.3ms)[0m   [0mSELECT * FROM "recipes" WHERE ("recipes".meal_id = 6) LIMIT 1[0m
+  [4;36;1mRecipe Load (0.3ms)[0m   [0;1mSELECT * FROM "recipes" WHERE ("recipes".meal_id = 7) LIMIT 1[0m
+  [4;35;1mRecipe Load (0.2ms)[0m   [0mSELECT * FROM "recipes" WHERE ("recipes".meal_id = 8) LIMIT 1[0m
+Rendered layouts/_header (0.1ms)
+Completed in 22ms (View: 12, DB: 2) | 200 OK [http://localhost/meals]
+
+
+Processing MealsController#index (for 127.0.0.1 at 2010-04-18 12:08:33) [GET]
+  [4;36;1mMeal Load (0.2ms)[0m   [0;1mSELECT * FROM "meals" WHERE ("meals"."day" = '2010-04-17') [0m
+  [4;35;1mMeal Load (0.2ms)[0m   [0mSELECT * FROM "meals" WHERE ("meals"."day" = '2010-04-18') [0m
+  [4;36;1mMeal Load (0.3ms)[0m   [0;1mSELECT * FROM "meals" WHERE ("meals"."day" = '2010-04-19') [0m
+Rendering template within layouts/application
+Rendering meals/index
+  [4;35;1mRecipe Load (0.4ms)[0m   [0mSELECT * FROM "recipes" WHERE ("recipes".meal_id = 6) LIMIT 1[0m
+  [4;36;1mRecipe Load (0.3ms)[0m   [0;1mSELECT * FROM "recipes" WHERE ("recipes".meal_id = 7) LIMIT 1[0m
+  [4;35;1mRecipe Load (0.3ms)[0m   [0mSELECT * FROM "recipes" WHERE ("recipes".meal_id = 8) LIMIT 1[0m
+Rendered layouts/_header (0.1ms)
+Completed in 29ms (View: 18, DB: 2) | 200 OK [http://localhost/meals]
+
+
+Processing MealsController#index (for 127.0.0.1 at 2010-04-18 12:08:50) [GET]
+  [4;36;1mMeal Load (0.2ms)[0m   [0;1mSELECT * FROM "meals" WHERE ("meals"."day" = '2010-04-17') [0m
+  [4;35;1mMeal Load (0.3ms)[0m   [0mSELECT * FROM "meals" WHERE ("meals"."day" = '2010-04-18') [0m
+  [4;36;1mMeal Load (0.3ms)[0m   [0;1mSELECT * FROM "meals" WHERE ("meals"."day" = '2010-04-19') [0m
+Rendering template within layouts/application
+Rendering meals/index
+  [4;35;1mRecipe Load (0.3ms)[0m   [0mSELECT * FROM "recipes" WHERE ("recipes".meal_id = 6) LIMIT 1[0m
+  [4;36;1mRecipe Load (0.3ms)[0m   [0;1mSELECT * FROM "recipes" WHERE ("recipes".meal_id = 7) LIMIT 1[0m
+  [4;35;1mRecipe Load (0.3ms)[0m   [0mSELECT * FROM "recipes" WHERE ("recipes".meal_id = 8) LIMIT 1[0m
+Rendered layouts/_header (0.1ms)
+Completed in 25ms (View: 12, DB: 2) | 200 OK [http://localhost/meals]
+
+
+Processing MealsController#index (for 127.0.0.1 at 2010-04-18 12:08:54) [GET]
+  [4;36;1mMeal Load (0.2ms)[0m   [0;1mSELECT * FROM "meals" WHERE ("meals"."day" = '2010-04-17') [0m
+  [4;35;1mMeal Load (0.3ms)[0m   [0mSELECT * FROM "meals" WHERE ("meals"."day" = '2010-04-18') [0m
+  [4;36;1mMeal Load (0.3ms)[0m   [0;1mSELECT * FROM "meals" WHERE ("meals"."day" = '2010-04-19') [0m
+Rendering template within layouts/application
+Rendering meals/index
+  [4;35;1mRecipe Load (0.3ms)[0m   [0mSELECT * FROM "recipes" WHERE ("recipes".meal_id = 6) LIMIT 1[0m
+  [4;36;1mRecipe Load (0.3ms)[0m   [0;1mSELECT * FROM "recipes" WHERE ("recipes".meal_id = 7) LIMIT 1[0m
+  [4;35;1mRecipe Load (0.2ms)[0m   [0mSELECT * FROM "recipes" WHERE ("recipes".meal_id = 8) LIMIT 1[0m
+Rendered layouts/_header (0.1ms)
+Completed in 23ms (View: 12, DB: 2) | 200 OK [http://localhost/meals]
+
+
+Processing MealsController#index (for 127.0.0.1 at 2010-04-18 12:09:03) [GET]
+  [4;36;1mMeal Load (0.1ms)[0m   [0;1mSELECT * FROM "meals" WHERE ("meals"."day" = '2010-04-17') [0m
+  [4;35;1mMeal Load (0.2ms)[0m   [0mSELECT * FROM "meals" WHERE ("meals"."day" = '2010-04-18') [0m
+  [4;36;1mMeal Load (0.3ms)[0m   [0;1mSELECT * FROM "meals" WHERE ("meals"."day" = '2010-04-19') [0m
+Rendering template within layouts/application
+Rendering meals/index
+  [4;35;1mRecipe Load (0.4ms)[0m   [0mSELECT * FROM "recipes" WHERE ("recipes".meal_id = 6) LIMIT 1[0m
+  [4;36;1mRecipe Load (0.3ms)[0m   [0;1mSELECT * FROM "recipes" WHERE ("recipes".meal_id = 7) LIMIT 1[0m
+  [4;35;1mRecipe Load (0.3ms)[0m   [0mSELECT * FROM "recipes" WHERE ("recipes".meal_id = 8) LIMIT 1[0m
+Rendered layouts/_header (0.1ms)
+Completed in 21ms (View: 12, DB: 2) | 200 OK [http://localhost/meals]
+
+
+Processing MealsController#index (for 127.0.0.1 at 2010-04-18 12:09:27) [GET]
+  [4;36;1mMeal Load (0.2ms)[0m   [0;1mSELECT * FROM "meals" WHERE ("meals"."day" = '2010-04-17') [0m
+  [4;35;1mMeal Load (0.2ms)[0m   [0mSELECT * FROM "meals" WHERE ("meals"."day" = '2010-04-18') [0m
+  [4;36;1mMeal Load (0.3ms)[0m   [0;1mSELECT * FROM "meals" WHERE ("meals"."day" = '2010-04-19') [0m
+Rendering template within layouts/application
+Rendering meals/index
+  [4;35;1mRecipe Load (0.3ms)[0m   [0mSELECT * FROM "recipes" WHERE ("recipes".meal_id = 6) LIMIT 1[0m
+  [4;36;1mRecipe Load (0.3ms)[0m   [0;1mSELECT * FROM "recipes" WHERE ("recipes".meal_id = 7) LIMIT 1[0m
+  [4;35;1mRecipe Load (0.2ms)[0m   [0mSELECT * FROM "recipes" WHERE ("recipes".meal_id = 8) LIMIT 1[0m
+Rendered layouts/_header (0.1ms)
+Completed in 23ms (View: 12, DB: 2) | 200 OK [http://localhost/meals]
+
+
+Processing MealsController#index (for 127.0.0.1 at 2010-04-18 12:09:50) [GET]
+  [4;36;1mMeal Load (0.1ms)[0m   [0;1mSELECT * FROM "meals" WHERE ("meals"."day" = '2010-04-17') [0m
+  [4;35;1mMeal Load (0.2ms)[0m   [0mSELECT * FROM "meals" WHERE ("meals"."day" = '2010-04-18') [0m
+  [4;36;1mMeal Load (0.3ms)[0m   [0;1mSELECT * FROM "meals" WHERE ("meals"."day" = '2010-04-19') [0m
+Rendering template within layouts/application
+Rendering meals/index
+  [4;35;1mRecipe Load (0.4ms)[0m   [0mSELECT * FROM "recipes" WHERE ("recipes".meal_id = 6) LIMIT 1[0m
+  [4;36;1mRecipe Load (0.3ms)[0m   [0;1mSELECT * FROM "recipes" WHERE ("recipes".meal_id = 7) LIMIT 1[0m
+  [4;35;1mRecipe Load (0.2ms)[0m   [0mSELECT * FROM "recipes" WHERE ("recipes".meal_id = 8) LIMIT 1[0m
+Rendered layouts/_header (0.1ms)
+Completed in 24ms (View: 12, DB: 2) | 200 OK [http://localhost/meals]
+
+
+Processing MealsController#index (for 127.0.0.1 at 2010-04-18 12:10:46) [GET]
+  [4;36;1mMeal Load (0.1ms)[0m   [0;1mSELECT * FROM "meals" WHERE ("meals"."day" = '2010-04-17') [0m
+  [4;35;1mMeal Load (0.2ms)[0m   [0mSELECT * FROM "meals" WHERE ("meals"."day" = '2010-04-18') [0m
+  [4;36;1mMeal Load (0.3ms)[0m   [0;1mSELECT * FROM "meals" WHERE ("meals"."day" = '2010-04-19') [0m
+Rendering template within layouts/application
+Rendering meals/index
+  [4;35;1mRecipe Load (0.4ms)[0m   [0mSELECT * FROM "recipes" WHERE ("recipes".meal_id = 6) LIMIT 1[0m
+  [4;36;1mRecipe Load (0.3ms)[0m   [0;1mSELECT * FROM "recipes" WHERE ("recipes".meal_id = 7) LIMIT 1[0m
+  [4;35;1mRecipe Load (0.3ms)[0m   [0mSELECT * FROM "recipes" WHERE ("recipes".meal_id = 8) LIMIT 1[0m
+Rendered layouts/_header (0.1ms)
+Completed in 23ms (View: 12, DB: 2) | 200 OK [http://localhost/meals]
+
+
+Processing MealsController#index (for 127.0.0.1 at 2010-04-18 12:11:47) [GET]
+  [4;36;1mMeal Load (0.2ms)[0m   [0;1mSELECT * FROM "meals" WHERE ("meals"."day" = '2010-04-17') [0m
+  [4;35;1mMeal Load (0.2ms)[0m   [0mSELECT * FROM "meals" WHERE ("meals"."day" = '2010-04-18') [0m
+  [4;36;1mMeal Load (0.3ms)[0m   [0;1mSELECT * FROM "meals" WHERE ("meals"."day" = '2010-04-19') [0m
+Rendering template within layouts/application
+Rendering meals/index
+  [4;35;1mRecipe Load (0.4ms)[0m   [0mSELECT * FROM "recipes" WHERE ("recipes".meal_id = 6) LIMIT 1[0m
+  [4;36;1mRecipe Load (0.3ms)[0m   [0;1mSELECT * FROM "recipes" WHERE ("recipes".meal_id = 7) LIMIT 1[0m
+  [4;35;1mRecipe Load (0.2ms)[0m   [0mSELECT * FROM "recipes" WHERE ("recipes".meal_id = 8) LIMIT 1[0m
+Rendered layouts/_header (1.7ms)
+Completed in 29ms (View: 18, DB: 2) | 200 OK [http://localhost/meals]
+
+
+Processing MealsController#index (for 127.0.0.1 at 2010-04-18 12:12:20) [GET]
+  [4;36;1mMeal Load (0.1ms)[0m   [0;1mSELECT * FROM "meals" WHERE ("meals"."day" = '2010-04-17') [0m
+  [4;35;1mMeal Load (0.2ms)[0m   [0mSELECT * FROM "meals" WHERE ("meals"."day" = '2010-04-18') [0m
+  [4;36;1mMeal Load (0.3ms)[0m   [0;1mSELECT * FROM "meals" WHERE ("meals"."day" = '2010-04-19') [0m
+Rendering template within layouts/application
+Rendering meals/index
+  [4;35;1mRecipe Load (0.3ms)[0m   [0mSELECT * FROM "recipes" WHERE ("recipes".meal_id = 6) LIMIT 1[0m
+  [4;36;1mRecipe Load (0.3ms)[0m   [0;1mSELECT * FROM "recipes" WHERE ("recipes".meal_id = 7) LIMIT 1[0m
+  [4;35;1mRecipe Load (0.2ms)[0m   [0mSELECT * FROM "recipes" WHERE ("recipes".meal_id = 8) LIMIT 1[0m
+Rendered layouts/_header (1.8ms)
+Completed in 26ms (View: 17, DB: 1) | 200 OK [http://localhost/meals]
+
+
+Processing MealsController#index (for 127.0.0.1 at 2010-04-18 12:14:19) [GET]
+  [4;36;1mMeal Load (0.3ms)[0m   [0;1mSELECT * FROM "meals" WHERE ("meals"."day" = '2010-04-17') [0m
+  [4;35;1mMeal Load (0.3ms)[0m   [0mSELECT * FROM "meals" WHERE ("meals"."day" = '2010-04-18') [0m
+  [4;36;1mMeal Load (0.3ms)[0m   [0;1mSELECT * FROM "meals" WHERE ("meals"."day" = '2010-04-19') [0m
+Rendering template within layouts/application
+Rendering meals/index
+  [4;35;1mRecipe Load (0.3ms)[0m   [0mSELECT * FROM "recipes" WHERE ("recipes".meal_id = 6) LIMIT 1[0m
+  [4;36;1mRecipe Load (0.3ms)[0m   [0;1mSELECT * FROM "recipes" WHERE ("recipes".meal_id = 7) LIMIT 1[0m
+  [4;35;1mRecipe Load (0.2ms)[0m   [0mSELECT * FROM "recipes" WHERE ("recipes".meal_id = 8) LIMIT 1[0m
+Rendered layouts/_header (1.7ms)
+Completed in 27ms (View: 16, DB: 2) | 200 OK [http://localhost/meals]
+
+
+Processing MealsController#index (for 127.0.0.1 at 2010-04-18 12:15:18) [GET]
+  [4;36;1mMeal Load (0.2ms)[0m   [0;1mSELECT * FROM "meals" WHERE ("meals"."day" = '2010-04-17') [0m
+  [4;35;1mMeal Load (0.8ms)[0m   [0mSELECT * FROM "meals" WHERE ("meals"."day" = '2010-04-18') [0m
+  [4;36;1mMeal Load (0.3ms)[0m   [0;1mSELECT * FROM "meals" WHERE ("meals"."day" = '2010-04-19') [0m
+Rendering template within layouts/application
+Rendering meals/index
+  [4;35;1mRecipe Load (0.3ms)[0m   [0mSELECT * FROM "recipes" WHERE ("recipes".meal_id = 6) LIMIT 1[0m
+  [4;36;1mRecipe Load (0.3ms)[0m   [0;1mSELECT * FROM "recipes" WHERE ("recipes".meal_id = 7) LIMIT 1[0m
+  [4;35;1mRecipe Load (0.2ms)[0m   [0mSELECT * FROM "recipes" WHERE ("recipes".meal_id = 8) LIMIT 1[0m
+Rendered layouts/_header (0.1ms)
+Completed in 25ms (View: 12, DB: 2) | 200 OK [http://localhost/meals]
+
+
+Processing MealsController#index (for 127.0.0.1 at 2010-04-18 12:15:50) [GET]
+  [4;36;1mMeal Load (0.2ms)[0m   [0;1mSELECT * FROM "meals" WHERE ("meals"."day" = '2010-04-17') [0m
+  [4;35;1mMeal Load (0.2ms)[0m   [0mSELECT * FROM "meals" WHERE ("meals"."day" = '2010-04-18') [0m
+  [4;36;1mMeal Load (0.3ms)[0m   [0;1mSELECT * FROM "meals" WHERE ("meals"."day" = '2010-04-19') [0m
+Rendering template within layouts/application
+Rendering meals/index
+  [4;35;1mRecipe Load (0.4ms)[0m   [0mSELECT * FROM "recipes" WHERE ("recipes".meal_id = 6) LIMIT 1[0m
+  [4;36;1mRecipe Load (0.3ms)[0m   [0;1mSELECT * FROM "recipes" WHERE ("recipes".meal_id = 7) LIMIT 1[0m
+  [4;35;1mRecipe Load (0.3ms)[0m   [0mSELECT * FROM "recipes" WHERE ("recipes".meal_id = 8) LIMIT 1[0m
+Rendered layouts/_header (0.1ms)
+Completed in 22ms (View: 12, DB: 2) | 200 OK [http://localhost/meals]
+
+
+Processing MealsController#index (for 127.0.0.1 at 2010-04-18 12:16:17) [GET]
+  [4;36;1mMeal Load (0.1ms)[0m   [0;1mSELECT * FROM "meals" WHERE ("meals"."day" = '2010-04-17') [0m
+  [4;35;1mMeal Load (0.2ms)[0m   [0mSELECT * FROM "meals" WHERE ("meals"."day" = '2010-04-18') [0m
+  [4;36;1mMeal Load (0.3ms)[0m   [0;1mSELECT * FROM "meals" WHERE ("meals"."day" = '2010-04-19') [0m
+Rendering template within layouts/application
+Rendering meals/index
+  [4;35;1mRecipe Load (0.4ms)[0m   [0mSELECT * FROM "recipes" WHERE ("recipes".meal_id = 6) LIMIT 1[0m
+  [4;36;1mRecipe Load (0.3ms)[0m   [0;1mSELECT * FROM "recipes" WHERE ("recipes".meal_id = 7) LIMIT 1[0m
+  [4;35;1mRecipe Load (0.2ms)[0m   [0mSELECT * FROM "recipes" WHERE ("recipes".meal_id = 8) LIMIT 1[0m
+Rendered layouts/_header (2.0ms)
+Completed in 27ms (View: 17, DB: 2) | 200 OK [http://localhost/meals]
+
+
+Processing MealsController#index (for 127.0.0.1 at 2010-04-18 12:16:29) [GET]
+  [4;36;1mMeal Load (0.2ms)[0m   [0;1mSELECT * FROM "meals" WHERE ("meals"."day" = '2010-04-17') [0m
+  [4;35;1mMeal Load (0.2ms)[0m   [0mSELECT * FROM "meals" WHERE ("meals"."day" = '2010-04-18') [0m
+  [4;36;1mMeal Load (0.3ms)[0m   [0;1mSELECT * FROM "meals" WHERE ("meals"."day" = '2010-04-19') [0m
+Rendering template within layouts/application
+Rendering meals/index
+  [4;35;1mRecipe Load (0.4ms)[0m   [0mSELECT * FROM "recipes" WHERE ("recipes".meal_id = 6) LIMIT 1[0m
+  [4;36;1mRecipe Load (0.3ms)[0m   [0;1mSELECT * FROM "recipes" WHERE ("recipes".meal_id = 7) LIMIT 1[0m
+  [4;35;1mRecipe Load (0.3ms)[0m   [0mSELECT * FROM "recipes" WHERE ("recipes".meal_id = 8) LIMIT 1[0m
+Rendered layouts/_header (0.1ms)
+Completed in 23ms (View: 12, DB: 2) | 200 OK [http://localhost/meals]
+
+
+Processing MealsController#index (for 127.0.0.1 at 2010-04-18 12:16:46) [GET]
+  [4;36;1mMeal Load (0.1ms)[0m   [0;1mSELECT * FROM "meals" WHERE ("meals"."day" = '2010-04-17') [0m
+  [4;35;1mMeal Load (0.2ms)[0m   [0mSELECT * FROM "meals" WHERE ("meals"."day" = '2010-04-18') [0m
+  [4;36;1mMeal Load (0.3ms)[0m   [0;1mSELECT * FROM "meals" WHERE ("meals"."day" = '2010-04-19') [0m
+Rendering template within layouts/application
+Rendering meals/index
+  [4;35;1mRecipe Load (0.4ms)[0m   [0mSELECT * FROM "recipes" WHERE ("recipes".meal_id = 6) LIMIT 1[0m
+  [4;36;1mRecipe Load (0.3ms)[0m   [0;1mSELECT * FROM "recipes" WHERE ("recipes".meal_id = 7) LIMIT 1[0m
+  [4;35;1mRecipe Load (0.3ms)[0m   [0mSELECT * FROM "recipes" WHERE ("recipes".meal_id = 8) LIMIT 1[0m
+Rendered layouts/_header (0.1ms)
+Completed in 23ms (View: 12, DB: 2) | 200 OK [http://localhost/meals]
+
+
+Processing MealsController#index (for 127.0.0.1 at 2010-04-18 12:17:27) [GET]
+  [4;36;1mMeal Load (0.2ms)[0m   [0;1mSELECT * FROM "meals" WHERE ("meals"."day" = '2010-04-17') [0m
+  [4;35;1mMeal Load (0.2ms)[0m   [0mSELECT * FROM "meals" WHERE ("meals"."day" = '2010-04-18') [0m
+  [4;36;1mMeal Load (0.3ms)[0m   [0;1mSELECT * FROM "meals" WHERE ("meals"."day" = '2010-04-19') [0m
+Rendering template within layouts/application
+Rendering meals/index
+  [4;35;1mRecipe Load (0.3ms)[0m   [0mSELECT * FROM "recipes" WHERE ("recipes".meal_id = 6) LIMIT 1[0m
+  [4;36;1mRecipe Load (0.3ms)[0m   [0;1mSELECT * FROM "recipes" WHERE ("recipes".meal_id = 7) LIMIT 1[0m
+  [4;35;1mRecipe Load (0.3ms)[0m   [0mSELECT * FROM "recipes" WHERE ("recipes".meal_id = 8) LIMIT 1[0m
+Rendered layouts/_header (0.1ms)
+Completed in 32ms (View: 21, DB: 2) | 200 OK [http://localhost/meals]
+
+
+Processing MealsController#index (for 127.0.0.1 at 2010-04-18 12:17:42) [GET]
+  [4;36;1mMeal Load (0.1ms)[0m   [0;1mSELECT * FROM "meals" WHERE ("meals"."day" = '2010-04-17') [0m
+  [4;35;1mMeal Load (0.2ms)[0m   [0mSELECT * FROM "meals" WHERE ("meals"."day" = '2010-04-18') [0m
+  [4;36;1mMeal Load (0.3ms)[0m   [0;1mSELECT * FROM "meals" WHERE ("meals"."day" = '2010-04-19') [0m
+Rendering template within layouts/application
+Rendering meals/index
+  [4;35;1mRecipe Load (0.3ms)[0m   [0mSELECT * FROM "recipes" WHERE ("recipes".meal_id = 6) LIMIT 1[0m
+  [4;36;1mRecipe Load (0.3ms)[0m   [0;1mSELECT * FROM "recipes" WHERE ("recipes".meal_id = 7) LIMIT 1[0m
+  [4;35;1mRecipe Load (0.3ms)[0m   [0mSELECT * FROM "recipes" WHERE ("recipes".meal_id = 8) LIMIT 1[0m
+Rendered layouts/_header (0.1ms)
+Completed in 24ms (View: 12, DB: 2) | 200 OK [http://localhost/meals]
+
+
+Processing MealsController#index (for 127.0.0.1 at 2010-04-18 12:17:52) [GET]
+  [4;36;1mMeal Load (0.2ms)[0m   [0;1mSELECT * FROM "meals" WHERE ("meals"."day" = '2010-04-17') [0m
+  [4;35;1mMeal Load (0.2ms)[0m   [0mSELECT * FROM "meals" WHERE ("meals"."day" = '2010-04-18') [0m
+  [4;36;1mMeal Load (0.3ms)[0m   [0;1mSELECT * FROM "meals" WHERE ("meals"."day" = '2010-04-19') [0m
+Rendering template within layouts/application
+Rendering meals/index
+  [4;35;1mRecipe Load (0.3ms)[0m   [0mSELECT * FROM "recipes" WHERE ("recipes".meal_id = 6) LIMIT 1[0m
+  [4;36;1mRecipe Load (0.3ms)[0m   [0;1mSELECT * FROM "recipes" WHERE ("recipes".meal_id = 7) LIMIT 1[0m
+  [4;35;1mRecipe Load (0.3ms)[0m   [0mSELECT * FROM "recipes" WHERE ("recipes".meal_id = 8) LIMIT 1[0m
+Rendered layouts/_header (0.1ms)
+Completed in 23ms (View: 13, DB: 2) | 200 OK [http://localhost/meals]
+
+
+Processing MealsController#index (for 127.0.0.1 at 2010-04-18 12:18:00) [GET]
+  [4;36;1mMeal Load (0.2ms)[0m   [0;1mSELECT * FROM "meals" WHERE ("meals"."day" = '2010-04-17') [0m
+  [4;35;1mMeal Load (0.2ms)[0m   [0mSELECT * FROM "meals" WHERE ("meals"."day" = '2010-04-18') [0m
+  [4;36;1mMeal Load (0.3ms)[0m   [0;1mSELECT * FROM "meals" WHERE ("meals"."day" = '2010-04-19') [0m
+Rendering template within layouts/application
+Rendering meals/index
+  [4;35;1mRecipe Load (0.4ms)[0m   [0mSELECT * FROM "recipes" WHERE ("recipes".meal_id = 6) LIMIT 1[0m
+  [4;36;1mRecipe Load (0.3ms)[0m   [0;1mSELECT * FROM "recipes" WHERE ("recipes".meal_id = 7) LIMIT 1[0m
+  [4;35;1mRecipe Load (0.2ms)[0m   [0mSELECT * FROM "recipes" WHERE ("recipes".meal_id = 8) LIMIT 1[0m
+Rendered layouts/_header (0.1ms)
+Completed in 23ms (View: 12, DB: 2) | 200 OK [http://localhost/meals]
+
+
+Processing MealsController#index (for 127.0.0.1 at 2010-04-18 12:18:08) [GET]
+  [4;36;1mMeal Load (0.1ms)[0m   [0;1mSELECT * FROM "meals" WHERE ("meals"."day" = '2010-04-17') [0m
+  [4;35;1mMeal Load (0.2ms)[0m   [0mSELECT * FROM "meals" WHERE ("meals"."day" = '2010-04-18') [0m
+  [4;36;1mMeal Load (0.3ms)[0m   [0;1mSELECT * FROM "meals" WHERE ("meals"."day" = '2010-04-19') [0m
+Rendering template within layouts/application
+Rendering meals/index
+  [4;35;1mRecipe Load (0.4ms)[0m   [0mSELECT * FROM "recipes" WHERE ("recipes".meal_id = 6) LIMIT 1[0m
+  [4;36;1mRecipe Load (0.3ms)[0m   [0;1mSELECT * FROM "recipes" WHERE ("recipes".meal_id = 7) LIMIT 1[0m
+  [4;35;1mRecipe Load (0.3ms)[0m   [0mSELECT * FROM "recipes" WHERE ("recipes".meal_id = 8) LIMIT 1[0m
+Rendered layouts/_header (0.1ms)
+Completed in 89ms (View: 12, DB: 2) | 200 OK [http://localhost/meals]
+
+
+Processing MealsController#index (for 127.0.0.1 at 2010-04-18 12:18:13) [GET]
+  [4;36;1mMeal Load (0.2ms)[0m   [0;1mSELECT * FROM "meals" WHERE ("meals"."day" = '2010-04-17') [0m
+  [4;35;1mMeal Load (0.3ms)[0m   [0mSELECT * FROM "meals" WHERE ("meals"."day" = '2010-04-18') [0m
+  [4;36;1mMeal Load (0.4ms)[0m   [0;1mSELECT * FROM "meals" WHERE ("meals"."day" = '2010-04-19') [0m
+Rendering template within layouts/application
+Rendering meals/index
+  [4;35;1mRecipe Load (0.3ms)[0m   [0mSELECT * FROM "recipes" WHERE ("recipes".meal_id = 6) LIMIT 1[0m
+  [4;36;1mRecipe Load (0.6ms)[0m   [0;1mSELECT * FROM "recipes" WHERE ("recipes".meal_id = 7) LIMIT 1[0m
+  [4;35;1mRecipe Load (0.3ms)[0m   [0mSELECT * FROM "recipes" WHERE ("recipes".meal_id = 8) LIMIT 1[0m
+Rendered layouts/_header (0.1ms)
+Completed in 25ms (View: 12, DB: 2) | 200 OK [http://localhost/meals]
+
+
+Processing MealsController#index (for 127.0.0.1 at 2010-04-18 12:18:24) [GET]
+  [4;36;1mMeal Load (0.2ms)[0m   [0;1mSELECT * FROM "meals" WHERE ("meals"."day" = '2010-04-17') [0m
+  [4;35;1mMeal Load (0.2ms)[0m   [0mSELECT * FROM "meals" WHERE ("meals"."day" = '2010-04-18') [0m
+  [4;36;1mMeal Load (0.3ms)[0m   [0;1mSELECT * FROM "meals" WHERE ("meals"."day" = '2010-04-19') [0m
+Rendering template within layouts/application
+Rendering meals/index
+  [4;35;1mRecipe Load (0.4ms)[0m   [0mSELECT * FROM "recipes" WHERE ("recipes".meal_id = 6) LIMIT 1[0m
+  [4;36;1mRecipe Load (0.3ms)[0m   [0;1mSELECT * FROM "recipes" WHERE ("recipes".meal_id = 7) LIMIT 1[0m
+  [4;35;1mRecipe Load (0.2ms)[0m   [0mSELECT * FROM "recipes" WHERE ("recipes".meal_id = 8) LIMIT 1[0m
+Rendered layouts/_header (0.1ms)
+Completed in 22ms (View: 12, DB: 2) | 200 OK [http://localhost/meals]
+
+
+Processing MealsController#index (for 127.0.0.1 at 2010-04-18 12:18:49) [GET]
+  [4;36;1mMeal Load (0.2ms)[0m   [0;1mSELECT * FROM "meals" WHERE ("meals"."day" = '2010-04-17') [0m
+  [4;35;1mMeal Load (0.2ms)[0m   [0mSELECT * FROM "meals" WHERE ("meals"."day" = '2010-04-18') [0m
+  [4;36;1mMeal Load (0.4ms)[0m   [0;1mSELECT * FROM "meals" WHERE ("meals"."day" = '2010-04-19') [0m
+Rendering template within layouts/application
+Rendering meals/index
+  [4;35;1mRecipe Load (0.3ms)[0m   [0mSELECT * FROM "recipes" WHERE ("recipes".meal_id = 6) LIMIT 1[0m
+  [4;36;1mRecipe Load (0.3ms)[0m   [0;1mSELECT * FROM "recipes" WHERE ("recipes".meal_id = 7) LIMIT 1[0m
+  [4;35;1mRecipe Load (0.4ms)[0m   [0mSELECT * FROM "recipes" WHERE ("recipes".meal_id = 8) LIMIT 1[0m
+Rendered layouts/_header (0.1ms)
+Completed in 31ms (View: 19, DB: 2) | 200 OK [http://localhost/meals]
+
+
+Processing MealsController#index (for 127.0.0.1 at 2010-04-18 12:18:57) [GET]
+  [4;36;1mMeal Load (0.1ms)[0m   [0;1mSELECT * FROM "meals" WHERE ("meals"."day" = '2010-04-17') [0m
+  [4;35;1mMeal Load (0.2ms)[0m   [0mSELECT * FROM "meals" WHERE ("meals"."day" = '2010-04-18') [0m
+  [4;36;1mMeal Load (0.3ms)[0m   [0;1mSELECT * FROM "meals" WHERE ("meals"."day" = '2010-04-19') [0m
+Rendering template within layouts/application
+Rendering meals/index
+  [4;35;1mRecipe Load (0.3ms)[0m   [0mSELECT * FROM "recipes" WHERE ("recipes".meal_id = 6) LIMIT 1[0m
+  [4;36;1mRecipe Load (0.3ms)[0m   [0;1mSELECT * FROM "recipes" WHERE ("recipes".meal_id = 7) LIMIT 1[0m
+  [4;35;1mRecipe Load (0.3ms)[0m   [0mSELECT * FROM "recipes" WHERE ("recipes".meal_id = 8) LIMIT 1[0m
+Rendered layouts/_header (0.1ms)
+Completed in 23ms (View: 11, DB: 2) | 200 OK [http://localhost/meals]
+
+
+Processing MealsController#index (for 127.0.0.1 at 2010-04-18 12:19:37) [GET]
+  [4;36;1mMeal Load (0.1ms)[0m   [0;1mSELECT * FROM "meals" WHERE ("meals"."day" = '2010-04-17') [0m
+  [4;35;1mMeal Load (0.2ms)[0m   [0mSELECT * FROM "meals" WHERE ("meals"."day" = '2010-04-18') [0m
+  [4;36;1mMeal Load (0.3ms)[0m   [0;1mSELECT * FROM "meals" WHERE ("meals"."day" = '2010-04-19') [0m
+Rendering template within layouts/application
+Rendering meals/index
+  [4;35;1mRecipe Load (0.3ms)[0m   [0mSELECT * FROM "recipes" WHERE ("recipes".meal_id = 6) LIMIT 1[0m
+  [4;36;1mRecipe Load (0.3ms)[0m   [0;1mSELECT * FROM "recipes" WHERE ("recipes".meal_id = 7) LIMIT 1[0m
+  [4;35;1mRecipe Load (0.2ms)[0m   [0mSELECT * FROM "recipes" WHERE ("recipes".meal_id = 8) LIMIT 1[0m
+Rendered layouts/_header (0.1ms)
+Completed in 22ms (View: 11, DB: 1) | 200 OK [http://localhost/meals]
+
+
+Processing MealsController#index (for 127.0.0.1 at 2010-04-18 12:20:02) [GET]
+  [4;36;1mMeal Load (0.1ms)[0m   [0;1mSELECT * FROM "meals" WHERE ("meals"."day" = '2010-04-17') [0m
+  [4;35;1mMeal Load (0.2ms)[0m   [0mSELECT * FROM "meals" WHERE ("meals"."day" = '2010-04-18') [0m
+  [4;36;1mMeal Load (0.3ms)[0m   [0;1mSELECT * FROM "meals" WHERE ("meals"."day" = '2010-04-19') [0m
+Rendering template within layouts/application
+Rendering meals/index
+  [4;35;1mRecipe Load (0.4ms)[0m   [0mSELECT * FROM "recipes" WHERE ("recipes".meal_id = 6) LIMIT 1[0m
+  [4;36;1mRecipe Load (0.4ms)[0m   [0;1mSELECT * FROM "recipes" WHERE ("recipes".meal_id = 7) LIMIT 1[0m
+  [4;35;1mRecipe Load (0.2ms)[0m   [0mSELECT * FROM "recipes" WHERE ("recipes".meal_id = 8) LIMIT 1[0m
+Rendered layouts/_header (0.1ms)
+Completed in 88ms (View: 77, DB: 2) | 200 OK [http://localhost/meals]
+
+
+Processing MealsController#index (for 127.0.0.1 at 2010-04-18 12:20:10) [GET]
+  [4;36;1mMeal Load (0.1ms)[0m   [0;1mSELECT * FROM "meals" WHERE ("meals"."day" = '2010-04-17') [0m
+  [4;35;1mMeal Load (0.2ms)[0m   [0mSELECT * FROM "meals" WHERE ("meals"."day" = '2010-04-18') [0m
+  [4;36;1mMeal Load (0.3ms)[0m   [0;1mSELECT * FROM "meals" WHERE ("meals"."day" = '2010-04-19') [0m
+Rendering template within layouts/application
+Rendering meals/index
+  [4;35;1mRecipe Load (0.3ms)[0m   [0mSELECT * FROM "recipes" WHERE ("recipes".meal_id = 6) LIMIT 1[0m
+  [4;36;1mRecipe Load (0.3ms)[0m   [0;1mSELECT * FROM "recipes" WHERE ("recipes".meal_id = 7) LIMIT 1[0m
+  [4;35;1mRecipe Load (0.3ms)[0m   [0mSELECT * FROM "recipes" WHERE ("recipes".meal_id = 8) LIMIT 1[0m
+Rendered layouts/_header (0.1ms)
+Completed in 24ms (View: 12, DB: 2) | 200 OK [http://localhost/meals]
+
+
+Processing MealsController#index (for 127.0.0.1 at 2010-04-18 12:20:19) [GET]
+  [4;36;1mMeal Load (0.1ms)[0m   [0;1mSELECT * FROM "meals" WHERE ("meals"."day" = '2010-04-17') [0m
+  [4;35;1mMeal Load (0.2ms)[0m   [0mSELECT * FROM "meals" WHERE ("meals"."day" = '2010-04-18') [0m
+  [4;36;1mMeal Load (0.3ms)[0m   [0;1mSELECT * FROM "meals" WHERE ("meals"."day" = '2010-04-19') [0m
+Rendering template within layouts/application
+Rendering meals/index
+  [4;35;1mRecipe Load (0.3ms)[0m   [0mSELECT * FROM "recipes" WHERE ("recipes".meal_id = 6) LIMIT 1[0m
+  [4;36;1mRecipe Load (0.3ms)[0m   [0;1mSELECT * FROM "recipes" WHERE ("recipes".meal_id = 7) LIMIT 1[0m
+  [4;35;1mRecipe Load (0.2ms)[0m   [0mSELECT * FROM "recipes" WHERE ("recipes".meal_id = 8) LIMIT 1[0m
+Rendered layouts/_header (0.1ms)
+Completed in 23ms (View: 12, DB: 2) | 200 OK [http://localhost/meals]
+
+
+Processing MealsController#index (for 127.0.0.1 at 2010-04-18 12:20:35) [GET]
+  [4;36;1mMeal Load (0.2ms)[0m   [0;1mSELECT * FROM "meals" WHERE ("meals"."day" = '2010-04-17') [0m
+  [4;35;1mMeal Load (0.2ms)[0m   [0mSELECT * FROM "meals" WHERE ("meals"."day" = '2010-04-18') [0m
+  [4;36;1mMeal Load (0.3ms)[0m   [0;1mSELECT * FROM "meals" WHERE ("meals"."day" = '2010-04-19') [0m
+Rendering template within layouts/application
+Rendering meals/index
+  [4;35;1mRecipe Load (0.3ms)[0m   [0mSELECT * FROM "recipes" WHERE ("recipes".meal_id = 6) LIMIT 1[0m
+  [4;36;1mRecipe Load (0.3ms)[0m   [0;1mSELECT * FROM "recipes" WHERE ("recipes".meal_id = 7) LIMIT 1[0m
+  [4;35;1mRecipe Load (0.2ms)[0m   [0mSELECT * FROM "recipes" WHERE ("recipes".meal_id = 8) LIMIT 1[0m
+Rendered layouts/_header (0.1ms)
+Completed in 25ms (View: 12, DB: 2) | 200 OK [http://localhost/meals]
+
+
+Processing MealsController#index (for 127.0.0.1 at 2010-04-18 12:21:06) [GET]
+  [4;36;1mMeal Load (0.1ms)[0m   [0;1mSELECT * FROM "meals" WHERE ("meals"."day" = '2010-04-17') [0m
+  [4;35;1mMeal Load (0.2ms)[0m   [0mSELECT * FROM "meals" WHERE ("meals"."day" = '2010-04-18') [0m
+  [4;36;1mMeal Load (0.3ms)[0m   [0;1mSELECT * FROM "meals" WHERE ("meals"."day" = '2010-04-19') [0m
+Rendering template within layouts/application
+Rendering meals/index
+  [4;35;1mRecipe Load (0.4ms)[0m   [0mSELECT * FROM "recipes" WHERE ("recipes".meal_id = 6) LIMIT 1[0m
+  [4;36;1mRecipe Load (0.3ms)[0m   [0;1mSELECT * FROM "recipes" WHERE ("recipes".meal_id = 7) LIMIT 1[0m
+  [4;35;1mRecipe Load (0.2ms)[0m   [0mSELECT * FROM "recipes" WHERE ("recipes".meal_id = 8) LIMIT 1[0m
+Rendered layouts/_header (0.1ms)
+Completed in 23ms (View: 12, DB: 1) | 200 OK [http://localhost/meals]
+
+
+Processing MealsController#index (for 127.0.0.1 at 2010-04-18 12:21:07) [GET]
+  [4;36;1mMeal Load (0.1ms)[0m   [0;1mSELECT * FROM "meals" WHERE ("meals"."day" = '2010-04-17') [0m
+  [4;35;1mMeal Load (0.2ms)[0m   [0mSELECT * FROM "meals" WHERE ("meals"."day" = '2010-04-18') [0m
+  [4;36;1mMeal Load (0.3ms)[0m   [0;1mSELECT * FROM "meals" WHERE ("meals"."day" = '2010-04-19') [0m
+Rendering template within layouts/application
+Rendering meals/index
+  [4;35;1mRecipe Load (0.3ms)[0m   [0mSELECT * FROM "recipes" WHERE ("recipes".meal_id = 6) LIMIT 1[0m
+  [4;36;1mRecipe Load (0.3ms)[0m   [0;1mSELECT * FROM "recipes" WHERE ("recipes".meal_id = 7) LIMIT 1[0m
+  [4;35;1mRecipe Load (0.2ms)[0m   [0mSELECT * FROM "recipes" WHERE ("recipes".meal_id = 8) LIMIT 1[0m
+Rendered layouts/_header (0.1ms)
+Completed in 22ms (View: 12, DB: 2) | 200 OK [http://localhost/meals]
+
+
+Processing MealsController#index (for 127.0.0.1 at 2010-04-18 12:21:20) [GET]
+  [4;36;1mMeal Load (0.1ms)[0m   [0;1mSELECT * FROM "meals" WHERE ("meals"."day" = '2010-04-17') [0m
+  [4;35;1mMeal Load (0.3ms)[0m   [0mSELECT * FROM "meals" WHERE ("meals"."day" = '2010-04-18') [0m
+  [4;36;1mMeal Load (0.4ms)[0m   [0;1mSELECT * FROM "meals" WHERE ("meals"."day" = '2010-04-19') [0m
+Rendering template within layouts/application
+Rendering meals/index
+  [4;35;1mRecipe Load (0.4ms)[0m   [0mSELECT * FROM "recipes" WHERE ("recipes".meal_id = 6) LIMIT 1[0m
+  [4;36;1mRecipe Load (0.3ms)[0m   [0;1mSELECT * FROM "recipes" WHERE ("recipes".meal_id = 7) LIMIT 1[0m
+  [4;35;1mRecipe Load (0.3ms)[0m   [0mSELECT * FROM "recipes" WHERE ("recipes".meal_id = 8) LIMIT 1[0m
+Rendered layouts/_header (0.1ms)
+Completed in 22ms (View: 12, DB: 2) | 200 OK [http://localhost/meals]
+
+
+Processing MealsController#index (for 127.0.0.1 at 2010-04-18 12:21:21) [GET]
+  [4;36;1mMeal Load (0.2ms)[0m   [0;1mSELECT * FROM "meals" WHERE ("meals"."day" = '2010-04-17') [0m
+  [4;35;1mMeal Load (0.3ms)[0m   [0mSELECT * FROM "meals" WHERE ("meals"."day" = '2010-04-18') [0m
+  [4;36;1mMeal Load (0.3ms)[0m   [0;1mSELECT * FROM "meals" WHERE ("meals"."day" = '2010-04-19') [0m
+Rendering template within layouts/application
+Rendering meals/index
+  [4;35;1mRecipe Load (0.4ms)[0m   [0mSELECT * FROM "recipes" WHERE ("recipes".meal_id = 6) LIMIT 1[0m
+  [4;36;1mRecipe Load (0.3ms)[0m   [0;1mSELECT * FROM "recipes" WHERE ("recipes".meal_id = 7) LIMIT 1[0m
+  [4;35;1mRecipe Load (0.3ms)[0m   [0mSELECT * FROM "recipes" WHERE ("recipes".meal_id = 8) LIMIT 1[0m
+Rendered layouts/_header (0.1ms)
+Completed in 94ms (View: 82, DB: 2) | 200 OK [http://localhost/meals]
+
+
+Processing MealsController#index (for 127.0.0.1 at 2010-04-18 12:22:51) [GET]
+  [4;36;1mMeal Load (0.1ms)[0m   [0;1mSELECT * FROM "meals" WHERE ("meals"."day" = '2010-04-17') [0m
+  [4;35;1mMeal Load (0.2ms)[0m   [0mSELECT * FROM "meals" WHERE ("meals"."day" = '2010-04-18') [0m
+  [4;36;1mMeal Load (0.3ms)[0m   [0;1mSELECT * FROM "meals" WHERE ("meals"."day" = '2010-04-19') [0m
+Rendering template within layouts/application
+Rendering meals/index
+  [4;35;1mRecipe Load (0.4ms)[0m   [0mSELECT * FROM "recipes" WHERE ("recipes".meal_id = 6) LIMIT 1[0m
+  [4;36;1mRecipe Load (0.3ms)[0m   [0;1mSELECT * FROM "recipes" WHERE ("recipes".meal_id = 7) LIMIT 1[0m
+  [4;35;1mRecipe Load (0.2ms)[0m   [0mSELECT * FROM "recipes" WHERE ("recipes".meal_id = 8) LIMIT 1[0m
+Rendered layouts/_header (0.1ms)
+Completed in 23ms (View: 13, DB: 2) | 200 OK [http://localhost/meals]
+
+
+Processing MealsController#index (for 127.0.0.1 at 2010-04-18 12:23:03) [GET]
+  [4;36;1mMeal Load (0.1ms)[0m   [0;1mSELECT * FROM "meals" WHERE ("meals"."day" = '2010-04-17') [0m
+  [4;35;1mMeal Load (0.2ms)[0m   [0mSELECT * FROM "meals" WHERE ("meals"."day" = '2010-04-18') [0m
+  [4;36;1mMeal Load (0.3ms)[0m   [0;1mSELECT * FROM "meals" WHERE ("meals"."day" = '2010-04-19') [0m
+Rendering template within layouts/application
+Rendering meals/index
+  [4;35;1mRecipe Load (0.3ms)[0m   [0mSELECT * FROM "recipes" WHERE ("recipes".meal_id = 6) LIMIT 1[0m
+  [4;36;1mRecipe Load (0.3ms)[0m   [0;1mSELECT * FROM "recipes" WHERE ("recipes".meal_id = 7) LIMIT 1[0m
+  [4;35;1mRecipe Load (0.2ms)[0m   [0mSELECT * FROM "recipes" WHERE ("recipes".meal_id = 8) LIMIT 1[0m
+Rendered layouts/_header (0.1ms)
+Completed in 21ms (View: 11, DB: 1) | 200 OK [http://localhost/meals]
+
+
+Processing MealsController#index (for 127.0.0.1 at 2010-04-18 12:23:09) [GET]
+  [4;36;1mMeal Load (0.1ms)[0m   [0;1mSELECT * FROM "meals" WHERE ("meals"."day" = '2010-04-17') [0m
+  [4;35;1mMeal Load (0.2ms)[0m   [0mSELECT * FROM "meals" WHERE ("meals"."day" = '2010-04-18') [0m
+  [4;36;1mMeal Load (0.3ms)[0m   [0;1mSELECT * FROM "meals" WHERE ("meals"."day" = '2010-04-19') [0m
+Rendering template within layouts/application
+Rendering meals/index
+  [4;35;1mRecipe Load (0.3ms)[0m   [0mSELECT * FROM "recipes" WHERE ("recipes".meal_id = 6) LIMIT 1[0m
+  [4;36;1mRecipe Load (0.3ms)[0m   [0;1mSELECT * FROM "recipes" WHERE ("recipes".meal_id = 7) LIMIT 1[0m
+  [4;35;1mRecipe Load (0.3ms)[0m   [0mSELECT * FROM "recipes" WHERE ("recipes".meal_id = 8) LIMIT 1[0m
+Rendered layouts/_header (0.1ms)
+Completed in 21ms (View: 12, DB: 2) | 200 OK [http://localhost/meals]
+
+
+Processing MealsController#index (for 127.0.0.1 at 2010-04-18 12:23:14) [GET]
+  [4;36;1mMeal Load (0.2ms)[0m   [0;1mSELECT * FROM "meals" WHERE ("meals"."day" = '2010-04-17') [0m
+  [4;35;1mMeal Load (0.2ms)[0m   [0mSELECT * FROM "meals" WHERE ("meals"."day" = '2010-04-18') [0m
+  [4;36;1mMeal Load (0.3ms)[0m   [0;1mSELECT * FROM "meals" WHERE ("meals"."day" = '2010-04-19') [0m
+Rendering template within layouts/application
+Rendering meals/index
+  [4;35;1mRecipe Load (0.4ms)[0m   [0mSELECT * FROM "recipes" WHERE ("recipes".meal_id = 6) LIMIT 1[0m
+  [4;36;1mRecipe Load (0.3ms)[0m   [0;1mSELECT * FROM "recipes" WHERE ("recipes".meal_id = 7) LIMIT 1[0m
+  [4;35;1mRecipe Load (0.3ms)[0m   [0mSELECT * FROM "recipes" WHERE ("recipes".meal_id = 8) LIMIT 1[0m
+Rendered layouts/_header (0.1ms)
+Completed in 24ms (View: 12, DB: 2) | 200 OK [http://localhost/meals]
+
+
+Processing MealsController#index (for 127.0.0.1 at 2010-04-18 12:24:01) [GET]
+  [4;36;1mMeal Load (0.1ms)[0m   [0;1mSELECT * FROM "meals" WHERE ("meals"."day" = '2010-04-17') [0m
+  [4;35;1mMeal Load (0.3ms)[0m   [0mSELECT * FROM "meals" WHERE ("meals"."day" = '2010-04-18') [0m
+  [4;36;1mMeal Load (0.4ms)[0m   [0;1mSELECT * FROM "meals" WHERE ("meals"."day" = '2010-04-19') [0m
+Rendering template within layouts/application
+Rendering meals/index
+  [4;35;1mRecipe Load (0.4ms)[0m   [0mSELECT * FROM "recipes" WHERE ("recipes".meal_id = 6) LIMIT 1[0m
+  [4;36;1mRecipe Load (0.3ms)[0m   [0;1mSELECT * FROM "recipes" WHERE ("recipes".meal_id = 7) LIMIT 1[0m
+  [4;35;1mRecipe Load (0.2ms)[0m   [0mSELECT * FROM "recipes" WHERE ("recipes".meal_id = 8) LIMIT 1[0m
+Rendered layouts/_header (0.1ms)
+Completed in 31ms (View: 20, DB: 2) | 200 OK [http://localhost/meals]
+
+
+Processing MealsController#index (for 127.0.0.1 at 2010-04-18 12:24:15) [GET]
+  [4;36;1mMeal Load (0.1ms)[0m   [0;1mSELECT * FROM "meals" WHERE ("meals"."day" = '2010-04-17') [0m
+  [4;35;1mMeal Load (0.2ms)[0m   [0mSELECT * FROM "meals" WHERE ("meals"."day" = '2010-04-18') [0m
+  [4;36;1mMeal Load (0.4ms)[0m   [0;1mSELECT * FROM "meals" WHERE ("meals"."day" = '2010-04-19') [0m
+Rendering template within layouts/application
+Rendering meals/index
+  [4;35;1mRecipe Load (0.3ms)[0m   [0mSELECT * FROM "recipes" WHERE ("recipes".meal_id = 6) LIMIT 1[0m
+  [4;36;1mRecipe Load (0.3ms)[0m   [0;1mSELECT * FROM "recipes" WHERE ("recipes".meal_id = 7) LIMIT 1[0m
+  [4;35;1mRecipe Load (0.3ms)[0m   [0mSELECT * FROM "recipes" WHERE ("recipes".meal_id = 8) LIMIT 1[0m
+Rendered layouts/_header (0.1ms)
+Completed in 22ms (View: 11, DB: 2) | 200 OK [http://localhost/meals]
+
+
+Processing MealsController#index (for 127.0.0.1 at 2010-04-18 12:25:34) [GET]
+  [4;36;1mMeal Load (0.2ms)[0m   [0;1mSELECT * FROM "meals" WHERE ("meals"."day" = '2010-04-17') [0m
+  [4;35;1mMeal Load (0.2ms)[0m   [0mSELECT * FROM "meals" WHERE ("meals"."day" = '2010-04-18') [0m
+  [4;36;1mMeal Load (0.3ms)[0m   [0;1mSELECT * FROM "meals" WHERE ("meals"."day" = '2010-04-19') [0m
+Rendering template within layouts/application
+Rendering meals/index
+  [4;35;1mRecipe Load (0.4ms)[0m   [0mSELECT * FROM "recipes" WHERE ("recipes".meal_id = 6) LIMIT 1[0m
+  [4;36;1mRecipe Load (0.3ms)[0m   [0;1mSELECT * FROM "recipes" WHERE ("recipes".meal_id = 7) LIMIT 1[0m
+  [4;35;1mRecipe Load (0.2ms)[0m   [0mSELECT * FROM "recipes" WHERE ("recipes".meal_id = 8) LIMIT 1[0m
+Rendered layouts/_header (0.1ms)
+Completed in 32ms (View: 20, DB: 2) | 200 OK [http://localhost/meals]
+
+
+Processing MealsController#index (for 127.0.0.1 at 2010-04-18 12:25:35) [GET]
+  [4;36;1mMeal Load (0.1ms)[0m   [0;1mSELECT * FROM "meals" WHERE ("meals"."day" = '2010-04-17') [0m
+  [4;35;1mMeal Load (0.2ms)[0m   [0mSELECT * FROM "meals" WHERE ("meals"."day" = '2010-04-18') [0m
+  [4;36;1mMeal Load (0.3ms)[0m   [0;1mSELECT * FROM "meals" WHERE ("meals"."day" = '2010-04-19') [0m
+Rendering template within layouts/application
+Rendering meals/index
+  [4;35;1mRecipe Load (0.3ms)[0m   [0mSELECT * FROM "recipes" WHERE ("recipes".meal_id = 6) LIMIT 1[0m
+  [4;36;1mRecipe Load (0.3ms)[0m   [0;1mSELECT * FROM "recipes" WHERE ("recipes".meal_id = 7) LIMIT 1[0m
+  [4;35;1mRecipe Load (0.2ms)[0m   [0mSELECT * FROM "recipes" WHERE ("recipes".meal_id = 8) LIMIT 1[0m
+Rendered layouts/_header (0.1ms)
+Completed in 22ms (View: 12, DB: 1) | 200 OK [http://localhost/meals]
+
+
+Processing MealsController#index (for 127.0.0.1 at 2010-04-18 12:25:41) [GET]
+  [4;36;1mMeal Load (0.1ms)[0m   [0;1mSELECT * FROM "meals" WHERE ("meals"."day" = '2010-04-17') [0m
+  [4;35;1mMeal Load (0.2ms)[0m   [0mSELECT * FROM "meals" WHERE ("meals"."day" = '2010-04-18') [0m
+  [4;36;1mMeal Load (0.3ms)[0m   [0;1mSELECT * FROM "meals" WHERE ("meals"."day" = '2010-04-19') [0m
+Rendering template within layouts/application
+Rendering meals/index
+  [4;35;1mRecipe Load (0.4ms)[0m   [0mSELECT * FROM "recipes" WHERE ("recipes".meal_id = 6) LIMIT 1[0m
+  [4;36;1mRecipe Load (0.3ms)[0m   [0;1mSELECT * FROM "recipes" WHERE ("recipes".meal_id = 7) LIMIT 1[0m
+  [4;35;1mRecipe Load (0.2ms)[0m   [0mSELECT * FROM "recipes" WHERE ("recipes".meal_id = 8) LIMIT 1[0m
+Rendered layouts/_header (0.1ms)
+Completed in 25ms (View: 12, DB: 2) | 200 OK [http://localhost/meals]
+
+
+Processing MealsController#index (for 127.0.0.1 at 2010-04-18 12:25:42) [GET]
+  [4;36;1mMeal Load (0.1ms)[0m   [0;1mSELECT * FROM "meals" WHERE ("meals"."day" = '2010-04-17') [0m
+  [4;35;1mMeal Load (0.2ms)[0m   [0mSELECT * FROM "meals" WHERE ("meals"."day" = '2010-04-18') [0m
+  [4;36;1mMeal Load (0.3ms)[0m   [0;1mSELECT * FROM "meals" WHERE ("meals"."day" = '2010-04-19') [0m
+Rendering template within layouts/application
+Rendering meals/index
+  [4;35;1mRecipe Load (0.4ms)[0m   [0mSELECT * FROM "recipes" WHERE ("recipes".meal_id = 6) LIMIT 1[0m
+  [4;36;1mRecipe Load (0.3ms)[0m   [0;1mSELECT * FROM "recipes" WHERE ("recipes".meal_id = 7) LIMIT 1[0m
+  [4;35;1mRecipe Load (0.2ms)[0m   [0mSELECT * FROM "recipes" WHERE ("recipes".meal_id = 8) LIMIT 1[0m
+Rendered layouts/_header (0.1ms)
+Completed in 24ms (View: 12, DB: 2) | 200 OK [http://localhost/meals]
+
+
+Processing MealsController#index (for 127.0.0.1 at 2010-04-18 12:25:59) [GET]
+  [4;36;1mMeal Load (0.2ms)[0m   [0;1mSELECT * FROM "meals" WHERE ("meals"."day" = '2010-04-17') [0m
+  [4;35;1mMeal Load (0.2ms)[0m   [0mSELECT * FROM "meals" WHERE ("meals"."day" = '2010-04-18') [0m
+  [4;36;1mMeal Load (0.3ms)[0m   [0;1mSELECT * FROM "meals" WHERE ("meals"."day" = '2010-04-19') [0m
+Rendering template within layouts/application
+Rendering meals/index
+  [4;35;1mRecipe Load (0.3ms)[0m   [0mSELECT * FROM "recipes" WHERE ("recipes".meal_id = 6) LIMIT 1[0m
+  [4;36;1mRecipe Load (0.3ms)[0m   [0;1mSELECT * FROM "recipes" WHERE ("recipes".meal_id = 7) LIMIT 1[0m
+  [4;35;1mRecipe Load (0.3ms)[0m   [0mSELECT * FROM "recipes" WHERE ("recipes".meal_id = 8) LIMIT 1[0m
+Rendered layouts/_header (0.1ms)
+Completed in 26ms (View: 12, DB: 2) | 200 OK [http://localhost/meals]
+
+
+Processing MealsController#index (for 127.0.0.1 at 2010-04-18 12:26:29) [GET]
+  [4;36;1mMeal Load (0.1ms)[0m   [0;1mSELECT * FROM "meals" WHERE ("meals"."day" = '2010-04-17') [0m
+  [4;35;1mMeal Load (0.2ms)[0m   [0mSELECT * FROM "meals" WHERE ("meals"."day" = '2010-04-18') [0m
+  [4;36;1mMeal Load (0.3ms)[0m   [0;1mSELECT * FROM "meals" WHERE ("meals"."day" = '2010-04-19') [0m
+Rendering template within layouts/application
+Rendering meals/index
+  [4;35;1mRecipe Load (0.3ms)[0m   [0mSELECT * FROM "recipes" WHERE ("recipes".meal_id = 6) LIMIT 1[0m
+  [4;36;1mRecipe Load (0.3ms)[0m   [0;1mSELECT * FROM "recipes" WHERE ("recipes".meal_id = 7) LIMIT 1[0m
+  [4;35;1mRecipe Load (0.3ms)[0m   [0mSELECT * FROM "recipes" WHERE ("recipes".meal_id = 8) LIMIT 1[0m
+Rendered layouts/_header (0.1ms)
+Completed in 22ms (View: 12, DB: 2) | 200 OK [http://localhost/meals]
+
+
+Processing MealsController#index (for 127.0.0.1 at 2010-04-18 12:27:06) [GET]
+  [4;36;1mMeal Load (0.1ms)[0m   [0;1mSELECT * FROM "meals" WHERE ("meals"."day" = '2010-04-17') [0m
+  [4;35;1mMeal Load (0.3ms)[0m   [0mSELECT * FROM "meals" WHERE ("meals"."day" = '2010-04-18') [0m
+  [4;36;1mMeal Load (0.3ms)[0m   [0;1mSELECT * FROM "meals" WHERE ("meals"."day" = '2010-04-19') [0m
+Rendering template within layouts/application
+Rendering meals/index
+  [4;35;1mRecipe Load (0.4ms)[0m   [0mSELECT * FROM "recipes" WHERE ("recipes".meal_id = 6) LIMIT 1[0m
+  [4;36;1mRecipe Load (0.3ms)[0m   [0;1mSELECT * FROM "recipes" WHERE ("recipes".meal_id = 7) LIMIT 1[0m
+  [4;35;1mRecipe Load (0.3ms)[0m   [0mSELECT * FROM "recipes" WHERE ("recipes".meal_id = 8) LIMIT 1[0m
+Rendered layouts/_header (0.1ms)
+Completed in 88ms (View: 12, DB: 2) | 200 OK [http://localhost/meals]
+
+
+Processing MealsController#index (for 127.0.0.1 at 2010-04-18 12:27:14) [GET]
+  [4;36;1mMeal Load (0.1ms)[0m   [0;1mSELECT * FROM "meals" WHERE ("meals"."day" = '2010-04-17') [0m
+  [4;35;1mMeal Load (0.2ms)[0m   [0mSELECT * FROM "meals" WHERE ("meals"."day" = '2010-04-18') [0m
+  [4;36;1mMeal Load (0.3ms)[0m   [0;1mSELECT * FROM "meals" WHERE ("meals"."day" = '2010-04-19') [0m
+Rendering template within layouts/application
+Rendering meals/index
+  [4;35;1mRecipe Load (0.4ms)[0m   [0mSELECT * FROM "recipes" WHERE ("recipes".meal_id = 6) LIMIT 1[0m
+  [4;36;1mRecipe Load (0.3ms)[0m   [0;1mSELECT * FROM "recipes" WHERE ("recipes".meal_id = 7) LIMIT 1[0m
+  [4;35;1mRecipe Load (0.2ms)[0m   [0mSELECT * FROM "recipes" WHERE ("recipes".meal_id = 8) LIMIT 1[0m
+Rendered layouts/_header (0.1ms)
+Completed in 24ms (View: 13, DB: 1) | 200 OK [http://localhost/meals]
+
+
+Processing MealsController#index (for 127.0.0.1 at 2010-04-18 12:27:20) [GET]
+  [4;36;1mMeal Load (0.1ms)[0m   [0;1mSELECT * FROM "meals" WHERE ("meals"."day" = '2010-04-17') [0m
+  [4;35;1mMeal Load (0.2ms)[0m   [0mSELECT * FROM "meals" WHERE ("meals"."day" = '2010-04-18') [0m
+  [4;36;1mMeal Load (0.3ms)[0m   [0;1mSELECT * FROM "meals" WHERE ("meals"."day" = '2010-04-19') [0m
+Rendering template within layouts/application
+Rendering meals/index
+  [4;35;1mRecipe Load (0.3ms)[0m   [0mSELECT * FROM "recipes" WHERE ("recipes".meal_id = 6) LIMIT 1[0m
+  [4;36;1mRecipe Load (0.3ms)[0m   [0;1mSELECT * FROM "recipes" WHERE ("recipes".meal_id = 7) LIMIT 1[0m
+  [4;35;1mRecipe Load (0.3ms)[0m   [0mSELECT * FROM "recipes" WHERE ("recipes".meal_id = 8) LIMIT 1[0m
+Rendered layouts/_header (0.1ms)
+Completed in 21ms (View: 11, DB: 1) | 200 OK [http://localhost/meals]
+
+
+Processing MealsController#index (for 127.0.0.1 at 2010-04-18 12:27:43) [GET]
+  [4;36;1mMeal Load (0.2ms)[0m   [0;1mSELECT * FROM "meals" WHERE ("meals"."day" = '2010-04-17') [0m
+  [4;35;1mMeal Load (0.3ms)[0m   [0mSELECT * FROM "meals" WHERE ("meals"."day" = '2010-04-18') [0m
+  [4;36;1mMeal Load (0.3ms)[0m   [0;1mSELECT * FROM "meals" WHERE ("meals"."day" = '2010-04-19') [0m
+Rendering template within layouts/application
+Rendering meals/index
+  [4;35;1mRecipe Load (0.4ms)[0m   [0mSELECT * FROM "recipes" WHERE ("recipes".meal_id = 6) LIMIT 1[0m
+  [4;36;1mRecipe Load (0.3ms)[0m   [0;1mSELECT * FROM "recipes" WHERE ("recipes".meal_id = 7) LIMIT 1[0m
+  [4;35;1mRecipe Load (0.3ms)[0m   [0mSELECT * FROM "recipes" WHERE ("recipes".meal_id = 8) LIMIT 1[0m
+Rendered layouts/_header (0.1ms)
+Completed in 30ms (View: 17, DB: 2) | 200 OK [http://localhost/meals]
+
+
+Processing MealsController#index (for 127.0.0.1 at 2010-04-18 12:27:47) [GET]
+  [4;36;1mMeal Load (0.2ms)[0m   [0;1mSELECT * FROM "meals" WHERE ("meals"."day" = '2010-04-17') [0m
+  [4;35;1mMeal Load (0.3ms)[0m   [0mSELECT * FROM "meals" WHERE ("meals"."day" = '2010-04-18') [0m
+  [4;36;1mMeal Load (0.3ms)[0m   [0;1mSELECT * FROM "meals" WHERE ("meals"."day" = '2010-04-19') [0m
+Rendering template within layouts/application
+Rendering meals/index
+  [4;35;1mRecipe Load (0.3ms)[0m   [0mSELECT * FROM "recipes" WHERE ("recipes".meal_id = 6) LIMIT 1[0m
+  [4;36;1mRecipe Load (0.3ms)[0m   [0;1mSELECT * FROM "recipes" WHERE ("recipes".meal_id = 7) LIMIT 1[0m
+  [4;35;1mRecipe Load (0.2ms)[0m   [0mSELECT * FROM "recipes" WHERE ("recipes".meal_id = 8) LIMIT 1[0m
+Rendered layouts/_header (0.1ms)
+Completed in 22ms (View: 11, DB: 2) | 200 OK [http://localhost/meals]
+
+
+Processing MealsController#index (for 127.0.0.1 at 2010-04-18 12:28:32) [GET]
+  [4;36;1mMeal Load (0.1ms)[0m   [0;1mSELECT * FROM "meals" WHERE ("meals"."day" = '2010-04-17') [0m
+  [4;35;1mMeal Load (0.2ms)[0m   [0mSELECT * FROM "meals" WHERE ("meals"."day" = '2010-04-18') [0m
+  [4;36;1mMeal Load (0.3ms)[0m   [0;1mSELECT * FROM "meals" WHERE ("meals"."day" = '2010-04-19') [0m
+Rendering template within layouts/application
+Rendering meals/index
+  [4;35;1mRecipe Load (0.4ms)[0m   [0mSELECT * FROM "recipes" WHERE ("recipes".meal_id = 6) LIMIT 1[0m
+  [4;36;1mRecipe Load (0.3ms)[0m   [0;1mSELECT * FROM "recipes" WHERE ("recipes".meal_id = 7) LIMIT 1[0m
+  [4;35;1mRecipe Load (0.2ms)[0m   [0mSELECT * FROM "recipes" WHERE ("recipes".meal_id = 8) LIMIT 1[0m
+Rendered layouts/_header (0.1ms)
+Completed in 22ms (View: 12, DB: 2) | 200 OK [http://localhost/meals]
+
+
+Processing MealsController#index (for 127.0.0.1 at 2010-04-18 12:28:46) [GET]
+  [4;36;1mMeal Load (0.1ms)[0m   [0;1mSELECT * FROM "meals" WHERE ("meals"."day" = '2010-04-17') [0m
+  [4;35;1mMeal Load (0.2ms)[0m   [0mSELECT * FROM "meals" WHERE ("meals"."day" = '2010-04-18') [0m
+  [4;36;1mMeal Load (0.3ms)[0m   [0;1mSELECT * FROM "meals" WHERE ("meals"."day" = '2010-04-19') [0m
+Rendering template within layouts/application
+Rendering meals/index
+  [4;35;1mRecipe Load (0.3ms)[0m   [0mSELECT * FROM "recipes" WHERE ("recipes".meal_id = 6) LIMIT 1[0m
+  [4;36;1mRecipe Load (0.3ms)[0m   [0;1mSELECT * FROM "recipes" WHERE ("recipes".meal_id = 7) LIMIT 1[0m
+  [4;35;1mRecipe Load (0.2ms)[0m   [0mSELECT * FROM "recipes" WHERE ("recipes".meal_id = 8) LIMIT 1[0m
+Rendered layouts/_header (0.1ms)
+Completed in 23ms (View: 13, DB: 2) | 200 OK [http://localhost/meals]
+
+
+Processing MealsController#index (for 127.0.0.1 at 2010-04-18 12:28:49) [GET]
+  [4;36;1mMeal Load (0.1ms)[0m   [0;1mSELECT * FROM "meals" WHERE ("meals"."day" = '2010-04-17') [0m
+  [4;35;1mMeal Load (0.2ms)[0m   [0mSELECT * FROM "meals" WHERE ("meals"."day" = '2010-04-18') [0m
+  [4;36;1mMeal Load (0.3ms)[0m   [0;1mSELECT * FROM "meals" WHERE ("meals"."day" = '2010-04-19') [0m
+Rendering template within layouts/application
+Rendering meals/index
+  [4;35;1mRecipe Load (0.4ms)[0m   [0mSELECT * FROM "recipes" WHERE ("recipes".meal_id = 6) LIMIT 1[0m
+  [4;36;1mRecipe Load (0.3ms)[0m   [0;1mSELECT * FROM "recipes" WHERE ("recipes".meal_id = 7) LIMIT 1[0m
+  [4;35;1mRecipe Load (0.2ms)[0m   [0mSELECT * FROM "recipes" WHERE ("recipes".meal_id = 8) LIMIT 1[0m
+Rendered layouts/_header (0.1ms)
+Completed in 24ms (View: 14, DB: 2) | 200 OK [http://localhost/meals]
+
+
+Processing MealsController#index (for 127.0.0.1 at 2010-04-18 12:29:04) [GET]
+  [4;36;1mMeal Load (0.1ms)[0m   [0;1mSELECT * FROM "meals" WHERE ("meals"."day" = '2010-04-17') [0m
+  [4;35;1mMeal Load (0.2ms)[0m   [0mSELECT * FROM "meals" WHERE ("meals"."day" = '2010-04-18') [0m
+  [4;36;1mMeal Load (0.3ms)[0m   [0;1mSELECT * FROM "meals" WHERE ("meals"."day" = '2010-04-19') [0m
+Rendering template within layouts/application
+Rendering meals/index
+  [4;35;1mRecipe Load (0.3ms)[0m   [0mSELECT * FROM "recipes" WHERE ("recipes".meal_id = 6) LIMIT 1[0m
+  [4;36;1mRecipe Load (0.3ms)[0m   [0;1mSELECT * FROM "recipes" WHERE ("recipes".meal_id = 7) LIMIT 1[0m
+  [4;35;1mRecipe Load (0.3ms)[0m   [0mSELECT * FROM "recipes" WHERE ("recipes".meal_id = 8) LIMIT 1[0m
+Rendered layouts/_header (0.1ms)
+Completed in 24ms (View: 12, DB: 2) | 200 OK [http://localhost/meals]
+
+
+Processing MealsController#index (for 127.0.0.1 at 2010-04-18 12:29:44) [GET]
+  [4;36;1mMeal Load (0.1ms)[0m   [0;1mSELECT * FROM "meals" WHERE ("meals"."day" = '2010-04-17') [0m
+  [4;35;1mMeal Load (0.2ms)[0m   [0mSELECT * FROM "meals" WHERE ("meals"."day" = '2010-04-18') [0m
+  [4;36;1mMeal Load (0.3ms)[0m   [0;1mSELECT * FROM "meals" WHERE ("meals"."day" = '2010-04-19') [0m
+Rendering template within layouts/application
+Rendering meals/index
+  [4;35;1mRecipe Load (0.3ms)[0m   [0mSELECT * FROM "recipes" WHERE ("recipes".meal_id = 6) LIMIT 1[0m
+  [4;36;1mRecipe Load (0.4ms)[0m   [0;1mSELECT * FROM "recipes" WHERE ("recipes".meal_id = 7) LIMIT 1[0m
+  [4;35;1mRecipe Load (0.2ms)[0m   [0mSELECT * FROM "recipes" WHERE ("recipes".meal_id = 8) LIMIT 1[0m
+Rendered layouts/_header (0.1ms)
+Completed in 24ms (View: 14, DB: 2) | 200 OK [http://localhost/meals]
+
+
+Processing MealsController#index (for 127.0.0.1 at 2010-04-18 12:29:45) [GET]
+  [4;36;1mMeal Load (0.1ms)[0m   [0;1mSELECT * FROM "meals" WHERE ("meals"."day" = '2010-04-17') [0m
+  [4;35;1mMeal Load (0.3ms)[0m   [0mSELECT * FROM "meals" WHERE ("meals"."day" = '2010-04-18') [0m
+  [4;36;1mMeal Load (0.4ms)[0m   [0;1mSELECT * FROM "meals" WHERE ("meals"."day" = '2010-04-19') [0m
+Rendering template within layouts/application
+Rendering meals/index
+  [4;35;1mRecipe Load (0.6ms)[0m   [0mSELECT * FROM "recipes" WHERE ("recipes".meal_id = 6) LIMIT 1[0m
+  [4;36;1mRecipe Load (0.4ms)[0m   [0;1mSELECT * FROM "recipes" WHERE ("recipes".meal_id = 7) LIMIT 1[0m
+  [4;35;1mRecipe Load (0.3ms)[0m   [0mSELECT * FROM "recipes" WHERE ("recipes".meal_id = 8) LIMIT 1[0m
+Rendered layouts/_header (0.1ms)
+Completed in 26ms (View: 14, DB: 2) | 200 OK [http://localhost/meals]
+
+
+Processing MealsController#index (for 127.0.0.1 at 2010-04-18 12:29:56) [GET]
+  [4;36;1mMeal Load (0.1ms)[0m   [0;1mSELECT * FROM "meals" WHERE ("meals"."day" = '2010-04-17') [0m
+  [4;35;1mMeal Load (0.3ms)[0m   [0mSELECT * FROM "meals" WHERE ("meals"."day" = '2010-04-18') [0m
+  [4;36;1mMeal Load (0.3ms)[0m   [0;1mSELECT * FROM "meals" WHERE ("meals"."day" = '2010-04-19') [0m
+Rendering template within layouts/application
+Rendering meals/index
+  [4;35;1mRecipe Load (0.3ms)[0m   [0mSELECT * FROM "recipes" WHERE ("recipes".meal_id = 6) LIMIT 1[0m
+  [4;36;1mRecipe Load (0.3ms)[0m   [0;1mSELECT * FROM "recipes" WHERE ("recipes".meal_id = 7) LIMIT 1[0m
+  [4;35;1mRecipe Load (0.3ms)[0m   [0mSELECT * FROM "recipes" WHERE ("recipes".meal_id = 8) LIMIT 1[0m
+Rendered layouts/_header (0.1ms)
+Completed in 22ms (View: 12, DB: 2) | 200 OK [http://localhost/meals]
+
+
+Processing MealsController#index (for 127.0.0.1 at 2010-04-18 12:30:01) [GET]
+  [4;36;1mMeal Load (0.1ms)[0m   [0;1mSELECT * FROM "meals" WHERE ("meals"."day" = '2010-04-17') [0m
+  [4;35;1mMeal Load (0.2ms)[0m   [0mSELECT * FROM "meals" WHERE ("meals"."day" = '2010-04-18') [0m
+  [4;36;1mMeal Load (0.3ms)[0m   [0;1mSELECT * FROM "meals" WHERE ("meals"."day" = '2010-04-19') [0m
+Rendering template within layouts/application
+Rendering meals/index
+  [4;35;1mRecipe Load (0.3ms)[0m   [0mSELECT * FROM "recipes" WHERE ("recipes".meal_id = 6) LIMIT 1[0m
+  [4;36;1mRecipe Load (0.3ms)[0m   [0;1mSELECT * FROM "recipes" WHERE ("recipes".meal_id = 7) LIMIT 1[0m
+  [4;35;1mRecipe Load (0.2ms)[0m   [0mSELECT * FROM "recipes" WHERE ("recipes".meal_id = 8) LIMIT 1[0m
+Rendered layouts/_header (0.1ms)
+Completed in 22ms (View: 11, DB: 1) | 200 OK [http://localhost/meals]
+
+
+Processing MealsController#index (for 127.0.0.1 at 2010-04-18 12:30:41) [GET]
+  [4;36;1mMeal Load (0.1ms)[0m   [0;1mSELECT * FROM "meals" WHERE ("meals"."day" = '2010-04-17') [0m
+  [4;35;1mMeal Load (0.2ms)[0m   [0mSELECT * FROM "meals" WHERE ("meals"."day" = '2010-04-18') [0m
+  [4;36;1mMeal Load (0.3ms)[0m   [0;1mSELECT * FROM "meals" WHERE ("meals"."day" = '2010-04-19') [0m
+Rendering template within layouts/application
+Rendering meals/index
+  [4;35;1mRecipe Load (0.4ms)[0m   [0mSELECT * FROM "recipes" WHERE ("recipes".meal_id = 6) LIMIT 1[0m
+  [4;36;1mRecipe Load (0.4ms)[0m   [0;1mSELECT * FROM "recipes" WHERE ("recipes".meal_id = 7) LIMIT 1[0m
+  [4;35;1mRecipe Load (0.3ms)[0m   [0mSELECT * FROM "recipes" WHERE ("recipes".meal_id = 8) LIMIT 1[0m
+Rendered layouts/_header (0.1ms)
+Completed in 86ms (View: 76, DB: 2) | 200 OK [http://localhost/meals]
+
+
+Processing MealsController#index (for 127.0.0.1 at 2010-04-18 12:30:47) [GET]
+  [4;36;1mMeal Load (0.2ms)[0m   [0;1mSELECT * FROM "meals" WHERE ("meals"."day" = '2010-04-17') [0m
+  [4;35;1mMeal Load (0.2ms)[0m   [0mSELECT * FROM "meals" WHERE ("meals"."day" = '2010-04-18') [0m
+  [4;36;1mMeal Load (0.3ms)[0m   [0;1mSELECT * FROM "meals" WHERE ("meals"."day" = '2010-04-19') [0m
+Rendering template within layouts/application
+Rendering meals/index
+  [4;35;1mRecipe Load (0.4ms)[0m   [0mSELECT * FROM "recipes" WHERE ("recipes".meal_id = 6) LIMIT 1[0m
+  [4;36;1mRecipe Load (0.3ms)[0m   [0;1mSELECT * FROM "recipes" WHERE ("recipes".meal_id = 7) LIMIT 1[0m
+  [4;35;1mRecipe Load (0.3ms)[0m   [0mSELECT * FROM "recipes" WHERE ("recipes".meal_id = 8) LIMIT 1[0m
+Rendered layouts/_header (0.1ms)
+Completed in 23ms (View: 13, DB: 2) | 200 OK [http://localhost/meals]
+
+
+Processing MealsController#index (for 127.0.0.1 at 2010-04-18 12:31:54) [GET]
+  [4;36;1mMeal Load (0.1ms)[0m   [0;1mSELECT * FROM "meals" WHERE ("meals"."day" = '2010-04-17') [0m
+  [4;35;1mMeal Load (0.2ms)[0m   [0mSELECT * FROM "meals" WHERE ("meals"."day" = '2010-04-18') [0m
+  [4;36;1mMeal Load (0.3ms)[0m   [0;1mSELECT * FROM "meals" WHERE ("meals"."day" = '2010-04-19') [0m
+Rendering template within layouts/application
+Rendering meals/index
+  [4;35;1mRecipe Load (0.3ms)[0m   [0mSELECT * FROM "recipes" WHERE ("recipes".meal_id = 6) LIMIT 1[0m
+  [4;36;1mRecipe Load (0.3ms)[0m   [0;1mSELECT * FROM "recipes" WHERE ("recipes".meal_id = 7) LIMIT 1[0m
+  [4;35;1mRecipe Load (0.2ms)[0m   [0mSELECT * FROM "recipes" WHERE ("recipes".meal_id = 8) LIMIT 1[0m
+Rendered layouts/_header (0.1ms)
+Completed in 22ms (View: 12, DB: 2) | 200 OK [http://localhost/meals]
+
+
+Processing MealsController#index (for 127.0.0.1 at 2010-04-18 12:31:55) [GET]
+  [4;36;1mMeal Load (0.2ms)[0m   [0;1mSELECT * FROM "meals" WHERE ("meals"."day" = '2010-04-17') [0m
+  [4;35;1mMeal Load (0.2ms)[0m   [0mSELECT * FROM "meals" WHERE ("meals"."day" = '2010-04-18') [0m
+  [4;36;1mMeal Load (0.3ms)[0m   [0;1mSELECT * FROM "meals" WHERE ("meals"."day" = '2010-04-19') [0m
+Rendering template within layouts/application
+Rendering meals/index
+  [4;35;1mRecipe Load (0.3ms)[0m   [0mSELECT * FROM "recipes" WHERE ("recipes".meal_id = 6) LIMIT 1[0m
+  [4;36;1mRecipe Load (0.3ms)[0m   [0;1mSELECT * FROM "recipes" WHERE ("recipes".meal_id = 7) LIMIT 1[0m
+  [4;35;1mRecipe Load (0.2ms)[0m   [0mSELECT * FROM "recipes" WHERE ("recipes".meal_id = 8) LIMIT 1[0m
+Rendered layouts/_header (0.1ms)
+Completed in 23ms (View: 12, DB: 2) | 200 OK [http://localhost/meals]
+
+
+Processing MealsController#index (for 127.0.0.1 at 2010-04-18 12:32:03) [GET]
+  [4;36;1mMeal Load (0.1ms)[0m   [0;1mSELECT * FROM "meals" WHERE ("meals"."day" = '2010-04-17') [0m
+  [4;35;1mMeal Load (0.2ms)[0m   [0mSELECT * FROM "meals" WHERE ("meals"."day" = '2010-04-18') [0m
+  [4;36;1mMeal Load (0.3ms)[0m   [0;1mSELECT * FROM "meals" WHERE ("meals"."day" = '2010-04-19') [0m
+Rendering template within layouts/application
+Rendering meals/index
+  [4;35;1mRecipe Load (0.3ms)[0m   [0mSELECT * FROM "recipes" WHERE ("recipes".meal_id = 6) LIMIT 1[0m
+  [4;36;1mRecipe Load (0.3ms)[0m   [0;1mSELECT * FROM "recipes" WHERE ("recipes".meal_id = 7) LIMIT 1[0m
+  [4;35;1mRecipe Load (0.2ms)[0m   [0mSELECT * FROM "recipes" WHERE ("recipes".meal_id = 8) LIMIT 1[0m
+Rendered layouts/_header (0.1ms)
+Completed in 21ms (View: 11, DB: 1) | 200 OK [http://localhost/meals]
+
+
+Processing MealsController#index (for 127.0.0.1 at 2010-04-18 12:32:12) [GET]
+  [4;36;1mMeal Load (0.1ms)[0m   [0;1mSELECT * FROM "meals" WHERE ("meals"."day" = '2010-04-17') [0m
+  [4;35;1mMeal Load (0.2ms)[0m   [0mSELECT * FROM "meals" WHERE ("meals"."day" = '2010-04-18') [0m
+  [4;36;1mMeal Load (0.3ms)[0m   [0;1mSELECT * FROM "meals" WHERE ("meals"."day" = '2010-04-19') [0m
+Rendering template within layouts/application
+Rendering meals/index
+  [4;35;1mRecipe Load (0.4ms)[0m   [0mSELECT * FROM "recipes" WHERE ("recipes".meal_id = 6) LIMIT 1[0m
+  [4;36;1mRecipe Load (0.3ms)[0m   [0;1mSELECT * FROM "recipes" WHERE ("recipes".meal_id = 7) LIMIT 1[0m
+  [4;35;1mRecipe Load (0.6ms)[0m   [0mSELECT * FROM "recipes" WHERE ("recipes".meal_id = 8) LIMIT 1[0m
+Rendered layouts/_header (0.1ms)
+Completed in 24ms (View: 13, DB: 2) | 200 OK [http://localhost/meals]
+
+
+Processing MealsController#new (for 127.0.0.1 at 2010-04-18 12:32:14) [GET]
+  Parameters: {"day"=>"apr-18-2010"}
+Rendering template within layouts/application
+Rendering meals/new
+Rendered layouts/_header (0.1ms)
+Completed in 34ms (View: 23, DB: 0) | 200 OK [http://localhost/apr-18-2010/meals/new/]
+
+
+Processing MealsController#index (for 127.0.0.1 at 2010-04-18 12:32:47) [GET]
+  [4;36;1mMeal Load (0.1ms)[0m   [0;1mSELECT * FROM "meals" WHERE ("meals"."day" = '2010-04-17') [0m
+  [4;35;1mMeal Load (0.2ms)[0m   [0mSELECT * FROM "meals" WHERE ("meals"."day" = '2010-04-18') [0m
+  [4;36;1mMeal Load (0.3ms)[0m   [0;1mSELECT * FROM "meals" WHERE ("meals"."day" = '2010-04-19') [0m
+Rendering template within layouts/application
+Rendering meals/index
+  [4;35;1mRecipe Load (0.5ms)[0m   [0mSELECT * FROM "recipes" WHERE ("recipes".meal_id = 6) LIMIT 1[0m
+  [4;36;1mRecipe Load (0.3ms)[0m   [0;1mSELECT * FROM "recipes" WHERE ("recipes".meal_id = 7) LIMIT 1[0m
+  [4;35;1mRecipe Load (0.2ms)[0m   [0mSELECT * FROM "recipes" WHERE ("recipes".meal_id = 8) LIMIT 1[0m
+Rendered layouts/_header (0.1ms)
+Completed in 24ms (View: 12, DB: 2) | 200 OK [http://localhost/meals]
+
+
+Processing MealsController#index (for 127.0.0.1 at 2010-04-18 12:32:56) [GET]
+  [4;36;1mMeal Load (0.1ms)[0m   [0;1mSELECT * FROM "meals" WHERE ("meals"."day" = '2010-04-17') [0m
+  [4;35;1mMeal Load (0.2ms)[0m   [0mSELECT * FROM "meals" WHERE ("meals"."day" = '2010-04-18') [0m
+  [4;36;1mMeal Load (0.3ms)[0m   [0;1mSELECT * FROM "meals" WHERE ("meals"."day" = '2010-04-19') [0m
+Rendering template within layouts/application
+Rendering meals/index
+  [4;35;1mRecipe Load (0.4ms)[0m   [0mSELECT * FROM "recipes" WHERE ("recipes".meal_id = 6) LIMIT 1[0m
+  [4;36;1mRecipe Load (0.3ms)[0m   [0;1mSELECT * FROM "recipes" WHERE ("recipes".meal_id = 7) LIMIT 1[0m
+  [4;35;1mRecipe Load (0.2ms)[0m   [0mSELECT * FROM "recipes" WHERE ("recipes".meal_id = 8) LIMIT 1[0m
+Rendered layouts/_header (0.1ms)
+Completed in 22ms (View: 12, DB: 2) | 200 OK [http://localhost/meals]
+
+
+Processing MealsController#index (for 127.0.0.1 at 2010-04-18 12:33:23) [GET]
+  [4;36;1mMeal Load (0.1ms)[0m   [0;1mSELECT * FROM "meals" WHERE ("meals"."day" = '2010-04-17') [0m
+  [4;35;1mMeal Load (0.3ms)[0m   [0mSELECT * FROM "meals" WHERE ("meals"."day" = '2010-04-18') [0m
+  [4;36;1mMeal Load (0.3ms)[0m   [0;1mSELECT * FROM "meals" WHERE ("meals"."day" = '2010-04-19') [0m
+Rendering template within layouts/application
+Rendering meals/index
+  [4;35;1mRecipe Load (0.3ms)[0m   [0mSELECT * FROM "recipes" WHERE ("recipes".meal_id = 6) LIMIT 1[0m
+  [4;36;1mRecipe Load (0.3ms)[0m   [0;1mSELECT * FROM "recipes" WHERE ("recipes".meal_id = 7) LIMIT 1[0m
+  [4;35;1mRecipe Load (0.3ms)[0m   [0mSELECT * FROM "recipes" WHERE ("recipes".meal_id = 8) LIMIT 1[0m
+Rendered layouts/_header (0.1ms)
+Completed in 22ms (View: 12, DB: 2) | 200 OK [http://localhost/meals]
+
+
+Processing MealsController#index (for 127.0.0.1 at 2010-04-18 12:33:33) [GET]
+  [4;36;1mMeal Load (0.2ms)[0m   [0;1mSELECT * FROM "meals" WHERE ("meals"."day" = '2010-04-17') [0m
+  [4;35;1mMeal Load (0.2ms)[0m   [0mSELECT * FROM "meals" WHERE ("meals"."day" = '2010-04-18') [0m
+  [4;36;1mMeal Load (0.3ms)[0m   [0;1mSELECT * FROM "meals" WHERE ("meals"."day" = '2010-04-19') [0m
+Rendering template within layouts/application
+Rendering meals/index
+  [4;35;1mRecipe Load (0.4ms)[0m   [0mSELECT * FROM "recipes" WHERE ("recipes".meal_id = 6) LIMIT 1[0m
+  [4;36;1mRecipe Load (0.3ms)[0m   [0;1mSELECT * FROM "recipes" WHERE ("recipes".meal_id = 7) LIMIT 1[0m
+  [4;35;1mRecipe Load (0.3ms)[0m   [0mSELECT * FROM "recipes" WHERE ("recipes".meal_id = 8) LIMIT 1[0m
+Rendered layouts/_header (0.1ms)
+Completed in 22ms (View: 12, DB: 2) | 200 OK [http://localhost/meals]
+
+
+Processing MealsController#index (for 127.0.0.1 at 2010-04-18 12:33:48) [GET]
+  [4;36;1mMeal Load (0.2ms)[0m   [0;1mSELECT * FROM "meals" WHERE ("meals"."day" = '2010-04-17') [0m
+  [4;35;1mMeal Load (0.2ms)[0m   [0mSELECT * FROM "meals" WHERE ("meals"."day" = '2010-04-18') [0m
+  [4;36;1mMeal Load (0.3ms)[0m   [0;1mSELECT * FROM "meals" WHERE ("meals"."day" = '2010-04-19') [0m
+Rendering template within layouts/application
+Rendering meals/index
+  [4;35;1mRecipe Load (0.3ms)[0m   [0mSELECT * FROM "recipes" WHERE ("recipes".meal_id = 6) LIMIT 1[0m
+  [4;36;1mRecipe Load (0.4ms)[0m   [0;1mSELECT * FROM "recipes" WHERE ("recipes".meal_id = 7) LIMIT 1[0m
+  [4;35;1mRecipe Load (0.3ms)[0m   [0mSELECT * FROM "recipes" WHERE ("recipes".meal_id = 8) LIMIT 1[0m
+Rendered layouts/_header (0.1ms)
+Completed in 21ms (View: 12, DB: 2) | 200 OK [http://localhost/meals]
+
+
+Processing MealsController#index (for 127.0.0.1 at 2010-04-18 12:34:05) [GET]
+  [4;36;1mMeal Load (0.2ms)[0m   [0;1mSELECT * FROM "meals" WHERE ("meals"."day" = '2010-04-17') [0m
+  [4;35;1mMeal Load (0.2ms)[0m   [0mSELECT * FROM "meals" WHERE ("meals"."day" = '2010-04-18') [0m
+  [4;36;1mMeal Load (0.3ms)[0m   [0;1mSELECT * FROM "meals" WHERE ("meals"."day" = '2010-04-19') [0m
+Rendering template within layouts/application
+Rendering meals/index
+  [4;35;1mRecipe Load (0.4ms)[0m   [0mSELECT * FROM "recipes" WHERE ("recipes".meal_id = 6) LIMIT 1[0m
+  [4;36;1mRecipe Load (0.3ms)[0m   [0;1mSELECT * FROM "recipes" WHERE ("recipes".meal_id = 7) LIMIT 1[0m
+  [4;35;1mRecipe Load (0.2ms)[0m   [0mSELECT * FROM "recipes" WHERE ("recipes".meal_id = 8) LIMIT 1[0m
+Rendered layouts/_header (0.1ms)
+Completed in 23ms (View: 12, DB: 2) | 200 OK [http://localhost/meals]

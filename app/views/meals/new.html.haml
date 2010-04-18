@@ -1,4 +1,4 @@
-%h2= "Adding a meal to " + @meal.day.strftime("%A, %B %d, %Y")
+%h2= "Adding a dish to " + @meal.day.strftime("%A, %B %d, %Y")
 #mealForm
   - form_for @meal, :url => { :action => "create"} do |meal_form|
     = hidden_field(:meal, :day)

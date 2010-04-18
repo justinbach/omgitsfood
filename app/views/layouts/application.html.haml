@@ -2,7 +2,12 @@
 %html
   %head
     %title OMGitsfood
+    = stylesheet_link_tag 'yui/reset-min', :media => "screen"
+    = stylesheet_link_tag 'style', :media => "screen"
   %body
-    #wrapper
-      = render :partial => "layouts/header"
-      #mainContent= yield
+    #outerWrapper
+      #borderWrapper
+        #innerWrapper
+          = render :partial => "layouts/header"
+          #mainContent= yield
+          .clearDiv
