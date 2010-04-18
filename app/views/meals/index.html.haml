@@ -1,16 +1,22 @@
 %h1 Plan your meals
 #yesterday
   %h2 Yesterday
-  = button_to "New", "/"+(Time.now-60*60*24).strftime("%b-%d-%Y").downcase+"/meals/new/", :method => :get
+  = button_to "add a meal", "/"+(Time.now-60*60*24).strftime("%b-%d-%Y").downcase+"/meals/new/", :method => :get
   - @yesterdays_meals.each do |m|
-    .meal= m.recipe.title
+    .meal
+      = link_to m.recipe.title, :controller => "recipes", :action => "edit", :id => m.recipe
+      = button_to "delete", { :controller => "meals", :action => "destroy", :id => m }, :confirm => "Are you sure you wish to delete this meal?", :method => 'delete'
 #today
   %h2 Today
-  = button_to "New", "/"+Time.now.strftime("%b-%d-%Y").downcase+"/meals/new/", :method => :get
+  = button_to "add a meal", "/"+Time.now.strftime("%b-%d-%Y").downcase+"/meals/new/", :method => :get
   - @todays_meals.each do |m|
-    .meal= m.recipe.title
+    .meal
+      = link_to m.recipe.title, :controller => "recipes", :action => "edit", :id => m.recipe
+      = button_to "delete", { :controller => "meals", :action => "destroy", :id => m }, :confirm => "Are you sure you wish to delete this meal?", :method => 'delete'
 #tomorrow
   %h2 Tomorrow
-  = button_to "New", "/"+(Time.now+60*60*24).strftime("%b-%d-%Y").downcase+"/meals/new/", :method => :get
+  = button_to "add a meal", "/"+(Time.now+60*60*24).strftime("%b-%d-%Y").downcase+"/meals/new/", :method => :get
   - @tomorrows_meals.each do |m|
-    .meal= m.recipe.title
+    .meal
+      = link_to m.recipe.title, :controller => "recipes", :action => "edit", :id => m.recipe
+      = button_to "delete", { :controller => "meals", :action => "destroy", :id => m }, :confirm => "Are you sure you wish to delete this meal?", :method => 'delete'

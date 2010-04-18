@@ -1,0 +1,11 @@
+%h1 Edit Recipe
+#recipeForm
+  - form_for @recipe, :url => { :action => "update" } do |recipe_form|
+    = hidden_field(:recipe, :id)
+    = label(:recipe, :title)
+    = recipe_form.text_field :title
+    %br
+    = label(:recipe, :body)
+    = recipe_form.text_area :body
+    %br
+    = submit_tag 'Update recipe'

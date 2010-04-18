@@ -21,6 +21,13 @@ class MealsController < ApplicationController
   end
 
   def destroy
+    if Meal.find(params[:id]).destroy
+      flash[:notice] = "Meal succesfully deleted."
+      redirect_to :action => 'index'
+    else
+      flash[:notice] = "Something went wrong."
+      redirect_to :action => 'index'
+    end
   end
 
   def update
