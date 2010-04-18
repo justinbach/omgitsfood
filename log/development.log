@@ -4983,3 +4983,83 @@ Rendering meals/index
   [4;35;1mRecipe Load (0.2ms)[0m   [0mSELECT * FROM "recipes" WHERE ("recipes".meal_id = 5) LIMIT 1[0m
 Rendered layouts/_header (0.1ms)
 Completed in 21ms (View: 12, DB: 1) | 200 OK [http://localhost/meals]
+
+
+Processing MealsController#new (for 127.0.0.1 at 2010-04-17 18:12:57) [GET]
+  Parameters: {"day"=>"apr-18-2010"}
+Rendering template within layouts/application
+Rendering meals/new
+Rendered layouts/_header (0.1ms)
+Completed in 17ms (View: 6, DB: 0) | 200 OK [http://localhost/apr-18-2010/meals/new/]
+
+
+Processing MealsController#create (for 127.0.0.1 at 2010-04-17 18:13:23) [POST]
+  Parameters: {"commit"=>"Add meal", "meal"=>{"recipe_attributes"=>{"title"=>"Sunday dinner", "body"=>"Bake some ham with pineapples in the oven.  It's awesome."}, "day"=>"apr-18-2010"}, "authenticity_token"=>"ZQprnFhiEDQE2JydwSZpm6JkCF90Ve7UYIDdMPm4Kdo="}
+  [4;36;1mMeal Create (0.4ms)[0m   [0;1mINSERT INTO "meals" ("updated_at", "recipe_id", "day", "created_at") VALUES('2010-04-17 22:13:23', NULL, '2010-04-18', '2010-04-17 22:13:23')[0m
+  [4;35;1mRecipe Create (0.1ms)[0m   [0mINSERT INTO "recipes" ("updated_at", "meal_id", "title", "body", "created_at") VALUES('2010-04-17 22:13:23', 6, 'Sunday dinner', 'Bake some ham with pineapples in the oven. It''s awesome.', '2010-04-17 22:13:23')[0m
+Redirected to http://localhost:3000/meals
+Completed in 17ms (DB: 1) | 302 Found [http://localhost/meals/create]
+
+
+Processing MealsController#index (for 127.0.0.1 at 2010-04-17 18:13:23) [GET]
+  [4;36;1mMeal Load (0.2ms)[0m   [0;1mSELECT * FROM "meals" WHERE ("meals"."day" = '2010-04-16') [0m
+  [4;35;1mMeal Load (0.2ms)[0m   [0mSELECT * FROM "meals" WHERE ("meals"."day" = '2010-04-17') [0m
+  [4;36;1mMeal Load (0.2ms)[0m   [0;1mSELECT * FROM "meals" WHERE ("meals"."day" = '2010-04-18') [0m
+Rendering template within layouts/application
+Rendering meals/index
+  [4;35;1mRecipe Load (0.3ms)[0m   [0mSELECT * FROM "recipes" WHERE ("recipes".meal_id = 4) LIMIT 1[0m
+  [4;36;1mRecipe Load (0.2ms)[0m   [0;1mSELECT * FROM "recipes" WHERE ("recipes".meal_id = 5) LIMIT 1[0m
+  [4;35;1mRecipe Load (0.2ms)[0m   [0mSELECT * FROM "recipes" WHERE ("recipes".meal_id = 6) LIMIT 1[0m
+Rendered layouts/_header (0.1ms)
+Completed in 15ms (View: 8, DB: 1) | 200 OK [http://localhost/meals]
+  [4;35;1mSQL (0.5ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mMeal Load (0.3ms)[0m   [0mSELECT * FROM "meals" ORDER BY meals.id DESC LIMIT 1[0m
+  [4;36;1mRecipe Load (0.3ms)[0m   [0;1mSELECT * FROM "recipes" ORDER BY recipes.id DESC LIMIT 1[0m
+  [4;36;1mSQL (0.6ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreateRecipes (20100417153810)
+Migrating to CreateIngredients (20100417153832)
+Migrating to CreateMeals (20100417153847)
+Migrating to CreateIngredientships (20100417155529)
+Migrating to AddRecipeToMeal (20100417160001)
+Migrating to AddBodyToRecipe (20100417160708)
+Migrating to AddMealIdToRecipes (20100417214431)
+Migrating to RemoveRecipeIdFromMeals (20100418133952)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mCREATE TEMPORARY TABLE "altered_meals" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "day" date, "created_at" datetime, "updated_at" datetime, "recipe_id" integer) [0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mPRAGMA index_list("meals")[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mDROP TABLE "meals"[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mCREATE TABLE "meals" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "day" date, "created_at" datetime, "updated_at" datetime) [0m
+  [4;35;1mSQL (0.0ms)[0m   [0mPRAGMA index_list("altered_meals")[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mDROP TABLE "altered_meals"[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20100418133952')[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mPRAGMA index_list("ingredients")[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mPRAGMA index_list("ingredientships")[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mPRAGMA index_list("meals")[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mPRAGMA index_list("recipes")[0m
+  [4;36;1mSQL (0.6ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mMeal Load (0.4ms)[0m   [0mSELECT * FROM "meals" ORDER BY meals.id DESC LIMIT 1[0m
+  [4;36;1mMeal Load (0.3ms)[0m   [0;1mSELECT * FROM "meals" ORDER BY meals.id DESC LIMIT 1[0m
+  [4;35;1mRecipe Load (0.3ms)[0m   [0mSELECT * FROM "recipes" WHERE ("recipes".meal_id = 6) LIMIT 1[0m
