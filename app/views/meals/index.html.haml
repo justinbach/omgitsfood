@@ -1,21 +1,21 @@
 %h1 Plan your meals
 #mealDays
   .mealDay
-    %h2= (@centerDate - 1).to_s
+    %h2= (@centerDate - 1).strftime("%b %d, %Y")
     = button_to "add a meal", "/"+(Time.now-60*60*24).strftime("%b-%d-%Y").downcase+"/meals/new/", :method => :get
     - @left_meals.each do |m|
       .meal
         = link_to m.recipe.title, :controller => "recipes", :action => "edit", :id => m.recipe
         = button_to "delete", { :controller => "meals", :action => "destroy", :id => m }, :confirm => "Are you sure you wish to delete this meal?", :method => 'delete'
   .mealDay
-    %h2= @centerDate.to_s
+    %h2= @centerDate.strftime("%b %d, %Y")
     = button_to "add a meal", "/"+Time.now.strftime("%b-%d-%Y").downcase+"/meals/new/", :method => :get
     - @center_meals.each do |m|
       .meal
         = link_to m.recipe.title, :controller => "recipes", :action => "edit", :id => m.recipe
         = button_to "delete", { :controller => "meals", :action => "destroy", :id => m }, :confirm => "Are you sure you wish to delete this meal?", :method => 'delete'
   .mealDay.lastMealDay
-    %h2= (@centerDate + 1).to_s
+    %h2= (@centerDate + 1).strftime("%b %d, %Y")
     = button_to "add a meal", "/"+(Time.now+60*60*24).strftime("%b-%d-%Y").downcase+"/meals/new/", :method => :get
     - @right_meals.each do |m|
       .meal
