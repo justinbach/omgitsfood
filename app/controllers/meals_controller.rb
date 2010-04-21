@@ -1,4 +1,7 @@
 class MealsController < ApplicationController
+
+  before_filter :login_required
+  
   def index
     @yesterdays_meals = Meal.find_all_by_day(Date.yesterday)
     @todays_meals = Meal.find_all_by_day(Date.today)
@@ -32,5 +35,8 @@ class MealsController < ApplicationController
 
   def update
   end
+  
+  private
+
 
 end

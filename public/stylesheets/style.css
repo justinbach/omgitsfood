@@ -24,20 +24,26 @@ body {
 #innerWrapper {
   width: 870px;
   margin: 0px auto;
-  padding: 20px 15px;
+  padding: 10px 15px;
   background-color: #EEE; }
 
 h1 {
   font-size: 30px; }
 
-#banner {
-  height: 50px; }
-  #banner #omg {
-    color: #FA6900; }
-  #banner #its {
-    color: #A7DBD8; }
-  #banner #food {
-    color: #69D2E7; }
+#header {
+  height: 50px;
+  width: 100%; }
+  #header #logo {
+    float: left;
+    height: 50px; }
+    #header #logo #omg {
+      color: #FA6900; }
+    #header #logo #its {
+      color: #A7DBD8; }
+    #header #logo #food {
+      color: #69D2E7; }
+  #header #userStuff {
+    float: right; }
 
 #mealDays {
   margin: auto;

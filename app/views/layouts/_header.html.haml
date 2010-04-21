@@ -1,8 +1,13 @@
-#banner
-  %h1 
-    %span#omg> omg 
-    %span#its> its
-    %span#food food
-  - if flash[:notice]
-    #flash= flash[:notice]
+#header
+  #logo
+    %h1 
+      %span#omg> omg 
+      %span#its> its
+      %span#food food
+  #userStuff
+    - if logged_in?
+      ='Logged in as ' + current_user.username
+      = link_to "Log out", logout_path
+    - else
+      = link_to "Sign up", signup_path
   
