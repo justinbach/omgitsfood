@@ -3,9 +3,12 @@ class MealsController < ApplicationController
   before_filter :login_required
   
   def index
-    @yesterdays_meals = Meal.find_all_by_day(Date.yesterday)
-    @todays_meals = Meal.find_all_by_day(Date.today)
-    @tomorrows_meals = Meal.find_all_by_day(Date.tomorrow)
+    @yesterdays_meals = Meal.find_all_by_day(Date.yesterday, 
+                              :conditions => ['user_id = ?', current_user])
+    @todays_meals = Meal.find_all_by_day(Date.today,
+                              :conditions => ['user_id = ?', current_user])
+    @tomorrows_meals = Meal.find_all_by_day(Date.tomorrow,
+                              :conditions => ['user_id = ?', current_user])
   end
 
   def new
@@ -16,6 +19,7 @@ class MealsController < ApplicationController
 
   def create
     @meal = Meal.new(params[:meal])
+    @meal.user = current_user
     if(@meal.save)
       redirect_to :action => 'index'
     else
