@@ -7838,3 +7838,94 @@ Rendering meals/index
   [4;35;1mRecipe Load (0.4ms)[0m   [0mSELECT * FROM "recipes" WHERE ("recipes".meal_id = 8) LIMIT 1[0m
 Rendered layouts/_header (0.5ms)
 Completed in 605ms (View: 302, DB: 14) | 200 OK [http://localhost/meals]
+
+
+Processing UsersController#new (for 127.0.0.1 at 2010-04-20 20:10:36) [GET]
+  Parameters: {"action"=>"new", "controller"=>"users"}
+
+ActiveRecord::StatementInvalid (Could not find table 'users'):
+  app/controllers/users_controller.rb:3:in `new'
+  app/controllers/users_controller.rb:3:in `new'
+  haml (2.2.23) lib/sass/plugin/rails.rb:20:in `process'
+
+Rendered rescues/_trace (73.1ms)
+Rendered rescues/_request_and_response (6.7ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.6ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreateRecipes (20100417153810)
+Migrating to CreateIngredients (20100417153832)
+Migrating to CreateMeals (20100417153847)
+Migrating to CreateIngredientships (20100417155529)
+Migrating to AddRecipeToMeal (20100417160001)
+Migrating to AddBodyToRecipe (20100417160708)
+Migrating to AddMealIdToRecipes (20100417214431)
+Migrating to RemoveRecipeIdFromMeals (20100418133952)
+Migrating to CreateUsers (20100421000826)
+  [4;36;1mSQL (8.2ms)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mCREATE TABLE "users" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "username" varchar(255), "email" varchar(255), "password_hash" varchar(255), "password_salt" varchar(255), "created_at" datetime, "updated_at" datetime) [0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20100421000826')[0m
+  [4;35;1mSQL (0.3ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (0.2ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mPRAGMA index_list("ingredients")[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mPRAGMA index_list("ingredientships")[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mPRAGMA index_list("meals")[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mPRAGMA index_list("recipes")[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mPRAGMA index_list("users")[0m
+
+
+Processing UsersController#new (for 127.0.0.1 at 2010-04-20 20:10:56) [GET]
+  Parameters: {"action"=>"new", "controller"=>"users"}
+Rendering template within layouts/application
+Rendering users/new
+
+ActionView::TemplateError (undefined method `title' for #<ActionView::Base:0x23a341c>) on line #1 of app/views/users/new.html.erb:
+1: <% title "Sign up" %>
+2: 
+3: <p>Already have an account? <%= link_to "Log in", login_path %>.</p>
+4: 
+
+    app/views/users/new.html.erb:1
+    haml (2.2.23) lib/haml/helpers/action_view_mods.rb:13:in `render'
+    haml (2.2.23) lib/haml/helpers/action_view_mods.rb:13:in `render'
+    haml (2.2.23) lib/sass/plugin/rails.rb:20:in `process'
+
+Rendered rescues/_trace (174.1ms)
+Rendered rescues/_request_and_response (0.4ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing UsersController#new (for 127.0.0.1 at 2010-04-20 20:12:29) [GET]
+  Parameters: {"action"=>"new", "controller"=>"users"}
+Rendering template within layouts/application
+Rendering users/new
+Completed in 28ms (View: 21, DB: 0) | 200 OK [http://localhost/users/new]
+
+
+Processing MealsController#index (for 127.0.0.1 at 2010-04-20 20:12:33) [GET]
+  Parameters: {"action"=>"index", "controller"=>"meals"}
+  [4;36;1mMeal Load (16.4ms)[0m   [0;1mSELECT * FROM "meals" WHERE ("meals"."day" = '2010-04-19') [0m
+  [4;35;1mMeal Load (0.2ms)[0m   [0mSELECT * FROM "meals" WHERE ("meals"."day" = '2010-04-20') [0m
+  [4;36;1mMeal Load (0.1ms)[0m   [0;1mSELECT * FROM "meals" WHERE ("meals"."day" = '2010-04-21') [0m
+Rendering template within layouts/application
+Rendering meals/index
+  [4;35;1mRecipe Load (7.1ms)[0m   [0mSELECT * FROM "recipes" WHERE ("recipes".meal_id = 7) LIMIT 1[0m
+  [4;36;1mRecipe Load (0.4ms)[0m   [0;1mSELECT * FROM "recipes" WHERE ("recipes".meal_id = 8) LIMIT 1[0m
+Completed in 138ms (View: 49, DB: 24) | 200 OK [http://localhost/meals]
+
+
+Processing MealsController#new (for 127.0.0.1 at 2010-04-20 20:12:45) [GET]
+  Parameters: {"action"=>"new", "day"=>"apr-19-2010", "controller"=>"meals"}
+Rendering template within layouts/application
+Rendering meals/new
+Completed in 18ms (View: 7, DB: 0) | 200 OK [http://localhost/apr-19-2010/meals/new/]
