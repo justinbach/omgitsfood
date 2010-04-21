@@ -1,23 +1,28 @@
 %h1 Plan your meals
 #mealDays
   .mealDay
-    %h2 Yesterday
+    %h2= (@centerDate - 1).to_s
     = button_to "add a meal", "/"+(Time.now-60*60*24).strftime("%b-%d-%Y").downcase+"/meals/new/", :method => :get
-    - @yesterdays_meals.each do |m|
+    - @left_meals.each do |m|
       .meal
         = link_to m.recipe.title, :controller => "recipes", :action => "edit", :id => m.recipe
         = button_to "delete", { :controller => "meals", :action => "destroy", :id => m }, :confirm => "Are you sure you wish to delete this meal?", :method => 'delete'
   .mealDay
-    %h2 Today
+    %h2= @centerDate.to_s
     = button_to "add a meal", "/"+Time.now.strftime("%b-%d-%Y").downcase+"/meals/new/", :method => :get
-    - @todays_meals.each do |m|
+    - @center_meals.each do |m|
       .meal
         = link_to m.recipe.title, :controller => "recipes", :action => "edit", :id => m.recipe
         = button_to "delete", { :controller => "meals", :action => "destroy", :id => m }, :confirm => "Are you sure you wish to delete this meal?", :method => 'delete'
   .mealDay.lastMealDay
-    %h2 Tomorrow
+    %h2= (@centerDate + 1).to_s
     = button_to "add a meal", "/"+(Time.now+60*60*24).strftime("%b-%d-%Y").downcase+"/meals/new/", :method => :get
-    - @tomorrows_meals.each do |m|
+    - @right_meals.each do |m|
       .meal
         = link_to m.recipe.title, :controller => "recipes", :action => "edit", :id => m.recipe
         = button_to "delete", { :controller => "meals", :action => "destroy", :id => m }, :confirm => "Are you sure you wish to delete this meal?", :method => 'delete'
+#dateLinks
+  .older
+    = link_to "older meals", url_for(:controller => 'meals', :action => 'index', :d => @centerDate - 3)
+  .newer
+    = link_to "newer meals", url_for(:controller => 'meals', :action => 'index', :d => @centerDate + 3)

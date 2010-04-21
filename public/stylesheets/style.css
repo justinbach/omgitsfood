@@ -78,6 +78,13 @@ h1 {
 .clearDiv {
   clear: both; }
 
+#dateLinks {
+  width: 100%; }
+  #dateLinks .older {
+    float: left; }
+  #dateLinks .newer {
+    float: right; }
+
 #mainContent h1 {
   text-align: center;
   margin: 10px;

@@ -3,11 +3,12 @@ class MealsController < ApplicationController
   before_filter :login_required
   
   def index
-    @yesterdays_meals = Meal.find_all_by_day(Date.yesterday, 
+    @centerDate = params[:d] ? Date.parse(params[:d]) : Date.today
+    @left_meals = Meal.find_all_by_day(@centerDate - 1, 
                               :conditions => ['user_id = ?', current_user])
-    @todays_meals = Meal.find_all_by_day(Date.today,
+    @center_meals = Meal.find_all_by_day(@centerDate,
                               :conditions => ['user_id = ?', current_user])
-    @tomorrows_meals = Meal.find_all_by_day(Date.tomorrow,
+    @right_meals = Meal.find_all_by_day(@centerDate + 1,
                               :conditions => ['user_id = ?', current_user])
   end
 
