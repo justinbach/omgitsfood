@@ -58,7 +58,9 @@ h1 {
     font-size: 20px;
     margin-bottom: 10px; }
   .mealDay input {
-    border: 2px #FA6900 solid; }
+    border: 2px #FA6900 solid;
+    padding: 3px;
+    -webkit-border-radius: 5px; }
     .mealDay input:hover {
       color: #FFF;
       background-color: #FA6900;
