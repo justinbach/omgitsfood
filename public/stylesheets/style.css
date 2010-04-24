@@ -25,9 +25,9 @@ p {
   border: 5px solid #A7DBD8; }
 
 #innerWrapper {
-  width: 870px;
+  width: 830px;
   margin: 0px auto;
-  padding: 10px 15px;
+  padding: 10px 35px;
   background-color: #FFF; }
 
 h1 {
@@ -73,7 +73,7 @@ h1 {
         margin-right: 0px; }
 
 #mealDays {
-  margin: auto;
+  margin: 20px auto 0px;
   width: 798px; }
 
 .mealDay {
@@ -88,6 +88,10 @@ h1 {
   background-color: #F6F6F6; }
   .mealDay .meal {
     margin: 10px 0; }
+    .mealDay .meal form {
+      display: inline; }
+    .mealDay .meal div {
+      display: inline; }
   .mealDay h2 {
     font-size: 20px;
     margin-bottom: 10px; }
@@ -121,6 +125,5 @@ h1 {
     float: right; }
 
 #mainContent h1 {
-  text-align: center;
-  margin: 10px;
+  text-align: left;
   font-size: 24px; }

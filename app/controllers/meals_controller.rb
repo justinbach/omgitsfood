@@ -20,10 +20,12 @@ class MealsController < ApplicationController
     @meal = Meal.new
     @meal.day = params[:day]
     @meal.recipe = Recipe.new
+    @recipes = Recipe.all
   end
 
   def create
     @meal = Meal.new(params[:meal])
+    @meal.recipe = Recipe.find_or_create_by_id(params[:meal][:recipe])
     @meal.user = current_user
     if(@meal.save)
       redirect_to :action => 'index'

@@ -1,12 +1,19 @@
-%h2= "Adding a dish to " + @meal.day.strftime("%A, %B %d, %Y")
-#mealForm
+%h1= "Schedule recipe for " + @meal.day.strftime("%A, %B %d, %Y")
+#recipePickerForm
   - form_for @meal, :url => { :action => "create"} do |meal_form|
     = hidden_field(:meal, :day)
     - meal_form.fields_for :recipe do |recipe_form|
-      = label(:recipe, :title)
-      = recipe_form.text_field :title 
-      %br
-      = label(:recipe, :body)
-      = recipe_form.text_area :body
-      %br
-    = submit_tag 'Add meal'
+      = label(:recipe, :id, "Pick a recipe:")
+      = collection_select(:recipe, :id, @recipes, :id, :title,options ={:prompt => "Select a recipe"})
+    = submit_tag 'Schedule Recipe'
+#mealForm
+- form_for @meal, :url => { :action => "create"} do |meal_form|
+  = hidden_field(:meal, :day)
+  - meal_form.fields_for :recipe do |recipe_form|
+    = label(:recipe, :title)
+    = recipe_form.text_field :title 
+    %br
+    = label(:recipe, :body)
+    = recipe_form.text_area :body
+    %br
+  = submit_tag 'Add and Schedule Recipe '
