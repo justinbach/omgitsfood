@@ -120,6 +120,13 @@ h1 {
   height: 30px;
   padding-top: 20px; }
   #dateLinks .older {
+    float: left;
+    width: 370px; }
+  #dateLinks .today {
+    width: 80px;
+    height: 30px;
+    text-align: center;
+    margin: auto;
     float: left; }
   #dateLinks .newer {
     float: right; }

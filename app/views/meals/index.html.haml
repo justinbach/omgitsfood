@@ -3,30 +3,23 @@
   .mealDay
     %h2= (@centerDate - 1).strftime("%a %b %d, %Y")
     = button_to "add a meal", "/" +(@centerDate - 1).strftime("%b-%d-%Y").downcase+"/meals/new/", :method => :get
-    - @left_meals.each do |m|
-      .meal
-        = button_to "x", { :controller => "meals", :action => "destroy", :id => m }, :confirm => "Are you sure you wish to delete this meal?", :method => 'delete'
-        = link_to m.recipe.title, m
+    = render :partial => 'meal', :collection => @left_meals
   .mealDay
     - if @centerDate == Date.today
       %h2.today= @centerDate.strftime("%a %b %d, %Y")
     - else
       %h2= @centerDate.strftime("%a %b %d, %Y")
     = button_to "add a meal", "/" + @centerDate.strftime("%b-%d-%Y").downcase+"/meals/new/", :method => :get
-    - @center_meals.each do |m|
-      .meal
-        = button_to "x", { :controller => "meals", :action => "destroy", :id => m }, :confirm => "Are you sure you wish to delete this meal?", :method => 'delete'
-        = link_to m.recipe.title, m
+    = render :partial => 'meal', :collection => @center_meals
   .mealDay.lastMealDay
     %h2= (@centerDate + 1).strftime("%a %b %d, %Y")
     = button_to "add a meal", "/"+ (@centerDate + 1).strftime("%b-%d-%Y").downcase+"/meals/new/", :method => :get
-    - @right_meals.each do |m|
-      .meal
-        = button_to "x", { :controller => "meals", :action => "destroy", :id => m }, :confirm => "Are you sure you wish to delete this meal?", :method => 'delete'
-        = link_to m.recipe.title, m
+    = render :partial => 'meal', :collection => @right_meals
 .clearDiv
 #dateLinks
   .older
-    = link_to "older meals", url_for(:controller => 'meals', :action => 'index', :d => @centerDate - 3)
+    = link_to "&larr; older meals", url_for(:controller => 'meals', :action => 'index', :d => @centerDate - 3)
+  .today
+    = link_to "today", url_for(:controller => 'meals', :action => 'index', :d => Date.today)
   .newer
-    = link_to "newer meals", url_for(:controller => 'meals', :action => 'index', :d => @centerDate + 3)
+    = link_to "newer meals &rarr;", url_for(:controller => 'meals', :action => 'index', :d => @centerDate + 3)
