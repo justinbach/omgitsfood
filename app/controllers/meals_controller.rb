@@ -1,6 +1,7 @@
 class MealsController < ApplicationController
 
   before_filter :login_required
+  before_filter :store_return_point, :only => [:index]
   
   def index
     @centerDate = params[:d] ? Date.parse(params[:d]) : Date.today
@@ -28,7 +29,7 @@ class MealsController < ApplicationController
     @meal.recipe = Recipe.find(params[:recipe][:id]) unless params[:recipe].nil?
     @meal.user = @meal.recipe.user = current_user
     if(@meal.save)
-      redirect_to :action => 'index'
+      redirect_back :action => 'index'
     else
       flash[:notice] = "uh oh"
     end
@@ -37,10 +38,10 @@ class MealsController < ApplicationController
   def destroy
     if Meal.find(params[:id]).destroy
       flash[:notice] = "Meal succesfully deleted."
-      redirect_to :action => 'index'
+      redirect_back :action => 'index'
     else
       flash[:notice] = "Something went wrong."
-      redirect_to :action => 'index'
+      redirect_back :action => 'index'
     end
   end
 

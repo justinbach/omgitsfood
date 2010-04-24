@@ -15,9 +15,10 @@ class RecipesController < ApplicationController
     @recipe = Recipe.find(params[:recipe][:id])
     if @recipe.update_attributes(params[:recipe])
       flash[:notice] = "Recipe was successfully updated."
-      redirect_to(:controller => "meals", :action => "index")
+      redirect_to(:controller => "recipes", :action => "index")
     else
-      redirect_to(:controller => "recipes", :action => "edit", :id => params[:id])
+      flash[:notice] = @recipe.errors
+      render :action => "edit"
     end
   end
 end

@@ -9548,3 +9548,966 @@ Migrating to FixRecipeMealRelationship (20100424174623)
   [4;36;1mRecipe Load (0.3ms)[0m   [0;1mSELECT * FROM "recipes" WHERE ("recipes"."title" = '') LIMIT 1[0m
   [4;35;1mRecipe Load (0.3ms)[0m   [0mSELECT * FROM "recipes" WHERE ("recipes"."title" = '') LIMIT 1[0m
   [4;36;1mRecipe Destroy (0.6ms)[0m   [0;1mDELETE FROM "recipes" WHERE "id" = 31[0m
+
+
+Processing MealsController#index (for 127.0.0.1 at 2010-04-24 16:52:24) [GET]
+  Parameters: {"action"=>"index", "d"=>"2010-04-21", "controller"=>"meals"}
+  [4;36;1mUser Load (0.4ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;35;1mMeal Load (0.3ms)[0m   [0mSELECT * FROM "meals" WHERE (user_id = 1) AND ("meals"."day" = '2010-04-20') [0m
+  [4;36;1mMeal Load (0.2ms)[0m   [0;1mSELECT * FROM "meals" WHERE (user_id = 1) AND ("meals"."day" = '2010-04-21') [0m
+  [4;35;1mMeal Load (0.4ms)[0m   [0mSELECT * FROM "meals" WHERE (user_id = 1) AND ("meals"."day" = '2010-04-22') [0m
+Rendering template within layouts/application
+Rendering meals/index
+  [4;36;1mRecipe Load (0.3ms)[0m   [0;1mSELECT * FROM "recipes" WHERE ("recipes"."id" = 27) [0m
+Rendered meals/_meal (13.5ms)
+  [4;35;1mRecipe Load (0.3ms)[0m   [0mSELECT * FROM "recipes" WHERE ("recipes"."id" = 28) [0m
+Rendered meals/_meal (1.6ms)
+  [4;36;1mRecipe Load (0.2ms)[0m   [0;1mSELECT * FROM "recipes" WHERE ("recipes"."id" = 33) [0m
+Rendered meals/_meal (1.4ms)
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "recipes" WHERE ("recipes"."id" = 28) [0m
+Rendered meals/_meal (1.1ms)
+Rendered layouts/_header (3.4ms)
+Completed in 154ms (View: 78, DB: 2) | 200 OK [http://localhost/meals?d=2010-04-21]
+
+
+Processing MealsController#show (for 127.0.0.1 at 2010-04-24 16:52:27) [GET]
+  Parameters: {"action"=>"show", "id"=>"44", "controller"=>"meals"}
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;35;1mMeal Load (0.3ms)[0m   [0mSELECT * FROM "meals" WHERE ("meals"."id" = 44) [0m
+Rendering template within layouts/application
+Rendering meals/show
+  [4;36;1mRecipe Load (0.3ms)[0m   [0;1mSELECT * FROM "recipes" WHERE ("recipes"."id" = 27) [0m
+Rendered layouts/_header (1.4ms)
+Completed in 31ms (View: 18, DB: 1) | 200 OK [http://localhost/meals/44]
+
+
+Processing MealsController#index (for 127.0.0.1 at 2010-04-24 16:52:28) [GET]
+  Parameters: {"action"=>"index", "d"=>"2010-04-21", "controller"=>"meals"}
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;36;1mMeal Load (0.3ms)[0m   [0;1mSELECT * FROM "meals" WHERE (user_id = 1) AND ("meals"."day" = '2010-04-20') [0m
+  [4;35;1mMeal Load (0.3ms)[0m   [0mSELECT * FROM "meals" WHERE (user_id = 1) AND ("meals"."day" = '2010-04-21') [0m
+  [4;36;1mMeal Load (0.3ms)[0m   [0;1mSELECT * FROM "meals" WHERE (user_id = 1) AND ("meals"."day" = '2010-04-22') [0m
+Rendering template within layouts/application
+Rendering meals/index
+  [4;35;1mRecipe Load (0.3ms)[0m   [0mSELECT * FROM "recipes" WHERE ("recipes"."id" = 27) [0m
+Rendered meals/_meal (9.0ms)
+  [4;36;1mRecipe Load (0.3ms)[0m   [0;1mSELECT * FROM "recipes" WHERE ("recipes"."id" = 28) [0m
+Rendered meals/_meal (1.7ms)
+  [4;35;1mRecipe Load (0.3ms)[0m   [0mSELECT * FROM "recipes" WHERE ("recipes"."id" = 33) [0m
+Rendered meals/_meal (1.5ms)
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "recipes" WHERE ("recipes"."id" = 28) [0m
+Rendered meals/_meal (1.1ms)
+Rendered layouts/_header (0.2ms)
+Completed in 37ms (View: 19, DB: 2) | 200 OK [http://localhost/meals?d=2010-04-21]
+
+
+Processing MealsController#index (for 127.0.0.1 at 2010-04-24 16:52:30) [GET]
+  Parameters: {"action"=>"index", "d"=>"2010-04-18", "controller"=>"meals"}
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;36;1mMeal Load (0.2ms)[0m   [0;1mSELECT * FROM "meals" WHERE (user_id = 1) AND ("meals"."day" = '2010-04-17') [0m
+  [4;35;1mMeal Load (0.1ms)[0m   [0mSELECT * FROM "meals" WHERE (user_id = 1) AND ("meals"."day" = '2010-04-18') [0m
+  [4;36;1mMeal Load (0.1ms)[0m   [0;1mSELECT * FROM "meals" WHERE (user_id = 1) AND ("meals"."day" = '2010-04-19') [0m
+Rendering template within layouts/application
+Rendering meals/index
+Rendered layouts/_header (0.2ms)
+Completed in 24ms (View: 6, DB: 1) | 200 OK [http://localhost/meals?d=2010-04-18]
+
+
+Processing MealsController#index (for 127.0.0.1 at 2010-04-24 16:52:31) [GET]
+  Parameters: {"action"=>"index", "d"=>"2010-04-15", "controller"=>"meals"}
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;36;1mMeal Load (0.2ms)[0m   [0;1mSELECT * FROM "meals" WHERE (user_id = 1) AND ("meals"."day" = '2010-04-14') [0m
+  [4;35;1mMeal Load (0.1ms)[0m   [0mSELECT * FROM "meals" WHERE (user_id = 1) AND ("meals"."day" = '2010-04-15') [0m
+  [4;36;1mMeal Load (0.1ms)[0m   [0;1mSELECT * FROM "meals" WHERE (user_id = 1) AND ("meals"."day" = '2010-04-16') [0m
+Rendering template within layouts/application
+Rendering meals/index
+Rendered layouts/_header (0.2ms)
+Completed in 24ms (View: 5, DB: 1) | 200 OK [http://localhost/meals?d=2010-04-15]
+
+
+Processing MealsController#index (for 127.0.0.1 at 2010-04-24 16:52:31) [GET]
+  Parameters: {"action"=>"index", "d"=>"2010-04-12", "controller"=>"meals"}
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;36;1mMeal Load (0.2ms)[0m   [0;1mSELECT * FROM "meals" WHERE (user_id = 1) AND ("meals"."day" = '2010-04-11') [0m
+  [4;35;1mMeal Load (0.1ms)[0m   [0mSELECT * FROM "meals" WHERE (user_id = 1) AND ("meals"."day" = '2010-04-12') [0m
+  [4;36;1mMeal Load (0.1ms)[0m   [0;1mSELECT * FROM "meals" WHERE (user_id = 1) AND ("meals"."day" = '2010-04-13') [0m
+Rendering template within layouts/application
+Rendering meals/index
+Rendered layouts/_header (0.2ms)
+Completed in 82ms (View: 6, DB: 1) | 200 OK [http://localhost/meals?d=2010-04-12]
+
+
+Processing MealsController#index (for 127.0.0.1 at 2010-04-24 16:52:32) [GET]
+  Parameters: {"action"=>"index", "d"=>"2010-04-15", "controller"=>"meals"}
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;36;1mMeal Load (0.2ms)[0m   [0;1mSELECT * FROM "meals" WHERE (user_id = 1) AND ("meals"."day" = '2010-04-14') [0m
+  [4;35;1mMeal Load (0.1ms)[0m   [0mSELECT * FROM "meals" WHERE (user_id = 1) AND ("meals"."day" = '2010-04-15') [0m
+  [4;36;1mMeal Load (0.1ms)[0m   [0;1mSELECT * FROM "meals" WHERE (user_id = 1) AND ("meals"."day" = '2010-04-16') [0m
+Rendering template within layouts/application
+Rendering meals/index
+Rendered layouts/_header (0.2ms)
+Completed in 23ms (View: 5, DB: 1) | 200 OK [http://localhost/meals?d=2010-04-15]
+
+
+Processing MealsController#index (for 127.0.0.1 at 2010-04-24 16:52:33) [GET]
+  Parameters: {"action"=>"index", "d"=>"2010-04-18", "controller"=>"meals"}
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;36;1mMeal Load (0.2ms)[0m   [0;1mSELECT * FROM "meals" WHERE (user_id = 1) AND ("meals"."day" = '2010-04-17') [0m
+  [4;35;1mMeal Load (0.1ms)[0m   [0mSELECT * FROM "meals" WHERE (user_id = 1) AND ("meals"."day" = '2010-04-18') [0m
+  [4;36;1mMeal Load (0.1ms)[0m   [0;1mSELECT * FROM "meals" WHERE (user_id = 1) AND ("meals"."day" = '2010-04-19') [0m
+Rendering template within layouts/application
+Rendering meals/index
+Rendered layouts/_header (0.3ms)
+Completed in 23ms (View: 5, DB: 1) | 200 OK [http://localhost/meals?d=2010-04-18]
+
+
+Processing MealsController#index (for 127.0.0.1 at 2010-04-24 16:52:33) [GET]
+  Parameters: {"action"=>"index", "d"=>"2010-04-21", "controller"=>"meals"}
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;36;1mMeal Load (0.3ms)[0m   [0;1mSELECT * FROM "meals" WHERE (user_id = 1) AND ("meals"."day" = '2010-04-20') [0m
+  [4;35;1mMeal Load (0.2ms)[0m   [0mSELECT * FROM "meals" WHERE (user_id = 1) AND ("meals"."day" = '2010-04-21') [0m
+  [4;36;1mMeal Load (0.4ms)[0m   [0;1mSELECT * FROM "meals" WHERE (user_id = 1) AND ("meals"."day" = '2010-04-22') [0m
+Rendering template within layouts/application
+Rendering meals/index
+  [4;35;1mRecipe Load (0.3ms)[0m   [0mSELECT * FROM "recipes" WHERE ("recipes"."id" = 27) [0m
+Rendered meals/_meal (8.3ms)
+  [4;36;1mRecipe Load (0.3ms)[0m   [0;1mSELECT * FROM "recipes" WHERE ("recipes"."id" = 28) [0m
+Rendered meals/_meal (1.5ms)
+  [4;35;1mRecipe Load (0.3ms)[0m   [0mSELECT * FROM "recipes" WHERE ("recipes"."id" = 33) [0m
+Rendered meals/_meal (1.6ms)
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "recipes" WHERE ("recipes"."id" = 28) [0m
+Rendered meals/_meal (1.2ms)
+Rendered layouts/_header (0.3ms)
+Completed in 37ms (View: 18, DB: 2) | 200 OK [http://localhost/meals?d=2010-04-21]
+
+
+Processing MealsController#show (for 127.0.0.1 at 2010-04-24 16:52:35) [GET]
+  Parameters: {"action"=>"show", "id"=>"45", "controller"=>"meals"}
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;36;1mMeal Load (0.3ms)[0m   [0;1mSELECT * FROM "meals" WHERE ("meals"."id" = 45) [0m
+Rendering template within layouts/application
+Rendering meals/show
+  [4;35;1mRecipe Load (0.3ms)[0m   [0mSELECT * FROM "recipes" WHERE ("recipes"."id" = 28) [0m
+Rendered layouts/_header (1.4ms)
+Completed in 25ms (View: 12, DB: 1) | 200 OK [http://localhost/meals/45]
+
+
+Processing MealsController#index (for 127.0.0.1 at 2010-04-24 16:52:36) [GET]
+  Parameters: {"action"=>"index", "d"=>"2010-04-21", "controller"=>"meals"}
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;35;1mMeal Load (0.4ms)[0m   [0mSELECT * FROM "meals" WHERE (user_id = 1) AND ("meals"."day" = '2010-04-20') [0m
+  [4;36;1mMeal Load (0.3ms)[0m   [0;1mSELECT * FROM "meals" WHERE (user_id = 1) AND ("meals"."day" = '2010-04-21') [0m
+  [4;35;1mMeal Load (0.3ms)[0m   [0mSELECT * FROM "meals" WHERE (user_id = 1) AND ("meals"."day" = '2010-04-22') [0m
+Rendering template within layouts/application
+Rendering meals/index
+  [4;36;1mRecipe Load (0.4ms)[0m   [0;1mSELECT * FROM "recipes" WHERE ("recipes"."id" = 27) [0m
+Rendered meals/_meal (9.0ms)
+  [4;35;1mRecipe Load (0.3ms)[0m   [0mSELECT * FROM "recipes" WHERE ("recipes"."id" = 28) [0m
+Rendered meals/_meal (1.6ms)
+  [4;36;1mRecipe Load (0.3ms)[0m   [0;1mSELECT * FROM "recipes" WHERE ("recipes"."id" = 33) [0m
+Rendered meals/_meal (1.5ms)
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "recipes" WHERE ("recipes"."id" = 28) [0m
+Rendered meals/_meal (1.1ms)
+Rendered layouts/_header (0.2ms)
+Completed in 39ms (View: 19, DB: 2) | 200 OK [http://localhost/meals?d=2010-04-21]
+
+
+Processing MealsController#destroy (for 127.0.0.1 at 2010-04-24 16:52:42) [DELETE]
+  Parameters: {"action"=>"destroy", "_method"=>"delete", "authenticity_token"=>"ZQprnFhiEDQE2JydwSZpm6JkCF90Ve7UYIDdMPm4Kdo=", "id"=>"46", "controller"=>"meals"}
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;35;1mMeal Load (0.3ms)[0m   [0mSELECT * FROM "meals" WHERE ("meals"."id" = 46) [0m
+  [4;36;1mMeal Destroy (0.4ms)[0m   [0;1mDELETE FROM "meals" WHERE "id" = 46[0m
+Redirected to http://localhost:3000/meals?d=2010-04-21
+Completed in 16ms (DB: 1) | 302 Found [http://localhost/meals/46]
+
+
+Processing MealsController#index (for 127.0.0.1 at 2010-04-24 16:52:42) [GET]
+  Parameters: {"action"=>"index", "d"=>"2010-04-21", "controller"=>"meals"}
+  [4;35;1mUser Load (0.4ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;36;1mMeal Load (0.4ms)[0m   [0;1mSELECT * FROM "meals" WHERE (user_id = 1) AND ("meals"."day" = '2010-04-20') [0m
+  [4;35;1mMeal Load (0.4ms)[0m   [0mSELECT * FROM "meals" WHERE (user_id = 1) AND ("meals"."day" = '2010-04-21') [0m
+  [4;36;1mMeal Load (0.3ms)[0m   [0;1mSELECT * FROM "meals" WHERE (user_id = 1) AND ("meals"."day" = '2010-04-22') [0m
+Rendering template within layouts/application
+Rendering meals/index
+  [4;35;1mRecipe Load (0.3ms)[0m   [0mSELECT * FROM "recipes" WHERE ("recipes"."id" = 27) [0m
+Rendered meals/_meal (8.5ms)
+  [4;36;1mRecipe Load (0.3ms)[0m   [0;1mSELECT * FROM "recipes" WHERE ("recipes"."id" = 28) [0m
+Rendered meals/_meal (1.7ms)
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "recipes" WHERE ("recipes"."id" = 28) [0m
+Rendered meals/_meal (1.2ms)
+Rendered layouts/_header (0.2ms)
+Completed in 38ms (View: 17, DB: 2) | 200 OK [http://localhost/meals?d=2010-04-21]
+
+
+Processing MealsController#index (for 127.0.0.1 at 2010-04-24 16:52:47) [GET]
+  Parameters: {"action"=>"index", "d"=>"2010-04-18", "controller"=>"meals"}
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;35;1mMeal Load (0.2ms)[0m   [0mSELECT * FROM "meals" WHERE (user_id = 1) AND ("meals"."day" = '2010-04-17') [0m
+  [4;36;1mMeal Load (0.2ms)[0m   [0;1mSELECT * FROM "meals" WHERE (user_id = 1) AND ("meals"."day" = '2010-04-18') [0m
+  [4;35;1mMeal Load (0.1ms)[0m   [0mSELECT * FROM "meals" WHERE (user_id = 1) AND ("meals"."day" = '2010-04-19') [0m
+Rendering template within layouts/application
+Rendering meals/index
+Rendered layouts/_header (0.3ms)
+Completed in 25ms (View: 6, DB: 1) | 200 OK [http://localhost/meals?d=2010-04-18]
+
+
+Processing MealsController#new (for 127.0.0.1 at 2010-04-24 16:52:48) [GET]
+  Parameters: {"action"=>"new", "day"=>"apr-18-2010", "controller"=>"meals"}
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;35;1mRecipe Load (59.1ms)[0m   [0mSELECT * FROM "recipes" [0m
+Rendering template within layouts/application
+Rendering meals/new
+Rendered layouts/_header (1.5ms)
+Completed in 98ms (View: 17, DB: 59) | 200 OK [http://localhost/apr-18-2010/meals/new/]
+
+
+Processing MealsController#create (for 127.0.0.1 at 2010-04-24 16:52:51) [POST]
+  Parameters: {"commit"=>"Schedule Recipe", "meal"=>{"day"=>"apr-18-2010"}, "action"=>"create", "authenticity_token"=>"ZQprnFhiEDQE2JydwSZpm6JkCF90Ve7UYIDdMPm4Kdo=", "day"=>"apr-18-2010", "controller"=>"meals", "recipe"=>{"id"=>"29"}}
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;35;1mRecipe Load (0.3ms)[0m   [0mSELECT * FROM "recipes" WHERE ("recipes"."id" = 29) [0m
+  [4;36;1mMeal Create (0.5ms)[0m   [0;1mINSERT INTO "meals" ("updated_at", "recipe_id", "day", "user_id", "created_at") VALUES('2010-04-24 20:52:51', 29, '2010-04-18', 1, '2010-04-24 20:52:51')[0m
+Redirected to http://localhost:3000/meals?d=2010-04-18
+Completed in 28ms (DB: 1) | 302 Found [http://localhost/apr-18-2010/meals/create]
+
+
+Processing MealsController#index (for 127.0.0.1 at 2010-04-24 16:52:51) [GET]
+  Parameters: {"action"=>"index", "d"=>"2010-04-18", "controller"=>"meals"}
+  [4;35;1mUser Load (0.5ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;36;1mMeal Load (0.2ms)[0m   [0;1mSELECT * FROM "meals" WHERE (user_id = 1) AND ("meals"."day" = '2010-04-17') [0m
+  [4;35;1mMeal Load (0.3ms)[0m   [0mSELECT * FROM "meals" WHERE (user_id = 1) AND ("meals"."day" = '2010-04-18') [0m
+  [4;36;1mMeal Load (0.1ms)[0m   [0;1mSELECT * FROM "meals" WHERE (user_id = 1) AND ("meals"."day" = '2010-04-19') [0m
+Rendering template within layouts/application
+Rendering meals/index
+  [4;35;1mRecipe Load (0.3ms)[0m   [0mSELECT * FROM "recipes" WHERE ("recipes"."id" = 29) [0m
+Rendered meals/_meal (8.5ms)
+Rendered layouts/_header (0.2ms)
+Completed in 35ms (View: 14, DB: 1) | 200 OK [http://localhost/meals?d=2010-04-18]
+
+
+Processing MealsController#destroy (for 127.0.0.1 at 2010-04-24 16:52:55) [DELETE]
+  Parameters: {"action"=>"destroy", "_method"=>"delete", "authenticity_token"=>"ZQprnFhiEDQE2JydwSZpm6JkCF90Ve7UYIDdMPm4Kdo=", "id"=>"48", "controller"=>"meals"}
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;35;1mMeal Load (0.3ms)[0m   [0mSELECT * FROM "meals" WHERE ("meals"."id" = 48) [0m
+  [4;36;1mMeal Destroy (0.3ms)[0m   [0;1mDELETE FROM "meals" WHERE "id" = 48[0m
+Redirected to http://localhost:3000/meals?d=2010-04-18
+Completed in 17ms (DB: 1) | 302 Found [http://localhost/meals/48]
+
+
+Processing MealsController#index (for 127.0.0.1 at 2010-04-24 16:52:55) [GET]
+  Parameters: {"action"=>"index", "d"=>"2010-04-18", "controller"=>"meals"}
+  [4;35;1mUser Load (0.4ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;36;1mMeal Load (0.2ms)[0m   [0;1mSELECT * FROM "meals" WHERE (user_id = 1) AND ("meals"."day" = '2010-04-17') [0m
+  [4;35;1mMeal Load (0.1ms)[0m   [0mSELECT * FROM "meals" WHERE (user_id = 1) AND ("meals"."day" = '2010-04-18') [0m
+  [4;36;1mMeal Load (0.1ms)[0m   [0;1mSELECT * FROM "meals" WHERE (user_id = 1) AND ("meals"."day" = '2010-04-19') [0m
+Rendering template within layouts/application
+Rendering meals/index
+Rendered layouts/_header (0.3ms)
+Completed in 26ms (View: 5, DB: 1) | 200 OK [http://localhost/meals?d=2010-04-18]
+
+
+Processing MealsController#index (for 127.0.0.1 at 2010-04-24 16:52:56) [GET]
+  Parameters: {"action"=>"index", "d"=>"2010-04-21", "controller"=>"meals"}
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;36;1mMeal Load (0.4ms)[0m   [0;1mSELECT * FROM "meals" WHERE (user_id = 1) AND ("meals"."day" = '2010-04-20') [0m
+  [4;35;1mMeal Load (0.3ms)[0m   [0mSELECT * FROM "meals" WHERE (user_id = 1) AND ("meals"."day" = '2010-04-21') [0m
+  [4;36;1mMeal Load (0.3ms)[0m   [0;1mSELECT * FROM "meals" WHERE (user_id = 1) AND ("meals"."day" = '2010-04-22') [0m
+Rendering template within layouts/application
+Rendering meals/index
+  [4;35;1mRecipe Load (0.3ms)[0m   [0mSELECT * FROM "recipes" WHERE ("recipes"."id" = 27) [0m
+Rendered meals/_meal (9.0ms)
+  [4;36;1mRecipe Load (0.3ms)[0m   [0;1mSELECT * FROM "recipes" WHERE ("recipes"."id" = 28) [0m
+Rendered meals/_meal (1.6ms)
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "recipes" WHERE ("recipes"."id" = 28) [0m
+Rendered meals/_meal (1.2ms)
+Rendered layouts/_header (0.3ms)
+Completed in 38ms (View: 18, DB: 2) | 200 OK [http://localhost/meals?d=2010-04-21]
+
+
+Processing MealsController#index (for 127.0.0.1 at 2010-04-24 16:52:57) [GET]
+  Parameters: {"action"=>"index", "d"=>"2010-04-24", "controller"=>"meals"}
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;35;1mMeal Load (0.2ms)[0m   [0mSELECT * FROM "meals" WHERE (user_id = 1) AND ("meals"."day" = '2010-04-23') [0m
+  [4;36;1mMeal Load (0.4ms)[0m   [0;1mSELECT * FROM "meals" WHERE (user_id = 1) AND ("meals"."day" = '2010-04-24') [0m
+  [4;35;1mMeal Load (0.5ms)[0m   [0mSELECT * FROM "meals" WHERE (user_id = 1) AND ("meals"."day" = '2010-04-25') [0m
+Rendering template within layouts/application
+Rendering meals/index
+  [4;36;1mRecipe Load (0.3ms)[0m   [0;1mSELECT * FROM "recipes" WHERE ("recipes"."id" = 32) [0m
+Rendered meals/_meal (8.5ms)
+  [4;35;1mRecipe Load (0.3ms)[0m   [0mSELECT * FROM "recipes" WHERE ("recipes"."id" = 28) [0m
+Rendered meals/_meal (1.6ms)
+  [4;36;1mRecipe Load (0.3ms)[0m   [0;1mSELECT * FROM "recipes" WHERE ("recipes"."id" = 27) [0m
+Rendered meals/_meal (1.5ms)
+  [4;35;1mRecipe Load (0.3ms)[0m   [0mSELECT * FROM "recipes" WHERE ("recipes"."id" = 29) [0m
+Rendered meals/_meal (1.5ms)
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "recipes" WHERE ("recipes"."id" = 27) [0m
+Rendered meals/_meal (1.1ms)
+Rendered layouts/_header (0.2ms)
+Completed in 39ms (View: 19, DB: 2) | 200 OK [http://localhost/meals?d=2010-04-24]
+
+
+Processing MealsController#index (for 127.0.0.1 at 2010-04-24 16:52:58) [GET]
+  Parameters: {"action"=>"index", "d"=>"2010-04-27", "controller"=>"meals"}
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;36;1mMeal Load (0.2ms)[0m   [0;1mSELECT * FROM "meals" WHERE (user_id = 1) AND ("meals"."day" = '2010-04-26') [0m
+  [4;35;1mMeal Load (0.1ms)[0m   [0mSELECT * FROM "meals" WHERE (user_id = 1) AND ("meals"."day" = '2010-04-27') [0m
+  [4;36;1mMeal Load (0.1ms)[0m   [0;1mSELECT * FROM "meals" WHERE (user_id = 1) AND ("meals"."day" = '2010-04-28') [0m
+Rendering template within layouts/application
+Rendering meals/index
+Rendered layouts/_header (0.2ms)
+Completed in 25ms (View: 6, DB: 1) | 200 OK [http://localhost/meals?d=2010-04-27]
+
+
+Processing MealsController#index (for 127.0.0.1 at 2010-04-24 16:52:59) [GET]
+  Parameters: {"action"=>"index", "d"=>"2010-04-24", "controller"=>"meals"}
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;36;1mMeal Load (0.2ms)[0m   [0;1mSELECT * FROM "meals" WHERE (user_id = 1) AND ("meals"."day" = '2010-04-23') [0m
+  [4;35;1mMeal Load (0.4ms)[0m   [0mSELECT * FROM "meals" WHERE (user_id = 1) AND ("meals"."day" = '2010-04-24') [0m
+  [4;36;1mMeal Load (0.4ms)[0m   [0;1mSELECT * FROM "meals" WHERE (user_id = 1) AND ("meals"."day" = '2010-04-25') [0m
+Rendering template within layouts/application
+Rendering meals/index
+  [4;35;1mRecipe Load (0.3ms)[0m   [0mSELECT * FROM "recipes" WHERE ("recipes"."id" = 32) [0m
+Rendered meals/_meal (8.8ms)
+  [4;36;1mRecipe Load (0.3ms)[0m   [0;1mSELECT * FROM "recipes" WHERE ("recipes"."id" = 28) [0m
+Rendered meals/_meal (1.8ms)
+  [4;35;1mRecipe Load (0.3ms)[0m   [0mSELECT * FROM "recipes" WHERE ("recipes"."id" = 27) [0m
+Rendered meals/_meal (1.5ms)
+  [4;36;1mRecipe Load (0.3ms)[0m   [0;1mSELECT * FROM "recipes" WHERE ("recipes"."id" = 29) [0m
+Rendered meals/_meal (1.5ms)
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "recipes" WHERE ("recipes"."id" = 27) [0m
+Rendered meals/_meal (1.2ms)
+Rendered layouts/_header (0.2ms)
+Completed in 41ms (View: 21, DB: 2) | 200 OK [http://localhost/meals?d=2010-04-24]
+
+
+Processing MealsController#index (for 127.0.0.1 at 2010-04-24 16:52:59) [GET]
+  Parameters: {"action"=>"index", "d"=>"2010-04-21", "controller"=>"meals"}
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;35;1mMeal Load (0.4ms)[0m   [0mSELECT * FROM "meals" WHERE (user_id = 1) AND ("meals"."day" = '2010-04-20') [0m
+  [4;36;1mMeal Load (0.3ms)[0m   [0;1mSELECT * FROM "meals" WHERE (user_id = 1) AND ("meals"."day" = '2010-04-21') [0m
+  [4;35;1mMeal Load (0.4ms)[0m   [0mSELECT * FROM "meals" WHERE (user_id = 1) AND ("meals"."day" = '2010-04-22') [0m
+Rendering template within layouts/application
+Rendering meals/index
+  [4;36;1mRecipe Load (0.3ms)[0m   [0;1mSELECT * FROM "recipes" WHERE ("recipes"."id" = 27) [0m
+Rendered meals/_meal (9.1ms)
+  [4;35;1mRecipe Load (0.4ms)[0m   [0mSELECT * FROM "recipes" WHERE ("recipes"."id" = 28) [0m
+Rendered meals/_meal (1.8ms)
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "recipes" WHERE ("recipes"."id" = 28) [0m
+Rendered meals/_meal (1.4ms)
+Rendered layouts/_header (0.3ms)
+Completed in 101ms (View: 18, DB: 2) | 200 OK [http://localhost/meals?d=2010-04-21]
+
+
+Processing MealsController#index (for 127.0.0.1 at 2010-04-24 16:53:00) [GET]
+  Parameters: {"action"=>"index", "d"=>"2010-04-18", "controller"=>"meals"}
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;36;1mMeal Load (0.2ms)[0m   [0;1mSELECT * FROM "meals" WHERE (user_id = 1) AND ("meals"."day" = '2010-04-17') [0m
+  [4;35;1mMeal Load (0.1ms)[0m   [0mSELECT * FROM "meals" WHERE (user_id = 1) AND ("meals"."day" = '2010-04-18') [0m
+  [4;36;1mMeal Load (0.1ms)[0m   [0;1mSELECT * FROM "meals" WHERE (user_id = 1) AND ("meals"."day" = '2010-04-19') [0m
+Rendering template within layouts/application
+Rendering meals/index
+Rendered layouts/_header (0.2ms)
+Completed in 28ms (View: 7, DB: 1) | 200 OK [http://localhost/meals?d=2010-04-18]
+
+
+Processing MealsController#index (for 127.0.0.1 at 2010-04-24 16:53:02) [GET]
+  Parameters: {"action"=>"index", "d"=>"2010-04-21", "controller"=>"meals"}
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;36;1mMeal Load (0.3ms)[0m   [0;1mSELECT * FROM "meals" WHERE (user_id = 1) AND ("meals"."day" = '2010-04-20') [0m
+  [4;35;1mMeal Load (0.2ms)[0m   [0mSELECT * FROM "meals" WHERE (user_id = 1) AND ("meals"."day" = '2010-04-21') [0m
+  [4;36;1mMeal Load (0.2ms)[0m   [0;1mSELECT * FROM "meals" WHERE (user_id = 1) AND ("meals"."day" = '2010-04-22') [0m
+Rendering template within layouts/application
+Rendering meals/index
+  [4;35;1mRecipe Load (0.3ms)[0m   [0mSELECT * FROM "recipes" WHERE ("recipes"."id" = 27) [0m
+Rendered meals/_meal (8.8ms)
+  [4;36;1mRecipe Load (0.3ms)[0m   [0;1mSELECT * FROM "recipes" WHERE ("recipes"."id" = 28) [0m
+Rendered meals/_meal (1.7ms)
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "recipes" WHERE ("recipes"."id" = 28) [0m
+Rendered meals/_meal (1.2ms)
+Rendered layouts/_header (0.2ms)
+Completed in 36ms (View: 17, DB: 2) | 200 OK [http://localhost/meals?d=2010-04-21]
+
+
+Processing MealsController#index (for 127.0.0.1 at 2010-04-24 16:53:03) [GET]
+  Parameters: {"action"=>"index", "d"=>"2010-04-24", "controller"=>"meals"}
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;35;1mMeal Load (0.2ms)[0m   [0mSELECT * FROM "meals" WHERE (user_id = 1) AND ("meals"."day" = '2010-04-23') [0m
+  [4;36;1mMeal Load (0.4ms)[0m   [0;1mSELECT * FROM "meals" WHERE (user_id = 1) AND ("meals"."day" = '2010-04-24') [0m
+  [4;35;1mMeal Load (0.4ms)[0m   [0mSELECT * FROM "meals" WHERE (user_id = 1) AND ("meals"."day" = '2010-04-25') [0m
+Rendering template within layouts/application
+Rendering meals/index
+  [4;36;1mRecipe Load (0.3ms)[0m   [0;1mSELECT * FROM "recipes" WHERE ("recipes"."id" = 32) [0m
+Rendered meals/_meal (8.9ms)
+  [4;35;1mRecipe Load (0.3ms)[0m   [0mSELECT * FROM "recipes" WHERE ("recipes"."id" = 28) [0m
+Rendered meals/_meal (1.7ms)
+  [4;36;1mRecipe Load (0.3ms)[0m   [0;1mSELECT * FROM "recipes" WHERE ("recipes"."id" = 27) [0m
+Rendered meals/_meal (1.5ms)
+  [4;35;1mRecipe Load (0.2ms)[0m   [0mSELECT * FROM "recipes" WHERE ("recipes"."id" = 29) [0m
+Rendered meals/_meal (1.4ms)
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "recipes" WHERE ("recipes"."id" = 27) [0m
+Rendered meals/_meal (1.2ms)
+Rendered layouts/_header (0.2ms)
+Completed in 39ms (View: 20, DB: 2) | 200 OK [http://localhost/meals?d=2010-04-24]
+
+
+Processing MealsController#index (for 127.0.0.1 at 2010-04-24 16:53:03) [GET]
+  Parameters: {"action"=>"index", "d"=>"2010-04-27", "controller"=>"meals"}
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;36;1mMeal Load (0.2ms)[0m   [0;1mSELECT * FROM "meals" WHERE (user_id = 1) AND ("meals"."day" = '2010-04-26') [0m
+  [4;35;1mMeal Load (0.1ms)[0m   [0mSELECT * FROM "meals" WHERE (user_id = 1) AND ("meals"."day" = '2010-04-27') [0m
+  [4;36;1mMeal Load (0.1ms)[0m   [0;1mSELECT * FROM "meals" WHERE (user_id = 1) AND ("meals"."day" = '2010-04-28') [0m
+Rendering template within layouts/application
+Rendering meals/index
+Rendered layouts/_header (0.2ms)
+Completed in 85ms (View: 6, DB: 1) | 200 OK [http://localhost/meals?d=2010-04-27]
+
+
+Processing MealsController#new (for 127.0.0.1 at 2010-04-24 16:53:44) [GET]
+  Parameters: {"action"=>"new", "day"=>"apr-28-2010", "controller"=>"meals"}
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;36;1mRecipe Load (0.7ms)[0m   [0;1mSELECT * FROM "recipes" [0m
+Rendering template within layouts/application
+Rendering meals/new
+Rendered layouts/_header (1.3ms)
+Completed in 30ms (View: 10, DB: 1) | 200 OK [http://localhost/apr-28-2010/meals/new/]
+
+
+Processing MealsController#create (for 127.0.0.1 at 2010-04-24 16:53:56) [POST]
+  Parameters: {"commit"=>"Add and Schedule Recipe ", "meal"=>{"recipe_attributes"=>{"title"=>"Chixn nuggets", "body"=>"Gimme some chicken jawn"}, "day"=>"apr-28-2010"}, "action"=>"create", "authenticity_token"=>"ZQprnFhiEDQE2JydwSZpm6JkCF90Ve7UYIDdMPm4Kdo=", "day"=>"apr-28-2010", "controller"=>"meals"}
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;36;1mRecipe Create (0.5ms)[0m   [0;1mINSERT INTO "recipes" ("updated_at", "title", "body", "user_id", "created_at") VALUES('2010-04-24 20:53:56', 'Chixn nuggets', 'Gimme some chicken jawn', 1, '2010-04-24 20:53:56')[0m
+  [4;35;1mMeal Create (0.2ms)[0m   [0mINSERT INTO "meals" ("updated_at", "recipe_id", "day", "user_id", "created_at") VALUES('2010-04-24 20:53:56', 34, '2010-04-28', 1, '2010-04-24 20:53:56')[0m
+Redirected to http://localhost:3000/meals?d=2010-04-27
+Completed in 47ms (DB: 1) | 302 Found [http://localhost/apr-28-2010/meals/create]
+
+
+Processing MealsController#index (for 127.0.0.1 at 2010-04-24 16:53:56) [GET]
+  Parameters: {"action"=>"index", "d"=>"2010-04-27", "controller"=>"meals"}
+  [4;36;1mUser Load (0.5ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;35;1mMeal Load (0.2ms)[0m   [0mSELECT * FROM "meals" WHERE (user_id = 1) AND ("meals"."day" = '2010-04-26') [0m
+  [4;36;1mMeal Load (0.1ms)[0m   [0;1mSELECT * FROM "meals" WHERE (user_id = 1) AND ("meals"."day" = '2010-04-27') [0m
+  [4;35;1mMeal Load (0.3ms)[0m   [0mSELECT * FROM "meals" WHERE (user_id = 1) AND ("meals"."day" = '2010-04-28') [0m
+Rendering template within layouts/application
+Rendering meals/index
+  [4;36;1mRecipe Load (0.3ms)[0m   [0;1mSELECT * FROM "recipes" WHERE ("recipes"."id" = 34) [0m
+Rendered meals/_meal (8.9ms)
+Rendered layouts/_header (0.2ms)
+Completed in 37ms (View: 15, DB: 1) | 200 OK [http://localhost/meals?d=2010-04-27]
+
+
+Processing MealsController#index (for 127.0.0.1 at 2010-04-24 16:53:59) [GET]
+  Parameters: {"action"=>"index", "d"=>"2010-04-24", "controller"=>"meals"}
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;36;1mMeal Load (0.2ms)[0m   [0;1mSELECT * FROM "meals" WHERE (user_id = 1) AND ("meals"."day" = '2010-04-23') [0m
+  [4;35;1mMeal Load (0.4ms)[0m   [0mSELECT * FROM "meals" WHERE (user_id = 1) AND ("meals"."day" = '2010-04-24') [0m
+  [4;36;1mMeal Load (0.4ms)[0m   [0;1mSELECT * FROM "meals" WHERE (user_id = 1) AND ("meals"."day" = '2010-04-25') [0m
+Rendering template within layouts/application
+Rendering meals/index
+  [4;35;1mRecipe Load (0.3ms)[0m   [0mSELECT * FROM "recipes" WHERE ("recipes"."id" = 32) [0m
+Rendered meals/_meal (70.5ms)
+  [4;36;1mRecipe Load (0.3ms)[0m   [0;1mSELECT * FROM "recipes" WHERE ("recipes"."id" = 28) [0m
+Rendered meals/_meal (1.6ms)
+  [4;35;1mRecipe Load (0.3ms)[0m   [0mSELECT * FROM "recipes" WHERE ("recipes"."id" = 27) [0m
+Rendered meals/_meal (1.5ms)
+  [4;36;1mRecipe Load (0.3ms)[0m   [0;1mSELECT * FROM "recipes" WHERE ("recipes"."id" = 29) [0m
+Rendered meals/_meal (1.7ms)
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "recipes" WHERE ("recipes"."id" = 27) [0m
+Rendered meals/_meal (1.2ms)
+Rendered layouts/_header (0.2ms)
+Completed in 101ms (View: 82, DB: 2) | 200 OK [http://localhost/meals?d=2010-04-24]
+
+
+Processing MealsController#index (for 127.0.0.1 at 2010-04-24 16:54:01) [GET]
+  Parameters: {"action"=>"index", "d"=>"2010-04-27", "controller"=>"meals"}
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;35;1mMeal Load (0.2ms)[0m   [0mSELECT * FROM "meals" WHERE (user_id = 1) AND ("meals"."day" = '2010-04-26') [0m
+  [4;36;1mMeal Load (0.1ms)[0m   [0;1mSELECT * FROM "meals" WHERE (user_id = 1) AND ("meals"."day" = '2010-04-27') [0m
+  [4;35;1mMeal Load (0.3ms)[0m   [0mSELECT * FROM "meals" WHERE (user_id = 1) AND ("meals"."day" = '2010-04-28') [0m
+Rendering template within layouts/application
+Rendering meals/index
+  [4;36;1mRecipe Load (0.6ms)[0m   [0;1mSELECT * FROM "recipes" WHERE ("recipes"."id" = 34) [0m
+Rendered meals/_meal (10.2ms)
+Rendered layouts/_header (0.2ms)
+Completed in 34ms (View: 15, DB: 1) | 200 OK [http://localhost/meals?d=2010-04-27]
+
+
+Processing RecipesController#index (for 127.0.0.1 at 2010-04-24 16:54:02) [GET]
+  Parameters: {"action"=>"index", "controller"=>"recipes"}
+  [4;35;1mRecipe Load (1.4ms)[0m   [0mSELECT * FROM "recipes" ORDER BY created_at DESC[0m
+Rendering template within layouts/application
+Rendering recipes/index
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+Rendered layouts/_header (8.4ms)
+Completed in 33ms (View: 24, DB: 2) | 200 OK [http://localhost/recipes]
+
+
+Processing RecipesController#show (for 127.0.0.1 at 2010-04-24 16:54:04) [GET]
+  Parameters: {"action"=>"show", "id"=>"34", "controller"=>"recipes"}
+  [4;35;1mRecipe Load (0.2ms)[0m   [0mSELECT * FROM "recipes" WHERE ("recipes"."id" = 34) [0m
+Rendering template within layouts/application
+Rendering recipes/show
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+Rendered layouts/_header (8.9ms)
+Completed in 47ms (View: 38, DB: 1) | 200 OK [http://localhost/recipes/34]
+
+
+Processing RecipesController#update (for 127.0.0.1 at 2010-04-24 16:54:05) [PUT]
+  Parameters: {"commit"=>"Update recipe", "action"=>"update", "_method"=>"put", "authenticity_token"=>"ZQprnFhiEDQE2JydwSZpm6JkCF90Ve7UYIDdMPm4Kdo=", "id"=>"34", "controller"=>"recipes", "recipe"=>{"body"=>"Gimme some chicken jawn", "title"=>"Chixn nuggets", "id"=>"34"}}
+  [4;35;1mRecipe Load (0.3ms)[0m   [0mSELECT * FROM "recipes" WHERE ("recipes"."id" = 34) [0m
+WARNING: Can't mass-assign these protected attributes: id
+Redirected to http://localhost:3000/recipes
+Completed in 73ms (DB: 0) | 302 Found [http://localhost/recipes/34]
+
+
+Processing RecipesController#index (for 127.0.0.1 at 2010-04-24 16:54:06) [GET]
+  Parameters: {"action"=>"index", "controller"=>"recipes"}
+  [4;36;1mRecipe Load (1.5ms)[0m   [0;1mSELECT * FROM "recipes" ORDER BY created_at DESC[0m
+Rendering template within layouts/application
+Rendering recipes/index
+  [4;35;1mUser Load (0.4ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+Rendered layouts/_header (9.3ms)
+Completed in 35ms (View: 16, DB: 2) | 200 OK [http://localhost/recipes]
+
+
+Processing RecipesController#index (for 127.0.0.1 at 2010-04-24 16:54:24) [GET]
+  Parameters: {"action"=>"index", "controller"=>"recipes"}
+  [4;36;1mRecipe Load (1.5ms)[0m   [0;1mSELECT * FROM "recipes" ORDER BY created_at DESC[0m
+Rendering template within layouts/application
+Rendering recipes/index
+  [4;35;1mUser Load (0.4ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+Rendered layouts/_header (9.4ms)
+Completed in 24ms (View: 15, DB: 2) | 200 OK [http://localhost/recipes]
+
+
+Processing RecipesController#show (for 127.0.0.1 at 2010-04-24 16:54:25) [GET]
+  Parameters: {"action"=>"show", "id"=>"28", "controller"=>"recipes"}
+  [4;36;1mRecipe Load (0.2ms)[0m   [0;1mSELECT * FROM "recipes" WHERE ("recipes"."id" = 28) [0m
+Rendering template within layouts/application
+Rendering recipes/show
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+Rendered layouts/_header (8.2ms)
+Completed in 22ms (View: 14, DB: 1) | 200 OK [http://localhost/recipes/28]
+
+
+Processing RecipesController#update (for 127.0.0.1 at 2010-04-24 16:54:28) [PUT]
+  Parameters: {"commit"=>"Update recipe", "action"=>"update", "_method"=>"put", "authenticity_token"=>"ZQprnFhiEDQE2JydwSZpm6JkCF90Ve7UYIDdMPm4Kdo=", "id"=>"28", "controller"=>"recipes", "recipe"=>{"body"=>"Roast turken for the whole family\r\n\r\nplus a side of collard greens y'all", "title"=>"", "id"=>"28"}}
+  [4;36;1mRecipe Load (0.3ms)[0m   [0;1mSELECT * FROM "recipes" WHERE ("recipes"."id" = 28) [0m
+WARNING: Can't mass-assign these protected attributes: id
+Redirected to http://localhost:3000/recipes/28/edit
+Completed in 11ms (DB: 0) | 302 Found [http://localhost/recipes/28]
+
+
+Processing RecipesController#edit (for 127.0.0.1 at 2010-04-24 16:54:28) [GET]
+  Parameters: {"action"=>"edit", "id"=>"28", "controller"=>"recipes"}
+  [4;35;1mRecipe Load (0.3ms)[0m   [0mSELECT * FROM "recipes" WHERE ("recipes"."id" = 28) [0m
+Rendering template within layouts/application
+Rendering recipes/edit
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+Rendered layouts/_header (8.8ms)
+Completed in 36ms (View: 28, DB: 1) | 200 OK [http://localhost/recipes/28/edit]
+
+
+Processing RecipesController#edit (for 127.0.0.1 at 2010-04-24 16:56:05) [GET]
+  Parameters: {"action"=>"edit", "id"=>"28", "controller"=>"recipes"}
+  [4;35;1mRecipe Load (0.3ms)[0m   [0mSELECT * FROM "recipes" WHERE ("recipes"."id" = 28) [0m
+Rendering template within layouts/application
+Rendering recipes/edit
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+Rendered layouts/_header (8.1ms)
+Completed in 35ms (View: 25, DB: 1) | 200 OK [http://localhost/recipes/28/edit]
+
+
+Processing RecipesController#edit (for 127.0.0.1 at 2010-04-24 16:56:12) [GET]
+  Parameters: {"action"=>"edit", "id"=>"28", "controller"=>"recipes"}
+  [4;35;1mRecipe Load (0.3ms)[0m   [0mSELECT * FROM "recipes" WHERE ("recipes"."id" = 28) [0m
+Rendering template within layouts/application
+Rendering recipes/edit
+  [4;36;1mUser Load (0.4ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+Rendered layouts/_header (8.3ms)
+Completed in 28ms (View: 20, DB: 1) | 200 OK [http://localhost/recipes/28/edit]
+
+
+Processing RecipesController#edit (for 127.0.0.1 at 2010-04-24 16:56:27) [GET]
+  Parameters: {"action"=>"edit", "id"=>"28", "controller"=>"recipes"}
+  [4;35;1mRecipe Load (0.2ms)[0m   [0mSELECT * FROM "recipes" WHERE ("recipes"."id" = 28) [0m
+Rendering template within layouts/application
+Rendering recipes/edit
+  [4;36;1mUser Load (0.4ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+Rendered layouts/_header (77.6ms)
+Completed in 100ms (View: 91, DB: 1) | 200 OK [http://localhost/recipes/28/edit]
+
+
+Processing RecipesController#update (for 127.0.0.1 at 2010-04-24 16:56:30) [PUT]
+  Parameters: {"commit"=>"Update recipe", "action"=>"update", "_method"=>"put", "authenticity_token"=>"ZQprnFhiEDQE2JydwSZpm6JkCF90Ve7UYIDdMPm4Kdo=", "id"=>"28", "controller"=>"recipes", "recipe"=>{"body"=>"Roast turken for the whole family\r\n\r\nplus a side of collard greens y'all", "title"=>"", "id"=>"28"}}
+  [4;35;1mRecipe Load (0.5ms)[0m   [0mSELECT * FROM "recipes" WHERE ("recipes"."id" = 28) [0m
+WARNING: Can't mass-assign these protected attributes: id
+Redirected to http://localhost:3000/recipes/28/edit
+Completed in 14ms (DB: 0) | 302 Found [http://localhost/recipes/28]
+
+
+Processing RecipesController#edit (for 127.0.0.1 at 2010-04-24 16:56:30) [GET]
+  Parameters: {"action"=>"edit", "id"=>"28", "controller"=>"recipes"}
+  [4;36;1mRecipe Load (0.3ms)[0m   [0;1mSELECT * FROM "recipes" WHERE ("recipes"."id" = 28) [0m
+Rendering template within layouts/application
+Rendering recipes/edit
+  [4;35;1mUser Load (1.8ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+Rendered layouts/_header (12.4ms)
+Completed in 29ms (View: 17, DB: 2) | 200 OK [http://localhost/recipes/28/edit]
+
+
+Processing RecipesController#edit (for 127.0.0.1 at 2010-04-24 17:20:26) [GET]
+  Parameters: {"action"=>"edit", "id"=>"28", "controller"=>"recipes"}
+  [4;36;1mRecipe Load (0.3ms)[0m   [0;1mSELECT * FROM "recipes" WHERE ("recipes"."id" = 28) [0m
+Rendering template within layouts/application
+Rendering recipes/edit
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+Rendered layouts/_header (8.0ms)
+Completed in 22ms (View: 14, DB: 1) | 200 OK [http://localhost/recipes/28/edit]
+
+
+Processing RecipesController#edit (for 127.0.0.1 at 2010-04-24 17:22:53) [GET]
+  Parameters: {"action"=>"edit", "id"=>"28", "controller"=>"recipes"}
+  [4;36;1mRecipe Load (0.3ms)[0m   [0;1mSELECT * FROM "recipes" WHERE ("recipes"."id" = 28) [0m
+Rendering template within layouts/application
+Rendering recipes/edit
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+Rendered layouts/_header (8.4ms)
+Completed in 23ms (View: 14, DB: 1) | 200 OK [http://localhost/recipes/28/edit]
+
+
+Processing RecipesController#update (for 127.0.0.1 at 2010-04-24 17:22:58) [PUT]
+  Parameters: {"commit"=>"Update recipe", "action"=>"update", "_method"=>"put", "authenticity_token"=>"ZQprnFhiEDQE2JydwSZpm6JkCF90Ve7UYIDdMPm4Kdo=", "id"=>"28", "controller"=>"recipes", "recipe"=>{"body"=>"", "title"=>"Turken", "id"=>"28"}}
+  [4;36;1mRecipe Load (0.3ms)[0m   [0;1mSELECT * FROM "recipes" WHERE ("recipes"."id" = 28) [0m
+WARNING: Can't mass-assign these protected attributes: id
+Redirected to http://localhost:3000/recipes/28/edit
+Completed in 13ms (DB: 0) | 302 Found [http://localhost/recipes/28]
+
+
+Processing RecipesController#edit (for 127.0.0.1 at 2010-04-24 17:22:58) [GET]
+  Parameters: {"action"=>"edit", "id"=>"28", "controller"=>"recipes"}
+  [4;35;1mRecipe Load (1.3ms)[0m   [0mSELECT * FROM "recipes" WHERE ("recipes"."id" = 28) [0m
+Rendering template within layouts/application
+Rendering recipes/edit
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+Rendered layouts/_header (8.3ms)
+Completed in 25ms (View: 15, DB: 2) | 200 OK [http://localhost/recipes/28/edit]
+
+
+Processing RecipesController#update (for 127.0.0.1 at 2010-04-24 17:23:06) [PUT]
+  Parameters: {"commit"=>"Update recipe", "action"=>"update", "_method"=>"put", "authenticity_token"=>"ZQprnFhiEDQE2JydwSZpm6JkCF90Ve7UYIDdMPm4Kdo=", "id"=>"28", "controller"=>"recipes", "recipe"=>{"body"=>"", "title"=>"Turken", "id"=>"28"}}
+  [4;35;1mRecipe Load (0.3ms)[0m   [0mSELECT * FROM "recipes" WHERE ("recipes"."id" = 28) [0m
+WARNING: Can't mass-assign these protected attributes: id
+Redirected to http://localhost:3000/recipes/28/edit
+Completed in 11ms (DB: 0) | 302 Found [http://localhost/recipes/28]
+
+
+Processing RecipesController#edit (for 127.0.0.1 at 2010-04-24 17:23:06) [GET]
+  Parameters: {"action"=>"edit", "id"=>"28", "controller"=>"recipes"}
+  [4;36;1mRecipe Load (0.5ms)[0m   [0;1mSELECT * FROM "recipes" WHERE ("recipes"."id" = 28) [0m
+Rendering template within layouts/application
+Rendering recipes/edit
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+Rendered layouts/_header (8.3ms)
+Completed in 29ms (View: 16, DB: 1) | 200 OK [http://localhost/recipes/28/edit]
+
+
+Processing RecipesController#update (for 127.0.0.1 at 2010-04-24 17:23:09) [PUT]
+  Parameters: {"commit"=>"Update recipe", "action"=>"update", "_method"=>"put", "authenticity_token"=>"ZQprnFhiEDQE2JydwSZpm6JkCF90Ve7UYIDdMPm4Kdo=", "id"=>"28", "controller"=>"recipes", "recipe"=>{"body"=>"Roast turken for the whole family\r\n\r\nplus a side of collard greens y'all ountz", "title"=>"Turken", "id"=>"28"}}
+  [4;36;1mRecipe Load (0.3ms)[0m   [0;1mSELECT * FROM "recipes" WHERE ("recipes"."id" = 28) [0m
+WARNING: Can't mass-assign these protected attributes: id
+  [4;35;1mRecipe Update (0.4ms)[0m   [0mUPDATE "recipes" SET "body" = 'Roast turken for the whole family
+
+plus a side of collard greens y''all ountz', "updated_at" = '2010-04-24 21:23:09' WHERE "id" = 28[0m
+Redirected to http://localhost:3000/recipes
+Completed in 14ms (DB: 1) | 302 Found [http://localhost/recipes/28]
+
+
+Processing RecipesController#index (for 127.0.0.1 at 2010-04-24 17:23:09) [GET]
+  Parameters: {"action"=>"index", "controller"=>"recipes"}
+  [4;36;1mRecipe Load (1.5ms)[0m   [0;1mSELECT * FROM "recipes" ORDER BY created_at DESC[0m
+Rendering template within layouts/application
+Rendering recipes/index
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+Rendered layouts/_header (10.1ms)
+Completed in 84ms (View: 75, DB: 2) | 200 OK [http://localhost/recipes]
+
+
+Processing RecipesController#show (for 127.0.0.1 at 2010-04-24 17:23:11) [GET]
+  Parameters: {"action"=>"show", "id"=>"28", "controller"=>"recipes"}
+  [4;36;1mRecipe Load (0.3ms)[0m   [0;1mSELECT * FROM "recipes" WHERE ("recipes"."id" = 28) [0m
+Rendering template within layouts/application
+Rendering recipes/show
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+Rendered layouts/_header (8.1ms)
+Completed in 23ms (View: 14, DB: 1) | 200 OK [http://localhost/recipes/28]
+
+
+Processing RecipesController#update (for 127.0.0.1 at 2010-04-24 17:23:14) [PUT]
+  Parameters: {"commit"=>"Update recipe", "action"=>"update", "_method"=>"put", "authenticity_token"=>"ZQprnFhiEDQE2JydwSZpm6JkCF90Ve7UYIDdMPm4Kdo=", "id"=>"28", "controller"=>"recipes", "recipe"=>{"body"=>"Roast turken for the whole family\r\n\r\nplus a side of collard greens y'all", "title"=>"Turken", "id"=>"28"}}
+  [4;36;1mRecipe Load (0.2ms)[0m   [0;1mSELECT * FROM "recipes" WHERE ("recipes"."id" = 28) [0m
+WARNING: Can't mass-assign these protected attributes: id
+  [4;35;1mRecipe Update (0.4ms)[0m   [0mUPDATE "recipes" SET "body" = 'Roast turken for the whole family
+
+plus a side of collard greens y''all', "updated_at" = '2010-04-24 21:23:14' WHERE "id" = 28[0m
+Redirected to http://localhost:3000/recipes
+Completed in 14ms (DB: 1) | 302 Found [http://localhost/recipes/28]
+
+
+Processing RecipesController#index (for 127.0.0.1 at 2010-04-24 17:23:14) [GET]
+  Parameters: {"action"=>"index", "controller"=>"recipes"}
+  [4;36;1mRecipe Load (2.4ms)[0m   [0;1mSELECT * FROM "recipes" ORDER BY created_at DESC[0m
+Rendering template within layouts/application
+Rendering recipes/index
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+Rendered layouts/_header (8.2ms)
+Completed in 26ms (View: 16, DB: 3) | 200 OK [http://localhost/recipes]
+
+
+Processing RecipesController#edit (for 127.0.0.1 at 2010-04-24 17:24:25) [GET]
+  Parameters: {"action"=>"edit", "id"=>"28", "controller"=>"recipes"}
+  [4;36;1mRecipe Load (0.3ms)[0m   [0;1mSELECT * FROM "recipes" WHERE ("recipes"."id" = 28) [0m
+Rendering template within layouts/application
+Rendering recipes/edit
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+Rendered layouts/_header (11.5ms)
+Completed in 29ms (View: 19, DB: 1) | 200 OK [http://localhost/recipes/28/edit]
+
+
+Processing RecipesController#update (for 127.0.0.1 at 2010-04-24 17:24:28) [PUT]
+  Parameters: {"commit"=>"Update recipe", "action"=>"update", "_method"=>"put", "authenticity_token"=>"ZQprnFhiEDQE2JydwSZpm6JkCF90Ve7UYIDdMPm4Kdo=", "id"=>"28", "controller"=>"recipes", "recipe"=>{"body"=>"", "title"=>"Turken", "id"=>"28"}}
+  [4;36;1mRecipe Load (0.3ms)[0m   [0;1mSELECT * FROM "recipes" WHERE ("recipes"."id" = 28) [0m
+WARNING: Can't mass-assign these protected attributes: id
+
+NameError (undefined local variable or method `errors_for_recipe' for #<RecipesController:0x2604120>):
+  app/controllers/recipes_controller.rb:20:in `update'
+  haml (2.2.23) lib/sass/plugin/rails.rb:20:in `process'
+
+Rendered rescues/_trace (42.0ms)
+Rendered rescues/_request_and_response (2.0ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing RecipesController#update (for 127.0.0.1 at 2010-04-24 17:24:45) [PUT]
+  Parameters: {"commit"=>"Update recipe", "action"=>"update", "_method"=>"put", "authenticity_token"=>"ZQprnFhiEDQE2JydwSZpm6JkCF90Ve7UYIDdMPm4Kdo=", "id"=>"28", "controller"=>"recipes", "recipe"=>{"body"=>"", "title"=>"Turken", "id"=>"28"}}
+  [4;35;1mRecipe Load (0.2ms)[0m   [0mSELECT * FROM "recipes" WHERE ("recipes"."id" = 28) [0m
+WARNING: Can't mass-assign these protected attributes: id
+
+NoMethodError (undefined method `errors_for' for #<RecipesController:0x23d8c48>):
+  app/controllers/recipes_controller.rb:20:in `update'
+  haml (2.2.23) lib/sass/plugin/rails.rb:20:in `process'
+
+Rendered rescues/_trace (40.1ms)
+Rendered rescues/_request_and_response (0.5ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing RecipesController#show (for 127.0.0.1 at 2010-04-24 17:25:35) [GET]
+  Parameters: {"action"=>"show", "id"=>"28", "controller"=>"recipes"}
+  [4;36;1mRecipe Load (0.3ms)[0m   [0;1mSELECT * FROM "recipes" WHERE ("recipes"."id" = 28) [0m
+Rendering template within layouts/application
+Rendering recipes/show
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+Rendered layouts/_header (9.1ms)
+Completed in 91ms (View: 81, DB: 1) | 200 OK [http://localhost/recipes/28]
+
+
+Processing RecipesController#update (for 127.0.0.1 at 2010-04-24 17:25:39) [PUT]
+  Parameters: {"commit"=>"Update recipe", "action"=>"update", "_method"=>"put", "authenticity_token"=>"ZQprnFhiEDQE2JydwSZpm6JkCF90Ve7UYIDdMPm4Kdo=", "id"=>"28", "controller"=>"recipes", "recipe"=>{"body"=>"Roast turken for the whole family\r\n\r\nplus a side of collard greens y'all", "title"=>"Turken", "id"=>"28"}}
+  [4;36;1mRecipe Load (0.3ms)[0m   [0;1mSELECT * FROM "recipes" WHERE ("recipes"."id" = 28) [0m
+WARNING: Can't mass-assign these protected attributes: id
+Redirected to http://localhost:3000/recipes
+Completed in 12ms (DB: 0) | 302 Found [http://localhost/recipes/28]
+
+
+Processing RecipesController#index (for 127.0.0.1 at 2010-04-24 17:25:39) [GET]
+  Parameters: {"action"=>"index", "controller"=>"recipes"}
+  [4;35;1mRecipe Load (1.9ms)[0m   [0mSELECT * FROM "recipes" ORDER BY created_at DESC[0m
+Rendering template within layouts/application
+Rendering recipes/index
+  [4;36;1mUser Load (0.7ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+Rendered layouts/_header (10.2ms)
+Completed in 29ms (View: 20, DB: 3) | 200 OK [http://localhost/recipes]
+
+
+Processing RecipesController#show (for 127.0.0.1 at 2010-04-24 17:25:41) [GET]
+  Parameters: {"action"=>"show", "id"=>"28", "controller"=>"recipes"}
+  [4;35;1mRecipe Load (0.3ms)[0m   [0mSELECT * FROM "recipes" WHERE ("recipes"."id" = 28) [0m
+Rendering template within layouts/application
+Rendering recipes/show
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+Rendered layouts/_header (8.2ms)
+Completed in 22ms (View: 14, DB: 1) | 200 OK [http://localhost/recipes/28]
+
+
+Processing RecipesController#update (for 127.0.0.1 at 2010-04-24 17:25:44) [PUT]
+  Parameters: {"commit"=>"Update recipe", "action"=>"update", "_method"=>"put", "authenticity_token"=>"ZQprnFhiEDQE2JydwSZpm6JkCF90Ve7UYIDdMPm4Kdo=", "id"=>"28", "controller"=>"recipes", "recipe"=>{"body"=>"Roast turken for the whole family\r\n\r\nplus a side of collard greens y'all bonutz", "title"=>"Turken", "id"=>"28"}}
+  [4;35;1mRecipe Load (0.3ms)[0m   [0mSELECT * FROM "recipes" WHERE ("recipes"."id" = 28) [0m
+WARNING: Can't mass-assign these protected attributes: id
+  [4;36;1mRecipe Update (0.4ms)[0m   [0;1mUPDATE "recipes" SET "body" = 'Roast turken for the whole family
+
+plus a side of collard greens y''all bonutz', "updated_at" = '2010-04-24 21:25:44' WHERE "id" = 28[0m
+Redirected to http://localhost:3000/recipes
+Completed in 15ms (DB: 1) | 302 Found [http://localhost/recipes/28]
+
+
+Processing RecipesController#index (for 127.0.0.1 at 2010-04-24 17:25:44) [GET]
+  Parameters: {"action"=>"index", "controller"=>"recipes"}
+  [4;35;1mRecipe Load (1.5ms)[0m   [0mSELECT * FROM "recipes" ORDER BY created_at DESC[0m
+Rendering template within layouts/application
+Rendering recipes/index
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+Rendered layouts/_header (11.0ms)
+Completed in 96ms (View: 18, DB: 2) | 200 OK [http://localhost/recipes]
+
+
+Processing RecipesController#show (for 127.0.0.1 at 2010-04-24 17:25:46) [GET]
+  Parameters: {"action"=>"show", "id"=>"28", "controller"=>"recipes"}
+  [4;35;1mRecipe Load (0.3ms)[0m   [0mSELECT * FROM "recipes" WHERE ("recipes"."id" = 28) [0m
+Rendering template within layouts/application
+Rendering recipes/show
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+Rendered layouts/_header (8.2ms)
+Completed in 23ms (View: 14, DB: 1) | 200 OK [http://localhost/recipes/28]
+
+
+Processing RecipesController#update (for 127.0.0.1 at 2010-04-24 17:25:48) [PUT]
+  Parameters: {"commit"=>"Update recipe", "action"=>"update", "_method"=>"put", "authenticity_token"=>"ZQprnFhiEDQE2JydwSZpm6JkCF90Ve7UYIDdMPm4Kdo=", "id"=>"28", "controller"=>"recipes", "recipe"=>{"body"=>"", "title"=>"Turken", "id"=>"28"}}
+  [4;35;1mRecipe Load (0.2ms)[0m   [0mSELECT * FROM "recipes" WHERE ("recipes"."id" = 28) [0m
+WARNING: Can't mass-assign these protected attributes: id
+Rendering template within layouts/application
+Rendering recipes/edit
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+Rendered layouts/_header (8.4ms)
+Completed in 23ms (View: 12, DB: 1) | 200 OK [http://localhost/recipes/28]
+
+
+Processing RecipesController#update (for 127.0.0.1 at 2010-04-24 17:25:51) [PUT]
+  Parameters: {"commit"=>"Update recipe", "action"=>"update", "_method"=>"put", "authenticity_token"=>"ZQprnFhiEDQE2JydwSZpm6JkCF90Ve7UYIDdMPm4Kdo=", "id"=>"28", "controller"=>"recipes", "recipe"=>{"body"=>"", "title"=>"Turken", "id"=>"28"}}
+  [4;35;1mRecipe Load (0.3ms)[0m   [0mSELECT * FROM "recipes" WHERE ("recipes"."id" = 28) [0m
+WARNING: Can't mass-assign these protected attributes: id
+Rendering template within layouts/application
+Rendering recipes/edit
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+Rendered layouts/_header (8.2ms)
+Completed in 24ms (View: 13, DB: 1) | 200 OK [http://localhost/recipes/28]
+
+
+Processing RecipesController#update (for 127.0.0.1 at 2010-04-24 17:25:55) [PUT]
+  Parameters: {"commit"=>"Update recipe", "action"=>"update", "_method"=>"put", "authenticity_token"=>"ZQprnFhiEDQE2JydwSZpm6JkCF90Ve7UYIDdMPm4Kdo=", "id"=>"28", "controller"=>"recipes", "recipe"=>{"body"=>"", "title"=>"Turken", "id"=>"28"}}
+  [4;35;1mRecipe Load (0.3ms)[0m   [0mSELECT * FROM "recipes" WHERE ("recipes"."id" = 28) [0m
+WARNING: Can't mass-assign these protected attributes: id
+Rendering template within layouts/application
+Rendering recipes/edit
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+Rendered layouts/_header (9.6ms)
+Completed in 84ms (View: 14, DB: 1) | 200 OK [http://localhost/recipes/28]
+
+
+Processing RecipesController#update (for 127.0.0.1 at 2010-04-24 17:25:58) [PUT]
+  Parameters: {"commit"=>"Update recipe", "action"=>"update", "_method"=>"put", "authenticity_token"=>"ZQprnFhiEDQE2JydwSZpm6JkCF90Ve7UYIDdMPm4Kdo=", "id"=>"28", "controller"=>"recipes", "recipe"=>{"body"=>"bonutz", "title"=>"Turken", "id"=>"28"}}
+  [4;35;1mRecipe Load (0.3ms)[0m   [0mSELECT * FROM "recipes" WHERE ("recipes"."id" = 28) [0m
+WARNING: Can't mass-assign these protected attributes: id
+  [4;36;1mRecipe Update (0.4ms)[0m   [0;1mUPDATE "recipes" SET "body" = 'bonutz', "updated_at" = '2010-04-24 21:25:58' WHERE "id" = 28[0m
+Redirected to http://localhost:3000/recipes
+Completed in 14ms (DB: 1) | 302 Found [http://localhost/recipes/28]
+
+
+Processing RecipesController#index (for 127.0.0.1 at 2010-04-24 17:25:58) [GET]
+  Parameters: {"action"=>"index", "controller"=>"recipes"}
+  [4;35;1mRecipe Load (5.0ms)[0m   [0mSELECT * FROM "recipes" ORDER BY created_at DESC[0m
+Rendering template within layouts/application
+Rendering recipes/index
+  [4;36;1mUser Load (1.2ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+Rendered layouts/_header (9.6ms)
+Completed in 30ms (View: 15, DB: 6) | 200 OK [http://localhost/recipes]
+
+
+Processing RecipesController#show (for 127.0.0.1 at 2010-04-24 17:25:59) [GET]
+  Parameters: {"action"=>"show", "id"=>"28", "controller"=>"recipes"}
+  [4;35;1mRecipe Load (0.3ms)[0m   [0mSELECT * FROM "recipes" WHERE ("recipes"."id" = 28) [0m
+Rendering template within layouts/application
+Rendering recipes/show
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+Rendered layouts/_header (8.6ms)
+Completed in 23ms (View: 14, DB: 1) | 200 OK [http://localhost/recipes/28]
+
+
+Processing RecipesController#update (for 127.0.0.1 at 2010-04-24 17:26:02) [PUT]
+  Parameters: {"commit"=>"Update recipe", "action"=>"update", "_method"=>"put", "authenticity_token"=>"ZQprnFhiEDQE2JydwSZpm6JkCF90Ve7UYIDdMPm4Kdo=", "id"=>"28", "controller"=>"recipes", "recipe"=>{"body"=>"", "title"=>"Turken", "id"=>"28"}}
+  [4;35;1mRecipe Load (0.3ms)[0m   [0mSELECT * FROM "recipes" WHERE ("recipes"."id" = 28) [0m
+WARNING: Can't mass-assign these protected attributes: id
+Rendering template within layouts/application
+Rendering recipes/edit
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+Rendered layouts/_header (8.3ms)
+Completed in 23ms (View: 13, DB: 1) | 200 OK [http://localhost/recipes/28]
+
+
+Processing RecipesController#update (for 127.0.0.1 at 2010-04-24 17:26:49) [PUT]
+  Parameters: {"commit"=>"Update recipe", "action"=>"update", "_method"=>"put", "authenticity_token"=>"ZQprnFhiEDQE2JydwSZpm6JkCF90Ve7UYIDdMPm4Kdo=", "id"=>"28", "controller"=>"recipes", "recipe"=>{"body"=>"", "title"=>"Turken", "id"=>"28"}}
+  [4;35;1mRecipe Load (0.3ms)[0m   [0mSELECT * FROM "recipes" WHERE ("recipes"."id" = 28) [0m
+WARNING: Can't mass-assign these protected attributes: id
+Rendering template within layouts/application
+Rendering recipes/edit
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+Rendered layouts/_header (8.8ms)
+Completed in 24ms (View: 13, DB: 1) | 200 OK [http://localhost/recipes/28]
+
+
+Processing RecipesController#update (for 127.0.0.1 at 2010-04-24 17:28:43) [PUT]
+  Parameters: {"commit"=>"Update recipe", "action"=>"update", "_method"=>"put", "authenticity_token"=>"ZQprnFhiEDQE2JydwSZpm6JkCF90Ve7UYIDdMPm4Kdo=", "id"=>"28", "controller"=>"recipes", "recipe"=>{"body"=>"", "title"=>"Turken", "id"=>"28"}}
+  [4;35;1mRecipe Load (0.4ms)[0m   [0mSELECT * FROM "recipes" WHERE ("recipes"."id" = 28) [0m
+WARNING: Can't mass-assign these protected attributes: id
+Rendering template within layouts/application
+Rendering recipes/edit
+  [4;36;1mUser Load (1.1ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+Rendered layouts/_header (8.9ms)
+Completed in 27ms (View: 13, DB: 2) | 200 OK [http://localhost/recipes/28]
+
+
+Processing RecipesController#show (for 127.0.0.1 at 2010-04-24 17:28:46) [GET]
+  Parameters: {"action"=>"show", "id"=>"28", "controller"=>"recipes"}
+  [4;35;1mRecipe Load (0.2ms)[0m   [0mSELECT * FROM "recipes" WHERE ("recipes"."id" = 28) [0m
+Rendering template within layouts/application
+Rendering recipes/show
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+Rendered layouts/_header (8.2ms)
+Completed in 22ms (View: 14, DB: 1) | 200 OK [http://localhost/recipes/28]
+
+
+Processing RecipesController#update (for 127.0.0.1 at 2010-04-24 17:28:49) [PUT]
+  Parameters: {"commit"=>"Update recipe", "action"=>"update", "_method"=>"put", "authenticity_token"=>"ZQprnFhiEDQE2JydwSZpm6JkCF90Ve7UYIDdMPm4Kdo=", "id"=>"28", "controller"=>"recipes", "recipe"=>{"body"=>"bonutz", "title"=>"Turken", "id"=>"28"}}
+  [4;35;1mRecipe Load (0.2ms)[0m   [0mSELECT * FROM "recipes" WHERE ("recipes"."id" = 28) [0m
+WARNING: Can't mass-assign these protected attributes: id
+Redirected to http://localhost:3000/recipes
+Completed in 12ms (DB: 0) | 302 Found [http://localhost/recipes/28]
+
+
+Processing RecipesController#index (for 127.0.0.1 at 2010-04-24 17:28:49) [GET]
+  Parameters: {"action"=>"index", "controller"=>"recipes"}
+  [4;36;1mRecipe Load (1.5ms)[0m   [0;1mSELECT * FROM "recipes" ORDER BY created_at DESC[0m
+Rendering template within layouts/application
+Rendering recipes/index
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+Rendered layouts/_header (10.2ms)
+Completed in 28ms (View: 17, DB: 2) | 200 OK [http://localhost/recipes]
+
+
+Processing RecipesController#show (for 127.0.0.1 at 2010-04-24 17:28:51) [GET]
+  Parameters: {"action"=>"show", "id"=>"28", "controller"=>"recipes"}
+  [4;36;1mRecipe Load (0.3ms)[0m   [0;1mSELECT * FROM "recipes" WHERE ("recipes"."id" = 28) [0m
+Rendering template within layouts/application
+Rendering recipes/show
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+Rendered layouts/_header (8.1ms)
+Completed in 22ms (View: 14, DB: 1) | 200 OK [http://localhost/recipes/28]
+
+
+Processing RecipesController#update (for 127.0.0.1 at 2010-04-24 17:28:53) [PUT]
+  Parameters: {"commit"=>"Update recipe", "action"=>"update", "_method"=>"put", "authenticity_token"=>"ZQprnFhiEDQE2JydwSZpm6JkCF90Ve7UYIDdMPm4Kdo=", "id"=>"28", "controller"=>"recipes", "recipe"=>{"body"=>"", "title"=>"Turken", "id"=>"28"}}
+  [4;36;1mRecipe Load (0.3ms)[0m   [0;1mSELECT * FROM "recipes" WHERE ("recipes"."id" = 28) [0m
+WARNING: Can't mass-assign these protected attributes: id
+Rendering template within layouts/application
+Rendering recipes/edit
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+Rendered layouts/_header (9.1ms)
+Completed in 25ms (View: 13, DB: 1) | 200 OK [http://localhost/recipes/28]

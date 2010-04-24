@@ -10,5 +10,6 @@
       #borderWrapper
         #innerWrapper
           = render :partial => "layouts/header"
+          #flash= display_flash
           #mainContent= yield
           .clearDiv
