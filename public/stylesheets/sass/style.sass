@@ -1,3 +1,8 @@
+// variables
+!accentColor = #FA6900
+
+// general structure and typography
+
 html
   :font-family Trebuchet MS, Arial, sans-serif
   :height 100%
@@ -42,7 +47,8 @@ h1
   :-webkit-border-radius 25px
   :-moz-border-radius 25px
   :background-color #F6F6F6
-  
+
+// header and nav  
 
 #header
   :height 50px
@@ -51,13 +57,29 @@ h1
     :float left
     :height 50px
     #omg
-      :color #FA6900
+      color = !accentColor
     #its
       :color #A7DBD8
     #food
       :color #69D2E7
   #userStuff
     :float right
+  #nav
+    :float right
+    :clear right
+    :margin 20px 0
+    a
+      :text-decoration none
+      :color black
+      :padding 5px
+      :margin 0 5px
+      &:hover
+        :color white
+        background-color = !accentColor
+      &:last-child
+        :margin-right 0px
+
+// meals index
 
 #mealDays
   :margin auto
@@ -85,13 +107,16 @@ h1
     :text-decoration underline
     
   input
-    :border 2px #FA6900 solid
+    :border 
+      :thickness 2px 
+      color = !accentColor 
+      :style solid
     :padding 3px
     :-webkit-border-radius 5px
     :background-color #FFF
     &:hover
       :color #FFF
-      :background-color #FA6900
+      background-color = !accentColor
       :cursor pointer
   
 .lastMealDay

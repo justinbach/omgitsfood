@@ -50,13 +50,27 @@ h1 {
     float: left;
     height: 50px; }
     #header #logo #omg {
-      color: #FA6900; }
+      color: #fa6900; }
     #header #logo #its {
       color: #A7DBD8; }
     #header #logo #food {
       color: #69D2E7; }
   #header #userStuff {
     float: right; }
+  #header #nav {
+    float: right;
+    clear: right;
+    margin: 20px 0; }
+    #header #nav a {
+      text-decoration: none;
+      color: black;
+      padding: 5px;
+      margin: 0 5px; }
+      #header #nav a:hover {
+        color: white;
+        background-color: #fa6900; }
+      #header #nav a:last-child {
+        margin-right: 0px; }
 
 #mealDays {
   margin: auto;
@@ -80,13 +94,15 @@ h1 {
   .mealDay h2.today {
     text-decoration: underline; }
   .mealDay input {
-    border: 2px #FA6900 solid;
+    border-thickness: 2px;
+    border-color: #fa6900;
+    border-style: solid;
     padding: 3px;
     -webkit-border-radius: 5px;
     background-color: #FFF; }
     .mealDay input:hover {
       color: #FFF;
-      background-color: #FA6900;
+      background-color: #fa6900;
       cursor: pointer; }
 
 .lastMealDay {

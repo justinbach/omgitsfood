@@ -1,4 +1,4 @@
 %h1 Recipes
 - @recipes.each do |r|
-  %h2= r.title
-  %p= r.body
+  %li= link_to r.title, r
+  //%li= link_to r.title, :controller => 'recipes', :action => 'show', :id => r

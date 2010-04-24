@@ -3,7 +3,6 @@ ActionController::Routing::Routes.draw do |map|
   map.logout 'logout', :controller => 'sessions', :action => 'destroy'
   map.login 'login', :controller => 'sessions', :action => 'new'
   map.resources :sessions
-
   map.resources :users
 
   # The priority is based upon order of creation: first created -> highest priority.
@@ -45,10 +44,14 @@ ActionController::Routing::Routes.draw do |map|
   # Install the default routes as the lowest priority.
   # Note: These default routes make all actions in every controller accessible via GET requests. You should
   # consider removing or commenting them out if you're using named routes and resources.
-  map.connect ':controller/:action/:id'
-  map.connect ':controller/:action/:id.:format'
-  map.connect ':controller/:action'
-  map.meals ':day/meals/new', :controller => 'meals', :action => 'new'
+
+  map.connect ':day/meals/new', :controller => 'meals', :action => 'new'
+  map.connect ':day/meals/create', :controller => 'meals', :action => 'create'
+  
   map.resources :meals
+  map.resources :recipes
+
+  map.users 'users', :controller => 'users', :action => 'index'
+
   map.root :controller => "meals"
 end

@@ -11,6 +11,10 @@ class MealsController < ApplicationController
     @right_meals = Meal.find_all_by_day(@centerDate + 1,
                               :conditions => ['user_id = ?', current_user])
   end
+  
+  def show
+    @meal = Meal.find(params[:id])
+  end
 
   def new
     @meal = Meal.new
