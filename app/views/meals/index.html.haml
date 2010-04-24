@@ -2,28 +2,28 @@
 #mealDays
   .mealDay
     %h2= (@centerDate - 1).strftime("%a %b %d, %Y")
-    = button_to "add a meal", "/"+(Time.now-60*60*24).strftime("%b-%d-%Y").downcase+"/meals/new/", :method => :get
+    = button_to "add a meal", "/" +(@centerDate - 1).strftime("%b-%d-%Y").downcase+"/meals/new/", :method => :get
     - @left_meals.each do |m|
       .meal
+        = button_to "x", { :controller => "meals", :action => "destroy", :id => m }, :confirm => "Are you sure you wish to delete this meal?", :method => 'delete'
         = link_to m.recipe.title, m
-        = button_to "delete", { :controller => "meals", :action => "destroy", :id => m }, :confirm => "Are you sure you wish to delete this meal?", :method => 'delete'
   .mealDay
     - if @centerDate == Date.today
       %h2.today= @centerDate.strftime("%a %b %d, %Y")
     - else
       %h2= @centerDate.strftime("%a %b %d, %Y")
-    = button_to "add a meal", "/"+Time.now.strftime("%b-%d-%Y").downcase+"/meals/new/", :method => :get
+    = button_to "add a meal", "/" + @centerDate.strftime("%b-%d-%Y").downcase+"/meals/new/", :method => :get
     - @center_meals.each do |m|
       .meal
+        = button_to "x", { :controller => "meals", :action => "destroy", :id => m }, :confirm => "Are you sure you wish to delete this meal?", :method => 'delete'
         = link_to m.recipe.title, m
-        = button_to "delete", { :controller => "meals", :action => "destroy", :id => m }, :confirm => "Are you sure you wish to delete this meal?", :method => 'delete'
   .mealDay.lastMealDay
     %h2= (@centerDate + 1).strftime("%a %b %d, %Y")
-    = button_to "add a meal", "/"+(Time.now+60*60*24).strftime("%b-%d-%Y").downcase+"/meals/new/", :method => :get
+    = button_to "add a meal", "/"+ (@centerDate + 1).strftime("%b-%d-%Y").downcase+"/meals/new/", :method => :get
     - @right_meals.each do |m|
       .meal
+        = button_to "x", { :controller => "meals", :action => "destroy", :id => m }, :confirm => "Are you sure you wish to delete this meal?", :method => 'delete'
         = link_to m.recipe.title, m
-        = button_to "delete", { :controller => "meals", :action => "destroy", :id => m }, :confirm => "Are you sure you wish to delete this meal?", :method => 'delete'
 .clearDiv
 #dateLinks
   .older
