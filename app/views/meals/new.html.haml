@@ -23,6 +23,6 @@
       = hidden_field(:meal, :day)
       - meal_form.fields_for :recipe do |recipe_form|
         %h2 Use an existing recipe
-        = collection_select(:recipe, :id, @recipes, :id, :title,options ={:prompt => "-----"}, :size => 10 )
+        = collection_select(:recipe, :id, @recipes, :id, :title, options = {:size => 10} )
       %br
       = submit_tag 'Schedule Recipe'
