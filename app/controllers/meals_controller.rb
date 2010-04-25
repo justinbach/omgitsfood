@@ -21,7 +21,7 @@ class MealsController < ApplicationController
     @meal = Meal.new
     @meal.day = params[:day]
     @meal.recipe = Recipe.new
-    @recipes = Recipe.all(:order, "upper(title) ASC")
+    @recipes = Recipe.all(:order => "upper(title) ASC")
   end
 
   def create

@@ -55,6 +55,8 @@ h1 {
       color: #A7DBD8; }
     #header #logo #food {
       color: #69D2E7; }
+    #header #logo a {
+      text-decoration: none; }
   #header #userStuff {
     float: right; }
   #header #nav {
@@ -71,6 +73,22 @@ h1 {
         background-color: #fa6900; }
       #header #nav a:last-child {
         margin-right: 0px; }
+
+#mainContent h1 {
+  text-align: left;
+  font-size: 24px; }
+
+#errorExplanation {
+  border: 3px solid red;
+  width: 500px;
+  padding: 20px;
+  margin: 20px 0;
+  -webkit-border-radius: 25px;
+  -moz-border-radius: 25px;
+  background-color: #facecf; }
+  #errorExplanation h2 {
+    text-decoration: none;
+    font-weight: bold; }
 
 #mealDays {
   margin: 20px auto 0px;
@@ -130,7 +148,3 @@ h1 {
     float: left; }
   #dateLinks .newer {
     float: right; }
-
-#mainContent h1 {
-  text-align: left;
-  font-size: 24px; }

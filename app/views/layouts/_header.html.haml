@@ -1,9 +1,10 @@
 #header
   #logo
-    %h1 
-      %span#omg> omg 
-      %span#its> its
-      %span#food food
+    %h1
+      %a(href="/")
+        %span#omg> omg 
+        %span#its> its
+        %span#food food
   #userStuff
     - if logged_in?
       ='you are ' + current_user.username

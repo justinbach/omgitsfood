@@ -17,8 +17,7 @@ class RecipesController < ApplicationController
       flash[:notice] = "Recipe was successfully updated."
       redirect_to(:controller => "recipes", :action => "index")
     else
-      flash[:notice] = @recipe.errors
-      render :action => "edit"
+      render :action => "show"
     end
   end
 end
