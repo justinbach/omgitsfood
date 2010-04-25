@@ -10,4 +10,9 @@ $(document).ready(function() {
       $('#recipePickerForm input[type=submit]').removeAttr('disabled');
   }
   
+  // autogrow text areas
+  $('textarea').autogrow({
+    minHeight: '100px',
+    maxHeight: '500px'
+  });
 });

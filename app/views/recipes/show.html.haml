@@ -6,7 +6,10 @@
     = label(:recipe, :title)
     = recipe_form.text_field :title
     %br
-    = label(:recipe, :body)
-    = recipe_form.text_area :body
+    = label(:recipe, :ingredients)
+    = recipe_form.text_area :ingredients
+    %br
+    = label(:recipe, :directions)
+    = recipe_form.text_area :directions
     %br
     = submit_tag 'Update recipe'

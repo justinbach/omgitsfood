@@ -1,23 +1,28 @@
 %h1= "Schedule recipe for " + @meal.day.strftime("%A, %B %d, %Y")
 = error_messages_for :meal
+= javascript_include_tag('jquery.autogrow')
 = javascript_include_tag('meal_add')
-#recipePickerForm
-  - form_for @meal, :url => { :action => "create"} do |meal_form|
-    = hidden_field(:meal, :day)
-    - meal_form.fields_for :recipe do |recipe_form|
-      = label(:recipe, :id, "Pick a recipe:")
-      = collection_select(:recipe, :id, @recipes, :id, :title,options ={:prompt => "-----"})
-    = submit_tag 'Schedule Recipe'
-#orDiv OR
-#mealForm
-  %p Create new Recipe:
-  - form_for @meal, :url => { :action => "create"} do |meal_form|
-    = hidden_field(:meal, :day)
-    - meal_form.fields_for :recipe do |recipe_form|
-      = label(:recipe, :title)
-      = recipe_form.text_field :title 
+#recipeForms
+  #mealForm
+    %h2 Create a new recipe
+    - form_for @meal, :url => { :action => "create"} do |meal_form|
+      = hidden_field(:meal, :day)
+      - meal_form.fields_for :recipe do |recipe_form|
+        = label(:recipe, :title)
+        = recipe_form.text_field :title
+        %br
+        = label(:recipe, :ingredients)
+        = recipe_form.text_area :ingredients 
+        %br
+        = label(:recipe, :directions)
+        = recipe_form.text_area :directions
+        %br
+      = submit_tag 'Add and Schedule Recipe '
+  #recipePickerForm
+    - form_for @meal, :url => { :action => "create"} do |meal_form|
+      = hidden_field(:meal, :day)
+      - meal_form.fields_for :recipe do |recipe_form|
+        %h2 Use an existing recipe
+        = collection_select(:recipe, :id, @recipes, :id, :title,options ={:prompt => "-----"}, :size => 10 )
       %br
-      = label(:recipe, :body)
-      = recipe_form.text_area :body
-      %br
-    = submit_tag 'Add and Schedule Recipe '
+      = submit_tag 'Schedule Recipe'

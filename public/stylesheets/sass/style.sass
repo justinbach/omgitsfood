@@ -1,5 +1,8 @@
 // variables
 !accentColor = #FA6900
+!backgroundColor = #69D2E7
+!black = #333
+!gray = #999
 
 // general structure and typography
 
@@ -7,10 +10,10 @@ html
   :font-family Trebuchet MS, Arial, sans-serif
   :height 100%
   :width 100%
-  :color #222
+  color = !black
 
 body
-  :background-color #69D2E7
+  background-color = !backgroundColor
   :min-height 100%
   :width 100%
 
@@ -51,11 +54,16 @@ h1
 // header and nav  
 
 #header
-  :height 50px
+  :height 60px
   :width 100%
+  :margin 10px 0 40px 0
   #logo
     :float left
     :height 50px
+    :position relative
+    :top -13px
+    h1
+      :font-size 63px
     #omg
       color = !accentColor
     #its
@@ -72,7 +80,7 @@ h1
     :margin 20px 0
     a
       :text-decoration none
-      :color black
+      color = !black
       :padding 5px
       :margin 0 5px
       &:hover
@@ -125,19 +133,37 @@ h1
     :font-size 20px
     :margin-bottom 10px    
   h2.today
-    :text-decoration underline    
-  input
-    :border 
-      :thickness 2px 
-      color = !accentColor 
-      :style solid
-    :padding 3px
-    :-webkit-border-radius 5px
+    :text-decoration underline  
+    
+// forms  
+input, textarea
+  :border
+    :thickness 1px
+    :style solid
+    color = !gray
+
+input[type=submit]
+  :border 
+    :thickness 2px 
+    color = !accentColor 
+    :style solid
+  :padding 3px
+  :-webkit-border-radius 5px
+  :background-color #FFF
+  &:hover
+    :color #FFF
+    background-color = !accentColor
+    :cursor pointer
+
+input[disabled]
+  :border
+    :thickness 2px
+    :color gray
+    :style solid
+  &:hover
+    :color gray
     :background-color #FFF
-    &:hover
-      :color #FFF
-      background-color = !accentColor
-      :cursor pointer
+    :cursor default
   
 .lastMealDay
   :margin-right 0
@@ -162,11 +188,38 @@ h1
     :float right
     
 // meals add ****************************************************************
-#recipePickerForm
+#recipeForms
   :margin 40px 0 20px 0
-
-#orDiv
-  :font-size 24px
-  :margin 0px 100px
+  h2
+    :font-size 20px
+    :margin-bottom 15px 
+  input, textarea
+    :margin 0 0 10px 0
+    :width 300px
+  textarea
+    :height 100px
+  input[type=submit]
+    :width auto
+  label
+    :margin 10px 0 0 0
+  #recipePickerForm
+    :padding-left 25px
+    :float left
+    :width 400px
+    label
+      :display block
+    input[type=submit]
+      :margin-top 20px
+    select
+      :margin-top 20px
+      :width 300px
+      :border 2px solid gray
+  #mealForm
+    :border-right 1px black solid
+    :float left
+    :width 400px
+    label
+      :width 200px
+      :display block
     
   
