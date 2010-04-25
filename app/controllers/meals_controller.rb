@@ -27,11 +27,13 @@ class MealsController < ApplicationController
   def create
     @meal = Meal.new(params[:meal])
     @meal.recipe = Recipe.find(params[:recipe][:id]) unless params[:recipe].nil?
-    @meal.user = @meal.recipe.user = current_user
+    @meal.user = current_user
+    @meal.recipe.user = current_user unless @meal.recipe.nil?
     if(@meal.save)
       redirect_back :action => 'index'
     else
-      flash[:notice] = "uh oh"
+      @recipes = Recipe.all(:order => "upper(title) ASC")
+      render :action => "new"
     end
   end
 
