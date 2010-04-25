@@ -148,3 +148,10 @@ h1 {
     float: left; }
   #dateLinks .newer {
     float: right; }
+
+#recipePickerForm {
+  margin: 40px 0 20px 0; }
+
+#orDiv {
+  font-size: 24px;
+  margin: 0px 100px; }
