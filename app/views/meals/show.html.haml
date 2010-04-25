@@ -1,5 +1,10 @@
-%h1= "Manage meal"
-%h2= @meal.recipe.title
+%h1= @meal.recipe.title
 %h2= "Scheduled for #{@meal.day.strftime("%a %b %d, %Y")}"
-%p= @meal.recipe.directions
-= link_to "Back to meals", :back
+#viewMeal
+  #ingredients
+    %h3 Ingredients
+    %p= @meal.recipe.ingredients.gsub(/\n/,'<br/>')
+  #directions
+    %h3 Directions
+    %p= @meal.recipe.directions.gsub(/\n/,'<br/>')
+  #backLink= link_to "Back to meals", :back
