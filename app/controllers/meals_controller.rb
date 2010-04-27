@@ -48,6 +48,13 @@ class MealsController < ApplicationController
   end
 
   def update
+    @meal = Meal.find(params[:id])
+    if @meal.update_attributes(params[:meal])
+      render :action => 'show'
+    else
+      flash[:notice] = "There was a problem updating the meal."
+      render :action => 'show'
+    end
   end
   
   private

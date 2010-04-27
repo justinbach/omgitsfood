@@ -1,11 +1,11 @@
-%h1= "Schedule recipe for " + @meal.day.strftime("%A, %B %d, %Y")
-= error_messages_for :meal
 = javascript_include_tag('jquery.autogrow')
 = javascript_include_tag('meal_add')
+%h1= "Schedule recipe for " + @meal.day.strftime("%A, %B %d, %Y")
+= error_messages_for :meal
 #recipeForms
   #mealForm
     %h2 Create a new recipe
-    - form_for @meal, :url => { :action => "create"} do |meal_form|
+    - form_for @meal, :url => { :action => "create" } do |meal_form|
       = hidden_field(:meal, :day)
       - meal_form.fields_for :recipe do |recipe_form|
         = label(:recipe, :title)

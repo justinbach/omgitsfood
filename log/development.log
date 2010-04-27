@@ -19599,3 +19599,2562 @@ Rendered meals/_meal (1.8ms)
 Rendered meals/_meal (1.3ms)
 Rendered layouts/_header (0.2ms)
 Completed in 40ms (View: 20, DB: 3) | 200 OK [http://localhost/]
+
+
+Processing MealsController#index (for 127.0.0.1 at 2010-04-26 21:05:18) [GET]
+  Parameters: {"action"=>"index", "controller"=>"meals"}
+Redirected to http://localhost:3000/login
+Filter chain halted as [:login_required] rendered_or_redirected.
+Completed in 74ms (DB: 0) | 302 Found [http://localhost/]
+
+
+Processing SessionsController#new (for 127.0.0.1 at 2010-04-26 21:05:18) [GET]
+  Parameters: {"action"=>"new", "controller"=>"sessions"}
+Rendering template within layouts/application
+Rendering sessions/new
+Rendered layouts/_header (39.4ms)
+Completed in 179ms (View: 177, DB: 0) | 200 OK [http://localhost/login]
+
+
+Processing SessionsController#create (for 127.0.0.1 at 2010-04-26 21:05:27) [POST]
+  Parameters: {"commit"=>"Log in", "action"=>"create", "authenticity_token"=>"xIluTwOX+l/L2A0Xf/S4/IAq5XRefDZ9VkwWfUX0QyY=", "controller"=>"sessions", "login"=>"justinbach", "password"=>"[FILTERED]"}
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."username" = 'justinbach') LIMIT 1[0m
+Redirected to http://localhost:3000/
+Completed in 110ms (DB: 0) | 302 Found [http://localhost/sessions]
+
+
+Processing MealsController#index (for 127.0.0.1 at 2010-04-26 21:05:27) [GET]
+  Parameters: {"action"=>"index", "controller"=>"meals"}
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;36;1mMeal Load (1.0ms)[0m   [0;1mSELECT * FROM "meals" WHERE (user_id = 1) AND ("meals"."day" = '2010-04-25') [0m
+  [4;35;1mMeal Load (0.4ms)[0m   [0mSELECT * FROM "meals" WHERE (user_id = 1) AND ("meals"."day" = '2010-04-26') [0m
+  [4;36;1mMeal Load (0.1ms)[0m   [0;1mSELECT * FROM "meals" WHERE (user_id = 1) AND ("meals"."day" = '2010-04-27') [0m
+Rendering template within layouts/application
+Rendering meals/index
+  [4;35;1mRecipe Load (1.1ms)[0m   [0mSELECT * FROM "recipes" WHERE ("recipes"."id" = 29) [0m
+Rendered meals/_meal (34.0ms)
+  [4;36;1mRecipe Load (0.3ms)[0m   [0;1mSELECT * FROM "recipes" WHERE ("recipes"."id" = 36) [0m
+Rendered meals/_meal (1.9ms)
+  [4;35;1mRecipe Load (0.2ms)[0m   [0mSELECT * FROM "recipes" WHERE ("recipes"."id" = 37) [0m
+Rendered meals/_meal (1.1ms)
+  [4;36;1mRecipe Load (0.2ms)[0m   [0;1mSELECT * FROM "recipes" WHERE ("recipes"."id" = 30) [0m
+Rendered meals/_meal (1.1ms)
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "recipes" WHERE ("recipes"."id" = 29) [0m
+Rendered meals/_meal (0.8ms)
+Rendered layouts/_header (0.2ms)
+Completed in 134ms (View: 55, DB: 4) | 200 OK [http://localhost/]
+
+
+Processing MealsController#show (for 127.0.0.1 at 2010-04-26 21:06:37) [GET]
+  Parameters: {"action"=>"show", "id"=>"53", "controller"=>"meals"}
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;35;1mMeal Load (0.2ms)[0m   [0mSELECT * FROM "meals" WHERE ("meals"."id" = 53) [0m
+Rendering template within layouts/application
+Rendering meals/show
+  [4;36;1mRecipe Load (0.3ms)[0m   [0;1mSELECT * FROM "recipes" WHERE ("recipes"."id" = 30) [0m
+Rendered layouts/_header (1.1ms)
+Completed in 24ms (View: 14, DB: 1) | 200 OK [http://localhost/meals/53]
+
+
+Processing MealsController#index (for 127.0.0.1 at 2010-04-26 21:06:57) [GET]
+  Parameters: {"action"=>"index", "controller"=>"meals"}
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;36;1mMeal Load (0.4ms)[0m   [0;1mSELECT * FROM "meals" WHERE (user_id = 1) AND ("meals"."day" = '2010-04-25') [0m
+  [4;35;1mMeal Load (0.3ms)[0m   [0mSELECT * FROM "meals" WHERE (user_id = 1) AND ("meals"."day" = '2010-04-26') [0m
+  [4;36;1mMeal Load (0.1ms)[0m   [0;1mSELECT * FROM "meals" WHERE (user_id = 1) AND ("meals"."day" = '2010-04-27') [0m
+Rendering template within layouts/application
+Rendering meals/index
+  [4;35;1mRecipe Load (0.2ms)[0m   [0mSELECT * FROM "recipes" WHERE ("recipes"."id" = 29) [0m
+Rendered meals/_meal (6.5ms)
+  [4;36;1mRecipe Load (0.2ms)[0m   [0;1mSELECT * FROM "recipes" WHERE ("recipes"."id" = 36) [0m
+Rendered meals/_meal (1.1ms)
+  [4;35;1mRecipe Load (0.3ms)[0m   [0mSELECT * FROM "recipes" WHERE ("recipes"."id" = 37) [0m
+Rendered meals/_meal (1.2ms)
+  [4;36;1mRecipe Load (0.2ms)[0m   [0;1mSELECT * FROM "recipes" WHERE ("recipes"."id" = 30) [0m
+Rendered meals/_meal (1.2ms)
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "recipes" WHERE ("recipes"."id" = 29) [0m
+Rendered meals/_meal (0.8ms)
+Rendered layouts/_header (0.2ms)
+Completed in 29ms (View: 14, DB: 2) | 200 OK [http://localhost/]
+
+
+Processing MealsController#show (for 127.0.0.1 at 2010-04-26 21:06:59) [GET]
+  Parameters: {"action"=>"show", "id"=>"38", "controller"=>"meals"}
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;35;1mMeal Load (0.2ms)[0m   [0mSELECT * FROM "meals" WHERE ("meals"."id" = 38) [0m
+Rendering template within layouts/application
+Rendering meals/show
+  [4;36;1mRecipe Load (0.3ms)[0m   [0;1mSELECT * FROM "recipes" WHERE ("recipes"."id" = 29) [0m
+Rendered layouts/_header (1.1ms)
+Completed in 80ms (View: 68, DB: 1) | 200 OK [http://localhost/meals/38]
+
+
+Processing MealsController#index (for 127.0.0.1 at 2010-04-26 21:07:00) [GET]
+  Parameters: {"action"=>"index", "controller"=>"meals"}
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;36;1mMeal Load (0.4ms)[0m   [0;1mSELECT * FROM "meals" WHERE (user_id = 1) AND ("meals"."day" = '2010-04-25') [0m
+  [4;35;1mMeal Load (0.3ms)[0m   [0mSELECT * FROM "meals" WHERE (user_id = 1) AND ("meals"."day" = '2010-04-26') [0m
+  [4;36;1mMeal Load (0.1ms)[0m   [0;1mSELECT * FROM "meals" WHERE (user_id = 1) AND ("meals"."day" = '2010-04-27') [0m
+Rendering template within layouts/application
+Rendering meals/index
+  [4;35;1mRecipe Load (0.2ms)[0m   [0mSELECT * FROM "recipes" WHERE ("recipes"."id" = 29) [0m
+Rendered meals/_meal (6.3ms)
+  [4;36;1mRecipe Load (0.2ms)[0m   [0;1mSELECT * FROM "recipes" WHERE ("recipes"."id" = 36) [0m
+Rendered meals/_meal (1.2ms)
+  [4;35;1mRecipe Load (0.2ms)[0m   [0mSELECT * FROM "recipes" WHERE ("recipes"."id" = 37) [0m
+Rendered meals/_meal (1.1ms)
+  [4;36;1mRecipe Load (0.2ms)[0m   [0;1mSELECT * FROM "recipes" WHERE ("recipes"."id" = 30) [0m
+Rendered meals/_meal (1.0ms)
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "recipes" WHERE ("recipes"."id" = 29) [0m
+Rendered meals/_meal (0.8ms)
+Rendered layouts/_header (0.2ms)
+Completed in 29ms (View: 14, DB: 2) | 200 OK [http://localhost/]
+
+
+Processing SessionsController#new (for 127.0.0.1 at 2010-04-26 21:07:01) [GET]
+  Parameters: {"action"=>"new", "controller"=>"sessions"}
+Rendering template within layouts/application
+Rendering sessions/new
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+Rendered layouts/_header (8.3ms)
+Completed in 13ms (View: 11, DB: 0) | 200 OK [http://localhost/login]
+
+
+Processing MealsController#index (for 127.0.0.1 at 2010-04-26 21:08:14) [GET]
+  Parameters: {"action"=>"index", "controller"=>"meals"}
+Redirected to http://localhost:3000/login
+Filter chain halted as [:login_required] rendered_or_redirected.
+Completed in 0ms (DB: 0) | 302 Found [http://localhost/]
+
+
+Processing SessionsController#new (for 127.0.0.1 at 2010-04-26 21:08:14) [GET]
+  Parameters: {"action"=>"new", "controller"=>"sessions"}
+Rendering template within layouts/application
+Rendering sessions/new
+Rendered layouts/_header (0.2ms)
+Completed in 4ms (View: 3, DB: 0) | 200 OK [http://localhost/login]
+
+
+Processing SessionsController#create (for 127.0.0.1 at 2010-04-26 21:08:26) [POST]
+  Parameters: {"commit"=>"Log in", "action"=>"create", "authenticity_token"=>"vHPlWi2McLaHjPqRhUsrRMIZMocno8g+JLuvn/SEQ2k=", "controller"=>"sessions", "login"=>"justinbach", "password"=>"[FILTERED]"}
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."username" = 'justinbach') LIMIT 1[0m
+Redirected to http://localhost:3000/
+Completed in 8ms (DB: 0) | 302 Found [http://localhost/sessions]
+
+
+Processing MealsController#index (for 127.0.0.1 at 2010-04-26 21:08:26) [GET]
+  Parameters: {"action"=>"index", "controller"=>"meals"}
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;35;1mMeal Load (0.4ms)[0m   [0mSELECT * FROM "meals" WHERE (user_id = 1) AND ("meals"."day" = '2010-04-25') [0m
+  [4;36;1mMeal Load (0.2ms)[0m   [0;1mSELECT * FROM "meals" WHERE (user_id = 1) AND ("meals"."day" = '2010-04-26') [0m
+  [4;35;1mMeal Load (0.1ms)[0m   [0mSELECT * FROM "meals" WHERE (user_id = 1) AND ("meals"."day" = '2010-04-27') [0m
+Rendering template within layouts/application
+Rendering meals/index
+  [4;36;1mRecipe Load (0.2ms)[0m   [0;1mSELECT * FROM "recipes" WHERE ("recipes"."id" = 29) [0m
+Rendered meals/_meal (5.8ms)
+  [4;35;1mRecipe Load (0.2ms)[0m   [0mSELECT * FROM "recipes" WHERE ("recipes"."id" = 36) [0m
+Rendered meals/_meal (1.1ms)
+  [4;36;1mRecipe Load (0.2ms)[0m   [0;1mSELECT * FROM "recipes" WHERE ("recipes"."id" = 37) [0m
+Rendered meals/_meal (1.0ms)
+  [4;35;1mRecipe Load (0.2ms)[0m   [0mSELECT * FROM "recipes" WHERE ("recipes"."id" = 30) [0m
+Rendered meals/_meal (1.0ms)
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "recipes" WHERE ("recipes"."id" = 29) [0m
+Rendered meals/_meal (0.8ms)
+Rendered layouts/_header (0.2ms)
+Completed in 92ms (View: 78, DB: 2) | 200 OK [http://localhost/]
+
+
+Processing MealsController#show (for 127.0.0.1 at 2010-04-26 21:08:35) [GET]
+  Parameters: {"action"=>"show", "id"=>"53", "controller"=>"meals"}
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;36;1mMeal Load (0.2ms)[0m   [0;1mSELECT * FROM "meals" WHERE ("meals"."id" = 53) [0m
+Rendering template within layouts/application
+Rendering meals/show
+  [4;35;1mRecipe Load (0.3ms)[0m   [0mSELECT * FROM "recipes" WHERE ("recipes"."id" = 30) [0m
+Rendered layouts/_header (1.1ms)
+Completed in 20ms (View: 9, DB: 1) | 200 OK [http://localhost/meals/53]
+
+
+Processing MealsController#show (for 127.0.0.1 at 2010-04-26 21:09:11) [GET]
+  Parameters: {"action"=>"show", "id"=>"53", "controller"=>"meals"}
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;35;1mMeal Load (0.2ms)[0m   [0mSELECT * FROM "meals" WHERE ("meals"."id" = 53) [0m
+Rendering template within layouts/application
+Rendering meals/show
+  [4;36;1mRecipe Load (0.3ms)[0m   [0;1mSELECT * FROM "recipes" WHERE ("recipes"."id" = 30) [0m
+
+ActionView::TemplateError (uninitialized constant ActionView::Base::CompiledTemplates::Reschedule) on line #3 of app/views/meals/show.html.haml:
+1: %h1= @meal.recipe.title
+2: %h2= "Scheduled for #{@meal.day.strftime("%a %b %d, %Y")}"
+3: %a(id = "rescheduleLink")= Reschedule
+4: #viewMeal
+5:   #ingredients
+6:     %h3 Ingredients
+
+    app/views/meals/show.html.haml:3:in `_run_haml_app47views47meals47show46html46haml'
+    haml (2.2.23) lib/haml/helpers/action_view_mods.rb:13:in `render'
+    haml (2.2.23) lib/haml/helpers/action_view_mods.rb:13:in `render'
+    haml (2.2.23) lib/sass/plugin/rails.rb:20:in `process'
+
+Rendered rescues/_trace (40.9ms)
+Rendered rescues/_request_and_response (1.6ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing MealsController#show (for 127.0.0.1 at 2010-04-26 21:10:20) [GET]
+  Parameters: {"action"=>"show", "id"=>"53", "controller"=>"meals"}
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;36;1mMeal Load (0.3ms)[0m   [0;1mSELECT * FROM "meals" WHERE ("meals"."id" = 53) [0m
+Rendering template within layouts/application
+Rendering meals/show
+  [4;35;1mRecipe Load (0.3ms)[0m   [0mSELECT * FROM "recipes" WHERE ("recipes"."id" = 30) [0m
+Rendered layouts/_header (1.2ms)
+Completed in 26ms (View: 15, DB: 1) | 200 OK [http://localhost/meals/53]
+
+
+Processing MealsController#show (for 127.0.0.1 at 2010-04-26 21:16:26) [GET]
+  Parameters: {"action"=>"show", "id"=>"53", "controller"=>"meals"}
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;35;1mMeal Load (0.2ms)[0m   [0mSELECT * FROM "meals" WHERE ("meals"."id" = 53) [0m
+Rendering template within layouts/application
+Rendering meals/show
+  [4;36;1mRecipe Load (0.2ms)[0m   [0;1mSELECT * FROM "recipes" WHERE ("recipes"."id" = 30) [0m
+Rendered layouts/_header (1.1ms)
+Completed in 25ms (View: 15, DB: 1) | 200 OK [http://localhost/meals/53]
+
+
+Processing MealsController#show (for 127.0.0.1 at 2010-04-26 21:16:27) [GET]
+  Parameters: {"action"=>"show", "id"=>"53", "controller"=>"meals"}
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;36;1mMeal Load (0.2ms)[0m   [0;1mSELECT * FROM "meals" WHERE ("meals"."id" = 53) [0m
+Rendering template within layouts/application
+Rendering meals/show
+  [4;35;1mRecipe Load (0.2ms)[0m   [0mSELECT * FROM "recipes" WHERE ("recipes"."id" = 30) [0m
+Rendered layouts/_header (1.1ms)
+Completed in 20ms (View: 9, DB: 1) | 200 OK [http://localhost/meals/53]
+
+
+Processing MealsController#show (for 127.0.0.1 at 2010-04-26 21:16:44) [GET]
+  Parameters: {"action"=>"show", "id"=>"53", "controller"=>"meals"}
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;35;1mMeal Load (0.3ms)[0m   [0mSELECT * FROM "meals" WHERE ("meals"."id" = 53) [0m
+Rendering template within layouts/application
+Rendering meals/show
+  [4;36;1mRecipe Load (0.3ms)[0m   [0;1mSELECT * FROM "recipes" WHERE ("recipes"."id" = 30) [0m
+Rendered layouts/_header (1.1ms)
+Completed in 25ms (View: 15, DB: 1) | 200 OK [http://localhost/meals/53]
+
+
+Processing MealsController#show (for 127.0.0.1 at 2010-04-26 21:17:14) [GET]
+  Parameters: {"action"=>"show", "id"=>"53", "controller"=>"meals"}
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;36;1mMeal Load (0.3ms)[0m   [0;1mSELECT * FROM "meals" WHERE ("meals"."id" = 53) [0m
+Rendering template within layouts/application
+Rendering meals/show
+  [4;35;1mRecipe Load (0.3ms)[0m   [0mSELECT * FROM "recipes" WHERE ("recipes"."id" = 30) [0m
+Rendered layouts/_header (1.3ms)
+Completed in 28ms (View: 17, DB: 1) | 200 OK [http://localhost/meals/53]
+
+
+Processing MealsController#update (for 127.0.0.1 at 2010-04-26 21:17:15) [PUT]
+  Parameters: {"commit"=>"update date", "meal"=>{"id"=>"53"}, "action"=>"update", "_method"=>"put", "authenticity_token"=>"vHPlWi2McLaHjPqRhUsrRMIZMocno8g+JLuvn/SEQ2k=", "id"=>"53", "controller"=>"meals"}
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+Rendering template within layouts/application
+Rendering meals/update
+Rendered layouts/_header (1.3ms)
+Completed in 120ms (View: 112, DB: 0) | 200 OK [http://localhost/meals/53]
+
+
+Processing MealsController#show (for 127.0.0.1 at 2010-04-26 21:18:13) [GET]
+  Parameters: {"action"=>"show", "id"=>"53", "controller"=>"meals"}
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;36;1mMeal Load (0.2ms)[0m   [0;1mSELECT * FROM "meals" WHERE ("meals"."id" = 53) [0m
+Rendering template within layouts/application
+Rendering meals/show
+  [4;35;1mRecipe Load (0.2ms)[0m   [0mSELECT * FROM "recipes" WHERE ("recipes"."id" = 30) [0m
+Rendered layouts/_header (1.1ms)
+Completed in 25ms (View: 15, DB: 1) | 200 OK [http://localhost/meals/53]
+
+
+Processing MealsController#update (for 127.0.0.1 at 2010-04-26 21:18:16) [PUT]
+  Parameters: {"commit"=>"update date", "meal"=>{"day"=>"2010-04-26"}, "action"=>"update", "_method"=>"put", "authenticity_token"=>"vHPlWi2McLaHjPqRhUsrRMIZMocno8g+JLuvn/SEQ2k=", "id"=>"53", "controller"=>"meals"}
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+Rendering template within layouts/application
+Rendering meals/update
+Rendered layouts/_header (1.2ms)
+Completed in 9ms (View: 3, DB: 0) | 200 OK [http://localhost/meals/53]
+
+
+Processing MealsController#update (for 127.0.0.1 at 2010-04-26 21:19:54) [PUT]
+  Parameters: {"commit"=>"update date", "meal"=>{"day"=>"2010-04-26"}, "action"=>"update", "_method"=>"put", "authenticity_token"=>"vHPlWi2McLaHjPqRhUsrRMIZMocno8g+JLuvn/SEQ2k=", "id"=>"53", "controller"=>"meals"}
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;36;1mMeal Load (0.2ms)[0m   [0;1mSELECT * FROM "meals" WHERE ("meals"."id" = 53) [0m
+
+***** Debugger requested, but was not available: Start server with --debugger to enable *****
+Rendering template within layouts/application
+Rendering meals/update
+Rendered layouts/_header (1.1ms)
+Completed in 13ms (View: 3, DB: 0) | 200 OK [http://localhost/meals/53]
+
+
+Processing MealsController#update (for 127.0.0.1 at 2010-04-26 21:20:17) [PUT]
+  Parameters: {"commit"=>"update date", "meal"=>{"day"=>"2010-04-26"}, "action"=>"update", "_method"=>"put", "authenticity_token"=>"vHPlWi2McLaHjPqRhUsrRMIZMocno8g+JLuvn/SEQ2k=", "id"=>"53", "controller"=>"meals"}
+  [4;36;1mUser Load (0.4ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;35;1mMeal Load (0.3ms)[0m   [0mSELECT * FROM "meals" WHERE ("meals"."id" = 53) [0m
+  [4;36;1mRecipe Load (0.3ms)[0m   [0;1mSELECT * FROM "recipes" WHERE ("recipes"."id" = 30) [0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-04-26 21:23:26) [GET]
+  Parameters: {"action"=>"index", "controller"=>"meals"}
+
+SyntaxError (/Users/justinbachorik/Documents/Coursework/CSCI-E250/projects/omgitsfood/src/omgitsfood/app/controllers/meals_controller.rb:63: syntax error, unexpected $end, expecting kEND):
+  
+
+Rendered rescues/_trace (38.1ms)
+Rendered rescues/_request_and_response (1.9ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing SessionsController#create (for 127.0.0.1 at 2010-04-26 21:23:37) [POST]
+  Parameters: {"commit"=>"Log in", "action"=>"create", "authenticity_token"=>"vHPlWi2McLaHjPqRhUsrRMIZMocno8g+JLuvn/SEQ2k=", "controller"=>"sessions", "login"=>"justinbach", "password"=>"[FILTERED]"}
+  [4;36;1mUser Load (0.5ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."username" = 'justinbach') LIMIT 1[0m
+Redirected to http://localhost:3000/
+Completed in 20ms (DB: 1) | 302 Found [http://localhost/sessions]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-04-26 21:23:37) [GET]
+  Parameters: {"action"=>"index", "controller"=>"meals"}
+
+SyntaxError (/Users/justinbachorik/Documents/Coursework/CSCI-E250/projects/omgitsfood/src/omgitsfood/app/controllers/meals_controller.rb:63: syntax error, unexpected $end, expecting kEND):
+  
+
+Rendered rescues/_trace (42.6ms)
+Rendered rescues/_request_and_response (1.6ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-04-26 21:23:49) [GET]
+  Parameters: {"action"=>"index", "controller"=>"meals"}
+
+SyntaxError (/Users/justinbachorik/Documents/Coursework/CSCI-E250/projects/omgitsfood/src/omgitsfood/app/controllers/meals_controller.rb:63: syntax error, unexpected $end, expecting kEND):
+  
+
+Rendered rescues/_trace (39.1ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing MealsController#index (for 127.0.0.1 at 2010-04-26 21:23:58) [GET]
+  Parameters: {"action"=>"index", "controller"=>"meals"}
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;36;1mMeal Load (0.6ms)[0m   [0;1mSELECT * FROM "meals" WHERE (user_id = 1) AND ("meals"."day" = '2010-04-25') [0m
+  [4;35;1mMeal Load (0.3ms)[0m   [0mSELECT * FROM "meals" WHERE (user_id = 1) AND ("meals"."day" = '2010-04-26') [0m
+  [4;36;1mMeal Load (0.2ms)[0m   [0;1mSELECT * FROM "meals" WHERE (user_id = 1) AND ("meals"."day" = '2010-04-27') [0m
+Rendering template within layouts/application
+Rendering meals/index
+  [4;35;1mRecipe Load (0.3ms)[0m   [0mSELECT * FROM "recipes" WHERE ("recipes"."id" = 29) [0m
+Rendered meals/_meal (9.1ms)
+  [4;36;1mRecipe Load (0.3ms)[0m   [0;1mSELECT * FROM "recipes" WHERE ("recipes"."id" = 36) [0m
+Rendered meals/_meal (1.5ms)
+  [4;35;1mRecipe Load (0.3ms)[0m   [0mSELECT * FROM "recipes" WHERE ("recipes"."id" = 37) [0m
+Rendered meals/_meal (1.5ms)
+  [4;36;1mRecipe Load (0.3ms)[0m   [0;1mSELECT * FROM "recipes" WHERE ("recipes"."id" = 30) [0m
+Rendered meals/_meal (1.5ms)
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "recipes" WHERE ("recipes"."id" = 29) [0m
+Rendered meals/_meal (1.1ms)
+Rendered layouts/_header (3.8ms)
+Completed in 79ms (View: 49, DB: 3) | 200 OK [http://localhost/]
+
+
+Processing MealsController#index (for 127.0.0.1 at 2010-04-26 21:24:57) [GET]
+  Parameters: {"action"=>"index", "d"=>"2010-04-29", "controller"=>"meals"}
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;35;1mMeal Load (0.3ms)[0m   [0mSELECT * FROM "meals" WHERE (user_id = 1) AND ("meals"."day" = '2010-04-28') [0m
+  [4;36;1mMeal Load (0.1ms)[0m   [0;1mSELECT * FROM "meals" WHERE (user_id = 1) AND ("meals"."day" = '2010-04-29') [0m
+  [4;35;1mMeal Load (0.2ms)[0m   [0mSELECT * FROM "meals" WHERE (user_id = 1) AND ("meals"."day" = '2010-04-30') [0m
+Rendering template within layouts/application
+Rendering meals/index
+  [4;36;1mRecipe Load (0.3ms)[0m   [0;1mSELECT * FROM "recipes" WHERE ("recipes"."id" = 34) [0m
+Rendered meals/_meal (7.5ms)
+  [4;35;1mRecipe Load (0.3ms)[0m   [0mSELECT * FROM "recipes" WHERE ("recipes"."id" = 30) [0m
+Rendered meals/_meal (1.6ms)
+Rendered layouts/_header (0.2ms)
+Completed in 32ms (View: 14, DB: 2) | 200 OK [http://localhost/meals?d=2010-04-29]
+
+
+Processing MealsController#show (for 127.0.0.1 at 2010-04-26 21:25:00) [GET]
+  Parameters: {"action"=>"show", "id"=>"58", "controller"=>"meals"}
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;35;1mMeal Load (0.3ms)[0m   [0mSELECT * FROM "meals" WHERE ("meals"."id" = 58) [0m
+Rendering template within layouts/application
+Rendering meals/show
+  [4;36;1mRecipe Load (0.3ms)[0m   [0;1mSELECT * FROM "recipes" WHERE ("recipes"."id" = 30) [0m
+Rendered layouts/_header (1.7ms)
+Completed in 35ms (View: 21, DB: 1) | 200 OK [http://localhost/meals/58]
+
+
+Processing MealsController#update (for 127.0.0.1 at 2010-04-26 21:25:03) [PUT]
+  Parameters: {"commit"=>"update date", "meal"=>{"day"=>"2010-04-30"}, "action"=>"update", "_method"=>"put", "authenticity_token"=>"vHPlWi2McLaHjPqRhUsrRMIZMocno8g+JLuvn/SEQ2k=", "id"=>"58", "controller"=>"meals"}
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;36;1mMeal Load (0.3ms)[0m   [0;1mSELECT * FROM "meals" WHERE ("meals"."id" = 58) [0m
+Rendering template within layouts/application
+Rendering meals/show
+  [4;35;1mRecipe Load (0.3ms)[0m   [0mSELECT * FROM "recipes" WHERE ("recipes"."id" = 30) [0m
+Rendered layouts/_header (1.3ms)
+Completed in 27ms (View: 11, DB: 1) | 200 OK [http://localhost/meals/58]
+
+
+Processing MealsController#update (for 127.0.0.1 at 2010-04-26 21:25:05) [PUT]
+  Parameters: {"commit"=>"update date", "meal"=>{"day"=>"2010-04-31"}, "action"=>"update", "_method"=>"put", "authenticity_token"=>"vHPlWi2McLaHjPqRhUsrRMIZMocno8g+JLuvn/SEQ2k=", "id"=>"58", "controller"=>"meals"}
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;35;1mMeal Load (0.3ms)[0m   [0mSELECT * FROM "meals" WHERE ("meals"."id" = 58) [0m
+  [4;36;1mMeal Update (0.4ms)[0m   [0;1mUPDATE "meals" SET "day" = NULL, "updated_at" = '2010-04-27 01:25:05' WHERE "id" = 58[0m
+Rendering template within layouts/application
+Rendering meals/show
+  [4;35;1mRecipe Load (0.4ms)[0m   [0mSELECT * FROM "recipes" WHERE ("recipes"."id" = 30) [0m
+
+ActionView::TemplateError (undefined method `strftime' for nil:NilClass) on line #2 of app/views/meals/show.html.haml:
+1: %h1= @meal.recipe.title
+2: %h2= "Scheduled for #{@meal.day.strftime("%a %b %d, %Y")}"
+3: %a(id="rescheduleLink") Reschedule
+4: - form_for @meal, :url => { :action => "update"} do |meal_form|
+5:   = text_field(:meal, :day)
+
+    app/views/meals/show.html.haml:2:in `_run_haml_app47views47meals47show46html46haml'
+    haml (2.2.23) lib/haml/helpers/action_view_mods.rb:13:in `render'
+    haml (2.2.23) lib/haml/helpers/action_view_mods.rb:13:in `render'
+    app/controllers/meals_controller.rb:54:in `update'
+    haml (2.2.23) lib/sass/plugin/rails.rb:20:in `process'
+
+Rendered rescues/_trace (115.2ms)
+Rendered rescues/_request_and_response (0.4ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing MealsController#update (for 127.0.0.1 at 2010-04-26 21:25:10) [PUT]
+  Parameters: {"commit"=>"update date", "meal"=>{"day"=>"2010-04-30"}, "action"=>"update", "_method"=>"put", "authenticity_token"=>"vHPlWi2McLaHjPqRhUsrRMIZMocno8g+JLuvn/SEQ2k=", "id"=>"58", "controller"=>"meals"}
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;35;1mMeal Load (0.3ms)[0m   [0mSELECT * FROM "meals" WHERE ("meals"."id" = 58) [0m
+  [4;36;1mMeal Update (0.3ms)[0m   [0;1mUPDATE "meals" SET "day" = '2010-04-30', "updated_at" = '2010-04-27 01:25:10' WHERE "id" = 58[0m
+Rendering template within layouts/application
+Rendering meals/show
+  [4;35;1mRecipe Load (0.4ms)[0m   [0mSELECT * FROM "recipes" WHERE ("recipes"."id" = 30) [0m
+Rendered layouts/_header (1.4ms)
+Completed in 31ms (View: 12, DB: 1) | 200 OK [http://localhost/meals/58]
+
+
+Processing MealsController#update (for 127.0.0.1 at 2010-04-26 21:25:12) [PUT]
+  Parameters: {"commit"=>"update date", "meal"=>{"day"=>"2010-04-29"}, "action"=>"update", "_method"=>"put", "authenticity_token"=>"vHPlWi2McLaHjPqRhUsrRMIZMocno8g+JLuvn/SEQ2k=", "id"=>"58", "controller"=>"meals"}
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;35;1mMeal Load (0.3ms)[0m   [0mSELECT * FROM "meals" WHERE ("meals"."id" = 58) [0m
+  [4;36;1mMeal Update (0.4ms)[0m   [0;1mUPDATE "meals" SET "day" = '2010-04-29', "updated_at" = '2010-04-27 01:25:12' WHERE "id" = 58[0m
+Rendering template within layouts/application
+Rendering meals/show
+  [4;35;1mRecipe Load (0.3ms)[0m   [0mSELECT * FROM "recipes" WHERE ("recipes"."id" = 30) [0m
+Rendered layouts/_header (1.7ms)
+Completed in 35ms (View: 13, DB: 1) | 200 OK [http://localhost/meals/58]
+
+
+Processing MealsController#update (for 127.0.0.1 at 2010-04-26 21:26:12) [PUT]
+  Parameters: {"commit"=>"update date", "meal"=>{"day"=>"2010-05-05"}, "action"=>"update", "_method"=>"put", "authenticity_token"=>"vHPlWi2McLaHjPqRhUsrRMIZMocno8g+JLuvn/SEQ2k=", "id"=>"58", "controller"=>"meals"}
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;35;1mMeal Load (0.3ms)[0m   [0mSELECT * FROM "meals" WHERE ("meals"."id" = 58) [0m
+  [4;36;1mMeal Update (0.4ms)[0m   [0;1mUPDATE "meals" SET "day" = '2010-05-05', "updated_at" = '2010-04-27 01:26:12' WHERE "id" = 58[0m
+Rendering template within layouts/application
+Rendering meals/show
+  [4;35;1mRecipe Load (0.3ms)[0m   [0mSELECT * FROM "recipes" WHERE ("recipes"."id" = 30) [0m
+Rendered layouts/_header (1.4ms)
+Completed in 31ms (View: 12, DB: 1) | 200 OK [http://localhost/meals/58]
+
+
+Processing MealsController#show (for 127.0.0.1 at 2010-04-26 21:26:15) [GET]
+  Parameters: {"action"=>"show", "id"=>"58", "controller"=>"meals"}
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;35;1mMeal Load (0.3ms)[0m   [0mSELECT * FROM "meals" WHERE ("meals"."id" = 58) [0m
+Rendering template within layouts/application
+Rendering meals/show
+  [4;36;1mRecipe Load (0.3ms)[0m   [0;1mSELECT * FROM "recipes" WHERE ("recipes"."id" = 30) [0m
+Rendered layouts/_header (1.3ms)
+Completed in 25ms (View: 12, DB: 1) | 200 OK [http://localhost/meals/58]
+
+
+Processing MealsController#show (for 127.0.0.1 at 2010-04-26 21:26:17) [GET]
+  Parameters: {"action"=>"show", "id"=>"58", "controller"=>"meals"}
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;36;1mMeal Load (0.3ms)[0m   [0;1mSELECT * FROM "meals" WHERE ("meals"."id" = 58) [0m
+Rendering template within layouts/application
+Rendering meals/show
+  [4;35;1mRecipe Load (0.3ms)[0m   [0mSELECT * FROM "recipes" WHERE ("recipes"."id" = 30) [0m
+Rendered layouts/_header (1.4ms)
+Completed in 26ms (View: 13, DB: 1) | 200 OK [http://localhost/meals/58]
+
+
+Processing MealsController#show (for 127.0.0.1 at 2010-04-26 21:26:18) [GET]
+  Parameters: {"action"=>"show", "id"=>"58", "controller"=>"meals"}
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;35;1mMeal Load (0.3ms)[0m   [0mSELECT * FROM "meals" WHERE ("meals"."id" = 58) [0m
+Rendering template within layouts/application
+Rendering meals/show
+  [4;36;1mRecipe Load (0.3ms)[0m   [0;1mSELECT * FROM "recipes" WHERE ("recipes"."id" = 30) [0m
+Rendered layouts/_header (1.4ms)
+Completed in 25ms (View: 12, DB: 1) | 200 OK [http://localhost/meals/58]
+
+
+Processing MealsController#show (for 127.0.0.1 at 2010-04-26 21:26:18) [GET]
+  Parameters: {"action"=>"show", "id"=>"58", "controller"=>"meals"}
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;36;1mMeal Load (0.3ms)[0m   [0;1mSELECT * FROM "meals" WHERE ("meals"."id" = 58) [0m
+Rendering template within layouts/application
+Rendering meals/show
+  [4;35;1mRecipe Load (0.3ms)[0m   [0mSELECT * FROM "recipes" WHERE ("recipes"."id" = 30) [0m
+Rendered layouts/_header (1.4ms)
+Completed in 26ms (View: 12, DB: 1) | 200 OK [http://localhost/meals/58]
+
+
+Processing MealsController#show (for 127.0.0.1 at 2010-04-26 21:26:19) [GET]
+  Parameters: {"action"=>"show", "id"=>"58", "controller"=>"meals"}
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;35;1mMeal Load (0.3ms)[0m   [0mSELECT * FROM "meals" WHERE ("meals"."id" = 58) [0m
+Rendering template within layouts/application
+Rendering meals/show
+  [4;36;1mRecipe Load (0.3ms)[0m   [0;1mSELECT * FROM "recipes" WHERE ("recipes"."id" = 30) [0m
+Rendered layouts/_header (1.3ms)
+Completed in 25ms (View: 12, DB: 1) | 200 OK [http://localhost/meals/58]
+
+
+Processing MealsController#show (for 127.0.0.1 at 2010-04-26 21:26:20) [GET]
+  Parameters: {"action"=>"show", "id"=>"58", "controller"=>"meals"}
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;36;1mMeal Load (0.3ms)[0m   [0;1mSELECT * FROM "meals" WHERE ("meals"."id" = 58) [0m
+Rendering template within layouts/application
+Rendering meals/show
+  [4;35;1mRecipe Load (0.3ms)[0m   [0mSELECT * FROM "recipes" WHERE ("recipes"."id" = 30) [0m
+Rendered layouts/_header (1.4ms)
+Completed in 27ms (View: 13, DB: 1) | 200 OK [http://localhost/meals/58]
+
+
+Processing MealsController#show (for 127.0.0.1 at 2010-04-26 21:30:11) [GET]
+  Parameters: {"action"=>"show", "id"=>"58", "controller"=>"meals"}
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;35;1mMeal Load (0.3ms)[0m   [0mSELECT * FROM "meals" WHERE ("meals"."id" = 58) [0m
+Rendering template within layouts/application
+Rendering meals/show
+  [4;36;1mRecipe Load (0.3ms)[0m   [0;1mSELECT * FROM "recipes" WHERE ("recipes"."id" = 30) [0m
+Rendered layouts/_header (1.4ms)
+Completed in 33ms (View: 20, DB: 1) | 200 OK [http://localhost/meals/58]
+
+
+Processing MealsController#index (for 127.0.0.1 at 2010-04-26 21:30:13) [GET]
+  Parameters: {"action"=>"index", "d"=>"2010-05-05", "controller"=>"meals"}
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;36;1mMeal Load (0.2ms)[0m   [0;1mSELECT * FROM "meals" WHERE (user_id = 1) AND ("meals"."day" = '2010-05-04') [0m
+  [4;35;1mMeal Load (0.3ms)[0m   [0mSELECT * FROM "meals" WHERE (user_id = 1) AND ("meals"."day" = '2010-05-05') [0m
+  [4;36;1mMeal Load (0.1ms)[0m   [0;1mSELECT * FROM "meals" WHERE (user_id = 1) AND ("meals"."day" = '2010-05-06') [0m
+Rendering template within layouts/application
+Rendering meals/index
+  [4;35;1mRecipe Load (0.3ms)[0m   [0mSELECT * FROM "recipes" WHERE ("recipes"."id" = 30) [0m
+Rendered meals/_meal (7.5ms)
+Rendered layouts/_header (0.2ms)
+Completed in 30ms (View: 13, DB: 1) | 200 OK [http://localhost/meals?d=2010-05-05]
+
+
+Processing MealsController#destroy (for 127.0.0.1 at 2010-04-26 21:30:17) [DELETE]
+  Parameters: {"action"=>"destroy", "_method"=>"delete", "authenticity_token"=>"vHPlWi2McLaHjPqRhUsrRMIZMocno8g+JLuvn/SEQ2k=", "id"=>"58", "controller"=>"meals"}
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;35;1mMeal Load (0.3ms)[0m   [0mSELECT * FROM "meals" WHERE ("meals"."id" = 58) [0m
+  [4;36;1mMeal Destroy (0.3ms)[0m   [0;1mDELETE FROM "meals" WHERE "id" = 58[0m
+Redirected to http://localhost:3000/meals?d=2010-05-05
+Completed in 16ms (DB: 1) | 302 Found [http://localhost/meals/58]
+
+
+Processing MealsController#index (for 127.0.0.1 at 2010-04-26 21:30:17) [GET]
+  Parameters: {"action"=>"index", "d"=>"2010-05-05", "controller"=>"meals"}
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;36;1mMeal Load (0.3ms)[0m   [0;1mSELECT * FROM "meals" WHERE (user_id = 1) AND ("meals"."day" = '2010-05-04') [0m
+  [4;35;1mMeal Load (0.3ms)[0m   [0mSELECT * FROM "meals" WHERE (user_id = 1) AND ("meals"."day" = '2010-05-05') [0m
+  [4;36;1mMeal Load (0.2ms)[0m   [0;1mSELECT * FROM "meals" WHERE (user_id = 1) AND ("meals"."day" = '2010-05-06') [0m
+Rendering template within layouts/application
+Rendering meals/index
+Rendered layouts/_header (0.3ms)
+Completed in 86ms (View: 6, DB: 1) | 200 OK [http://localhost/meals?d=2010-05-05]
+
+
+Processing MealsController#index (for 127.0.0.1 at 2010-04-26 21:30:18) [GET]
+  Parameters: {"action"=>"index", "d"=>"2010-05-02", "controller"=>"meals"}
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;36;1mMeal Load (0.3ms)[0m   [0;1mSELECT * FROM "meals" WHERE (user_id = 1) AND ("meals"."day" = '2010-05-01') [0m
+  [4;35;1mMeal Load (0.4ms)[0m   [0mSELECT * FROM "meals" WHERE (user_id = 1) AND ("meals"."day" = '2010-05-02') [0m
+  [4;36;1mMeal Load (0.2ms)[0m   [0;1mSELECT * FROM "meals" WHERE (user_id = 1) AND ("meals"."day" = '2010-05-03') [0m
+Rendering template within layouts/application
+Rendering meals/index
+  [4;35;1mRecipe Load (0.3ms)[0m   [0mSELECT * FROM "recipes" WHERE ("recipes"."id" = 37) [0m
+Rendered meals/_meal (8.0ms)
+  [4;36;1mRecipe Load (0.3ms)[0m   [0;1mSELECT * FROM "recipes" WHERE ("recipes"."id" = 35) [0m
+Rendered meals/_meal (1.6ms)
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "recipes" WHERE ("recipes"."id" = 37) [0m
+Rendered meals/_meal (1.1ms)
+Rendered layouts/_header (0.2ms)
+Completed in 36ms (View: 16, DB: 2) | 200 OK [http://localhost/meals?d=2010-05-02]
+
+
+Processing MealsController#index (for 127.0.0.1 at 2010-04-26 21:30:19) [GET]
+  Parameters: {"action"=>"index", "d"=>"2010-04-29", "controller"=>"meals"}
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;35;1mMeal Load (0.3ms)[0m   [0mSELECT * FROM "meals" WHERE (user_id = 1) AND ("meals"."day" = '2010-04-28') [0m
+  [4;36;1mMeal Load (0.1ms)[0m   [0;1mSELECT * FROM "meals" WHERE (user_id = 1) AND ("meals"."day" = '2010-04-29') [0m
+  [4;35;1mMeal Load (0.1ms)[0m   [0mSELECT * FROM "meals" WHERE (user_id = 1) AND ("meals"."day" = '2010-04-30') [0m
+Rendering template within layouts/application
+Rendering meals/index
+  [4;36;1mRecipe Load (0.3ms)[0m   [0;1mSELECT * FROM "recipes" WHERE ("recipes"."id" = 34) [0m
+Rendered meals/_meal (7.6ms)
+Rendered layouts/_header (0.2ms)
+Completed in 31ms (View: 13, DB: 1) | 200 OK [http://localhost/meals?d=2010-04-29]
+
+
+Processing MealsController#index (for 127.0.0.1 at 2010-04-26 21:30:20) [GET]
+  Parameters: {"action"=>"index", "d"=>"2010-05-02", "controller"=>"meals"}
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;36;1mMeal Load (0.3ms)[0m   [0;1mSELECT * FROM "meals" WHERE (user_id = 1) AND ("meals"."day" = '2010-05-01') [0m
+  [4;35;1mMeal Load (0.3ms)[0m   [0mSELECT * FROM "meals" WHERE (user_id = 1) AND ("meals"."day" = '2010-05-02') [0m
+  [4;36;1mMeal Load (0.1ms)[0m   [0;1mSELECT * FROM "meals" WHERE (user_id = 1) AND ("meals"."day" = '2010-05-03') [0m
+Rendering template within layouts/application
+Rendering meals/index
+  [4;35;1mRecipe Load (0.3ms)[0m   [0mSELECT * FROM "recipes" WHERE ("recipes"."id" = 37) [0m
+Rendered meals/_meal (8.0ms)
+  [4;36;1mRecipe Load (0.4ms)[0m   [0;1mSELECT * FROM "recipes" WHERE ("recipes"."id" = 35) [0m
+Rendered meals/_meal (1.7ms)
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "recipes" WHERE ("recipes"."id" = 37) [0m
+Rendered meals/_meal (1.1ms)
+Rendered layouts/_header (0.2ms)
+Completed in 35ms (View: 16, DB: 2) | 200 OK [http://localhost/meals?d=2010-05-02]
+
+
+Processing MealsController#show (for 127.0.0.1 at 2010-04-26 21:30:24) [GET]
+  Parameters: {"action"=>"show", "id"=>"57", "controller"=>"meals"}
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;35;1mMeal Load (0.3ms)[0m   [0mSELECT * FROM "meals" WHERE ("meals"."id" = 57) [0m
+Rendering template within layouts/application
+Rendering meals/show
+  [4;36;1mRecipe Load (0.3ms)[0m   [0;1mSELECT * FROM "recipes" WHERE ("recipes"."id" = 35) [0m
+Rendered layouts/_header (1.3ms)
+Completed in 26ms (View: 12, DB: 1) | 200 OK [http://localhost/meals/57]
+
+
+Processing MealsController#update (for 127.0.0.1 at 2010-04-26 21:30:26) [PUT]
+  Parameters: {"commit"=>"update date", "meal"=>{"day"=>"2010-05-03"}, "action"=>"update", "_method"=>"put", "authenticity_token"=>"vHPlWi2McLaHjPqRhUsrRMIZMocno8g+JLuvn/SEQ2k=", "id"=>"57", "controller"=>"meals"}
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;36;1mMeal Load (0.3ms)[0m   [0;1mSELECT * FROM "meals" WHERE ("meals"."id" = 57) [0m
+  [4;35;1mMeal Update (0.3ms)[0m   [0mUPDATE "meals" SET "day" = '2010-05-03', "updated_at" = '2010-04-27 01:30:26' WHERE "id" = 57[0m
+Rendering template within layouts/application
+Rendering meals/show
+  [4;36;1mRecipe Load (0.3ms)[0m   [0;1mSELECT * FROM "recipes" WHERE ("recipes"."id" = 35) [0m
+Rendered layouts/_header (1.4ms)
+Completed in 33ms (View: 13, DB: 1) | 200 OK [http://localhost/meals/57]
+
+
+Processing MealsController#index (for 127.0.0.1 at 2010-04-26 21:30:29) [GET]
+  Parameters: {"action"=>"index", "d"=>"2010-05-03", "controller"=>"meals"}
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;36;1mMeal Load (0.3ms)[0m   [0;1mSELECT * FROM "meals" WHERE (user_id = 1) AND ("meals"."day" = '2010-05-02') [0m
+  [4;35;1mMeal Load (0.3ms)[0m   [0mSELECT * FROM "meals" WHERE (user_id = 1) AND ("meals"."day" = '2010-05-03') [0m
+  [4;36;1mMeal Load (0.1ms)[0m   [0;1mSELECT * FROM "meals" WHERE (user_id = 1) AND ("meals"."day" = '2010-05-04') [0m
+Rendering template within layouts/application
+Rendering meals/index
+  [4;35;1mRecipe Load (0.3ms)[0m   [0mSELECT * FROM "recipes" WHERE ("recipes"."id" = 37) [0m
+Rendered meals/_meal (7.9ms)
+  [4;36;1mRecipe Load (0.3ms)[0m   [0;1mSELECT * FROM "recipes" WHERE ("recipes"."id" = 35) [0m
+Rendered meals/_meal (1.6ms)
+Rendered layouts/_header (0.3ms)
+Completed in 33ms (View: 15, DB: 2) | 200 OK [http://localhost/meals?d=2010-05-03]
+
+
+Processing ApplicationController#show (for 127.0.0.1 at 2010-04-26 21:31:36) [GET]
+  Parameters: {"action"=>"show", "id"=>"57", "controller"=>"meals"}
+
+SyntaxError (/Users/justinbachorik/Documents/Coursework/CSCI-E250/projects/omgitsfood/src/omgitsfood/app/controllers/meals_controller.rb:53: syntax error, unexpected '=', expecting tASSOC
+      render :action => 'index', :d = @meal.day
+                                     ^):
+  
+
+Rendered rescues/_trace (36.4ms)
+Rendered rescues/_request_and_response (0.4ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing MealsController#index (for 127.0.0.1 at 2010-04-26 21:31:47) [GET]
+  Parameters: {"action"=>"index", "d"=>"2010-05-03", "controller"=>"meals"}
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;36;1mMeal Load (0.3ms)[0m   [0;1mSELECT * FROM "meals" WHERE (user_id = 1) AND ("meals"."day" = '2010-05-02') [0m
+  [4;35;1mMeal Load (0.3ms)[0m   [0mSELECT * FROM "meals" WHERE (user_id = 1) AND ("meals"."day" = '2010-05-03') [0m
+  [4;36;1mMeal Load (0.1ms)[0m   [0;1mSELECT * FROM "meals" WHERE (user_id = 1) AND ("meals"."day" = '2010-05-04') [0m
+Rendering template within layouts/application
+Rendering meals/index
+  [4;35;1mRecipe Load (0.3ms)[0m   [0mSELECT * FROM "recipes" WHERE ("recipes"."id" = 37) [0m
+Rendered meals/_meal (67.5ms)
+  [4;36;1mRecipe Load (0.4ms)[0m   [0;1mSELECT * FROM "recipes" WHERE ("recipes"."id" = 35) [0m
+Rendered meals/_meal (2.0ms)
+Rendered layouts/_header (0.2ms)
+Completed in 93ms (View: 75, DB: 2) | 200 OK [http://localhost/meals?d=2010-05-03]
+
+
+Processing MealsController#show (for 127.0.0.1 at 2010-04-26 21:31:49) [GET]
+  Parameters: {"action"=>"show", "id"=>"57", "controller"=>"meals"}
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;36;1mMeal Load (0.3ms)[0m   [0;1mSELECT * FROM "meals" WHERE ("meals"."id" = 57) [0m
+Rendering template within layouts/application
+Rendering meals/show
+  [4;35;1mRecipe Load (0.3ms)[0m   [0mSELECT * FROM "recipes" WHERE ("recipes"."id" = 35) [0m
+Rendered layouts/_header (1.4ms)
+Completed in 27ms (View: 13, DB: 1) | 200 OK [http://localhost/meals/57]
+
+
+Processing MealsController#update (for 127.0.0.1 at 2010-04-26 21:31:51) [PUT]
+  Parameters: {"commit"=>"update date", "meal"=>{"day"=>"2010-05-04"}, "action"=>"update", "_method"=>"put", "authenticity_token"=>"vHPlWi2McLaHjPqRhUsrRMIZMocno8g+JLuvn/SEQ2k=", "id"=>"57", "controller"=>"meals"}
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;35;1mMeal Load (0.3ms)[0m   [0mSELECT * FROM "meals" WHERE ("meals"."id" = 57) [0m
+  [4;36;1mMeal Update (0.3ms)[0m   [0;1mUPDATE "meals" SET "day" = '2010-05-04', "updated_at" = '2010-04-27 01:31:51' WHERE "id" = 57[0m
+Rendering template within layouts/application
+Rendering meals/index
+
+ActionView::TemplateError (You have a nil object when you didn't expect it!
+You might have expected an instance of Array.
+The error occurred while evaluating nil.-) on line #4 of app/views/meals/index.html.haml:
+1: %h1 What's cooking?
+2: #mealDays
+3:   .mealDay
+4:     %h2= (@centerDate - 1).strftime("%a %b %d, %Y")
+5:     = button_to "add a meal", "/" +(@centerDate - 1).strftime("%b-%d-%Y").downcase+"/meals/new/", :method => :get
+6:     = render :partial => 'meal', :collection => @left_meals
+7:   .mealDay
+
+    app/views/meals/index.html.haml:4:in `_run_haml_app47views47meals47index46html46haml'
+    haml (2.2.23) lib/haml/helpers/action_view_mods.rb:13:in `render'
+    haml (2.2.23) lib/haml/helpers/action_view_mods.rb:13:in `render'
+    app/controllers/meals_controller.rb:53:in `update'
+    haml (2.2.23) lib/sass/plugin/rails.rb:20:in `process'
+
+Rendered rescues/_trace (51.2ms)
+Rendered rescues/_request_and_response (0.4ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mMeal Load (0.6ms)[0m   [0;1mSELECT * FROM "meals" ORDER BY meals.id DESC LIMIT 1[0m
+  [4;35;1mRecipe Load (0.3ms)[0m   [0mSELECT * FROM "recipes" ORDER BY recipes.id DESC LIMIT 1[0m
+
+
+Processing MealsController#show (for 127.0.0.1 at 2010-04-26 21:34:17) [GET]
+  Parameters: {"action"=>"show", "id"=>"57", "controller"=>"meals"}
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;36;1mMeal Load (0.3ms)[0m   [0;1mSELECT * FROM "meals" WHERE ("meals"."id" = 57) [0m
+Rendering template within layouts/application
+Rendering meals/show
+  [4;35;1mRecipe Load (0.3ms)[0m   [0mSELECT * FROM "recipes" WHERE ("recipes"."id" = 35) [0m
+Rendered layouts/_header (1.4ms)
+Completed in 90ms (View: 13, DB: 1) | 200 OK [http://localhost/meals/57]
+
+
+Processing MealsController#update (for 127.0.0.1 at 2010-04-26 21:34:20) [PUT]
+  Parameters: {"commit"=>"update date", "meal"=>{"day"=>"2010-05-05"}, "action"=>"update", "_method"=>"put", "authenticity_token"=>"vHPlWi2McLaHjPqRhUsrRMIZMocno8g+JLuvn/SEQ2k=", "id"=>"57", "controller"=>"meals"}
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;35;1mMeal Load (0.3ms)[0m   [0mSELECT * FROM "meals" WHERE ("meals"."id" = 57) [0m
+  [4;36;1mMeal Update (0.3ms)[0m   [0;1mUPDATE "meals" SET "day" = '2010-05-05', "updated_at" = '2010-04-27 01:34:20' WHERE "id" = 57[0m
+Rendering template within layouts/application
+Rendering meals/index
+
+ActionView::TemplateError (You have a nil object when you didn't expect it!
+You might have expected an instance of Array.
+The error occurred while evaluating nil.-) on line #4 of app/views/meals/index.html.haml:
+1: %h1 What's cooking?
+2: #mealDays
+3:   .mealDay
+4:     %h2= (@centerDate - 1).strftime("%a %b %d, %Y")
+5:     = button_to "add a meal", "/" +(@centerDate - 1).strftime("%b-%d-%Y").downcase+"/meals/new/", :method => :get
+6:     = render :partial => 'meal', :collection => @left_meals
+7:   .mealDay
+
+    app/views/meals/index.html.haml:4:in `_run_haml_app47views47meals47index46html46haml'
+    haml (2.2.23) lib/haml/helpers/action_view_mods.rb:13:in `render'
+    haml (2.2.23) lib/haml/helpers/action_view_mods.rb:13:in `render'
+    app/controllers/meals_controller.rb:53:in `update'
+    haml (2.2.23) lib/sass/plugin/rails.rb:20:in `process'
+
+Rendered rescues/_trace (51.8ms)
+Rendered rescues/_request_and_response (0.4ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing MealsController#update (for 127.0.0.1 at 2010-04-26 21:34:30) [PUT]
+  Parameters: {"commit"=>"update date", "meal"=>{"day"=>"2010-05-05"}, "action"=>"update", "_method"=>"put", "authenticity_token"=>"vHPlWi2McLaHjPqRhUsrRMIZMocno8g+JLuvn/SEQ2k=", "id"=>"57", "controller"=>"meals"}
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;36;1mMeal Load (0.3ms)[0m   [0;1mSELECT * FROM "meals" WHERE ("meals"."id" = 57) [0m
+Rendering template within layouts/application
+Rendering meals/index
+
+ActionView::TemplateError (You have a nil object when you didn't expect it!
+You might have expected an instance of Array.
+The error occurred while evaluating nil.-) on line #4 of app/views/meals/index.html.haml:
+1: %h1 What's cooking?
+2: #mealDays
+3:   .mealDay
+4:     %h2= (@centerDate - 1).strftime("%a %b %d, %Y")
+5:     = button_to "add a meal", "/" +(@centerDate - 1).strftime("%b-%d-%Y").downcase+"/meals/new/", :method => :get
+6:     = render :partial => 'meal', :collection => @left_meals
+7:   .mealDay
+
+    app/views/meals/index.html.haml:4:in `_run_haml_app47views47meals47index46html46haml'
+    haml (2.2.23) lib/haml/helpers/action_view_mods.rb:13:in `render'
+    haml (2.2.23) lib/haml/helpers/action_view_mods.rb:13:in `render'
+    app/controllers/meals_controller.rb:54:in `update'
+    haml (2.2.23) lib/sass/plugin/rails.rb:20:in `process'
+
+Rendered rescues/_trace (121.9ms)
+Rendered rescues/_request_and_response (0.4ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing MealsController#show (for 127.0.0.1 at 2010-04-26 21:34:45) [GET]
+  Parameters: {"action"=>"show", "id"=>"57", "controller"=>"meals"}
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;36;1mMeal Load (0.4ms)[0m   [0;1mSELECT * FROM "meals" WHERE ("meals"."id" = 57) [0m
+Rendering template within layouts/application
+Rendering meals/show
+  [4;35;1mRecipe Load (0.3ms)[0m   [0mSELECT * FROM "recipes" WHERE ("recipes"."id" = 35) [0m
+Rendered layouts/_header (1.4ms)
+Completed in 28ms (View: 14, DB: 1) | 200 OK [http://localhost/meals/57]
+
+
+Processing MealsController#show (for 127.0.0.1 at 2010-04-26 21:34:45) [GET]
+  Parameters: {"action"=>"show", "id"=>"57", "controller"=>"meals"}
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;35;1mMeal Load (0.3ms)[0m   [0mSELECT * FROM "meals" WHERE ("meals"."id" = 57) [0m
+Rendering template within layouts/application
+Rendering meals/show
+  [4;36;1mRecipe Load (2.7ms)[0m   [0;1mSELECT * FROM "recipes" WHERE ("recipes"."id" = 35) [0m
+Rendered layouts/_header (1.7ms)
+Completed in 33ms (View: 17, DB: 3) | 200 OK [http://localhost/meals/57]
+
+
+Processing MealsController#show (for 127.0.0.1 at 2010-04-26 21:34:45) [GET]
+  Parameters: {"action"=>"show", "id"=>"57", "controller"=>"meals"}
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;36;1mMeal Load (0.3ms)[0m   [0;1mSELECT * FROM "meals" WHERE ("meals"."id" = 57) [0m
+Rendering template within layouts/application
+Rendering meals/show
+  [4;35;1mRecipe Load (0.3ms)[0m   [0mSELECT * FROM "recipes" WHERE ("recipes"."id" = 35) [0m
+Rendered layouts/_header (1.5ms)
+Completed in 26ms (View: 13, DB: 1) | 200 OK [http://localhost/meals/57]
+
+
+Processing MealsController#show (for 127.0.0.1 at 2010-04-26 21:34:45) [GET]
+  Parameters: {"action"=>"show", "id"=>"57", "controller"=>"meals"}
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;35;1mMeal Load (0.3ms)[0m   [0mSELECT * FROM "meals" WHERE ("meals"."id" = 57) [0m
+Rendering template within layouts/application
+Rendering meals/show
+  [4;36;1mRecipe Load (0.3ms)[0m   [0;1mSELECT * FROM "recipes" WHERE ("recipes"."id" = 35) [0m
+Rendered layouts/_header (1.5ms)
+Completed in 91ms (View: 13, DB: 1) | 200 OK [http://localhost/meals/57]
+
+
+Processing MealsController#update (for 127.0.0.1 at 2010-04-26 21:34:45) [PUT]
+  Parameters: {"commit"=>"update date", "meal"=>{"day"=>"2010-05-05"}, "action"=>"update", "_method"=>"put", "authenticity_token"=>"vHPlWi2McLaHjPqRhUsrRMIZMocno8g+JLuvn/SEQ2k=", "id"=>"57", "controller"=>"meals"}
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;36;1mMeal Load (0.3ms)[0m   [0;1mSELECT * FROM "meals" WHERE ("meals"."id" = 57) [0m
+Rendering template within layouts/application
+Rendering meals/index
+
+ActionView::TemplateError (You have a nil object when you didn't expect it!
+You might have expected an instance of Array.
+The error occurred while evaluating nil.-) on line #4 of app/views/meals/index.html.haml:
+1: %h1 What's cooking?
+2: #mealDays
+3:   .mealDay
+4:     %h2= (@centerDate - 1).strftime("%a %b %d, %Y")
+5:     = button_to "add a meal", "/" +(@centerDate - 1).strftime("%b-%d-%Y").downcase+"/meals/new/", :method => :get
+6:     = render :partial => 'meal', :collection => @left_meals
+7:   .mealDay
+
+    app/views/meals/index.html.haml:4:in `_run_haml_app47views47meals47index46html46haml'
+    haml (2.2.23) lib/haml/helpers/action_view_mods.rb:13:in `render'
+    haml (2.2.23) lib/haml/helpers/action_view_mods.rb:13:in `render'
+    app/controllers/meals_controller.rb:54:in `update'
+    haml (2.2.23) lib/sass/plugin/rails.rb:20:in `process'
+
+Rendered rescues/_trace (57.5ms)
+Rendered rescues/_request_and_response (0.4ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing MealsController#show (for 127.0.0.1 at 2010-04-26 21:34:54) [GET]
+  Parameters: {"action"=>"show", "id"=>"57", "controller"=>"meals"}
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;36;1mMeal Load (0.3ms)[0m   [0;1mSELECT * FROM "meals" WHERE ("meals"."id" = 57) [0m
+Rendering template within layouts/application
+Rendering meals/show
+  [4;35;1mRecipe Load (0.3ms)[0m   [0mSELECT * FROM "recipes" WHERE ("recipes"."id" = 35) [0m
+Rendered layouts/_header (1.4ms)
+Completed in 26ms (View: 12, DB: 1) | 200 OK [http://localhost/meals/57]
+
+
+Processing MealsController#show (for 127.0.0.1 at 2010-04-26 21:36:03) [GET]
+  Parameters: {"action"=>"show", "id"=>"57", "controller"=>"meals"}
+  [4;36;1mUser Load (64.1ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;35;1mMeal Load (0.3ms)[0m   [0mSELECT * FROM "meals" WHERE ("meals"."id" = 57) [0m
+Rendering template within layouts/application
+Rendering meals/show
+  [4;36;1mRecipe Load (0.4ms)[0m   [0;1mSELECT * FROM "recipes" WHERE ("recipes"."id" = 35) [0m
+Rendered layouts/_header (1.5ms)
+Completed in 92ms (View: 14, DB: 65) | 200 OK [http://localhost/meals/57]
+
+
+Processing MealsController#update (for 127.0.0.1 at 2010-04-26 21:36:06) [PUT]
+  Parameters: {"commit"=>"update date", "meal"=>{"day"=>"2010-05-06"}, "action"=>"update", "_method"=>"put", "authenticity_token"=>"vHPlWi2McLaHjPqRhUsrRMIZMocno8g+JLuvn/SEQ2k=", "id"=>"57", "controller"=>"meals"}
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;36;1mMeal Load (0.3ms)[0m   [0;1mSELECT * FROM "meals" WHERE ("meals"."id" = 57) [0m
+  [4;35;1mMeal Update (0.4ms)[0m   [0mUPDATE "meals" SET "day" = '2010-05-06', "updated_at" = '2010-04-27 01:36:06' WHERE "id" = 57[0m
+
+NoMethodError (undefined method `redirect' for #<MealsController:0x2596ae4>):
+  app/controllers/meals_controller.rb:54:in `update'
+  haml (2.2.23) lib/sass/plugin/rails.rb:20:in `process'
+
+Rendered rescues/_trace (41.2ms)
+Rendered rescues/_request_and_response (0.4ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing MealsController#update (for 127.0.0.1 at 2010-04-26 21:36:41) [PUT]
+  Parameters: {"commit"=>"update date", "meal"=>{"day"=>"2010-05-06"}, "action"=>"update", "_method"=>"put", "authenticity_token"=>"vHPlWi2McLaHjPqRhUsrRMIZMocno8g+JLuvn/SEQ2k=", "id"=>"57", "controller"=>"meals"}
+  [4;36;1mUser Load (0.4ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;35;1mMeal Load (0.4ms)[0m   [0mSELECT * FROM "meals" WHERE ("meals"."id" = 57) [0m
+Redirected to http://localhost:3000/meals?d=2010-05-06
+Completed in 20ms (DB: 1) | 302 Found [http://localhost/meals/57]
+
+
+Processing MealsController#index (for 127.0.0.1 at 2010-04-26 21:36:41) [GET]
+  Parameters: {"action"=>"index", "d"=>"2010-05-06", "controller"=>"meals"}
+  [4;36;1mUser Load (0.5ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;35;1mMeal Load (0.2ms)[0m   [0mSELECT * FROM "meals" WHERE (user_id = 1) AND ("meals"."day" = '2010-05-05') [0m
+  [4;36;1mMeal Load (0.3ms)[0m   [0;1mSELECT * FROM "meals" WHERE (user_id = 1) AND ("meals"."day" = '2010-05-06') [0m
+  [4;35;1mMeal Load (0.1ms)[0m   [0mSELECT * FROM "meals" WHERE (user_id = 1) AND ("meals"."day" = '2010-05-07') [0m
+Rendering template within layouts/application
+Rendering meals/index
+  [4;36;1mRecipe Load (0.3ms)[0m   [0;1mSELECT * FROM "recipes" WHERE ("recipes"."id" = 35) [0m
+Rendered meals/_meal (7.5ms)
+Rendered layouts/_header (0.2ms)
+Completed in 34ms (View: 13, DB: 1) | 200 OK [http://localhost/meals?d=2010-05-06]
+
+
+Processing MealsController#show (for 127.0.0.1 at 2010-04-26 21:36:43) [GET]
+  Parameters: {"action"=>"show", "id"=>"57", "controller"=>"meals"}
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;36;1mMeal Load (0.3ms)[0m   [0;1mSELECT * FROM "meals" WHERE ("meals"."id" = 57) [0m
+Rendering template within layouts/application
+Rendering meals/show
+  [4;35;1mRecipe Load (0.3ms)[0m   [0mSELECT * FROM "recipes" WHERE ("recipes"."id" = 35) [0m
+Rendered layouts/_header (1.4ms)
+Completed in 27ms (View: 13, DB: 1) | 200 OK [http://localhost/meals/57]
+
+
+Processing MealsController#update (for 127.0.0.1 at 2010-04-26 21:36:46) [PUT]
+  Parameters: {"commit"=>"update date", "meal"=>{"day"=>"2010-05-07"}, "action"=>"update", "_method"=>"put", "authenticity_token"=>"vHPlWi2McLaHjPqRhUsrRMIZMocno8g+JLuvn/SEQ2k=", "id"=>"57", "controller"=>"meals"}
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;35;1mMeal Load (0.3ms)[0m   [0mSELECT * FROM "meals" WHERE ("meals"."id" = 57) [0m
+  [4;36;1mMeal Update (0.4ms)[0m   [0;1mUPDATE "meals" SET "day" = '2010-05-07', "updated_at" = '2010-04-27 01:36:46' WHERE "id" = 57[0m
+Redirected to http://localhost:3000/meals?d=2010-05-07
+Completed in 20ms (DB: 1) | 302 Found [http://localhost/meals/57]
+
+
+Processing MealsController#index (for 127.0.0.1 at 2010-04-26 21:36:46) [GET]
+  Parameters: {"action"=>"index", "d"=>"2010-05-07", "controller"=>"meals"}
+  [4;35;1mUser Load (0.4ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;36;1mMeal Load (0.2ms)[0m   [0;1mSELECT * FROM "meals" WHERE (user_id = 1) AND ("meals"."day" = '2010-05-06') [0m
+  [4;35;1mMeal Load (0.3ms)[0m   [0mSELECT * FROM "meals" WHERE (user_id = 1) AND ("meals"."day" = '2010-05-07') [0m
+  [4;36;1mMeal Load (0.1ms)[0m   [0;1mSELECT * FROM "meals" WHERE (user_id = 1) AND ("meals"."day" = '2010-05-08') [0m
+Rendering template within layouts/application
+Rendering meals/index
+  [4;35;1mRecipe Load (0.3ms)[0m   [0mSELECT * FROM "recipes" WHERE ("recipes"."id" = 35) [0m
+Rendered meals/_meal (7.9ms)
+Rendered layouts/_header (0.2ms)
+Completed in 32ms (View: 13, DB: 1) | 200 OK [http://localhost/meals?d=2010-05-07]
+
+
+Processing MealsController#index (for 127.0.0.1 at 2010-04-26 21:36:59) [GET]
+  Parameters: {"action"=>"index", "d"=>"2010-04-26", "controller"=>"meals"}
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;35;1mMeal Load (0.5ms)[0m   [0mSELECT * FROM "meals" WHERE (user_id = 1) AND ("meals"."day" = '2010-04-25') [0m
+  [4;36;1mMeal Load (0.3ms)[0m   [0;1mSELECT * FROM "meals" WHERE (user_id = 1) AND ("meals"."day" = '2010-04-26') [0m
+  [4;35;1mMeal Load (0.1ms)[0m   [0mSELECT * FROM "meals" WHERE (user_id = 1) AND ("meals"."day" = '2010-04-27') [0m
+Rendering template within layouts/application
+Rendering meals/index
+  [4;36;1mRecipe Load (0.3ms)[0m   [0;1mSELECT * FROM "recipes" WHERE ("recipes"."id" = 29) [0m
+Rendered meals/_meal (7.4ms)
+  [4;35;1mRecipe Load (0.3ms)[0m   [0mSELECT * FROM "recipes" WHERE ("recipes"."id" = 36) [0m
+Rendered meals/_meal (1.5ms)
+  [4;36;1mRecipe Load (0.3ms)[0m   [0;1mSELECT * FROM "recipes" WHERE ("recipes"."id" = 37) [0m
+Rendered meals/_meal (1.4ms)
+  [4;35;1mRecipe Load (0.3ms)[0m   [0mSELECT * FROM "recipes" WHERE ("recipes"."id" = 30) [0m
+Rendered meals/_meal (1.5ms)
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "recipes" WHERE ("recipes"."id" = 29) [0m
+Rendered meals/_meal (1.1ms)
+Rendered layouts/_header (0.2ms)
+Completed in 37ms (View: 18, DB: 2) | 200 OK [http://localhost/meals?d=2010-04-26]
+
+
+Processing MealsController#show (for 127.0.0.1 at 2010-04-26 21:37:02) [GET]
+  Parameters: {"action"=>"show", "id"=>"53", "controller"=>"meals"}
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;36;1mMeal Load (0.3ms)[0m   [0;1mSELECT * FROM "meals" WHERE ("meals"."id" = 53) [0m
+Rendering template within layouts/application
+Rendering meals/show
+  [4;35;1mRecipe Load (0.3ms)[0m   [0mSELECT * FROM "recipes" WHERE ("recipes"."id" = 30) [0m
+Rendered layouts/_header (1.4ms)
+Completed in 86ms (View: 73, DB: 1) | 200 OK [http://localhost/meals/53]
+
+
+Processing MealsController#show (for 127.0.0.1 at 2010-04-26 21:37:30) [GET]
+  Parameters: {"action"=>"show", "id"=>"53", "controller"=>"meals"}
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;35;1mMeal Load (0.3ms)[0m   [0mSELECT * FROM "meals" WHERE ("meals"."id" = 53) [0m
+Rendering template within layouts/application
+Rendering meals/show
+  [4;36;1mRecipe Load (0.3ms)[0m   [0;1mSELECT * FROM "recipes" WHERE ("recipes"."id" = 30) [0m
+Rendered layouts/_header (1.5ms)
+Completed in 27ms (View: 13, DB: 1) | 200 OK [http://localhost/meals/53]
+
+
+Processing MealsController#show (for 127.0.0.1 at 2010-04-26 21:43:42) [GET]
+  Parameters: {"action"=>"show", "id"=>"53", "controller"=>"meals"}
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;36;1mMeal Load (24.6ms)[0m   [0;1mSELECT * FROM "meals" WHERE ("meals"."id" = 53) [0m
+Rendering template within layouts/application
+Rendering meals/show
+  [4;35;1mRecipe Load (0.3ms)[0m   [0mSELECT * FROM "recipes" WHERE ("recipes"."id" = 30) [0m
+Rendered layouts/_header (1.3ms)
+Completed in 58ms (View: 21, DB: 25) | 200 OK [http://localhost/meals/53]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-04-26 21:43:42) [GET]
+
+ActionController::RoutingError (No route matches "/javascripts/jquery_ui.js" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-04-26 21:43:42) [GET]
+
+ActionController::RoutingError (No route matches "/javascripts/jquery_ui.js" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing MealsController#show (for 127.0.0.1 at 2010-04-26 21:43:57) [GET]
+  Parameters: {"action"=>"show", "id"=>"53", "controller"=>"meals"}
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;35;1mMeal Load (0.3ms)[0m   [0mSELECT * FROM "meals" WHERE ("meals"."id" = 53) [0m
+Rendering template within layouts/application
+Rendering meals/show
+  [4;36;1mRecipe Load (0.3ms)[0m   [0;1mSELECT * FROM "recipes" WHERE ("recipes"."id" = 30) [0m
+Rendered layouts/_header (61.3ms)
+Completed in 86ms (View: 73, DB: 1) | 200 OK [http://localhost/meals/53]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-04-26 21:43:57) [GET]
+
+ActionController::RoutingError (No route matches "/javascripts/jquery_ui.js" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-04-26 21:43:58) [GET]
+
+ActionController::RoutingError (No route matches "/javascripts/jquery_ui.js" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing MealsController#show (for 127.0.0.1 at 2010-04-26 21:43:58) [GET]
+  Parameters: {"action"=>"show", "id"=>"53", "controller"=>"meals"}
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;36;1mMeal Load (0.3ms)[0m   [0;1mSELECT * FROM "meals" WHERE ("meals"."id" = 53) [0m
+Rendering template within layouts/application
+Rendering meals/show
+  [4;35;1mRecipe Load (0.3ms)[0m   [0mSELECT * FROM "recipes" WHERE ("recipes"."id" = 30) [0m
+Rendered layouts/_header (1.4ms)
+Completed in 28ms (View: 13, DB: 1) | 200 OK [http://localhost/meals/53]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-04-26 21:43:58) [GET]
+
+ActionController::RoutingError (No route matches "/javascripts/jquery_ui.js" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-04-26 21:43:58) [GET]
+
+ActionController::RoutingError (No route matches "/javascripts/jquery_ui.js" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing MealsController#show (for 127.0.0.1 at 2010-04-26 21:44:55) [GET]
+  Parameters: {"action"=>"show", "id"=>"53", "controller"=>"meals"}
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;35;1mMeal Load (0.3ms)[0m   [0mSELECT * FROM "meals" WHERE ("meals"."id" = 53) [0m
+Rendering template within layouts/application
+Rendering meals/show
+  [4;36;1mRecipe Load (0.3ms)[0m   [0;1mSELECT * FROM "recipes" WHERE ("recipes"."id" = 30) [0m
+Rendered layouts/_header (1.3ms)
+Completed in 26ms (View: 13, DB: 1) | 200 OK [http://localhost/meals/53]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-04-26 21:44:55) [GET]
+
+ActionController::RoutingError (No route matches "/javascripts/jquery_ui.js" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing MealsController#show (for 127.0.0.1 at 2010-04-26 21:45:11) [GET]
+  Parameters: {"action"=>"show", "id"=>"53", "controller"=>"meals"}
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;36;1mMeal Load (0.3ms)[0m   [0;1mSELECT * FROM "meals" WHERE ("meals"."id" = 53) [0m
+Rendering template within layouts/application
+Rendering meals/show
+  [4;35;1mRecipe Load (0.3ms)[0m   [0mSELECT * FROM "recipes" WHERE ("recipes"."id" = 30) [0m
+Rendered layouts/_header (1.3ms)
+Completed in 33ms (View: 20, DB: 1) | 200 OK [http://localhost/meals/53]
+
+
+Processing MealsController#show (for 127.0.0.1 at 2010-04-26 21:46:58) [GET]
+  Parameters: {"action"=>"show", "id"=>"53", "controller"=>"meals"}
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;35;1mMeal Load (0.3ms)[0m   [0mSELECT * FROM "meals" WHERE ("meals"."id" = 53) [0m
+Rendering template within layouts/application
+Rendering meals/show
+  [4;36;1mRecipe Load (0.3ms)[0m   [0;1mSELECT * FROM "recipes" WHERE ("recipes"."id" = 30) [0m
+Rendered layouts/_header (1.6ms)
+Completed in 35ms (View: 21, DB: 1) | 200 OK [http://localhost/meals/53]
+
+
+Processing MealsController#show (for 127.0.0.1 at 2010-04-26 21:47:39) [GET]
+  Parameters: {"action"=>"show", "id"=>"53", "controller"=>"meals"}
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;36;1mMeal Load (0.3ms)[0m   [0;1mSELECT * FROM "meals" WHERE ("meals"."id" = 53) [0m
+Rendering template within layouts/application
+Rendering meals/show
+  [4;35;1mRecipe Load (0.3ms)[0m   [0mSELECT * FROM "recipes" WHERE ("recipes"."id" = 30) [0m
+Rendered layouts/_header (1.3ms)
+Completed in 33ms (View: 20, DB: 1) | 200 OK [http://localhost/meals/53]
+
+
+Processing MealsController#show (for 127.0.0.1 at 2010-04-26 21:48:22) [GET]
+  Parameters: {"action"=>"show", "id"=>"53", "controller"=>"meals"}
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;35;1mMeal Load (0.3ms)[0m   [0mSELECT * FROM "meals" WHERE ("meals"."id" = 53) [0m
+Rendering template within layouts/application
+Rendering meals/show
+  [4;36;1mRecipe Load (0.3ms)[0m   [0;1mSELECT * FROM "recipes" WHERE ("recipes"."id" = 30) [0m
+Rendered layouts/_header (1.3ms)
+Completed in 26ms (View: 13, DB: 1) | 200 OK [http://localhost/meals/53]
+
+
+Processing MealsController#show (for 127.0.0.1 at 2010-04-26 21:48:35) [GET]
+  Parameters: {"action"=>"show", "id"=>"53", "controller"=>"meals"}
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;36;1mMeal Load (0.3ms)[0m   [0;1mSELECT * FROM "meals" WHERE ("meals"."id" = 53) [0m
+Rendering template within layouts/application
+Rendering meals/show
+  [4;35;1mRecipe Load (0.3ms)[0m   [0mSELECT * FROM "recipes" WHERE ("recipes"."id" = 30) [0m
+Rendered layouts/_header (1.3ms)
+Completed in 26ms (View: 13, DB: 1) | 200 OK [http://localhost/meals/53]
+
+
+Processing MealsController#show (for 127.0.0.1 at 2010-04-26 21:48:54) [GET]
+  Parameters: {"action"=>"show", "id"=>"53", "controller"=>"meals"}
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;35;1mMeal Load (0.3ms)[0m   [0mSELECT * FROM "meals" WHERE ("meals"."id" = 53) [0m
+Rendering template within layouts/application
+Rendering meals/show
+  [4;36;1mRecipe Load (0.3ms)[0m   [0;1mSELECT * FROM "recipes" WHERE ("recipes"."id" = 30) [0m
+Rendered layouts/_header (1.3ms)
+Completed in 27ms (View: 13, DB: 1) | 200 OK [http://localhost/meals/53]
+
+
+Processing MealsController#show (for 127.0.0.1 at 2010-04-26 21:49:04) [GET]
+  Parameters: {"action"=>"show", "id"=>"53", "controller"=>"meals"}
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;36;1mMeal Load (0.3ms)[0m   [0;1mSELECT * FROM "meals" WHERE ("meals"."id" = 53) [0m
+Rendering template within layouts/application
+Rendering meals/show
+  [4;35;1mRecipe Load (0.3ms)[0m   [0mSELECT * FROM "recipes" WHERE ("recipes"."id" = 30) [0m
+Rendered layouts/_header (1.4ms)
+Completed in 27ms (View: 13, DB: 1) | 200 OK [http://localhost/meals/53]
+
+
+Processing MealsController#show (for 127.0.0.1 at 2010-04-26 21:49:23) [GET]
+  Parameters: {"action"=>"show", "id"=>"53", "controller"=>"meals"}
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;35;1mMeal Load (0.3ms)[0m   [0mSELECT * FROM "meals" WHERE ("meals"."id" = 53) [0m
+Rendering template within layouts/application
+Rendering meals/show
+  [4;36;1mRecipe Load (0.3ms)[0m   [0;1mSELECT * FROM "recipes" WHERE ("recipes"."id" = 30) [0m
+Rendered layouts/_header (1.4ms)
+Completed in 26ms (View: 13, DB: 1) | 200 OK [http://localhost/meals/53]
+
+
+Processing MealsController#show (for 127.0.0.1 at 2010-04-26 21:49:51) [GET]
+  Parameters: {"action"=>"show", "id"=>"53", "controller"=>"meals"}
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;36;1mMeal Load (0.3ms)[0m   [0;1mSELECT * FROM "meals" WHERE ("meals"."id" = 53) [0m
+Rendering template within layouts/application
+Rendering meals/show
+  [4;35;1mRecipe Load (0.3ms)[0m   [0mSELECT * FROM "recipes" WHERE ("recipes"."id" = 30) [0m
+Rendered layouts/_header (1.3ms)
+Completed in 26ms (View: 13, DB: 1) | 200 OK [http://localhost/meals/53]
+
+
+Processing MealsController#show (for 127.0.0.1 at 2010-04-26 21:50:07) [GET]
+  Parameters: {"action"=>"show", "id"=>"53", "controller"=>"meals"}
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;35;1mMeal Load (0.3ms)[0m   [0mSELECT * FROM "meals" WHERE ("meals"."id" = 53) [0m
+Rendering template within layouts/application
+Rendering meals/show
+  [4;36;1mRecipe Load (0.4ms)[0m   [0;1mSELECT * FROM "recipes" WHERE ("recipes"."id" = 30) [0m
+Rendered layouts/_header (1.5ms)
+Completed in 84ms (View: 71, DB: 1) | 200 OK [http://localhost/meals/53]
+
+
+Processing MealsController#show (for 127.0.0.1 at 2010-04-26 21:50:22) [GET]
+  Parameters: {"action"=>"show", "id"=>"53", "controller"=>"meals"}
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;36;1mMeal Load (0.3ms)[0m   [0;1mSELECT * FROM "meals" WHERE ("meals"."id" = 53) [0m
+Rendering template within layouts/application
+Rendering meals/show
+  [4;35;1mRecipe Load (0.3ms)[0m   [0mSELECT * FROM "recipes" WHERE ("recipes"."id" = 30) [0m
+Rendered layouts/_header (1.4ms)
+Completed in 29ms (View: 15, DB: 1) | 200 OK [http://localhost/meals/53]
+
+
+Processing MealsController#show (for 127.0.0.1 at 2010-04-26 21:50:39) [GET]
+  Parameters: {"action"=>"show", "id"=>"53", "controller"=>"meals"}
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;35;1mMeal Load (0.3ms)[0m   [0mSELECT * FROM "meals" WHERE ("meals"."id" = 53) [0m
+Rendering template within layouts/application
+Rendering meals/show
+  [4;36;1mRecipe Load (0.3ms)[0m   [0;1mSELECT * FROM "recipes" WHERE ("recipes"."id" = 30) [0m
+Rendered layouts/_header (1.4ms)
+Completed in 27ms (View: 13, DB: 1) | 200 OK [http://localhost/meals/53]
+
+
+Processing MealsController#show (for 127.0.0.1 at 2010-04-26 21:51:27) [GET]
+  Parameters: {"action"=>"show", "id"=>"53", "controller"=>"meals"}
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;36;1mMeal Load (11.2ms)[0m   [0;1mSELECT * FROM "meals" WHERE ("meals"."id" = 53) [0m
+Rendering template within layouts/application
+Rendering meals/show
+  [4;35;1mRecipe Load (0.3ms)[0m   [0mSELECT * FROM "recipes" WHERE ("recipes"."id" = 30) [0m
+Rendered layouts/_header (1.4ms)
+Completed in 97ms (View: 14, DB: 12) | 200 OK [http://localhost/meals/53]
+
+
+Processing MealsController#show (for 127.0.0.1 at 2010-04-26 21:52:14) [GET]
+  Parameters: {"action"=>"show", "id"=>"53", "controller"=>"meals"}
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;35;1mMeal Load (0.3ms)[0m   [0mSELECT * FROM "meals" WHERE ("meals"."id" = 53) [0m
+Rendering template within layouts/application
+Rendering meals/show
+  [4;36;1mRecipe Load (0.3ms)[0m   [0;1mSELECT * FROM "recipes" WHERE ("recipes"."id" = 30) [0m
+Rendered layouts/_header (1.4ms)
+Completed in 26ms (View: 13, DB: 1) | 200 OK [http://localhost/meals/53]
+
+
+Processing MealsController#show (for 127.0.0.1 at 2010-04-26 21:52:29) [GET]
+  Parameters: {"action"=>"show", "id"=>"53", "controller"=>"meals"}
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;36;1mMeal Load (0.3ms)[0m   [0;1mSELECT * FROM "meals" WHERE ("meals"."id" = 53) [0m
+Rendering template within layouts/application
+Rendering meals/show
+  [4;35;1mRecipe Load (0.3ms)[0m   [0mSELECT * FROM "recipes" WHERE ("recipes"."id" = 30) [0m
+Rendered layouts/_header (1.4ms)
+Completed in 25ms (View: 13, DB: 1) | 200 OK [http://localhost/meals/53]
+
+
+Processing MealsController#show (for 127.0.0.1 at 2010-04-26 21:52:42) [GET]
+  Parameters: {"action"=>"show", "id"=>"53", "controller"=>"meals"}
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;35;1mMeal Load (0.3ms)[0m   [0mSELECT * FROM "meals" WHERE ("meals"."id" = 53) [0m
+Rendering template within layouts/application
+Rendering meals/show
+  [4;36;1mRecipe Load (0.3ms)[0m   [0;1mSELECT * FROM "recipes" WHERE ("recipes"."id" = 30) [0m
+Rendered layouts/_header (1.4ms)
+Completed in 26ms (View: 13, DB: 1) | 200 OK [http://localhost/meals/53]
+
+
+Processing MealsController#show (for 127.0.0.1 at 2010-04-26 21:52:51) [GET]
+  Parameters: {"action"=>"show", "id"=>"53", "controller"=>"meals"}
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;36;1mMeal Load (0.3ms)[0m   [0;1mSELECT * FROM "meals" WHERE ("meals"."id" = 53) [0m
+Rendering template within layouts/application
+Rendering meals/show
+  [4;35;1mRecipe Load (0.3ms)[0m   [0mSELECT * FROM "recipes" WHERE ("recipes"."id" = 30) [0m
+Rendered layouts/_header (1.4ms)
+Completed in 27ms (View: 13, DB: 1) | 200 OK [http://localhost/meals/53]
+
+
+Processing MealsController#show (for 127.0.0.1 at 2010-04-26 21:53:24) [GET]
+  Parameters: {"action"=>"show", "id"=>"53", "controller"=>"meals"}
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;35;1mMeal Load (0.3ms)[0m   [0mSELECT * FROM "meals" WHERE ("meals"."id" = 53) [0m
+Rendering template within layouts/application
+Rendering meals/show
+  [4;36;1mRecipe Load (0.3ms)[0m   [0;1mSELECT * FROM "recipes" WHERE ("recipes"."id" = 30) [0m
+Rendered layouts/_header (1.4ms)
+Completed in 26ms (View: 13, DB: 1) | 200 OK [http://localhost/meals/53]
+
+
+Processing MealsController#show (for 127.0.0.1 at 2010-04-26 21:53:58) [GET]
+  Parameters: {"action"=>"show", "id"=>"53", "controller"=>"meals"}
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;36;1mMeal Load (0.3ms)[0m   [0;1mSELECT * FROM "meals" WHERE ("meals"."id" = 53) [0m
+Rendering template within layouts/application
+Rendering meals/show
+  [4;35;1mRecipe Load (0.3ms)[0m   [0mSELECT * FROM "recipes" WHERE ("recipes"."id" = 30) [0m
+Rendered layouts/_header (1.4ms)
+Completed in 26ms (View: 14, DB: 1) | 200 OK [http://localhost/meals/53]
+
+
+Processing MealsController#update (for 127.0.0.1 at 2010-04-26 21:54:02) [PUT]
+  Parameters: {"meal"=>{"day"=>"04/20/2010"}, "action"=>"update", "_method"=>"put", "authenticity_token"=>"vHPlWi2McLaHjPqRhUsrRMIZMocno8g+JLuvn/SEQ2k=", "id"=>"53", "controller"=>"meals"}
+  [4;36;1mUser Load (0.4ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;35;1mMeal Load (0.3ms)[0m   [0mSELECT * FROM "meals" WHERE ("meals"."id" = 53) [0m
+  [4;36;1mMeal Update (0.4ms)[0m   [0;1mUPDATE "meals" SET "day" = '2010-04-20', "updated_at" = '2010-04-27 01:54:02' WHERE "id" = 53[0m
+Redirected to http://localhost:3000/meals?d=2010-04-20
+Completed in 26ms (DB: 1) | 302 Found [http://localhost/meals/53]
+
+
+Processing MealsController#index (for 127.0.0.1 at 2010-04-26 21:54:02) [GET]
+  Parameters: {"action"=>"index", "d"=>"2010-04-20", "controller"=>"meals"}
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;36;1mMeal Load (0.2ms)[0m   [0;1mSELECT * FROM "meals" WHERE (user_id = 1) AND ("meals"."day" = '2010-04-19') [0m
+  [4;35;1mMeal Load (0.4ms)[0m   [0mSELECT * FROM "meals" WHERE (user_id = 1) AND ("meals"."day" = '2010-04-20') [0m
+  [4;36;1mMeal Load (0.3ms)[0m   [0;1mSELECT * FROM "meals" WHERE (user_id = 1) AND ("meals"."day" = '2010-04-21') [0m
+Rendering template within layouts/application
+Rendering meals/index
+  [4;35;1mRecipe Load (0.4ms)[0m   [0mSELECT * FROM "recipes" WHERE ("recipes"."id" = 27) [0m
+Rendered meals/_meal (8.7ms)
+  [4;36;1mRecipe Load (0.4ms)[0m   [0;1mSELECT * FROM "recipes" WHERE ("recipes"."id" = 30) [0m
+Rendered meals/_meal (1.8ms)
+  [4;35;1mRecipe Load (0.3ms)[0m   [0mSELECT * FROM "recipes" WHERE ("recipes"."id" = 28) [0m
+Rendered meals/_meal (1.6ms)
+Rendered layouts/_header (0.3ms)
+Completed in 40ms (View: 18, DB: 2) | 200 OK [http://localhost/meals?d=2010-04-20]
+
+
+Processing MealsController#show (for 127.0.0.1 at 2010-04-26 21:54:05) [GET]
+  Parameters: {"action"=>"show", "id"=>"53", "controller"=>"meals"}
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;35;1mMeal Load (0.3ms)[0m   [0mSELECT * FROM "meals" WHERE ("meals"."id" = 53) [0m
+Rendering template within layouts/application
+Rendering meals/show
+  [4;36;1mRecipe Load (0.3ms)[0m   [0;1mSELECT * FROM "recipes" WHERE ("recipes"."id" = 30) [0m
+Rendered layouts/_header (1.3ms)
+Completed in 26ms (View: 13, DB: 1) | 200 OK [http://localhost/meals/53]
+
+
+Processing MealsController#update (for 127.0.0.1 at 2010-04-26 21:54:09) [PUT]
+  Parameters: {"meal"=>{"day"=>"04/28/2010"}, "action"=>"update", "_method"=>"put", "authenticity_token"=>"vHPlWi2McLaHjPqRhUsrRMIZMocno8g+JLuvn/SEQ2k=", "id"=>"53", "controller"=>"meals"}
+  [4;35;1mUser Load (0.4ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;36;1mMeal Load (0.4ms)[0m   [0;1mSELECT * FROM "meals" WHERE ("meals"."id" = 53) [0m
+  [4;35;1mMeal Update (0.4ms)[0m   [0mUPDATE "meals" SET "day" = '2010-04-28', "updated_at" = '2010-04-27 01:54:09' WHERE "id" = 53[0m
+Redirected to http://localhost:3000/meals?d=2010-04-28
+Completed in 28ms (DB: 1) | 302 Found [http://localhost/meals/53]
+
+
+Processing MealsController#index (for 127.0.0.1 at 2010-04-26 21:54:09) [GET]
+  Parameters: {"action"=>"index", "d"=>"2010-04-28", "controller"=>"meals"}
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;35;1mMeal Load (0.2ms)[0m   [0mSELECT * FROM "meals" WHERE (user_id = 1) AND ("meals"."day" = '2010-04-27') [0m
+  [4;36;1mMeal Load (0.5ms)[0m   [0;1mSELECT * FROM "meals" WHERE (user_id = 1) AND ("meals"."day" = '2010-04-28') [0m
+  [4;35;1mMeal Load (0.2ms)[0m   [0mSELECT * FROM "meals" WHERE (user_id = 1) AND ("meals"."day" = '2010-04-29') [0m
+Rendering template within layouts/application
+Rendering meals/index
+  [4;36;1mRecipe Load (0.3ms)[0m   [0;1mSELECT * FROM "recipes" WHERE ("recipes"."id" = 34) [0m
+Rendered meals/_meal (9.1ms)
+  [4;35;1mRecipe Load (0.4ms)[0m   [0mSELECT * FROM "recipes" WHERE ("recipes"."id" = 30) [0m
+Rendered meals/_meal (1.8ms)
+Rendered layouts/_header (0.3ms)
+Completed in 107ms (View: 17, DB: 2) | 200 OK [http://localhost/meals?d=2010-04-28]
+
+
+Processing MealsController#show (for 127.0.0.1 at 2010-04-26 21:54:11) [GET]
+  Parameters: {"action"=>"show", "id"=>"53", "controller"=>"meals"}
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;35;1mMeal Load (0.3ms)[0m   [0mSELECT * FROM "meals" WHERE ("meals"."id" = 53) [0m
+Rendering template within layouts/application
+Rendering meals/show
+  [4;36;1mRecipe Load (0.4ms)[0m   [0;1mSELECT * FROM "recipes" WHERE ("recipes"."id" = 30) [0m
+Rendered layouts/_header (1.4ms)
+Completed in 27ms (View: 13, DB: 1) | 200 OK [http://localhost/meals/53]
+
+
+Processing MealsController#show (for 127.0.0.1 at 2010-04-26 21:54:31) [GET]
+  Parameters: {"action"=>"show", "id"=>"53", "controller"=>"meals"}
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;36;1mMeal Load (0.3ms)[0m   [0;1mSELECT * FROM "meals" WHERE ("meals"."id" = 53) [0m
+Rendering template within layouts/application
+Rendering meals/show
+  [4;35;1mRecipe Load (0.3ms)[0m   [0mSELECT * FROM "recipes" WHERE ("recipes"."id" = 30) [0m
+Rendered layouts/_header (1.3ms)
+Completed in 27ms (View: 13, DB: 1) | 200 OK [http://localhost/meals/53]
+
+
+Processing MealsController#update (for 127.0.0.1 at 2010-04-26 21:54:35) [PUT]
+  Parameters: {"meal"=>{"day"=>"04/27/2010"}, "action"=>"update", "_method"=>"put", "authenticity_token"=>"vHPlWi2McLaHjPqRhUsrRMIZMocno8g+JLuvn/SEQ2k=", "id"=>"53", "controller"=>"meals"}
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;35;1mMeal Load (0.4ms)[0m   [0mSELECT * FROM "meals" WHERE ("meals"."id" = 53) [0m
+  [4;36;1mMeal Update (0.4ms)[0m   [0;1mUPDATE "meals" SET "day" = '2010-04-27', "updated_at" = '2010-04-27 01:54:35' WHERE "id" = 53[0m
+Rendering template within layouts/application
+Rendering meals/show
+  [4;35;1mRecipe Load (0.4ms)[0m   [0mSELECT * FROM "recipes" WHERE ("recipes"."id" = 30) [0m
+Rendered layouts/_header (1.5ms)
+Completed in 62ms (View: 16, DB: 2) | 200 OK [http://localhost/meals/53]
+
+
+Processing MealsController#update (for 127.0.0.1 at 2010-04-26 21:54:38) [PUT]
+  Parameters: {"meal"=>{"day"=>"04/29/2010"}, "action"=>"update", "_method"=>"put", "authenticity_token"=>"vHPlWi2McLaHjPqRhUsrRMIZMocno8g+JLuvn/SEQ2k=", "id"=>"53", "controller"=>"meals"}
+  [4;36;1mUser Load (1.7ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;35;1mMeal Load (0.3ms)[0m   [0mSELECT * FROM "meals" WHERE ("meals"."id" = 53) [0m
+  [4;36;1mMeal Update (0.4ms)[0m   [0;1mUPDATE "meals" SET "day" = '2010-04-29', "updated_at" = '2010-04-27 01:54:38' WHERE "id" = 53[0m
+Rendering template within layouts/application
+Rendering meals/show
+  [4;35;1mRecipe Load (0.5ms)[0m   [0mSELECT * FROM "recipes" WHERE ("recipes"."id" = 30) [0m
+Rendered layouts/_header (1.6ms)
+Completed in 58ms (View: 16, DB: 3) | 200 OK [http://localhost/meals/53]
+
+
+Processing MealsController#update (for 127.0.0.1 at 2010-04-26 21:54:41) [PUT]
+  Parameters: {"meal"=>{"day"=>"04/06/2010"}, "action"=>"update", "_method"=>"put", "authenticity_token"=>"vHPlWi2McLaHjPqRhUsrRMIZMocno8g+JLuvn/SEQ2k=", "id"=>"53", "controller"=>"meals"}
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;35;1mMeal Load (0.4ms)[0m   [0mSELECT * FROM "meals" WHERE ("meals"."id" = 53) [0m
+  [4;36;1mMeal Update (0.9ms)[0m   [0;1mUPDATE "meals" SET "day" = '2010-04-06', "updated_at" = '2010-04-27 01:54:41' WHERE "id" = 53[0m
+Rendering template within layouts/application
+Rendering meals/show
+  [4;35;1mRecipe Load (0.4ms)[0m   [0mSELECT * FROM "recipes" WHERE ("recipes"."id" = 30) [0m
+Rendered layouts/_header (2.0ms)
+Completed in 92ms (View: 17, DB: 2) | 200 OK [http://localhost/meals/53]
+
+
+Processing MealsController#update (for 127.0.0.1 at 2010-04-26 21:55:38) [PUT]
+  Parameters: {"meal"=>{"day"=>"04/21/2010"}, "action"=>"update", "_method"=>"put", "authenticity_token"=>"vHPlWi2McLaHjPqRhUsrRMIZMocno8g+JLuvn/SEQ2k=", "id"=>"53", "controller"=>"meals"}
+  [4;36;1mUser Load (0.4ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;35;1mMeal Load (0.3ms)[0m   [0mSELECT * FROM "meals" WHERE ("meals"."id" = 53) [0m
+  [4;36;1mMeal Update (0.4ms)[0m   [0;1mUPDATE "meals" SET "day" = '2010-04-21', "updated_at" = '2010-04-27 01:55:38' WHERE "id" = 53[0m
+Rendering template within layouts/application
+Rendering meals/show
+  [4;35;1mRecipe Load (0.4ms)[0m   [0mSELECT * FROM "recipes" WHERE ("recipes"."id" = 30) [0m
+Rendered layouts/_header (1.9ms)
+Completed in 47ms (View: 24, DB: 1) | 200 OK [http://localhost/meals/53]
+
+
+Processing MealsController#index (for 127.0.0.1 at 2010-04-26 21:55:40) [GET]
+  Parameters: {"action"=>"index", "d"=>"2010-04-21", "controller"=>"meals"}
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;35;1mMeal Load (0.3ms)[0m   [0mSELECT * FROM "meals" WHERE (user_id = 1) AND ("meals"."day" = '2010-04-20') [0m
+  [4;36;1mMeal Load (0.3ms)[0m   [0;1mSELECT * FROM "meals" WHERE (user_id = 1) AND ("meals"."day" = '2010-04-21') [0m
+  [4;35;1mMeal Load (0.3ms)[0m   [0mSELECT * FROM "meals" WHERE (user_id = 1) AND ("meals"."day" = '2010-04-22') [0m
+Rendering template within layouts/application
+Rendering meals/index
+  [4;36;1mRecipe Load (0.3ms)[0m   [0;1mSELECT * FROM "recipes" WHERE ("recipes"."id" = 27) [0m
+Rendered meals/_meal (7.8ms)
+  [4;35;1mRecipe Load (0.4ms)[0m   [0mSELECT * FROM "recipes" WHERE ("recipes"."id" = 28) [0m
+Rendered meals/_meal (2.0ms)
+  [4;36;1mRecipe Load (0.3ms)[0m   [0;1mSELECT * FROM "recipes" WHERE ("recipes"."id" = 30) [0m
+Rendered meals/_meal (1.5ms)
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "recipes" WHERE ("recipes"."id" = 28) [0m
+Rendered meals/_meal (1.4ms)
+Rendered layouts/_header (0.2ms)
+Completed in 38ms (View: 18, DB: 2) | 200 OK [http://localhost/meals?d=2010-04-21]
+
+
+Processing MealsController#index (for 127.0.0.1 at 2010-04-26 21:55:44) [GET]
+  Parameters: {"action"=>"index", "d"=>"2010-04-18", "controller"=>"meals"}
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;35;1mMeal Load (0.2ms)[0m   [0mSELECT * FROM "meals" WHERE (user_id = 1) AND ("meals"."day" = '2010-04-17') [0m
+  [4;36;1mMeal Load (0.1ms)[0m   [0;1mSELECT * FROM "meals" WHERE (user_id = 1) AND ("meals"."day" = '2010-04-18') [0m
+  [4;35;1mMeal Load (0.1ms)[0m   [0mSELECT * FROM "meals" WHERE (user_id = 1) AND ("meals"."day" = '2010-04-19') [0m
+Rendering template within layouts/application
+Rendering meals/index
+Rendered layouts/_header (0.2ms)
+Completed in 23ms (View: 5, DB: 1) | 200 OK [http://localhost/meals?d=2010-04-18]
+
+
+Processing MealsController#index (for 127.0.0.1 at 2010-04-26 21:55:45) [GET]
+  Parameters: {"action"=>"index", "d"=>"2010-04-15", "controller"=>"meals"}
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;35;1mMeal Load (0.2ms)[0m   [0mSELECT * FROM "meals" WHERE (user_id = 1) AND ("meals"."day" = '2010-04-14') [0m
+  [4;36;1mMeal Load (0.1ms)[0m   [0;1mSELECT * FROM "meals" WHERE (user_id = 1) AND ("meals"."day" = '2010-04-15') [0m
+  [4;35;1mMeal Load (0.1ms)[0m   [0mSELECT * FROM "meals" WHERE (user_id = 1) AND ("meals"."day" = '2010-04-16') [0m
+Rendering template within layouts/application
+Rendering meals/index
+Rendered layouts/_header (0.2ms)
+Completed in 23ms (View: 6, DB: 1) | 200 OK [http://localhost/meals?d=2010-04-15]
+
+
+Processing MealsController#index (for 127.0.0.1 at 2010-04-26 21:55:47) [GET]
+  Parameters: {"action"=>"index", "d"=>"2010-04-18", "controller"=>"meals"}
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;35;1mMeal Load (0.2ms)[0m   [0mSELECT * FROM "meals" WHERE (user_id = 1) AND ("meals"."day" = '2010-04-17') [0m
+  [4;36;1mMeal Load (0.1ms)[0m   [0;1mSELECT * FROM "meals" WHERE (user_id = 1) AND ("meals"."day" = '2010-04-18') [0m
+  [4;35;1mMeal Load (0.1ms)[0m   [0mSELECT * FROM "meals" WHERE (user_id = 1) AND ("meals"."day" = '2010-04-19') [0m
+Rendering template within layouts/application
+Rendering meals/index
+Rendered layouts/_header (0.2ms)
+Completed in 22ms (View: 5, DB: 1) | 200 OK [http://localhost/meals?d=2010-04-18]
+
+
+Processing MealsController#index (for 127.0.0.1 at 2010-04-26 21:55:47) [GET]
+  Parameters: {"action"=>"index", "d"=>"2010-04-21", "controller"=>"meals"}
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;35;1mMeal Load (0.4ms)[0m   [0mSELECT * FROM "meals" WHERE (user_id = 1) AND ("meals"."day" = '2010-04-20') [0m
+  [4;36;1mMeal Load (0.4ms)[0m   [0;1mSELECT * FROM "meals" WHERE (user_id = 1) AND ("meals"."day" = '2010-04-21') [0m
+  [4;35;1mMeal Load (0.3ms)[0m   [0mSELECT * FROM "meals" WHERE (user_id = 1) AND ("meals"."day" = '2010-04-22') [0m
+Rendering template within layouts/application
+Rendering meals/index
+  [4;36;1mRecipe Load (0.3ms)[0m   [0;1mSELECT * FROM "recipes" WHERE ("recipes"."id" = 27) [0m
+Rendered meals/_meal (7.6ms)
+  [4;35;1mRecipe Load (0.3ms)[0m   [0mSELECT * FROM "recipes" WHERE ("recipes"."id" = 28) [0m
+Rendered meals/_meal (1.5ms)
+  [4;36;1mRecipe Load (0.3ms)[0m   [0;1mSELECT * FROM "recipes" WHERE ("recipes"."id" = 30) [0m
+Rendered meals/_meal (1.5ms)
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "recipes" WHERE ("recipes"."id" = 28) [0m
+Rendered meals/_meal (1.2ms)
+Rendered layouts/_header (0.2ms)
+Completed in 36ms (View: 17, DB: 2) | 200 OK [http://localhost/meals?d=2010-04-21]
+
+
+Processing MealsController#destroy (for 127.0.0.1 at 2010-04-26 21:55:53) [DELETE]
+  Parameters: {"action"=>"destroy", "_method"=>"delete", "authenticity_token"=>"vHPlWi2McLaHjPqRhUsrRMIZMocno8g+JLuvn/SEQ2k=", "id"=>"47", "controller"=>"meals"}
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;35;1mMeal Load (0.4ms)[0m   [0mSELECT * FROM "meals" WHERE ("meals"."id" = 47) [0m
+  [4;36;1mMeal Destroy (0.3ms)[0m   [0;1mDELETE FROM "meals" WHERE "id" = 47[0m
+Redirected to http://localhost:3000/meals?d=2010-04-21
+Completed in 77ms (DB: 1) | 302 Found [http://localhost/meals/47]
+
+
+Processing MealsController#index (for 127.0.0.1 at 2010-04-26 21:55:53) [GET]
+  Parameters: {"action"=>"index", "d"=>"2010-04-21", "controller"=>"meals"}
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;36;1mMeal Load (0.3ms)[0m   [0;1mSELECT * FROM "meals" WHERE (user_id = 1) AND ("meals"."day" = '2010-04-20') [0m
+  [4;35;1mMeal Load (0.3ms)[0m   [0mSELECT * FROM "meals" WHERE (user_id = 1) AND ("meals"."day" = '2010-04-21') [0m
+  [4;36;1mMeal Load (0.1ms)[0m   [0;1mSELECT * FROM "meals" WHERE (user_id = 1) AND ("meals"."day" = '2010-04-22') [0m
+Rendering template within layouts/application
+Rendering meals/index
+  [4;35;1mRecipe Load (0.3ms)[0m   [0mSELECT * FROM "recipes" WHERE ("recipes"."id" = 27) [0m
+Rendered meals/_meal (8.2ms)
+  [4;36;1mRecipe Load (0.3ms)[0m   [0;1mSELECT * FROM "recipes" WHERE ("recipes"."id" = 28) [0m
+Rendered meals/_meal (1.7ms)
+  [4;35;1mRecipe Load (0.3ms)[0m   [0mSELECT * FROM "recipes" WHERE ("recipes"."id" = 30) [0m
+Rendered meals/_meal (1.5ms)
+Rendered layouts/_header (0.3ms)
+Completed in 37ms (View: 18, DB: 2) | 200 OK [http://localhost/meals?d=2010-04-21]
+
+
+Processing MealsController#index (for 127.0.0.1 at 2010-04-26 21:55:55) [GET]
+  Parameters: {"action"=>"index", "d"=>"2010-04-24", "controller"=>"meals"}
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;35;1mMeal Load (0.2ms)[0m   [0mSELECT * FROM "meals" WHERE (user_id = 1) AND ("meals"."day" = '2010-04-23') [0m
+  [4;36;1mMeal Load (0.5ms)[0m   [0;1mSELECT * FROM "meals" WHERE (user_id = 1) AND ("meals"."day" = '2010-04-24') [0m
+  [4;35;1mMeal Load (0.5ms)[0m   [0mSELECT * FROM "meals" WHERE (user_id = 1) AND ("meals"."day" = '2010-04-25') [0m
+Rendering template within layouts/application
+Rendering meals/index
+  [4;36;1mRecipe Load (0.3ms)[0m   [0;1mSELECT * FROM "recipes" WHERE ("recipes"."id" = 32) [0m
+Rendered meals/_meal (7.6ms)
+  [4;35;1mRecipe Load (0.3ms)[0m   [0mSELECT * FROM "recipes" WHERE ("recipes"."id" = 28) [0m
+Rendered meals/_meal (1.5ms)
+  [4;36;1mRecipe Load (0.3ms)[0m   [0;1mSELECT * FROM "recipes" WHERE ("recipes"."id" = 35) [0m
+Rendered meals/_meal (1.4ms)
+  [4;35;1mRecipe Load (0.3ms)[0m   [0mSELECT * FROM "recipes" WHERE ("recipes"."id" = 30) [0m
+Rendered meals/_meal (1.5ms)
+  [4;36;1mRecipe Load (0.3ms)[0m   [0;1mSELECT * FROM "recipes" WHERE ("recipes"."id" = 29) [0m
+Rendered meals/_meal (1.5ms)
+  [4;35;1mRecipe Load (0.3ms)[0m   [0mSELECT * FROM "recipes" WHERE ("recipes"."id" = 36) [0m
+Rendered meals/_meal (1.4ms)
+  [4;36;1mRecipe Load (0.3ms)[0m   [0;1mSELECT * FROM "recipes" WHERE ("recipes"."id" = 37) [0m
+Rendered meals/_meal (1.4ms)
+Rendered layouts/_header (0.2ms)
+Completed in 41ms (View: 21, DB: 3) | 200 OK [http://localhost/meals?d=2010-04-24]
+
+
+Processing MealsController#show (for 127.0.0.1 at 2010-04-26 21:55:57) [GET]
+  Parameters: {"action"=>"show", "id"=>"42", "controller"=>"meals"}
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;36;1mMeal Load (0.3ms)[0m   [0;1mSELECT * FROM "meals" WHERE ("meals"."id" = 42) [0m
+Rendering template within layouts/application
+Rendering meals/show
+  [4;35;1mRecipe Load (0.3ms)[0m   [0mSELECT * FROM "recipes" WHERE ("recipes"."id" = 32) [0m
+Rendered layouts/_header (1.3ms)
+Completed in 26ms (View: 13, DB: 1) | 200 OK [http://localhost/meals/42]
+
+
+Processing MealsController#update (for 127.0.0.1 at 2010-04-26 21:56:03) [PUT]
+  Parameters: {"meal"=>{"day"=>"04/23/2010"}, "action"=>"update", "_method"=>"put", "authenticity_token"=>"vHPlWi2McLaHjPqRhUsrRMIZMocno8g+JLuvn/SEQ2k=", "id"=>"42", "controller"=>"meals"}
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;35;1mMeal Load (0.4ms)[0m   [0mSELECT * FROM "meals" WHERE ("meals"."id" = 42) [0m
+  [4;36;1mMeal Update (0.4ms)[0m   [0;1mUPDATE "meals" SET "day" = '2010-04-23', "updated_at" = '2010-04-27 01:56:03' WHERE "id" = 42[0m
+Rendering template within layouts/application
+Rendering meals/show
+  [4;35;1mRecipe Load (1.1ms)[0m   [0mSELECT * FROM "recipes" WHERE ("recipes"."id" = 32) [0m
+Rendered layouts/_header (1.4ms)
+Completed in 39ms (View: 15, DB: 2) | 200 OK [http://localhost/meals/42]
+
+
+Processing MealsController#update (for 127.0.0.1 at 2010-04-26 21:56:08) [PUT]
+  Parameters: {"meal"=>{"day"=>"04/22/2010"}, "action"=>"update", "_method"=>"put", "authenticity_token"=>"vHPlWi2McLaHjPqRhUsrRMIZMocno8g+JLuvn/SEQ2k=", "id"=>"42", "controller"=>"meals"}
+  [4;36;1mUser Load (0.4ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;35;1mMeal Load (0.6ms)[0m   [0mSELECT * FROM "meals" WHERE ("meals"."id" = 42) [0m
+  [4;36;1mMeal Update (0.4ms)[0m   [0;1mUPDATE "meals" SET "day" = '2010-04-22', "updated_at" = '2010-04-27 01:56:08' WHERE "id" = 42[0m
+Rendering template within layouts/application
+Rendering meals/show
+  [4;35;1mRecipe Load (0.5ms)[0m   [0mSELECT * FROM "recipes" WHERE ("recipes"."id" = 32) [0m
+Rendered layouts/_header (2.4ms)
+Completed in 41ms (View: 17, DB: 2) | 200 OK [http://localhost/meals/42]
+
+
+Processing MealsController#update (for 127.0.0.1 at 2010-04-26 21:56:12) [PUT]
+  Parameters: {"meal"=>{"day"=>"04/21/2010"}, "action"=>"update", "_method"=>"put", "authenticity_token"=>"vHPlWi2McLaHjPqRhUsrRMIZMocno8g+JLuvn/SEQ2k=", "id"=>"42", "controller"=>"meals"}
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;35;1mMeal Load (22.2ms)[0m   [0mSELECT * FROM "meals" WHERE ("meals"."id" = 42) [0m
+  [4;36;1mMeal Update (0.4ms)[0m   [0;1mUPDATE "meals" SET "day" = '2010-04-21', "updated_at" = '2010-04-27 01:56:12' WHERE "id" = 42[0m
+Rendering template within layouts/application
+Rendering meals/show
+  [4;35;1mRecipe Load (0.4ms)[0m   [0mSELECT * FROM "recipes" WHERE ("recipes"."id" = 32) [0m
+Rendered layouts/_header (1.9ms)
+Completed in 62ms (View: 16, DB: 23) | 200 OK [http://localhost/meals/42]
+
+
+Processing MealsController#index (for 127.0.0.1 at 2010-04-26 21:56:13) [GET]
+  Parameters: {"action"=>"index", "d"=>"2010-04-21", "controller"=>"meals"}
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;35;1mMeal Load (0.3ms)[0m   [0mSELECT * FROM "meals" WHERE (user_id = 1) AND ("meals"."day" = '2010-04-20') [0m
+  [4;36;1mMeal Load (0.5ms)[0m   [0;1mSELECT * FROM "meals" WHERE (user_id = 1) AND ("meals"."day" = '2010-04-21') [0m
+  [4;35;1mMeal Load (0.1ms)[0m   [0mSELECT * FROM "meals" WHERE (user_id = 1) AND ("meals"."day" = '2010-04-22') [0m
+Rendering template within layouts/application
+Rendering meals/index
+  [4;36;1mRecipe Load (0.3ms)[0m   [0;1mSELECT * FROM "recipes" WHERE ("recipes"."id" = 27) [0m
+Rendered meals/_meal (7.4ms)
+  [4;35;1mRecipe Load (0.3ms)[0m   [0mSELECT * FROM "recipes" WHERE ("recipes"."id" = 32) [0m
+Rendered meals/_meal (1.6ms)
+  [4;36;1mRecipe Load (0.3ms)[0m   [0;1mSELECT * FROM "recipes" WHERE ("recipes"."id" = 28) [0m
+Rendered meals/_meal (1.6ms)
+  [4;35;1mRecipe Load (0.3ms)[0m   [0mSELECT * FROM "recipes" WHERE ("recipes"."id" = 30) [0m
+Rendered meals/_meal (1.5ms)
+Rendered layouts/_header (0.2ms)
+Completed in 36ms (View: 17, DB: 2) | 200 OK [http://localhost/meals?d=2010-04-21]
+
+
+Processing MealsController#show (for 127.0.0.1 at 2010-04-26 21:56:18) [GET]
+  Parameters: {"action"=>"show", "id"=>"42", "controller"=>"meals"}
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;35;1mMeal Load (0.3ms)[0m   [0mSELECT * FROM "meals" WHERE ("meals"."id" = 42) [0m
+Rendering template within layouts/application
+Rendering meals/show
+  [4;36;1mRecipe Load (0.4ms)[0m   [0;1mSELECT * FROM "recipes" WHERE ("recipes"."id" = 32) [0m
+Rendered layouts/_header (1.4ms)
+Completed in 83ms (View: 70, DB: 1) | 200 OK [http://localhost/meals/42]
+
+
+Processing MealsController#update (for 127.0.0.1 at 2010-04-26 21:56:27) [PUT]
+  Parameters: {"meal"=>{"day"=>"04/22/2010"}, "action"=>"update", "_method"=>"put", "authenticity_token"=>"vHPlWi2McLaHjPqRhUsrRMIZMocno8g+JLuvn/SEQ2k=", "id"=>"42", "controller"=>"meals"}
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;36;1mMeal Load (0.3ms)[0m   [0;1mSELECT * FROM "meals" WHERE ("meals"."id" = 42) [0m
+  [4;35;1mMeal Update (0.4ms)[0m   [0mUPDATE "meals" SET "day" = '2010-04-22', "updated_at" = '2010-04-27 01:56:27' WHERE "id" = 42[0m
+Rendering template within layouts/application
+Rendering meals/show
+  [4;36;1mRecipe Load (0.5ms)[0m   [0;1mSELECT * FROM "recipes" WHERE ("recipes"."id" = 32) [0m
+Rendered layouts/_header (1.4ms)
+Completed in 40ms (View: 15, DB: 2) | 200 OK [http://localhost/meals/42]
+
+
+Processing MealsController#show (for 127.0.0.1 at 2010-04-26 21:56:49) [GET]
+  Parameters: {"action"=>"show", "id"=>"42", "controller"=>"meals"}
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;36;1mMeal Load (0.3ms)[0m   [0;1mSELECT * FROM "meals" WHERE ("meals"."id" = 42) [0m
+Rendering template within layouts/application
+Rendering meals/show
+  [4;35;1mRecipe Load (0.3ms)[0m   [0mSELECT * FROM "recipes" WHERE ("recipes"."id" = 32) [0m
+Rendered layouts/_header (1.4ms)
+Completed in 26ms (View: 13, DB: 1) | 200 OK [http://localhost/meals/42]
+
+
+Processing MealsController#update (for 127.0.0.1 at 2010-04-26 21:57:04) [PUT]
+  Parameters: {"meal"=>{"day"=>"04/22/2010"}, "action"=>"update", "_method"=>"put", "authenticity_token"=>"vHPlWi2McLaHjPqRhUsrRMIZMocno8g+JLuvn/SEQ2k=", "id"=>"42", "controller"=>"meals"}
+  [4;36;1mUser Load (0.4ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;35;1mMeal Load (0.4ms)[0m   [0mSELECT * FROM "meals" WHERE ("meals"."id" = 42) [0m
+Rendering template within layouts/application
+Rendering meals/show
+  [4;36;1mRecipe Load (0.4ms)[0m   [0;1mSELECT * FROM "recipes" WHERE ("recipes"."id" = 32) [0m
+Rendered layouts/_header (1.4ms)
+Completed in 35ms (View: 15, DB: 1) | 200 OK [http://localhost/meals/42]
+
+
+Processing MealsController#show (for 127.0.0.1 at 2010-04-26 21:58:40) [GET]
+  Parameters: {"action"=>"show", "id"=>"42", "controller"=>"meals"}
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;36;1mMeal Load (19.1ms)[0m   [0;1mSELECT * FROM "meals" WHERE ("meals"."id" = 42) [0m
+Rendering template within layouts/application
+Rendering meals/show
+  [4;35;1mRecipe Load (0.3ms)[0m   [0mSELECT * FROM "recipes" WHERE ("recipes"."id" = 32) [0m
+Rendered layouts/_header (1.6ms)
+Completed in 112ms (View: 21, DB: 20) | 200 OK [http://localhost/meals/42]
+
+
+Processing MealsController#update (for 127.0.0.1 at 2010-04-26 21:58:44) [PUT]
+  Parameters: {"meal"=>{"day"=>"04/20/2010"}, "action"=>"update", "_method"=>"put", "authenticity_token"=>"vHPlWi2McLaHjPqRhUsrRMIZMocno8g+JLuvn/SEQ2k=", "id"=>"42", "controller"=>"meals"}
+  [4;36;1mUser Load (0.4ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;35;1mMeal Load (0.8ms)[0m   [0mSELECT * FROM "meals" WHERE ("meals"."id" = 42) [0m
+  [4;36;1mMeal Update (0.6ms)[0m   [0;1mUPDATE "meals" SET "day" = '2010-04-20', "updated_at" = '2010-04-27 01:58:44' WHERE "id" = 42[0m
+Rendering template within layouts/application
+Rendering meals/show
+  [4;35;1mRecipe Load (0.9ms)[0m   [0mSELECT * FROM "recipes" WHERE ("recipes"."id" = 32) [0m
+Rendered layouts/_header (1.7ms)
+Completed in 42ms (View: 15, DB: 3) | 200 OK [http://localhost/meals/42]
+
+
+Processing MealsController#update (for 127.0.0.1 at 2010-04-26 21:58:48) [PUT]
+  Parameters: {"meal"=>{"day"=>"04/19/2010"}, "action"=>"update", "_method"=>"put", "authenticity_token"=>"vHPlWi2McLaHjPqRhUsrRMIZMocno8g+JLuvn/SEQ2k=", "id"=>"42", "controller"=>"meals"}
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;35;1mMeal Load (0.3ms)[0m   [0mSELECT * FROM "meals" WHERE ("meals"."id" = 42) [0m
+  [4;36;1mMeal Update (0.5ms)[0m   [0;1mUPDATE "meals" SET "day" = '2010-04-19', "updated_at" = '2010-04-27 01:58:48' WHERE "id" = 42[0m
+Rendering template within layouts/application
+Rendering meals/show
+  [4;35;1mRecipe Load (1.4ms)[0m   [0mSELECT * FROM "recipes" WHERE ("recipes"."id" = 32) [0m
+Rendered layouts/_header (1.5ms)
+Completed in 38ms (View: 14, DB: 3) | 200 OK [http://localhost/meals/42]
+
+
+Processing MealsController#index (for 127.0.0.1 at 2010-04-26 21:58:53) [GET]
+  Parameters: {"action"=>"index", "d"=>"2010-04-19", "controller"=>"meals"}
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;35;1mMeal Load (0.2ms)[0m   [0mSELECT * FROM "meals" WHERE (user_id = 1) AND ("meals"."day" = '2010-04-18') [0m
+  [4;36;1mMeal Load (0.3ms)[0m   [0;1mSELECT * FROM "meals" WHERE (user_id = 1) AND ("meals"."day" = '2010-04-19') [0m
+  [4;35;1mMeal Load (0.3ms)[0m   [0mSELECT * FROM "meals" WHERE (user_id = 1) AND ("meals"."day" = '2010-04-20') [0m
+Rendering template within layouts/application
+Rendering meals/index
+  [4;36;1mRecipe Load (0.3ms)[0m   [0;1mSELECT * FROM "recipes" WHERE ("recipes"."id" = 32) [0m
+Rendered meals/_meal (7.4ms)
+  [4;35;1mRecipe Load (0.3ms)[0m   [0mSELECT * FROM "recipes" WHERE ("recipes"."id" = 27) [0m
+Rendered meals/_meal (1.6ms)
+Rendered layouts/_header (0.2ms)
+Completed in 33ms (View: 14, DB: 2) | 200 OK [http://localhost/meals?d=2010-04-19]
+
+
+Processing MealsController#show (for 127.0.0.1 at 2010-04-26 21:58:57) [GET]
+  Parameters: {"action"=>"show", "id"=>"42", "controller"=>"meals"}
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;35;1mMeal Load (0.3ms)[0m   [0mSELECT * FROM "meals" WHERE ("meals"."id" = 42) [0m
+Rendering template within layouts/application
+Rendering meals/show
+  [4;36;1mRecipe Load (0.3ms)[0m   [0;1mSELECT * FROM "recipes" WHERE ("recipes"."id" = 32) [0m
+Rendered layouts/_header (1.4ms)
+Completed in 28ms (View: 14, DB: 1) | 200 OK [http://localhost/meals/42]
+
+
+Processing MealsController#update (for 127.0.0.1 at 2010-04-26 21:59:00) [PUT]
+  Parameters: {"meal"=>{"day"=>"04/18/2010"}, "action"=>"update", "_method"=>"put", "authenticity_token"=>"vHPlWi2McLaHjPqRhUsrRMIZMocno8g+JLuvn/SEQ2k=", "id"=>"42", "controller"=>"meals"}
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;36;1mMeal Load (0.4ms)[0m   [0;1mSELECT * FROM "meals" WHERE ("meals"."id" = 42) [0m
+  [4;35;1mMeal Update (0.4ms)[0m   [0mUPDATE "meals" SET "day" = '2010-04-18', "updated_at" = '2010-04-27 01:59:00' WHERE "id" = 42[0m
+Rendering template within layouts/application
+Rendering meals/show
+  [4;36;1mRecipe Load (0.5ms)[0m   [0;1mSELECT * FROM "recipes" WHERE ("recipes"."id" = 32) [0m
+Rendered layouts/_header (1.6ms)
+Completed in 38ms (View: 15, DB: 2) | 200 OK [http://localhost/meals/42]
+
+
+Processing MealsController#index (for 127.0.0.1 at 2010-04-26 21:59:02) [GET]
+  Parameters: {"action"=>"index", "d"=>"2010-04-18", "controller"=>"meals"}
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;36;1mMeal Load (0.2ms)[0m   [0;1mSELECT * FROM "meals" WHERE (user_id = 1) AND ("meals"."day" = '2010-04-17') [0m
+  [4;35;1mMeal Load (0.2ms)[0m   [0mSELECT * FROM "meals" WHERE (user_id = 1) AND ("meals"."day" = '2010-04-18') [0m
+  [4;36;1mMeal Load (0.1ms)[0m   [0;1mSELECT * FROM "meals" WHERE (user_id = 1) AND ("meals"."day" = '2010-04-19') [0m
+Rendering template within layouts/application
+Rendering meals/index
+  [4;35;1mRecipe Load (0.3ms)[0m   [0mSELECT * FROM "recipes" WHERE ("recipes"."id" = 32) [0m
+Rendered meals/_meal (7.6ms)
+Rendered layouts/_header (0.2ms)
+Completed in 31ms (View: 13, DB: 1) | 200 OK [http://localhost/meals?d=2010-04-18]
+
+
+Processing MealsController#index (for 127.0.0.1 at 2010-04-26 21:59:16) [GET]
+  Parameters: {"action"=>"index", "d"=>"2010-04-26", "controller"=>"meals"}
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;35;1mMeal Load (0.6ms)[0m   [0mSELECT * FROM "meals" WHERE (user_id = 1) AND ("meals"."day" = '2010-04-25') [0m
+  [4;36;1mMeal Load (0.3ms)[0m   [0;1mSELECT * FROM "meals" WHERE (user_id = 1) AND ("meals"."day" = '2010-04-26') [0m
+  [4;35;1mMeal Load (0.4ms)[0m   [0mSELECT * FROM "meals" WHERE (user_id = 1) AND ("meals"."day" = '2010-04-27') [0m
+Rendering template within layouts/application
+Rendering meals/index
+  [4;36;1mRecipe Load (0.3ms)[0m   [0;1mSELECT * FROM "recipes" WHERE ("recipes"."id" = 29) [0m
+Rendered meals/_meal (7.7ms)
+  [4;35;1mRecipe Load (0.3ms)[0m   [0mSELECT * FROM "recipes" WHERE ("recipes"."id" = 36) [0m
+Rendered meals/_meal (1.5ms)
+  [4;36;1mRecipe Load (0.3ms)[0m   [0;1mSELECT * FROM "recipes" WHERE ("recipes"."id" = 37) [0m
+Rendered meals/_meal (1.5ms)
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "recipes" WHERE ("recipes"."id" = 29) [0m
+Rendered meals/_meal (1.2ms)
+Rendered layouts/_header (0.2ms)
+Completed in 40ms (View: 17, DB: 2) | 200 OK [http://localhost/meals?d=2010-04-26]
+
+
+Processing MealsController#show (for 127.0.0.1 at 2010-04-26 21:59:39) [GET]
+  Parameters: {"action"=>"show", "id"=>"56", "controller"=>"meals"}
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;35;1mMeal Load (0.3ms)[0m   [0mSELECT * FROM "meals" WHERE ("meals"."id" = 56) [0m
+Rendering template within layouts/application
+Rendering meals/show
+  [4;36;1mRecipe Load (0.3ms)[0m   [0;1mSELECT * FROM "recipes" WHERE ("recipes"."id" = 29) [0m
+Rendered layouts/_header (1.4ms)
+Completed in 27ms (View: 13, DB: 1) | 200 OK [http://localhost/meals/56]
+
+
+Processing MealsController#show (for 127.0.0.1 at 2010-04-26 21:59:53) [GET]
+  Parameters: {"action"=>"show", "id"=>"56", "controller"=>"meals"}
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;36;1mMeal Load (0.3ms)[0m   [0;1mSELECT * FROM "meals" WHERE ("meals"."id" = 56) [0m
+Rendering template within layouts/application
+Rendering meals/show
+  [4;35;1mRecipe Load (0.3ms)[0m   [0mSELECT * FROM "recipes" WHERE ("recipes"."id" = 29) [0m
+Rendered layouts/_header (1.4ms)
+Completed in 32ms (View: 19, DB: 1) | 200 OK [http://localhost/meals/56]
+
+
+Processing MealsController#show (for 127.0.0.1 at 2010-04-26 21:59:58) [GET]
+  Parameters: {"action"=>"show", "id"=>"56", "controller"=>"meals"}
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;35;1mMeal Load (0.3ms)[0m   [0mSELECT * FROM "meals" WHERE ("meals"."id" = 56) [0m
+Rendering template within layouts/application
+Rendering meals/show
+  [4;36;1mRecipe Load (0.3ms)[0m   [0;1mSELECT * FROM "recipes" WHERE ("recipes"."id" = 29) [0m
+Rendered layouts/_header (1.4ms)
+Completed in 33ms (View: 20, DB: 1) | 200 OK [http://localhost/meals/56]
+
+
+Processing MealsController#show (for 127.0.0.1 at 2010-04-26 22:00:52) [GET]
+  Parameters: {"action"=>"show", "id"=>"56", "controller"=>"meals"}
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;36;1mMeal Load (0.3ms)[0m   [0;1mSELECT * FROM "meals" WHERE ("meals"."id" = 56) [0m
+Rendering template within layouts/application
+Rendering meals/show
+ERROR: compiling _run_haml_app47views47meals47show46html46haml RAISED compile error
+/Users/justinbachorik/Documents/Coursework/CSCI-E250/projects/omgitsfood/src/omgitsfood/app/views/meals/show.html.haml:19: syntax error, unexpected kENSURE, expecting $end
+Function body:           def _run_haml_app47views47meals47show46html46haml(local_assigns)
+            old_output_buffer = output_buffer;;begin;extend Haml::Helpers;_hamlout = @haml_buffer = Haml::Buffer.new(@haml_buffer, {:autoclose=>["meta", "img", "link", "br", "hr", "input", "area", "param", "col", "base"], :escape_html=>false, :ugly=>false, :format=>:xhtml, :encoding=>nil, :attr_wrapper=>"'", :preserve=>["textarea", "pre", "code"]});_erbout = _hamlout.buffer;__in_erb_template = true;;_hamlout.push_text("#{haml_temp =  stylesheet_link_tag 'ui-lightness/jquery-ui', :media => "screen"
+_hamlout.format_script_false_false_false_false_false_true_false((haml_very_temp = haml_temp; haml_temp = nil; haml_very_temp));}\n#{haml_temp =  javascript_include_tag('jquery-ui')
+_hamlout.format_script_false_false_false_false_false_true_false((haml_very_temp = haml_temp; haml_temp = nil; haml_very_temp));}\n", 0, false);haml_temp =  javascript_include_tag('meal_show');
+
+_hamlout.push_text("<div id='viewMealCont'></div>\n<h1>#{_hamlout.adjust_tabs(1); haml_temp = @meal.recipe.title
+_hamlout.format_script_false_true_false_false_false_true_false((haml_very_temp = haml_temp; haml_temp = nil; haml_very_temp));}</h1>\n<h2>#{_hamlout.adjust_tabs(1); haml_temp = "Scheduled for #{@meal.day.strftime("%a %b %d, %Y")}"
+_hamlout.format_script_false_true_false_false_false_true_false((haml_very_temp = haml_temp; haml_temp = nil; haml_very_temp));}</h2>\n<a id='rescheduleLink'>Reschedule</a>\n", 0, false);
+ form_for @meal, :url => { :action => "update"} do |meal_form|;
+_hamlout.push_text("#{haml_temp =  text_field(:meal, :day, :value => @meal.day.strftime('%m/%d/%Y'))
+_hamlout.format_script_false_false_false_false_false_true_false((haml_very_temp = haml_temp; haml_temp = nil; haml_very_temp));}\n", 0, false);end;
+
+
+_hamlout.push_text("<div id='viewMeal'>\n  <div id='ingredients'>\n    <h3>Ingredients</h3>\n    <p>#{_hamlout.adjust_tabs(3); haml_temp = @meal.recipe.ingredients.gsub(/\n/,'<br/>')
+_hamlout.format_script_false_true_false_false_false_true_false((haml_very_temp = haml_temp; haml_temp = nil; haml_very_temp));}</p>\n  </div>\n  <div id='directions'>\n", 0, false);
+
+_hamlout.push_text("    <h3>Directions</h3>\n    <p>#{_hamlout.adjust_tabs(1); haml_temp = @meal.recipe.directions.gsub(/\n/,'<br/>')
+_hamlout.format_script_false_true_false_false_false_true_false((haml_very_temp = haml_temp; haml_temp = nil; haml_very_temp));}</p>\n  </div>\n  <div id='backLink'>#{haml_temp = link_to "Back to meals", url_for(:controller => 'meals', :action => 'index', :d => @meal.day)
+_hamlout.format_script_false_true_false_false_false_true_false((haml_very_temp = haml_temp; haml_temp = nil; haml_very_temp));}</div>\n</div>\n", -1, false);end;_hamlout.buffer << _hamlout.format_script_false_false_false_false_false_false_false((haml_very_temp = haml_temp; haml_temp = nil; haml_very_temp));_hamlout.push_text("\n", 0, false);_erbout;ensure;@haml_buffer = @haml_buffer.upper;end;
+          ensure
+            self.output_buffer = old_output_buffer
+          end
+Backtrace: /Users/justinbachorik/Documents/Coursework/CSCI-E250/projects/omgitsfood/src/omgitsfood/app/views/meals/show.html.haml:19:in `compile!'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.5/lib/action_view/renderable.rb:61:in `compile'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.5/lib/action_view/renderable.rb:28:in `render'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.5/lib/action_view/template.rb:205:in `render_template'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.5/lib/action_view/base.rb:265:in `render_without_haml'
+/Users/justinbachorik/.gem/ruby/1.8/gems/haml-2.2.23/lib/haml/helpers/action_view_mods.rb:13:in `render'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.5/lib/action_view/base.rb:348:in `_render_with_layout'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.5/lib/action_view/base.rb:262:in `render_without_haml'
+/Users/justinbachorik/.gem/ruby/1.8/gems/haml-2.2.23/lib/haml/helpers/action_view_mods.rb:13:in `render'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.5/lib/action_controller/base.rb:1250:in `render_for_file'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.5/lib/action_controller/base.rb:945:in `render_without_benchmark'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.5/lib/action_controller/benchmarking.rb:51:in `render'
+/Library/Ruby/Gems/1.8/gems/activesupport-2.3.5/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+/Library/Ruby/Gems/1.8/gems/activesupport-2.3.5/lib/active_support/core_ext/benchmark.rb:10:in `realtime'
+/Library/Ruby/Gems/1.8/gems/activesupport-2.3.5/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.5/lib/action_controller/benchmarking.rb:51:in `render'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.5/lib/action_controller/base.rb:1326:in `default_render'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.5/lib/action_controller/base.rb:1332:in `perform_action_without_filters'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.5/lib/action_controller/filters.rb:617:in `call_filters'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.5/lib/action_controller/filters.rb:610:in `perform_action_without_benchmark'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.5/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+/Library/Ruby/Gems/1.8/gems/activesupport-2.3.5/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+/Library/Ruby/Gems/1.8/gems/activesupport-2.3.5/lib/active_support/core_ext/benchmark.rb:10:in `realtime'
+/Library/Ruby/Gems/1.8/gems/activesupport-2.3.5/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.5/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.5/lib/action_controller/rescue.rb:160:in `perform_action_without_flash'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.5/lib/action_controller/flash.rb:146:in `perform_action'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.5/lib/action_controller/base.rb:532:in `send'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.5/lib/action_controller/base.rb:532:in `process_without_filters'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.5/lib/action_controller/filters.rb:606:in `sass_old_process'
+/Users/justinbachorik/.gem/ruby/1.8/gems/haml-2.2.23/lib/sass/plugin/rails.rb:20:in `process'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.5/lib/action_controller/base.rb:391:in `process'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.5/lib/action_controller/base.rb:386:in `call'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.5/lib/action_controller/routing/route_set.rb:437:in `call'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.5/lib/action_controller/dispatcher.rb:87:in `dispatch'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.5/lib/action_controller/dispatcher.rb:121:in `_call'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.5/lib/action_controller/dispatcher.rb:130:in `build_middleware_stack'
+/Library/Ruby/Gems/1.8/gems/activerecord-2.3.5/lib/active_record/query_cache.rb:29:in `call'
+/Library/Ruby/Gems/1.8/gems/activerecord-2.3.5/lib/active_record/query_cache.rb:29:in `call'
+/Library/Ruby/Gems/1.8/gems/activerecord-2.3.5/lib/active_record/connection_adapters/abstract/query_cache.rb:34:in `cache'
+/Library/Ruby/Gems/1.8/gems/activerecord-2.3.5/lib/active_record/query_cache.rb:9:in `cache'
+/Library/Ruby/Gems/1.8/gems/activerecord-2.3.5/lib/active_record/query_cache.rb:28:in `call'
+/Library/Ruby/Gems/1.8/gems/activerecord-2.3.5/lib/active_record/connection_adapters/abstract/connection_pool.rb:361:in `call'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.5/lib/action_controller/string_coercion.rb:25:in `call'
+/Library/Ruby/Gems/1.8/gems/rack-1.0.1/lib/rack/head.rb:9:in `call'
+/Library/Ruby/Gems/1.8/gems/rack-1.0.1/lib/rack/methodoverride.rb:24:in `call'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.5/lib/action_controller/params_parser.rb:15:in `call'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.5/lib/action_controller/session/cookie_store.rb:93:in `call'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.5/lib/action_controller/failsafe.rb:26:in `call'
+/Library/Ruby/Gems/1.8/gems/rack-1.0.1/lib/rack/lock.rb:11:in `call'
+/Library/Ruby/Gems/1.8/gems/rack-1.0.1/lib/rack/lock.rb:11:in `synchronize'
+/Library/Ruby/Gems/1.8/gems/rack-1.0.1/lib/rack/lock.rb:11:in `call'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.5/lib/action_controller/dispatcher.rb:114:in `call'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.5/lib/action_controller/reloader.rb:34:in `run'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.5/lib/action_controller/dispatcher.rb:108:in `call'
+/Library/Ruby/Gems/1.8/gems/rails-2.3.5/lib/rails/rack/static.rb:31:in `call'
+/Library/Ruby/Gems/1.8/gems/rack-1.0.1/lib/rack/urlmap.rb:46:in `call'
+/Library/Ruby/Gems/1.8/gems/rack-1.0.1/lib/rack/urlmap.rb:40:in `each'
+/Library/Ruby/Gems/1.8/gems/rack-1.0.1/lib/rack/urlmap.rb:40:in `call'
+/Library/Ruby/Gems/1.8/gems/rails-2.3.5/lib/rails/rack/debugger.rb:19:in `call'
+/Library/Ruby/Gems/1.8/gems/rails-2.3.5/lib/rails/rack/log_tailer.rb:17:in `call'
+/Library/Ruby/Gems/1.8/gems/rack-1.0.1/lib/rack/content_length.rb:13:in `call'
+/Library/Ruby/Gems/1.8/gems/rack-1.0.1/lib/rack/chunked.rb:15:in `call'
+/Library/Ruby/Gems/1.8/gems/rack-1.0.1/lib/rack/handler/mongrel.rb:64:in `process'
+/Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:159:in `process_client'
+/Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:158:in `each'
+/Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:158:in `process_client'
+/Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `run'
+/Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `initialize'
+/Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `new'
+/Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `run'
+/Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `initialize'
+/Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `new'
+/Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `run'
+/Library/Ruby/Gems/1.8/gems/rack-1.0.1/lib/rack/handler/mongrel.rb:34:in `run'
+/Library/Ruby/Gems/1.8/gems/rails-2.3.5/lib/commands/server.rb:111
+/Library/Ruby/Site/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+/Library/Ruby/Site/1.8/rubygems/custom_require.rb:31:in `require'
+script/server:3
+
+ActionView::TemplateError (compile error
+/Users/justinbachorik/Documents/Coursework/CSCI-E250/projects/omgitsfood/src/omgitsfood/app/views/meals/show.html.haml:19: syntax error, unexpected kENSURE, expecting $end) on line #19 of app/views/meals/show.html.haml:
+16:       %p= @meal.recipe.directions.gsub(/\n/,'<br/>')
+17:     #backLink= link_to "Back to meals", url_for(:controller => 'meals', :action => 'index', :d => @meal.day)
+
+    app/views/meals/show.html.haml:19:in `compile!'
+    haml (2.2.23) lib/haml/helpers/action_view_mods.rb:13:in `render'
+    haml (2.2.23) lib/haml/helpers/action_view_mods.rb:13:in `render'
+    haml (2.2.23) lib/sass/plugin/rails.rb:20:in `process'
+
+Rendered rescues/_trace (49.6ms)
+Rendered rescues/_request_and_response (0.4ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing MealsController#show (for 127.0.0.1 at 2010-04-26 22:00:53) [GET]
+  Parameters: {"action"=>"show", "id"=>"56", "controller"=>"meals"}
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;36;1mMeal Load (0.3ms)[0m   [0;1mSELECT * FROM "meals" WHERE ("meals"."id" = 56) [0m
+Rendering template within layouts/application
+Rendering meals/show
+ERROR: compiling _run_haml_app47views47meals47show46html46haml RAISED compile error
+/Users/justinbachorik/Documents/Coursework/CSCI-E250/projects/omgitsfood/src/omgitsfood/app/views/meals/show.html.haml:19: syntax error, unexpected kENSURE, expecting $end
+Function body:           def _run_haml_app47views47meals47show46html46haml(local_assigns)
+            old_output_buffer = output_buffer;;begin;extend Haml::Helpers;_hamlout = @haml_buffer = Haml::Buffer.new(@haml_buffer, {:autoclose=>["meta", "img", "link", "br", "hr", "input", "area", "param", "col", "base"], :escape_html=>false, :ugly=>false, :format=>:xhtml, :encoding=>nil, :attr_wrapper=>"'", :preserve=>["textarea", "pre", "code"]});_erbout = _hamlout.buffer;__in_erb_template = true;;_hamlout.push_text("#{haml_temp =  stylesheet_link_tag 'ui-lightness/jquery-ui', :media => "screen"
+_hamlout.format_script_false_false_false_false_false_true_false((haml_very_temp = haml_temp; haml_temp = nil; haml_very_temp));}\n#{haml_temp =  javascript_include_tag('jquery-ui')
+_hamlout.format_script_false_false_false_false_false_true_false((haml_very_temp = haml_temp; haml_temp = nil; haml_very_temp));}\n", 0, false);haml_temp =  javascript_include_tag('meal_show');
+
+_hamlout.push_text("<div id='viewMealCont'></div>\n<h1>#{_hamlout.adjust_tabs(1); haml_temp = @meal.recipe.title
+_hamlout.format_script_false_true_false_false_false_true_false((haml_very_temp = haml_temp; haml_temp = nil; haml_very_temp));}</h1>\n<h2>#{_hamlout.adjust_tabs(1); haml_temp = "Scheduled for #{@meal.day.strftime("%a %b %d, %Y")}"
+_hamlout.format_script_false_true_false_false_false_true_false((haml_very_temp = haml_temp; haml_temp = nil; haml_very_temp));}</h2>\n<a id='rescheduleLink'>Reschedule</a>\n", 0, false);
+ form_for @meal, :url => { :action => "update"} do |meal_form|;
+_hamlout.push_text("#{haml_temp =  text_field(:meal, :day, :value => @meal.day.strftime('%m/%d/%Y'))
+_hamlout.format_script_false_false_false_false_false_true_false((haml_very_temp = haml_temp; haml_temp = nil; haml_very_temp));}\n", 0, false);end;
+
+
+_hamlout.push_text("<div id='viewMeal'>\n  <div id='ingredients'>\n    <h3>Ingredients</h3>\n    <p>#{_hamlout.adjust_tabs(3); haml_temp = @meal.recipe.ingredients.gsub(/\n/,'<br/>')
+_hamlout.format_script_false_true_false_false_false_true_false((haml_very_temp = haml_temp; haml_temp = nil; haml_very_temp));}</p>\n  </div>\n  <div id='directions'>\n", 0, false);
+
+_hamlout.push_text("    <h3>Directions</h3>\n    <p>#{_hamlout.adjust_tabs(1); haml_temp = @meal.recipe.directions.gsub(/\n/,'<br/>')
+_hamlout.format_script_false_true_false_false_false_true_false((haml_very_temp = haml_temp; haml_temp = nil; haml_very_temp));}</p>\n  </div>\n  <div id='backLink'>#{haml_temp = link_to "Back to meals", url_for(:controller => 'meals', :action => 'index', :d => @meal.day)
+_hamlout.format_script_false_true_false_false_false_true_false((haml_very_temp = haml_temp; haml_temp = nil; haml_very_temp));}</div>\n</div>\n", -1, false);end;_hamlout.buffer << _hamlout.format_script_false_false_false_false_false_false_false((haml_very_temp = haml_temp; haml_temp = nil; haml_very_temp));_hamlout.push_text("\n", 0, false);_erbout;ensure;@haml_buffer = @haml_buffer.upper;end;
+          ensure
+            self.output_buffer = old_output_buffer
+          end
+Backtrace: /Users/justinbachorik/Documents/Coursework/CSCI-E250/projects/omgitsfood/src/omgitsfood/app/views/meals/show.html.haml:19:in `compile!'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.5/lib/action_view/renderable.rb:61:in `compile'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.5/lib/action_view/renderable.rb:28:in `render'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.5/lib/action_view/template.rb:205:in `render_template'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.5/lib/action_view/base.rb:265:in `render_without_haml'
+/Users/justinbachorik/.gem/ruby/1.8/gems/haml-2.2.23/lib/haml/helpers/action_view_mods.rb:13:in `render'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.5/lib/action_view/base.rb:348:in `_render_with_layout'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.5/lib/action_view/base.rb:262:in `render_without_haml'
+/Users/justinbachorik/.gem/ruby/1.8/gems/haml-2.2.23/lib/haml/helpers/action_view_mods.rb:13:in `render'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.5/lib/action_controller/base.rb:1250:in `render_for_file'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.5/lib/action_controller/base.rb:945:in `render_without_benchmark'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.5/lib/action_controller/benchmarking.rb:51:in `render'
+/Library/Ruby/Gems/1.8/gems/activesupport-2.3.5/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+/Library/Ruby/Gems/1.8/gems/activesupport-2.3.5/lib/active_support/core_ext/benchmark.rb:10:in `realtime'
+/Library/Ruby/Gems/1.8/gems/activesupport-2.3.5/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.5/lib/action_controller/benchmarking.rb:51:in `render'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.5/lib/action_controller/base.rb:1326:in `default_render'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.5/lib/action_controller/base.rb:1332:in `perform_action_without_filters'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.5/lib/action_controller/filters.rb:617:in `call_filters'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.5/lib/action_controller/filters.rb:610:in `perform_action_without_benchmark'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.5/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+/Library/Ruby/Gems/1.8/gems/activesupport-2.3.5/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+/Library/Ruby/Gems/1.8/gems/activesupport-2.3.5/lib/active_support/core_ext/benchmark.rb:10:in `realtime'
+/Library/Ruby/Gems/1.8/gems/activesupport-2.3.5/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.5/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.5/lib/action_controller/rescue.rb:160:in `perform_action_without_flash'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.5/lib/action_controller/flash.rb:146:in `perform_action'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.5/lib/action_controller/base.rb:532:in `send'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.5/lib/action_controller/base.rb:532:in `process_without_filters'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.5/lib/action_controller/filters.rb:606:in `sass_old_process'
+/Users/justinbachorik/.gem/ruby/1.8/gems/haml-2.2.23/lib/sass/plugin/rails.rb:20:in `process'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.5/lib/action_controller/base.rb:391:in `process'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.5/lib/action_controller/base.rb:386:in `call'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.5/lib/action_controller/routing/route_set.rb:437:in `call'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.5/lib/action_controller/dispatcher.rb:87:in `dispatch'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.5/lib/action_controller/dispatcher.rb:121:in `_call'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.5/lib/action_controller/dispatcher.rb:130:in `build_middleware_stack'
+/Library/Ruby/Gems/1.8/gems/activerecord-2.3.5/lib/active_record/query_cache.rb:29:in `call'
+/Library/Ruby/Gems/1.8/gems/activerecord-2.3.5/lib/active_record/query_cache.rb:29:in `call'
+/Library/Ruby/Gems/1.8/gems/activerecord-2.3.5/lib/active_record/connection_adapters/abstract/query_cache.rb:34:in `cache'
+/Library/Ruby/Gems/1.8/gems/activerecord-2.3.5/lib/active_record/query_cache.rb:9:in `cache'
+/Library/Ruby/Gems/1.8/gems/activerecord-2.3.5/lib/active_record/query_cache.rb:28:in `call'
+/Library/Ruby/Gems/1.8/gems/activerecord-2.3.5/lib/active_record/connection_adapters/abstract/connection_pool.rb:361:in `call'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.5/lib/action_controller/string_coercion.rb:25:in `call'
+/Library/Ruby/Gems/1.8/gems/rack-1.0.1/lib/rack/head.rb:9:in `call'
+/Library/Ruby/Gems/1.8/gems/rack-1.0.1/lib/rack/methodoverride.rb:24:in `call'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.5/lib/action_controller/params_parser.rb:15:in `call'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.5/lib/action_controller/session/cookie_store.rb:93:in `call'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.5/lib/action_controller/failsafe.rb:26:in `call'
+/Library/Ruby/Gems/1.8/gems/rack-1.0.1/lib/rack/lock.rb:11:in `call'
+/Library/Ruby/Gems/1.8/gems/rack-1.0.1/lib/rack/lock.rb:11:in `synchronize'
+/Library/Ruby/Gems/1.8/gems/rack-1.0.1/lib/rack/lock.rb:11:in `call'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.5/lib/action_controller/dispatcher.rb:114:in `call'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.5/lib/action_controller/reloader.rb:34:in `run'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.5/lib/action_controller/dispatcher.rb:108:in `call'
+/Library/Ruby/Gems/1.8/gems/rails-2.3.5/lib/rails/rack/static.rb:31:in `call'
+/Library/Ruby/Gems/1.8/gems/rack-1.0.1/lib/rack/urlmap.rb:46:in `call'
+/Library/Ruby/Gems/1.8/gems/rack-1.0.1/lib/rack/urlmap.rb:40:in `each'
+/Library/Ruby/Gems/1.8/gems/rack-1.0.1/lib/rack/urlmap.rb:40:in `call'
+/Library/Ruby/Gems/1.8/gems/rails-2.3.5/lib/rails/rack/debugger.rb:19:in `call'
+/Library/Ruby/Gems/1.8/gems/rails-2.3.5/lib/rails/rack/log_tailer.rb:17:in `call'
+/Library/Ruby/Gems/1.8/gems/rack-1.0.1/lib/rack/content_length.rb:13:in `call'
+/Library/Ruby/Gems/1.8/gems/rack-1.0.1/lib/rack/chunked.rb:15:in `call'
+/Library/Ruby/Gems/1.8/gems/rack-1.0.1/lib/rack/handler/mongrel.rb:64:in `process'
+/Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:159:in `process_client'
+/Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:158:in `each'
+/Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:158:in `process_client'
+/Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `run'
+/Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `initialize'
+/Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `new'
+/Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `run'
+/Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `initialize'
+/Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `new'
+/Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `run'
+/Library/Ruby/Gems/1.8/gems/rack-1.0.1/lib/rack/handler/mongrel.rb:34:in `run'
+/Library/Ruby/Gems/1.8/gems/rails-2.3.5/lib/commands/server.rb:111
+/Library/Ruby/Site/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+/Library/Ruby/Site/1.8/rubygems/custom_require.rb:31:in `require'
+script/server:3
+
+ActionView::TemplateError (compile error
+/Users/justinbachorik/Documents/Coursework/CSCI-E250/projects/omgitsfood/src/omgitsfood/app/views/meals/show.html.haml:19: syntax error, unexpected kENSURE, expecting $end) on line #19 of app/views/meals/show.html.haml:
+16:       %p= @meal.recipe.directions.gsub(/\n/,'<br/>')
+17:     #backLink= link_to "Back to meals", url_for(:controller => 'meals', :action => 'index', :d => @meal.day)
+
+    app/views/meals/show.html.haml:19:in `compile!'
+    haml (2.2.23) lib/haml/helpers/action_view_mods.rb:13:in `render'
+    haml (2.2.23) lib/haml/helpers/action_view_mods.rb:13:in `render'
+    haml (2.2.23) lib/sass/plugin/rails.rb:20:in `process'
+
+Rendered rescues/_trace (117.0ms)
+Rendered rescues/_request_and_response (0.4ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing MealsController#show (for 127.0.0.1 at 2010-04-26 22:01:05) [GET]
+  Parameters: {"action"=>"show", "id"=>"56", "controller"=>"meals"}
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;36;1mMeal Load (0.3ms)[0m   [0;1mSELECT * FROM "meals" WHERE ("meals"."id" = 56) [0m
+Rendering template within layouts/application
+Rendering meals/show
+ERROR: compiling _run_haml_app47views47meals47show46html46haml RAISED compile error
+/Users/justinbachorik/Documents/Coursework/CSCI-E250/projects/omgitsfood/src/omgitsfood/app/views/meals/show.html.haml:19: syntax error, unexpected kENSURE, expecting $end
+Function body:           def _run_haml_app47views47meals47show46html46haml(local_assigns)
+            old_output_buffer = output_buffer;;begin;extend Haml::Helpers;_hamlout = @haml_buffer = Haml::Buffer.new(@haml_buffer, {:autoclose=>["meta", "img", "link", "br", "hr", "input", "area", "param", "col", "base"], :escape_html=>false, :ugly=>false, :format=>:xhtml, :encoding=>nil, :attr_wrapper=>"'", :preserve=>["textarea", "pre", "code"]});_erbout = _hamlout.buffer;__in_erb_template = true;;_hamlout.push_text("#{haml_temp =  stylesheet_link_tag 'ui-lightness/jquery-ui', :media => "screen"
+_hamlout.format_script_false_false_false_false_false_true_false((haml_very_temp = haml_temp; haml_temp = nil; haml_very_temp));}\n#{haml_temp =  javascript_include_tag('jquery-ui')
+_hamlout.format_script_false_false_false_false_false_true_false((haml_very_temp = haml_temp; haml_temp = nil; haml_very_temp));}\n", 0, false);haml_temp =  javascript_include_tag('meal_show');
+
+_hamlout.push_text("<div id='viewMealCont'>\n  <h1>#{_hamlout.adjust_tabs(2); haml_temp = @meal.recipe.title
+_hamlout.format_script_false_true_false_false_false_true_false((haml_very_temp = haml_temp; haml_temp = nil; haml_very_temp));}</h1>\n  <h2>#{_hamlout.adjust_tabs(1); haml_temp = "Scheduled for #{@meal.day.strftime("%a %b %d, %Y")}"
+_hamlout.format_script_false_true_false_false_false_true_false((haml_very_temp = haml_temp; haml_temp = nil; haml_very_temp));}</h2>\n  <a id='rescheduleLink'>Reschedule</a>\n", 0, false);
+ form_for @meal, :url => { :action => "update"} do |meal_form|;
+_hamlout.push_text("  #{haml_temp =  text_field(:meal, :day, :value => @meal.day.strftime('%m/%d/%Y'))
+_hamlout.format_script_false_false_false_false_false_true_false((haml_very_temp = haml_temp; haml_temp = nil; haml_very_temp));}\n", 0, false);end;
+
+
+_hamlout.push_text("  <div id='viewMeal'>\n    <div id='ingredients'>\n      <h3>Ingredients</h3>\n      <p>#{_hamlout.adjust_tabs(3); haml_temp = @meal.recipe.ingredients.gsub(/\n/,'<br/>')
+_hamlout.format_script_false_true_false_false_false_true_false((haml_very_temp = haml_temp; haml_temp = nil; haml_very_temp));}</p>\n    </div>\n    <div id='directions'>\n", 0, false);
+
+_hamlout.push_text("      <h3>Directions</h3>\n      <p>#{_hamlout.adjust_tabs(1); haml_temp = @meal.recipe.directions.gsub(/\n/,'<br/>')
+_hamlout.format_script_false_true_false_false_false_true_false((haml_very_temp = haml_temp; haml_temp = nil; haml_very_temp));}</p>\n    </div>\n    <div id='backLink'>#{haml_temp = link_to "Back to meals", url_for(:controller => 'meals', :action => 'index', :d => @meal.day)
+_hamlout.format_script_false_true_false_false_false_true_false((haml_very_temp = haml_temp; haml_temp = nil; haml_very_temp));}</div>\n  </div>\n</div>\n", -2, false);end;_hamlout.buffer << _hamlout.format_script_false_false_false_false_false_false_false((haml_very_temp = haml_temp; haml_temp = nil; haml_very_temp));_hamlout.push_text("\n", 0, false);_erbout;ensure;@haml_buffer = @haml_buffer.upper;end;
+          ensure
+            self.output_buffer = old_output_buffer
+          end
+Backtrace: /Users/justinbachorik/Documents/Coursework/CSCI-E250/projects/omgitsfood/src/omgitsfood/app/views/meals/show.html.haml:19:in `compile!'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.5/lib/action_view/renderable.rb:61:in `compile'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.5/lib/action_view/renderable.rb:28:in `render'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.5/lib/action_view/template.rb:205:in `render_template'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.5/lib/action_view/base.rb:265:in `render_without_haml'
+/Users/justinbachorik/.gem/ruby/1.8/gems/haml-2.2.23/lib/haml/helpers/action_view_mods.rb:13:in `render'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.5/lib/action_view/base.rb:348:in `_render_with_layout'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.5/lib/action_view/base.rb:262:in `render_without_haml'
+/Users/justinbachorik/.gem/ruby/1.8/gems/haml-2.2.23/lib/haml/helpers/action_view_mods.rb:13:in `render'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.5/lib/action_controller/base.rb:1250:in `render_for_file'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.5/lib/action_controller/base.rb:945:in `render_without_benchmark'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.5/lib/action_controller/benchmarking.rb:51:in `render'
+/Library/Ruby/Gems/1.8/gems/activesupport-2.3.5/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+/Library/Ruby/Gems/1.8/gems/activesupport-2.3.5/lib/active_support/core_ext/benchmark.rb:10:in `realtime'
+/Library/Ruby/Gems/1.8/gems/activesupport-2.3.5/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.5/lib/action_controller/benchmarking.rb:51:in `render'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.5/lib/action_controller/base.rb:1326:in `default_render'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.5/lib/action_controller/base.rb:1332:in `perform_action_without_filters'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.5/lib/action_controller/filters.rb:617:in `call_filters'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.5/lib/action_controller/filters.rb:610:in `perform_action_without_benchmark'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.5/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+/Library/Ruby/Gems/1.8/gems/activesupport-2.3.5/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+/Library/Ruby/Gems/1.8/gems/activesupport-2.3.5/lib/active_support/core_ext/benchmark.rb:10:in `realtime'
+/Library/Ruby/Gems/1.8/gems/activesupport-2.3.5/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.5/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.5/lib/action_controller/rescue.rb:160:in `perform_action_without_flash'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.5/lib/action_controller/flash.rb:146:in `perform_action'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.5/lib/action_controller/base.rb:532:in `send'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.5/lib/action_controller/base.rb:532:in `process_without_filters'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.5/lib/action_controller/filters.rb:606:in `sass_old_process'
+/Users/justinbachorik/.gem/ruby/1.8/gems/haml-2.2.23/lib/sass/plugin/rails.rb:20:in `process'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.5/lib/action_controller/base.rb:391:in `process'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.5/lib/action_controller/base.rb:386:in `call'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.5/lib/action_controller/routing/route_set.rb:437:in `call'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.5/lib/action_controller/dispatcher.rb:87:in `dispatch'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.5/lib/action_controller/dispatcher.rb:121:in `_call'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.5/lib/action_controller/dispatcher.rb:130:in `build_middleware_stack'
+/Library/Ruby/Gems/1.8/gems/activerecord-2.3.5/lib/active_record/query_cache.rb:29:in `call'
+/Library/Ruby/Gems/1.8/gems/activerecord-2.3.5/lib/active_record/query_cache.rb:29:in `call'
+/Library/Ruby/Gems/1.8/gems/activerecord-2.3.5/lib/active_record/connection_adapters/abstract/query_cache.rb:34:in `cache'
+/Library/Ruby/Gems/1.8/gems/activerecord-2.3.5/lib/active_record/query_cache.rb:9:in `cache'
+/Library/Ruby/Gems/1.8/gems/activerecord-2.3.5/lib/active_record/query_cache.rb:28:in `call'
+/Library/Ruby/Gems/1.8/gems/activerecord-2.3.5/lib/active_record/connection_adapters/abstract/connection_pool.rb:361:in `call'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.5/lib/action_controller/string_coercion.rb:25:in `call'
+/Library/Ruby/Gems/1.8/gems/rack-1.0.1/lib/rack/head.rb:9:in `call'
+/Library/Ruby/Gems/1.8/gems/rack-1.0.1/lib/rack/methodoverride.rb:24:in `call'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.5/lib/action_controller/params_parser.rb:15:in `call'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.5/lib/action_controller/session/cookie_store.rb:93:in `call'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.5/lib/action_controller/failsafe.rb:26:in `call'
+/Library/Ruby/Gems/1.8/gems/rack-1.0.1/lib/rack/lock.rb:11:in `call'
+/Library/Ruby/Gems/1.8/gems/rack-1.0.1/lib/rack/lock.rb:11:in `synchronize'
+/Library/Ruby/Gems/1.8/gems/rack-1.0.1/lib/rack/lock.rb:11:in `call'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.5/lib/action_controller/dispatcher.rb:114:in `call'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.5/lib/action_controller/reloader.rb:34:in `run'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.5/lib/action_controller/dispatcher.rb:108:in `call'
+/Library/Ruby/Gems/1.8/gems/rails-2.3.5/lib/rails/rack/static.rb:31:in `call'
+/Library/Ruby/Gems/1.8/gems/rack-1.0.1/lib/rack/urlmap.rb:46:in `call'
+/Library/Ruby/Gems/1.8/gems/rack-1.0.1/lib/rack/urlmap.rb:40:in `each'
+/Library/Ruby/Gems/1.8/gems/rack-1.0.1/lib/rack/urlmap.rb:40:in `call'
+/Library/Ruby/Gems/1.8/gems/rails-2.3.5/lib/rails/rack/debugger.rb:19:in `call'
+/Library/Ruby/Gems/1.8/gems/rails-2.3.5/lib/rails/rack/log_tailer.rb:17:in `call'
+/Library/Ruby/Gems/1.8/gems/rack-1.0.1/lib/rack/content_length.rb:13:in `call'
+/Library/Ruby/Gems/1.8/gems/rack-1.0.1/lib/rack/chunked.rb:15:in `call'
+/Library/Ruby/Gems/1.8/gems/rack-1.0.1/lib/rack/handler/mongrel.rb:64:in `process'
+/Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:159:in `process_client'
+/Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:158:in `each'
+/Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:158:in `process_client'
+/Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `run'
+/Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `initialize'
+/Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `new'
+/Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `run'
+/Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `initialize'
+/Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `new'
+/Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `run'
+/Library/Ruby/Gems/1.8/gems/rack-1.0.1/lib/rack/handler/mongrel.rb:34:in `run'
+/Library/Ruby/Gems/1.8/gems/rails-2.3.5/lib/commands/server.rb:111
+/Library/Ruby/Site/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+/Library/Ruby/Site/1.8/rubygems/custom_require.rb:31:in `require'
+script/server:3
+
+ActionView::TemplateError (compile error
+/Users/justinbachorik/Documents/Coursework/CSCI-E250/projects/omgitsfood/src/omgitsfood/app/views/meals/show.html.haml:19: syntax error, unexpected kENSURE, expecting $end) on line #19 of app/views/meals/show.html.haml:
+16:         %p= @meal.recipe.directions.gsub(/\n/,'<br/>')
+17:       #backLink= link_to "Back to meals", url_for(:controller => 'meals', :action => 'index', :d => @meal.day)
+
+    app/views/meals/show.html.haml:19:in `compile!'
+    haml (2.2.23) lib/haml/helpers/action_view_mods.rb:13:in `render'
+    haml (2.2.23) lib/haml/helpers/action_view_mods.rb:13:in `render'
+    haml (2.2.23) lib/sass/plugin/rails.rb:20:in `process'
+
+Rendered rescues/_trace (50.1ms)
+Rendered rescues/_request_and_response (0.4ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing MealsController#show (for 127.0.0.1 at 2010-04-26 22:01:27) [GET]
+  Parameters: {"action"=>"show", "id"=>"56", "controller"=>"meals"}
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;36;1mMeal Load (0.3ms)[0m   [0;1mSELECT * FROM "meals" WHERE ("meals"."id" = 56) [0m
+Rendering template within layouts/application
+Rendering meals/show
+  [4;35;1mRecipe Load (0.3ms)[0m   [0mSELECT * FROM "recipes" WHERE ("recipes"."id" = 29) [0m
+Rendered layouts/_header (1.3ms)
+Completed in 32ms (View: 19, DB: 1) | 200 OK [http://localhost/meals/56]
+
+
+Processing MealsController#show (for 127.0.0.1 at 2010-04-26 22:01:41) [GET]
+  Parameters: {"action"=>"show", "id"=>"56", "controller"=>"meals"}
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;35;1mMeal Load (0.3ms)[0m   [0mSELECT * FROM "meals" WHERE ("meals"."id" = 56) [0m
+Rendering template within layouts/application
+Rendering meals/show
+  [4;36;1mRecipe Load (0.3ms)[0m   [0;1mSELECT * FROM "recipes" WHERE ("recipes"."id" = 29) [0m
+Rendered layouts/_header (1.4ms)
+Completed in 97ms (View: 21, DB: 1) | 200 OK [http://localhost/meals/56]
+
+
+Processing MealsController#index (for 127.0.0.1 at 2010-04-26 22:01:45) [GET]
+  Parameters: {"action"=>"index", "d"=>"2010-04-26", "controller"=>"meals"}
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;36;1mMeal Load (0.5ms)[0m   [0;1mSELECT * FROM "meals" WHERE (user_id = 1) AND ("meals"."day" = '2010-04-25') [0m
+  [4;35;1mMeal Load (0.2ms)[0m   [0mSELECT * FROM "meals" WHERE (user_id = 1) AND ("meals"."day" = '2010-04-26') [0m
+  [4;36;1mMeal Load (0.1ms)[0m   [0;1mSELECT * FROM "meals" WHERE (user_id = 1) AND ("meals"."day" = '2010-04-27') [0m
+Rendering template within layouts/application
+Rendering meals/index
+  [4;35;1mRecipe Load (0.3ms)[0m   [0mSELECT * FROM "recipes" WHERE ("recipes"."id" = 29) [0m
+Rendered meals/_meal (7.8ms)
+  [4;36;1mRecipe Load (0.3ms)[0m   [0;1mSELECT * FROM "recipes" WHERE ("recipes"."id" = 36) [0m
+Rendered meals/_meal (1.6ms)
+  [4;35;1mRecipe Load (0.3ms)[0m   [0mSELECT * FROM "recipes" WHERE ("recipes"."id" = 37) [0m
+Rendered meals/_meal (1.5ms)
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "recipes" WHERE ("recipes"."id" = 29) [0m
+Rendered meals/_meal (1.2ms)
+Rendered layouts/_header (0.3ms)
+Completed in 36ms (View: 17, DB: 2) | 200 OK [http://localhost/meals?d=2010-04-26]
+
+
+Processing MealsController#show (for 127.0.0.1 at 2010-04-26 22:01:47) [GET]
+  Parameters: {"action"=>"show", "id"=>"56", "controller"=>"meals"}
+  [4;35;1mUser Load (0.4ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;36;1mMeal Load (0.3ms)[0m   [0;1mSELECT * FROM "meals" WHERE ("meals"."id" = 56) [0m
+Rendering template within layouts/application
+Rendering meals/show
+  [4;35;1mRecipe Load (0.3ms)[0m   [0mSELECT * FROM "recipes" WHERE ("recipes"."id" = 29) [0m
+Rendered layouts/_header (1.4ms)
+Completed in 29ms (View: 15, DB: 1) | 200 OK [http://localhost/meals/56]
+
+
+Processing MealsController#show (for 127.0.0.1 at 2010-04-26 22:02:11) [GET]
+  Parameters: {"action"=>"show", "id"=>"56", "controller"=>"meals"}
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;35;1mMeal Load (0.3ms)[0m   [0mSELECT * FROM "meals" WHERE ("meals"."id" = 56) [0m
+Rendering template within layouts/application
+Rendering meals/show
+  [4;36;1mRecipe Load (0.3ms)[0m   [0;1mSELECT * FROM "recipes" WHERE ("recipes"."id" = 29) [0m
+Rendered layouts/_header (1.4ms)
+Completed in 33ms (View: 20, DB: 1) | 200 OK [http://localhost/meals/56]
+
+
+Processing MealsController#show (for 127.0.0.1 at 2010-04-26 22:02:23) [GET]
+  Parameters: {"action"=>"show", "id"=>"56", "controller"=>"meals"}
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;36;1mMeal Load (0.3ms)[0m   [0;1mSELECT * FROM "meals" WHERE ("meals"."id" = 56) [0m
+Rendering template within layouts/application
+Rendering meals/show
+  [4;35;1mRecipe Load (0.3ms)[0m   [0mSELECT * FROM "recipes" WHERE ("recipes"."id" = 29) [0m
+Rendered layouts/_header (1.4ms)
+Completed in 34ms (View: 20, DB: 1) | 200 OK [http://localhost/meals/56]
+
+
+Processing MealsController#update (for 127.0.0.1 at 2010-04-26 22:02:27) [PUT]
+  Parameters: {"meal"=>{"day"=>"04/21/2010"}, "action"=>"update", "_method"=>"put", "authenticity_token"=>"vHPlWi2McLaHjPqRhUsrRMIZMocno8g+JLuvn/SEQ2k=", "id"=>"56", "controller"=>"meals"}
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;35;1mMeal Load (0.3ms)[0m   [0mSELECT * FROM "meals" WHERE ("meals"."id" = 56) [0m
+  [4;36;1mMeal Update (0.6ms)[0m   [0;1mUPDATE "meals" SET "day" = '2010-04-21', "updated_at" = '2010-04-27 02:02:27' WHERE "id" = 56[0m
+Rendering template within layouts/application
+Rendering meals/show
+  [4;35;1mRecipe Load (1.0ms)[0m   [0mSELECT * FROM "recipes" WHERE ("recipes"."id" = 29) [0m
+Rendered layouts/_header (1.4ms)
+Completed in 36ms (View: 13, DB: 2) | 200 OK [http://localhost/meals/56]
+
+
+Processing MealsController#show (for 127.0.0.1 at 2010-04-26 22:02:51) [GET]
+  Parameters: {"action"=>"show", "id"=>"56", "controller"=>"meals"}
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;35;1mMeal Load (0.3ms)[0m   [0mSELECT * FROM "meals" WHERE ("meals"."id" = 56) [0m
+Rendering template within layouts/application
+Rendering meals/show
+  [4;36;1mRecipe Load (0.3ms)[0m   [0;1mSELECT * FROM "recipes" WHERE ("recipes"."id" = 29) [0m
+Rendered layouts/_header (1.4ms)
+Completed in 32ms (View: 19, DB: 1) | 200 OK [http://localhost/meals/56]
+
+
+Processing MealsController#show (for 127.0.0.1 at 2010-04-26 22:04:06) [GET]
+  Parameters: {"action"=>"show", "id"=>"56", "controller"=>"meals"}
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;36;1mMeal Load (15.9ms)[0m   [0;1mSELECT * FROM "meals" WHERE ("meals"."id" = 56) [0m
+Rendering template within layouts/application
+Rendering meals/show
+  [4;35;1mRecipe Load (0.3ms)[0m   [0mSELECT * FROM "recipes" WHERE ("recipes"."id" = 29) [0m
+Rendered layouts/_header (1.3ms)
+Completed in 44ms (View: 14, DB: 17) | 200 OK [http://localhost/meals/56]
+
+
+Processing MealsController#index (for 127.0.0.1 at 2010-04-26 22:04:12) [GET]
+  Parameters: {"action"=>"index", "d"=>"2010-04-21", "controller"=>"meals"}
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;35;1mMeal Load (0.3ms)[0m   [0mSELECT * FROM "meals" WHERE (user_id = 1) AND ("meals"."day" = '2010-04-20') [0m
+  [4;36;1mMeal Load (0.4ms)[0m   [0;1mSELECT * FROM "meals" WHERE (user_id = 1) AND ("meals"."day" = '2010-04-21') [0m
+  [4;35;1mMeal Load (0.1ms)[0m   [0mSELECT * FROM "meals" WHERE (user_id = 1) AND ("meals"."day" = '2010-04-22') [0m
+Rendering template within layouts/application
+Rendering meals/index
+  [4;36;1mRecipe Load (0.3ms)[0m   [0;1mSELECT * FROM "recipes" WHERE ("recipes"."id" = 27) [0m
+Rendered meals/_meal (7.6ms)
+  [4;35;1mRecipe Load (0.3ms)[0m   [0mSELECT * FROM "recipes" WHERE ("recipes"."id" = 28) [0m
+Rendered meals/_meal (1.6ms)
+  [4;36;1mRecipe Load (0.3ms)[0m   [0;1mSELECT * FROM "recipes" WHERE ("recipes"."id" = 30) [0m
+Rendered meals/_meal (1.5ms)
+  [4;35;1mRecipe Load (0.3ms)[0m   [0mSELECT * FROM "recipes" WHERE ("recipes"."id" = 29) [0m
+Rendered meals/_meal (1.4ms)
+Rendered layouts/_header (0.3ms)
+Completed in 36ms (View: 18, DB: 2) | 200 OK [http://localhost/meals?d=2010-04-21]
+
+
+Processing MealsController#new (for 127.0.0.1 at 2010-04-26 22:04:14) [GET]
+  Parameters: {"action"=>"new", "day"=>"apr-22-2010", "controller"=>"meals"}
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;35;1mRecipe Load (1.7ms)[0m   [0mSELECT * FROM "recipes" ORDER BY upper(title) ASC[0m
+Rendering template within layouts/application
+Rendering meals/new
+Rendered layouts/_header (1.4ms)
+Completed in 94ms (View: 41, DB: 2) | 200 OK [http://localhost/apr-22-2010/meals/new/]
+
+
+Processing MealsController#show (for 127.0.0.1 at 2010-04-26 22:04:28) [GET]
+  Parameters: {"action"=>"show", "id"=>"53", "controller"=>"meals"}
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;35;1mMeal Load (37.9ms)[0m   [0mSELECT * FROM "meals" WHERE ("meals"."id" = 53) [0m
+Rendering template within layouts/application
+Rendering meals/show
+  [4;36;1mRecipe Load (0.3ms)[0m   [0;1mSELECT * FROM "recipes" WHERE ("recipes"."id" = 30) [0m
+Rendered layouts/_header (1.4ms)
+Completed in 126ms (View: 15, DB: 39) | 200 OK [http://localhost/meals/53]
+
+
+Processing MealsController#show (for 127.0.0.1 at 2010-04-26 22:04:43) [GET]
+  Parameters: {"action"=>"show", "id"=>"53", "controller"=>"meals"}
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;36;1mMeal Load (0.3ms)[0m   [0;1mSELECT * FROM "meals" WHERE ("meals"."id" = 53) [0m
+Rendering template within layouts/application
+Rendering meals/show
+  [4;35;1mRecipe Load (0.3ms)[0m   [0mSELECT * FROM "recipes" WHERE ("recipes"."id" = 30) [0m
+Rendered layouts/_header (1.4ms)
+Completed in 26ms (View: 13, DB: 1) | 200 OK [http://localhost/meals/53]
+
+
+Processing MealsController#show (for 127.0.0.1 at 2010-04-26 22:04:46) [GET]
+  Parameters: {"action"=>"show", "id"=>"53", "controller"=>"meals"}
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;35;1mMeal Load (0.3ms)[0m   [0mSELECT * FROM "meals" WHERE ("meals"."id" = 53) [0m
+Rendering template within layouts/application
+Rendering meals/show
+  [4;36;1mRecipe Load (0.3ms)[0m   [0;1mSELECT * FROM "recipes" WHERE ("recipes"."id" = 30) [0m
+Rendered layouts/_header (2.0ms)
+Completed in 27ms (View: 14, DB: 1) | 200 OK [http://localhost/meals/53]
+
+
+Processing MealsController#update (for 127.0.0.1 at 2010-04-26 22:05:01) [PUT]
+  Parameters: {"meal"=>{"day"=>"04/30/2010"}, "action"=>"update", "_method"=>"put", "authenticity_token"=>"vHPlWi2McLaHjPqRhUsrRMIZMocno8g+JLuvn/SEQ2k=", "id"=>"53", "controller"=>"meals"}
+  [4;35;1mUser Load (0.4ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;36;1mMeal Load (0.3ms)[0m   [0;1mSELECT * FROM "meals" WHERE ("meals"."id" = 53) [0m
+  [4;35;1mMeal Update (0.5ms)[0m   [0mUPDATE "meals" SET "day" = '2010-04-30', "updated_at" = '2010-04-27 02:05:01' WHERE "id" = 53[0m
+Rendering template within layouts/application
+Rendering meals/show
+  [4;36;1mRecipe Load (0.9ms)[0m   [0;1mSELECT * FROM "recipes" WHERE ("recipes"."id" = 30) [0m
+Rendered layouts/_header (2.0ms)
+Completed in 135ms (View: 110, DB: 2) | 200 OK [http://localhost/meals/53]
+
+
+Processing MealsController#update (for 127.0.0.1 at 2010-04-26 22:05:07) [PUT]
+  Parameters: {"meal"=>{"day"=>"04/29/2010"}, "action"=>"update", "_method"=>"put", "authenticity_token"=>"vHPlWi2McLaHjPqRhUsrRMIZMocno8g+JLuvn/SEQ2k=", "id"=>"53", "controller"=>"meals"}
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;36;1mMeal Load (0.3ms)[0m   [0;1mSELECT * FROM "meals" WHERE ("meals"."id" = 53) [0m
+  [4;35;1mMeal Update (0.5ms)[0m   [0mUPDATE "meals" SET "day" = '2010-04-29', "updated_at" = '2010-04-27 02:05:07' WHERE "id" = 53[0m
+Rendering template within layouts/application
+Rendering meals/show
+  [4;36;1mRecipe Load (0.4ms)[0m   [0;1mSELECT * FROM "recipes" WHERE ("recipes"."id" = 30) [0m
+Rendered layouts/_header (1.6ms)
+Completed in 40ms (View: 15, DB: 1) | 200 OK [http://localhost/meals/53]
+
+
+Processing MealsController#index (for 127.0.0.1 at 2010-04-26 22:05:15) [GET]
+  Parameters: {"action"=>"index", "d"=>"2010-04-29", "controller"=>"meals"}
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;36;1mMeal Load (0.3ms)[0m   [0;1mSELECT * FROM "meals" WHERE (user_id = 1) AND ("meals"."day" = '2010-04-28') [0m
+  [4;35;1mMeal Load (0.3ms)[0m   [0mSELECT * FROM "meals" WHERE (user_id = 1) AND ("meals"."day" = '2010-04-29') [0m
+  [4;36;1mMeal Load (0.1ms)[0m   [0;1mSELECT * FROM "meals" WHERE (user_id = 1) AND ("meals"."day" = '2010-04-30') [0m
+Rendering template within layouts/application
+Rendering meals/index
+  [4;35;1mRecipe Load (0.3ms)[0m   [0mSELECT * FROM "recipes" WHERE ("recipes"."id" = 34) [0m
+Rendered meals/_meal (7.9ms)
+  [4;36;1mRecipe Load (0.3ms)[0m   [0;1mSELECT * FROM "recipes" WHERE ("recipes"."id" = 30) [0m
+Rendered meals/_meal (1.6ms)
+Rendered layouts/_header (0.2ms)
+Completed in 34ms (View: 15, DB: 2) | 200 OK [http://localhost/meals?d=2010-04-29]
+
+
+Processing MealsController#new (for 127.0.0.1 at 2010-04-26 22:05:17) [GET]
+  Parameters: {"action"=>"new", "day"=>"apr-30-2010", "controller"=>"meals"}
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;36;1mRecipe Load (1.5ms)[0m   [0;1mSELECT * FROM "recipes" ORDER BY upper(title) ASC[0m
+Rendering template within layouts/application
+Rendering meals/new
+Rendered layouts/_header (1.7ms)
+Completed in 31ms (View: 11, DB: 2) | 200 OK [http://localhost/apr-30-2010/meals/new/]
+
+
+Processing MealsController#create (for 127.0.0.1 at 2010-04-26 22:05:52) [POST]
+  Parameters: {"commit"=>"Add and Schedule Recipe ", "meal"=>{"recipe_attributes"=>{"title"=>"Flank steak", "ingredients"=>"1 c. soy sauce\r\n1 clove garlic\r\n2 lbs fresh spinach", "directions"=>"1. Cut up all the ingredients.\r\n\r\n2. Soak them in a frying pan.\r\n\r\n3. Kick some ass!"}, "day"=>"apr-30-2010"}, "action"=>"create", "authenticity_token"=>"vHPlWi2McLaHjPqRhUsrRMIZMocno8g+JLuvn/SEQ2k=", "day"=>"apr-30-2010", "controller"=>"meals"}
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;36;1mRecipe Create (14.8ms)[0m   [0;1mINSERT INTO "recipes" ("updated_at", "title", "directions", "ingredients", "user_id", "created_at") VALUES('2010-04-27 02:05:53', 'Flank steak', '1. Cut up all the ingredients.
+
+2. Soak them in a frying pan.
+
+3. Kick some ass!', '1 c. soy sauce
+1 clove garlic
+2 lbs fresh spinach', 1, '2010-04-27 02:05:53')[0m
+  [4;35;1mMeal Create (0.2ms)[0m   [0mINSERT INTO "meals" ("updated_at", "recipe_id", "day", "user_id", "created_at") VALUES('2010-04-27 02:05:53', 38, '2010-04-30', 1, '2010-04-27 02:05:53')[0m
+Redirected to http://localhost:3000/meals?d=2010-04-29
+Completed in 117ms (DB: 15) | 302 Found [http://localhost/apr-30-2010/meals/create]
+
+
+Processing MealsController#index (for 127.0.0.1 at 2010-04-26 22:05:53) [GET]
+  Parameters: {"action"=>"index", "d"=>"2010-04-29", "controller"=>"meals"}
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;35;1mMeal Load (0.4ms)[0m   [0mSELECT * FROM "meals" WHERE (user_id = 1) AND ("meals"."day" = '2010-04-28') [0m
+  [4;36;1mMeal Load (0.3ms)[0m   [0;1mSELECT * FROM "meals" WHERE (user_id = 1) AND ("meals"."day" = '2010-04-29') [0m
+  [4;35;1mMeal Load (0.3ms)[0m   [0mSELECT * FROM "meals" WHERE (user_id = 1) AND ("meals"."day" = '2010-04-30') [0m
+Rendering template within layouts/application
+Rendering meals/index
+  [4;36;1mRecipe Load (0.3ms)[0m   [0;1mSELECT * FROM "recipes" WHERE ("recipes"."id" = 34) [0m
+Rendered meals/_meal (8.0ms)
+  [4;35;1mRecipe Load (0.3ms)[0m   [0mSELECT * FROM "recipes" WHERE ("recipes"."id" = 30) [0m
+Rendered meals/_meal (1.7ms)
+  [4;36;1mRecipe Load (0.3ms)[0m   [0;1mSELECT * FROM "recipes" WHERE ("recipes"."id" = 38) [0m
+Rendered meals/_meal (1.6ms)
+Rendered layouts/_header (0.2ms)
+Completed in 37ms (View: 17, DB: 2) | 200 OK [http://localhost/meals?d=2010-04-29]
+
+
+Processing MealsController#show (for 127.0.0.1 at 2010-04-26 22:05:55) [GET]
+  Parameters: {"action"=>"show", "id"=>"67", "controller"=>"meals"}
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;36;1mMeal Load (0.3ms)[0m   [0;1mSELECT * FROM "meals" WHERE ("meals"."id" = 67) [0m
+Rendering template within layouts/application
+Rendering meals/show
+  [4;35;1mRecipe Load (0.3ms)[0m   [0mSELECT * FROM "recipes" WHERE ("recipes"."id" = 38) [0m
+Rendered layouts/_header (1.4ms)
+Completed in 28ms (View: 13, DB: 1) | 200 OK [http://localhost/meals/67]
+
+
+Processing MealsController#index (for 127.0.0.1 at 2010-04-26 22:05:58) [GET]
+  Parameters: {"action"=>"index", "d"=>"2010-04-30", "controller"=>"meals"}
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;35;1mMeal Load (0.3ms)[0m   [0mSELECT * FROM "meals" WHERE (user_id = 1) AND ("meals"."day" = '2010-04-29') [0m
+  [4;36;1mMeal Load (0.3ms)[0m   [0;1mSELECT * FROM "meals" WHERE (user_id = 1) AND ("meals"."day" = '2010-04-30') [0m
+  [4;35;1mMeal Load (0.3ms)[0m   [0mSELECT * FROM "meals" WHERE (user_id = 1) AND ("meals"."day" = '2010-05-01') [0m
+Rendering template within layouts/application
+Rendering meals/index
+  [4;36;1mRecipe Load (0.3ms)[0m   [0;1mSELECT * FROM "recipes" WHERE ("recipes"."id" = 30) [0m
+Rendered meals/_meal (8.2ms)
+  [4;35;1mRecipe Load (0.3ms)[0m   [0mSELECT * FROM "recipes" WHERE ("recipes"."id" = 38) [0m
+Rendered meals/_meal (1.6ms)
+  [4;36;1mRecipe Load (0.3ms)[0m   [0;1mSELECT * FROM "recipes" WHERE ("recipes"."id" = 37) [0m
+Rendered meals/_meal (1.6ms)
+Rendered layouts/_header (0.3ms)
+Completed in 35ms (View: 16, DB: 2) | 200 OK [http://localhost/meals?d=2010-04-30]
+
+
+Processing MealsController#new (for 127.0.0.1 at 2010-04-26 22:06:01) [GET]
+  Parameters: {"action"=>"new", "day"=>"may-01-2010", "controller"=>"meals"}
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;36;1mRecipe Load (1.7ms)[0m   [0;1mSELECT * FROM "recipes" ORDER BY upper(title) ASC[0m
+Rendering template within layouts/application
+Rendering meals/new
+Rendered layouts/_header (1.6ms)
+Completed in 93ms (View: 13, DB: 2) | 200 OK [http://localhost/may-01-2010/meals/new/]
+
+
+Processing MealsController#create (for 127.0.0.1 at 2010-04-26 22:06:07) [POST]
+  Parameters: {"commit"=>"Schedule Recipe", "meal"=>{"day"=>"may-01-2010"}, "action"=>"create", "authenticity_token"=>"vHPlWi2McLaHjPqRhUsrRMIZMocno8g+JLuvn/SEQ2k=", "day"=>"may-01-2010", "controller"=>"meals", "recipe"=>{"id"=>"38"}}
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;36;1mRecipe Load (0.3ms)[0m   [0;1mSELECT * FROM "recipes" WHERE ("recipes"."id" = 38) [0m
+  [4;35;1mMeal Create (0.4ms)[0m   [0mINSERT INTO "meals" ("updated_at", "recipe_id", "day", "user_id", "created_at") VALUES('2010-04-27 02:06:07', 38, '2010-05-01', 1, '2010-04-27 02:06:07')[0m
+Redirected to http://localhost:3000/meals?d=2010-04-30
+Completed in 29ms (DB: 1) | 302 Found [http://localhost/may-01-2010/meals/create]
+
+
+Processing MealsController#index (for 127.0.0.1 at 2010-04-26 22:06:07) [GET]
+  Parameters: {"action"=>"index", "d"=>"2010-04-30", "controller"=>"meals"}
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;35;1mMeal Load (0.3ms)[0m   [0mSELECT * FROM "meals" WHERE (user_id = 1) AND ("meals"."day" = '2010-04-29') [0m
+  [4;36;1mMeal Load (0.2ms)[0m   [0;1mSELECT * FROM "meals" WHERE (user_id = 1) AND ("meals"."day" = '2010-04-30') [0m
+  [4;35;1mMeal Load (0.3ms)[0m   [0mSELECT * FROM "meals" WHERE (user_id = 1) AND ("meals"."day" = '2010-05-01') [0m
+Rendering template within layouts/application
+Rendering meals/index
+  [4;36;1mRecipe Load (0.4ms)[0m   [0;1mSELECT * FROM "recipes" WHERE ("recipes"."id" = 30) [0m
+Rendered meals/_meal (7.9ms)
+  [4;35;1mRecipe Load (0.3ms)[0m   [0mSELECT * FROM "recipes" WHERE ("recipes"."id" = 38) [0m
+Rendered meals/_meal (1.7ms)
+  [4;36;1mRecipe Load (0.3ms)[0m   [0;1mSELECT * FROM "recipes" WHERE ("recipes"."id" = 37) [0m
+Rendered meals/_meal (1.5ms)
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "recipes" WHERE ("recipes"."id" = 38) [0m
+Rendered meals/_meal (1.1ms)
+Rendered layouts/_header (0.2ms)
+Completed in 36ms (View: 17, DB: 2) | 200 OK [http://localhost/meals?d=2010-04-30]
+
+
+Processing MealsController#index (for 127.0.0.1 at 2010-04-26 22:06:39) [GET]
+  Parameters: {"action"=>"index", "d"=>"2010-04-26", "controller"=>"meals"}
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;35;1mMeal Load (0.5ms)[0m   [0mSELECT * FROM "meals" WHERE (user_id = 1) AND ("meals"."day" = '2010-04-25') [0m
+  [4;36;1mMeal Load (0.1ms)[0m   [0;1mSELECT * FROM "meals" WHERE (user_id = 1) AND ("meals"."day" = '2010-04-26') [0m
+  [4;35;1mMeal Load (0.1ms)[0m   [0mSELECT * FROM "meals" WHERE (user_id = 1) AND ("meals"."day" = '2010-04-27') [0m
+Rendering template within layouts/application
+Rendering meals/index
+  [4;36;1mRecipe Load (0.3ms)[0m   [0;1mSELECT * FROM "recipes" WHERE ("recipes"."id" = 29) [0m
+Rendered meals/_meal (7.6ms)
+  [4;35;1mRecipe Load (0.3ms)[0m   [0mSELECT * FROM "recipes" WHERE ("recipes"."id" = 36) [0m
+Rendered meals/_meal (1.5ms)
+  [4;36;1mRecipe Load (0.3ms)[0m   [0;1mSELECT * FROM "recipes" WHERE ("recipes"."id" = 37) [0m
+Rendered meals/_meal (1.5ms)
+Rendered layouts/_header (0.2ms)
+Completed in 34ms (View: 16, DB: 2) | 200 OK [http://localhost/meals?d=2010-04-26]

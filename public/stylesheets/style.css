@@ -218,3 +218,17 @@ input[disabled] {
 
 #backLink {
   margin-top: 20px; }
+
+#meal_day {
+  visibility: hidden;
+  width: 0px;
+  height: 0px; }
+
+#rescheduleLink {
+  cursor: pointer; }
+
+h2 {
+  font-size: 20px; }
+
+h1 {
+  margin-bottom: 20px; }
