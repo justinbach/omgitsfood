@@ -21,7 +21,7 @@ class MealsController < ApplicationController
     @meal = Meal.new
     @meal.day = params[:day]
     @meal.recipe = Recipe.new
-    @recipes = Recipe.all(:order => "upper(title) ASC")
+    @recipes = Recipe.find_by_user_id(current_user, :order => "upper(title) ASC")
   end
 
   def create
@@ -32,7 +32,7 @@ class MealsController < ApplicationController
     if(@meal.save)
       redirect_back :action => 'index'
     else
-      @recipes = Recipe.all(:order => "upper(title) ASC")
+      @recipes = Recipe.find_by_user_id(current_user, :order => "upper(title) ASC")
       render :action => "new"
     end
   end
