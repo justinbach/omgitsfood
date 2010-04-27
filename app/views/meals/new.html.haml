@@ -18,12 +18,12 @@
         = recipe_form.text_area :directions
         %br
       = submit_tag 'Add and Schedule Recipe '
-- if @recipes
-  #recipePickerForm
-    - form_for @meal, :url => { :action => "create"} do |meal_form|
-      = hidden_field(:meal, :day)
-      - meal_form.fields_for :recipe do |recipe_form|
-        %h2 Use an existing recipe
-        = collection_select(:recipe, :id, @recipes, :id, :title, options = {:size => 10} )
-      %br
-      = submit_tag 'Schedule Recipe'
+  - if @recipes
+    #recipePickerForm
+      - form_for @meal, :url => { :action => "create"} do |meal_form|
+        = hidden_field(:meal, :day)
+        - meal_form.fields_for :recipe do |recipe_form|
+          %h2 Use an existing recipe
+          = collection_select(:recipe, :id, @recipes, :id, :title, options = {:size => 10} )
+        %br
+        = submit_tag 'Schedule Recipe'
