@@ -106,6 +106,13 @@ h1 {
     text-decoration: none;
     font-weight: bold; }
 
+#footer {
+  width: 100%;
+  text-align: right;
+  margin-top: 20px;
+  font-size: 10px;
+  font-weight: bold; }
+
 #mealDays {
   margin: 20px auto 0px;
   width: 798px; }

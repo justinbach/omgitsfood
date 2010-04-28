@@ -18,8 +18,8 @@
 .clearDiv
 #dateLinks
   .older
-    = link_to "&larr; older", url_for(:controller => 'meals', :action => 'index', :d => @centerDate - 3)
+    = link_to "&larr; older", url_for(:controller => 'meals', :action => 'index', :d => @centerDate - 3), :class => "utilityLink"
   .today
-    = link_to "today", url_for(:controller => 'meals', :action => 'index', :d => Date.today)
+    = link_to "today", url_for(:controller => 'meals', :action => 'index', :d => Date.today), :class => "utilityLink"
   .newer
-    = link_to "newer &rarr;", url_for(:controller => 'meals', :action => 'index', :d => @centerDate + 3)
+    = link_to "newer &rarr;", url_for(:controller => 'meals', :action => 'index', :d => @centerDate + 3), :class => "utilityLink"

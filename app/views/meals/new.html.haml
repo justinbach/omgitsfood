@@ -17,7 +17,7 @@
         = label(:recipe, :directions)
         = recipe_form.text_area :directions
         %br
-      = submit_tag 'Add and Schedule Recipe'
+      = submit_tag 'add and schedule recipe'
   - if @recipes
     #recipePickerForm
       - form_for @meal, :url => { :action => "create"} do |meal_form|
@@ -26,4 +26,4 @@
           %h2 Use an existing recipe
           = collection_select(:recipe, :id, @recipes, :id, :title, options = {:size => 10} )
         %br
-        = submit_tag 'Schedule Recipe'
+        = submit_tag 'schedule recipe'
