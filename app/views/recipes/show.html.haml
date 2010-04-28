@@ -1,15 +1,10 @@
 %h1= "Recipe: #{@recipe.title}"
-#recipeForm
-  = error_messages_for :recipe
-  - form_for @recipe, :url => { :action => "update" } do |recipe_form|
-    = hidden_field(:recipe, :id)
-    = label(:recipe, :title)
-    = recipe_form.text_field :title
-    %br
-    = label(:recipe, :ingredients)
-    = recipe_form.text_area :ingredients
-    %br
-    = label(:recipe, :directions)
-    = recipe_form.text_area :directions
-    %br
-    = submit_tag 'Update recipe'
+#editRecipeLink= edit_recipe_link_display
+#viewMeal
+  #ingredients
+    %h3 Ingredients
+    %p= @recipe.ingredients.gsub(/\n/,'<br/>')
+  #directions
+    %h3 Directions
+    %p= @recipe.directions.gsub(/\n/,'<br/>')
+  #backLink= link_to "&larr; Back to recipes", {:action => "index"}, :class => "utilityLink"

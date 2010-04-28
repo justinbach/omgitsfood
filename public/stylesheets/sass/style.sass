@@ -4,6 +4,9 @@
 !black = #333
 !gray = #999
 
+// mixins *********************************************************************
+
+
 // general structure and typography *******************************************
 
 html
@@ -57,6 +60,10 @@ h1
   :-webkit-border-radius 25px
   :-moz-border-radius 25px
   :background-color #F6F6F6
+  
+.utilityLink
+  color = !accentColor
+
 
 // header and nav  
 
@@ -91,10 +98,12 @@ h1
       :padding 5px
       :margin 0 5px
       &:hover
-        :color white
-        background-color = !accentColor
+        color = !accentColor
       &:last-child
         :margin-right 0px
+    a.navActive
+      :color white
+      background-color = !accentColor
 
 #mainContent
   h1
@@ -222,7 +231,7 @@ input[disabled]
       :margin-top 20px
       :width 300px
       :border 2px solid gray
-  #mealForm
+  #recipeForm
     :border-right 1px black solid
     :float left
     :width 400px
@@ -250,5 +259,54 @@ h2
   :font-size 20px
 h1
   :margin-bottom 20px
+
+// recipes index **************************************************************
+#recipeIndex
+  :margin 40px 0 20px 0
+  h2
+    :font-size 20px
+    :margin-bottom 15px 
+  input, textarea
+    :margin 0 0 10px 0
+    :width 300px
+  textarea
+    :height 100px
+  input[type=submit]
+    :width auto
+  label
+    :margin 10px 0 0 0
+  #userRecipes
+    :border-right 1px black solid
+    :float left
+    :width 400px
+    label
+      :width 200px
+      :display block
+  #otherRecipes
+    :padding-left 25px
+    :float left
+    :width 400px
+    label
+      :display block
+    input[type=submit]
+      :margin-top 20px
+    select
+      :margin-top 20px
+      :width 300px
+      :border 2px solid gray
+
+// recipes view/edit **********************************************************
+
+#editRecipeForm
+  #recipeForms
+    #recipeForm
+      :border none
+      input, textarea
+        :width 400px
+      input[type=submit]
+        :width auto
+      :float none
+        
+      
 
   

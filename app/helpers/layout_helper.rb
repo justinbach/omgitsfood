@@ -19,4 +19,15 @@ module LayoutHelper
   def javascript(*args)
     content_for(:head) { javascript_include_tag(*args) }
   end
+  
+  # thanks to http://groups.google.co.in/group/rubyonrails-talk/browse_thread/thread/cce32744dd41ff83
+  def nav_link_to(name, location, controller) 
+    if params[:controller] == controller
+      html_options = { :class => 'navActive' }
+    else
+      html_options = {}
+    end
+    link_to name, location, html_options
+  end
+  
 end

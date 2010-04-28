@@ -49,6 +49,9 @@ h1 {
   -moz-border-radius: 25px;
   background-color: #F6F6F6; }
 
+.utilityLink {
+  color: #fa6900; }
+
 #header {
   height: 60px;
   width: 100%;
@@ -80,10 +83,12 @@ h1 {
       padding: 5px;
       margin: 0 5px; }
       #header #nav a:hover {
-        color: white;
-        background-color: #fa6900; }
+        color: #fa6900; }
       #header #nav a:last-child {
         margin-right: 0px; }
+    #header #nav a.navActive {
+      color: white;
+      background-color: #fa6900; }
 
 #mainContent h1 {
   text-align: left;
@@ -201,11 +206,11 @@ input[disabled] {
       margin-top: 20px;
       width: 300px;
       border: 2px solid gray; }
-  #recipeForms #mealForm {
+  #recipeForms #recipeForm {
     border-right: 1px black solid;
     float: left;
     width: 400px; }
-    #recipeForms #mealForm label {
+    #recipeForms #recipeForm label {
       width: 200px;
       display: block; }
 
@@ -232,3 +237,45 @@ h2 {
 
 h1 {
   margin-bottom: 20px; }
+
+#recipeIndex {
+  margin: 40px 0 20px 0; }
+  #recipeIndex h2 {
+    font-size: 20px;
+    margin-bottom: 15px; }
+  #recipeIndex input, #recipeIndex textarea {
+    margin: 0 0 10px 0;
+    width: 300px; }
+  #recipeIndex textarea {
+    height: 100px; }
+  #recipeIndex input[type=submit] {
+    width: auto; }
+  #recipeIndex label {
+    margin: 10px 0 0 0; }
+  #recipeIndex #userRecipes {
+    border-right: 1px black solid;
+    float: left;
+    width: 400px; }
+    #recipeIndex #userRecipes label {
+      width: 200px;
+      display: block; }
+  #recipeIndex #otherRecipes {
+    padding-left: 25px;
+    float: left;
+    width: 400px; }
+    #recipeIndex #otherRecipes label {
+      display: block; }
+    #recipeIndex #otherRecipes input[type=submit] {
+      margin-top: 20px; }
+    #recipeIndex #otherRecipes select {
+      margin-top: 20px;
+      width: 300px;
+      border: 2px solid gray; }
+
+#editRecipeForm #recipeForms #recipeForm {
+  border: none;
+  float: none; }
+  #editRecipeForm #recipeForms #recipeForm input, #editRecipeForm #recipeForms #recipeForm textarea {
+    width: 400px; }
+  #editRecipeForm #recipeForms #recipeForm input[type=submit] {
+    width: auto; }

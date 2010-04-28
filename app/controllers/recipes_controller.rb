@@ -1,10 +1,22 @@
 class RecipesController < ApplicationController
+  
+  before_filter :login_required
+  
   def index
-    @recipes = Recipe.all(:order => "created_at DESC")
+    @user_recipes = Recipe.find_all_by_user_id(current_user, 
+                                            :order => "upper(title) ASC")
+    @other_recipes = Recipe.find(:all, 
+      :conditions => [ "user_id != :user_id", {:user_id => current_user}], 
+                                            :order => "upper(title) ASC")
   end
   
   def edit
     @recipe = Recipe.find(params[:id])
+    if @recipe.user == current_user
+      render :action => "edit"
+    else
+      render :action => "show"
+    end
   end
   
   def show
@@ -14,7 +26,7 @@ class RecipesController < ApplicationController
   def update
     @recipe = Recipe.find(params[:recipe][:id])
     if @recipe.update_attributes(params[:recipe])
-      flash[:notice] = "Recipe was successfully updated."
+      flash[:notice] = "#{@recipe.title} was successfully updated."
       redirect_to(:controller => "recipes", :action => "index")
     else
       render :action => "show"

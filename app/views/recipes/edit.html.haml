@@ -1,14 +1,19 @@
-%h1 Edit Recipe
-#recipeForm
-  - form_for @recipe, :url => { :action => "update" } do |recipe_form|
-    = hidden_field(:recipe, :id)
-    = label(:recipe, :title)
-    = recipe_form.text_field :title
-    %br
-    = label(:recipe, :ingredients)
-    = recipe_form.text_area :ingredients
-    %br
-    = label(:recipe, :directions)
-    = recipe_form.text_area :directions
-    %br
-    = submit_tag 'Update recipe'
+= javascript_include_tag('jquery.autogrow')
+= javascript_include_tag('recipe_edit')
+%h1= "Edit Recipe: #{@recipe.title}"
+#editRecipeForm
+  #recipeForms
+    #recipeForm
+      - form_for @recipe, :url => { :action => "update" } do |recipe_form|
+        = hidden_field(:recipe, :id)
+        = label(:recipe, :title)
+        = recipe_form.text_field :title
+        %br
+        = label(:recipe, :ingredients)
+        = recipe_form.text_area :ingredients
+        %br
+        = label(:recipe, :directions)
+        = recipe_form.text_area :directions
+        %br
+        = submit_tag 'Update recipe'
+#backLink= link_to "&larr; Back to #{@recipe.title}", :back, :class => "utilityLink"

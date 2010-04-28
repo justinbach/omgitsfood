@@ -3,7 +3,7 @@
 %h1= "Schedule recipe for " + @meal.day.strftime("%A, %B %d, %Y")
 = error_messages_for :meal
 #recipeForms
-  #mealForm
+  #recipeForm
     %h2 Create a new recipe
     - form_for @meal, :url => { :action => "create" } do |meal_form|
       = hidden_field(:meal, :day)
@@ -17,7 +17,7 @@
         = label(:recipe, :directions)
         = recipe_form.text_area :directions
         %br
-      = submit_tag 'Add and Schedule Recipe '
+      = submit_tag 'Add and Schedule Recipe'
   - if @recipes
     #recipePickerForm
       - form_for @meal, :url => { :action => "create"} do |meal_form|
