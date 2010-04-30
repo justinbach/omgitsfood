@@ -113,7 +113,8 @@ h1 {
   text-align: right;
   margin-top: 20px;
   font-size: 10px;
-  font-weight: bold; }
+  font-weight: bold;
+  font-family: Arial, Helvetica, sans-serif; }
 
 #mealDays {
   margin: 20px auto 0px;
