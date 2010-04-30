@@ -1,0 +1,6 @@
+%h1 Browsing Users
+#flash= flash[:notice]
+#userIndex
+  %h2 All Users
+  - @users.each do |u|
+    %li= link_to u.username, u

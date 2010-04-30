@@ -1,4 +1,10 @@
 class UsersController < ApplicationController
+  
+  def index
+    @users = User.find(:all, 
+                :conditions => ["username != :username", {:username => current_user.username}])
+  end
+  
   def new
     @user = User.new
   end
@@ -13,4 +19,5 @@ class UsersController < ApplicationController
       render :action => 'new'
     end
   end
+  
 end
