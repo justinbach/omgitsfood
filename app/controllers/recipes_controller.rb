@@ -1,5 +1,7 @@
 class RecipesController < ApplicationController
   
+  include RecipeScraper
+  
   before_filter :login_required
   
   def index
@@ -32,4 +34,16 @@ class RecipesController < ApplicationController
       render :action => "show"
     end
   end
+  
+  def recipe_by_link
+    @recipe = load_recipe params[:link]
+    if @recipe
+      render :text  => @recipe.to_json
+    else
+      render :text => "{ 'failed': true }"
+    end
+  end
+  
+  private
+  
 end

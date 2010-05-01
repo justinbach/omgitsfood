@@ -51,5 +51,7 @@ ActionController::Routing::Routes.draw do |map|
 
   map.users 'users', :controller => 'users', :action => 'index'
 
+  map.connect "recipe_by_link", :controller => 'recipes', :action => 'recipe_by_link'
+
   map.root :controller => "users"
 end

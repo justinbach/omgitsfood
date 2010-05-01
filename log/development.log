@@ -28561,3 +28561,1730 @@ Migrating to AddLinkToRecipes (20100501135835)
   [4;36;1mSQL (0.0ms)[0m   [0;1mPRAGMA index_list("meals")[0m
   [4;35;1mSQL (0.0ms)[0m   [0mPRAGMA index_list("recipes")[0m
   [4;36;1mSQL (0.0ms)[0m   [0;1mPRAGMA index_list("users")[0m
+
+
+Processing RecipesController#show (for 127.0.0.1 at 2010-05-01 11:38:44) [GET]
+  Parameters: {"action"=>"show", "id"=>"35", "controller"=>"recipes"}
+  [4;36;1mUser Load (0.9ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 3) [0m
+  [4;35;1mRecipe Load (0.5ms)[0m   [0mSELECT * FROM "recipes" WHERE ("recipes"."id" = 35) [0m
+Rendering template within layouts/application
+Rendering recipes/show
+  [4;36;1mUser Load (0.7ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+Rendered layouts/_header (5.3ms)
+Rendered layouts/_footer (18.4ms)
+Completed in 220ms (View: 87, DB: 2) | 200 OK [http://localhost/recipes/35]
+
+
+Processing RecipesController#index (for 127.0.0.1 at 2010-05-01 11:38:48) [GET]
+  Parameters: {"action"=>"index", "controller"=>"recipes"}
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 3) [0m
+  [4;36;1mRecipe Load (1.1ms)[0m   [0;1mSELECT * FROM "recipes" WHERE ("recipes"."user_id" = 3) ORDER BY upper(title) ASC[0m
+  [4;35;1mRecipe Load (2.0ms)[0m   [0mSELECT * FROM "recipes" WHERE (user_id != 3) ORDER BY upper(title) ASC[0m
+Rendering template within layouts/application
+Rendering recipes/index
+Rendered layouts/_header (0.3ms)
+Rendered layouts/_footer (0.4ms)
+Completed in 54ms (View: 31, DB: 3) | 200 OK [http://localhost/recipes]
+
+
+Processing RecipesController#show (for 127.0.0.1 at 2010-05-01 11:38:49) [GET]
+  Parameters: {"action"=>"show", "id"=>"41", "controller"=>"recipes"}
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 3) [0m
+  [4;35;1mRecipe Load (0.4ms)[0m   [0mSELECT * FROM "recipes" WHERE ("recipes"."id" = 41) [0m
+Rendering template within layouts/application
+Rendering recipes/show
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 3) [0m
+Rendered layouts/_header (1.4ms)
+Rendered layouts/_footer (0.4ms)
+Completed in 23ms (View: 7, DB: 1) | 200 OK [http://localhost/recipes/41]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-05-01 11:40:05) [GET]
+
+ActionController::RoutingError (No route matches "/recipe_of_link" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing RecipesController#recipe_by_link (for 127.0.0.1 at 2010-05-01 11:40:08) [GET]
+  Parameters: {"action"=>"recipe_by_link", "controller"=>"recipes"}
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 3) [0m
+
+TypeError (can't convert nil into String):
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/open-uri.rb:32:in `open_uri_original_open'
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/open-uri.rb:32:in `open'
+  lib/recipe_scraper.rb:11:in `load_recipe'
+  app/controllers/recipes_controller.rb:39:in `recipe_by_link'
+  haml (2.2.23) lib/sass/plugin/rails.rb:20:in `process'
+
+Rendered rescues/_trace (48.2ms)
+Rendered rescues/_request_and_response (2.1ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing RecipesController#recipe_by_link (for 127.0.0.1 at 2010-05-01 11:40:31) [GET]
+  Parameters: {"action"=>"recipe_by_link", "controller"=>"recipes", "link"=>"http://google.com"}
+  [4;36;1mUser Load (0.4ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 3) [0m
+Completed in 263ms (View: 1, DB: 0) | 200 OK [http://localhost/recipe_by_link?link=http://google.com]
+
+
+Processing RecipesController#recipe_by_link (for 127.0.0.1 at 2010-05-01 11:40:45) [GET]
+  Parameters: {"action"=>"recipe_by_link", "controller"=>"recipes", "link"=>"http://www.epicurious.com/recipes/food/views/Bakewell-Tart-with-Raspberry-Preserves-358564"}
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 3) [0m
+Completed in 404ms (View: 1, DB: 0) | 200 OK [http://localhost/recipe_by_link?link=http://www.epicurious.com/recipes/food/views/Bakewell-Tart-with-Raspberry-Preserves-358564]
+
+
+Processing RecipesController#show (for 127.0.0.1 at 2010-05-01 11:41:52) [GET]
+  Parameters: {"action"=>"show", "id"=>"42", "controller"=>"recipes"}
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 3) [0m
+  [4;35;1mRecipe Load (0.4ms)[0m   [0mSELECT * FROM "recipes" WHERE ("recipes"."id" = 42) [0m
+Rendering template within layouts/application
+Rendering recipes/show
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 3) [0m
+Rendered layouts/_header (1.4ms)
+Rendered layouts/_footer (0.4ms)
+Completed in 23ms (View: 7, DB: 1) | 200 OK [http://localhost/recipes/42]
+
+
+Processing UsersController#index (for 127.0.0.1 at 2010-05-01 11:41:55) [GET]
+  Parameters: {"action"=>"index", "controller"=>"users"}
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 3) [0m
+  [4;36;1mUser Load (0.4ms)[0m   [0;1mSELECT * FROM "users" WHERE (username != 'tester') [0m
+Rendering template within layouts/application
+Rendering users/index
+Rendered layouts/_header (0.3ms)
+Rendered layouts/_footer (0.4ms)
+Completed in 26ms (View: 16, DB: 1) | 200 OK [http://localhost/]
+
+
+Processing MealsController#index (for 127.0.0.1 at 2010-05-01 11:41:56) [GET]
+  Parameters: {"action"=>"index", "controller"=>"meals", "user_id"=>"3"}
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 3) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 3) [0m
+  [4;35;1mMeal Load (0.2ms)[0m   [0mSELECT * FROM "meals" WHERE (user_id = 3) AND ("meals"."day" = '2010-04-30') [0m
+  [4;36;1mMeal Load (0.3ms)[0m   [0;1mSELECT * FROM "meals" WHERE (user_id = 3) AND ("meals"."day" = '2010-05-01') [0m
+  [4;35;1mMeal Load (0.3ms)[0m   [0mSELECT * FROM "meals" WHERE (user_id = 3) AND ("meals"."day" = '2010-05-02') [0m
+Rendering template within layouts/application
+Rendering meals/index
+  [4;36;1mRecipe Load (0.4ms)[0m   [0;1mSELECT * FROM "recipes" WHERE ("recipes"."id" = 41) [0m
+Rendered meals/_meal (12.2ms)
+  [4;35;1mRecipe Load (0.4ms)[0m   [0mSELECT * FROM "recipes" WHERE ("recipes"."id" = 42) [0m
+Rendered meals/_meal (1.6ms)
+Rendered layouts/_header (0.3ms)
+Rendered layouts/_footer (0.4ms)
+Completed in 56ms (View: 36, DB: 2) | 200 OK [http://localhost/users/3/meals]
+
+
+Processing MealsController#new (for 127.0.0.1 at 2010-05-01 11:42:00) [GET]
+  Parameters: {"action"=>"new", "controller"=>"meals", "day"=>"May-02-2010", "user_id"=>"3"}
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 3) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 3) [0m
+  [4;36;1mRecipe Load (1.4ms)[0m   [0;1mSELECT * FROM "recipes" WHERE ("recipes"."user_id" = 3) ORDER BY upper(title) ASC[0m
+Rendering template within layouts/application
+Rendering meals/new
+Rendered layouts/_header (0.3ms)
+Rendered layouts/_footer (0.5ms)
+Completed in 70ms (View: 26, DB: 2) | 200 OK [http://localhost/users/3/meals/new?day=May-02-2010]
+
+
+Processing MealsController#new (for 127.0.0.1 at 2010-05-01 11:42:28) [GET]
+  Parameters: {"action"=>"new", "controller"=>"meals", "day"=>"May-02-2010", "user_id"=>"3"}
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 3) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 3) [0m
+  [4;35;1mRecipe Load (1.1ms)[0m   [0mSELECT * FROM "recipes" WHERE ("recipes"."user_id" = 3) ORDER BY upper(title) ASC[0m
+Rendering template within layouts/application
+Rendering meals/new
+Rendered layouts/_header (0.3ms)
+Rendered layouts/_footer (0.5ms)
+Completed in 37ms (View: 14, DB: 1) | 200 OK [http://localhost/users/3/meals/new?day=May-02-2010]
+
+
+Processing MealsController#create (for 127.0.0.1 at 2010-05-01 11:42:32) [POST]
+  Parameters: {"commit"=>"add and schedule recipe", "meal"=>{"recipe_attributes"=>{"title"=>"", "prep_time"=>"", "ingredients"=>"", "directions"=>"", "yield"=>"", "link"=>"j"}, "day"=>"May-02-2010"}, "action"=>"create", "authenticity_token"=>"vHPlWi2McLaHjPqRhUsrRMIZMocno8g+JLuvn/SEQ2k=", "controller"=>"meals", "user_id"=>"3"}
+  [4;36;1mUser Load (0.5ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 3) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 3) [0m
+  [4;36;1mRecipe Load (2.3ms)[0m   [0;1mSELECT * FROM "recipes" WHERE ("recipes"."user_id" = 3) ORDER BY upper(title) ASC[0m
+Rendering template within layouts/application
+Rendering meals/new
+Rendered layouts/_header (0.3ms)
+Rendered layouts/_footer (0.4ms)
+Completed in 62ms (View: 21, DB: 3) | 200 OK [http://localhost/users/3/meals]
+
+
+Processing RecipesController#recipe_by_link (for 127.0.0.1 at 2010-05-01 11:44:29) [GET]
+  Parameters: {"action"=>"recipe_by_link", "controller"=>"recipes", "link"=>"http://www.epicurious.com/recipes/food/views/Bakewell-Tart-with-Raspberry-Preserves-358564"}
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 3) [0m
+Completed in 383ms (View: 1, DB: 0) | 200 OK [http://localhost/recipe_by_link?link=http://www.epicurious.com/recipes/food/views/Bakewell-Tart-with-Raspberry-Preserves-358564]
+
+
+Processing RecipesController#recipe_by_link (for 127.0.0.1 at 2010-05-01 11:45:04) [GET]
+  Parameters: {"action"=>"recipe_by_link", "controller"=>"recipes", "link"=>"http://www.epicurious.com/recipes/food/views/Bakewell-Tart-with-Raspberry-Preserves-358564"}
+  [4;36;1mUser Load (0.4ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 3) [0m
+Completed in 697ms (View: 2, DB: 0) | 200 OK [http://localhost/recipe_by_link?link=http://www.epicurious.com/recipes/food/views/Bakewell-Tart-with-Raspberry-Preserves-358564]
+
+
+Processing RecipesController#recipe_by_link (for 127.0.0.1 at 2010-05-01 11:45:09) [GET]
+  Parameters: {"action"=>"recipe_by_link", "controller"=>"recipes", "link"=>"http://www.epicurious.com/recipes/food/views/Bakewell-Tart-with-Raspberry-Preserves-358564"}
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 3) [0m
+Completed in 835ms (View: 1, DB: 0) | 200 OK [http://localhost/recipe_by_link?link=http://www.epicurious.com/recipes/food/views/Bakewell-Tart-with-Raspberry-Preserves-358564]
+
+
+Processing RecipesController#recipe_by_link (for 127.0.0.1 at 2010-05-01 11:45:13) [GET]
+  Parameters: {"action"=>"recipe_by_link", "controller"=>"recipes", "link"=>"http://www.epijcurious.com/recipes/food/views/Bakewell-Tart-with-Raspberry-Preserves-358564"}
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 3) [0m
+Completed in 391ms (View: 1, DB: 0) | 200 OK [http://localhost/recipe_by_link?link=http://www.epijcurious.com/recipes/food/views/Bakewell-Tart-with-Raspberry-Preserves-358564]
+
+
+Processing RecipesController#recipe_by_link (for 127.0.0.1 at 2010-05-01 11:45:26) [GET]
+  Parameters: {"action"=>"recipe_by_link", "controller"=>"recipes", "link"=>"http://www.jepicurious.com/recipes/food/views/Bakewell-Tart-with-Raspberry-Preserves-358564"}
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 3) [0m
+Completed in 304ms (View: 1, DB: 0) | 200 OK [http://localhost/recipe_by_link?link=http://www.jepicurious.com/recipes/food/views/Bakewell-Tart-with-Raspberry-Preserves-358564]
+
+
+Processing RecipesController#recipe_by_link (for 127.0.0.1 at 2010-05-01 11:45:32) [GET]
+  Parameters: {"action"=>"recipe_by_link", "controller"=>"recipes", "link"=>"http://www.jepicurious.com/recipes/food/views/Bakewell-Tart-with-Raspberry-Preserves-358564"}
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 3) [0m
+Completed in 318ms (View: 1, DB: 0) | 200 OK [http://localhost/recipe_by_link?link=http://www.jepicurious.com/recipes/food/views/Bakewell-Tart-with-Raspberry-Preserves-358564]
+
+
+Processing UsersController#index (for 127.0.0.1 at 2010-05-01 11:46:37) [GET]
+  Parameters: {"action"=>"index", "controller"=>"users"}
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 3) [0m
+  [4;36;1mUser Load (0.5ms)[0m   [0;1mSELECT * FROM "users" WHERE (username != 'tester') [0m
+Rendering template within layouts/application
+Rendering users/index
+Rendered layouts/_header (0.3ms)
+Rendered layouts/_footer (0.5ms)
+Completed in 15ms (View: 4, DB: 1) | 200 OK [http://localhost/]
+
+
+Processing MealsController#index (for 127.0.0.1 at 2010-05-01 11:46:40) [GET]
+  Parameters: {"action"=>"index", "controller"=>"meals", "user_id"=>"3"}
+  [4;35;1mUser Load (0.4ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 3) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 3) [0m
+  [4;35;1mMeal Load (0.2ms)[0m   [0mSELECT * FROM "meals" WHERE (user_id = 3) AND ("meals"."day" = '2010-04-30') [0m
+  [4;36;1mMeal Load (0.3ms)[0m   [0;1mSELECT * FROM "meals" WHERE (user_id = 3) AND ("meals"."day" = '2010-05-01') [0m
+  [4;35;1mMeal Load (0.3ms)[0m   [0mSELECT * FROM "meals" WHERE (user_id = 3) AND ("meals"."day" = '2010-05-02') [0m
+Rendering template within layouts/application
+Rendering meals/index
+  [4;36;1mRecipe Load (0.4ms)[0m   [0;1mSELECT * FROM "recipes" WHERE ("recipes"."id" = 41) [0m
+Rendered meals/_meal (9.9ms)
+  [4;35;1mRecipe Load (0.4ms)[0m   [0mSELECT * FROM "recipes" WHERE ("recipes"."id" = 42) [0m
+Rendered meals/_meal (1.6ms)
+Rendered layouts/_header (0.4ms)
+Rendered layouts/_footer (0.5ms)
+Completed in 107ms (View: 84, DB: 2) | 200 OK [http://localhost/users/3/meals]
+
+
+Processing MealsController#new (for 127.0.0.1 at 2010-05-01 11:46:41) [GET]
+  Parameters: {"action"=>"new", "controller"=>"meals", "day"=>"Apr-30-2010", "user_id"=>"3"}
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 3) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 3) [0m
+  [4;36;1mRecipe Load (1.2ms)[0m   [0;1mSELECT * FROM "recipes" WHERE ("recipes"."user_id" = 3) ORDER BY upper(title) ASC[0m
+Rendering template within layouts/application
+Rendering meals/new
+Rendered layouts/_header (0.3ms)
+Rendered layouts/_footer (0.4ms)
+Completed in 40ms (View: 14, DB: 1) | 200 OK [http://localhost/users/3/meals/new?day=Apr-30-2010]
+
+
+Processing MealsController#create (for 127.0.0.1 at 2010-05-01 11:46:45) [POST]
+  Parameters: {"commit"=>"add and schedule recipe", "meal"=>{"recipe_attributes"=>{"title"=>"tieest", "prep_time"=>"", "ingredients"=>"", "directions"=>"", "yield"=>"", "link"=>""}, "day"=>"Apr-30-2010"}, "action"=>"create", "authenticity_token"=>"vHPlWi2McLaHjPqRhUsrRMIZMocno8g+JLuvn/SEQ2k=", "controller"=>"meals", "user_id"=>"3"}
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 3) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 3) [0m
+  [4;35;1mRecipe Load (1.1ms)[0m   [0mSELECT * FROM "recipes" WHERE ("recipes"."user_id" = 3) ORDER BY upper(title) ASC[0m
+Rendering template within layouts/application
+Rendering meals/new
+Rendered layouts/_header (0.3ms)
+Rendered layouts/_footer (0.4ms)
+Completed in 43ms (View: 16, DB: 1) | 200 OK [http://localhost/users/3/meals]
+
+
+Processing MealsController#index (for 127.0.0.1 at 2010-05-01 11:47:15) [GET]
+  Parameters: {"action"=>"index", "controller"=>"meals", "user_id"=>"3"}
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 3) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 3) [0m
+  [4;36;1mMeal Load (0.2ms)[0m   [0;1mSELECT * FROM "meals" WHERE (user_id = 3) AND ("meals"."day" = '2010-04-30') [0m
+  [4;35;1mMeal Load (0.3ms)[0m   [0mSELECT * FROM "meals" WHERE (user_id = 3) AND ("meals"."day" = '2010-05-01') [0m
+  [4;36;1mMeal Load (0.3ms)[0m   [0;1mSELECT * FROM "meals" WHERE (user_id = 3) AND ("meals"."day" = '2010-05-02') [0m
+Rendering template within layouts/application
+Rendering meals/index
+  [4;35;1mRecipe Load (0.4ms)[0m   [0mSELECT * FROM "recipes" WHERE ("recipes"."id" = 41) [0m
+Rendered meals/_meal (10.6ms)
+  [4;36;1mRecipe Load (0.4ms)[0m   [0;1mSELECT * FROM "recipes" WHERE ("recipes"."id" = 42) [0m
+Rendered meals/_meal (1.7ms)
+Rendered layouts/_header (0.3ms)
+Rendered layouts/_footer (0.4ms)
+Completed in 41ms (View: 19, DB: 2) | 200 OK [http://localhost/users/3/meals]
+
+
+Processing RecipesController#recipe_by_link (for 127.0.0.1 at 2010-05-01 11:48:36) [GET]
+  Parameters: {"action"=>"recipe_by_link", "controller"=>"recipes", "link"=>"http://www.epicurious.com/recipes/food/views/Bakewell-Tart-with-Raspberry-Preserves-358564"}
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 3) [0m
+Completed in 368ms (View: 1, DB: 0) | 200 OK [http://localhost/recipe_by_link?link=http://www.epicurious.com/recipes/food/views/Bakewell-Tart-with-Raspberry-Preserves-358564]
+
+
+Processing MealsController#index (for 127.0.0.1 at 2010-05-01 11:48:41) [GET]
+  Parameters: {"action"=>"index", "controller"=>"meals", "user_id"=>"3"}
+  [4;36;1mUser Load (0.5ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 3) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 3) [0m
+  [4;36;1mMeal Load (0.2ms)[0m   [0;1mSELECT * FROM "meals" WHERE (user_id = 3) AND ("meals"."day" = '2010-04-30') [0m
+  [4;35;1mMeal Load (0.3ms)[0m   [0mSELECT * FROM "meals" WHERE (user_id = 3) AND ("meals"."day" = '2010-05-01') [0m
+  [4;36;1mMeal Load (0.2ms)[0m   [0;1mSELECT * FROM "meals" WHERE (user_id = 3) AND ("meals"."day" = '2010-05-02') [0m
+Rendering template within layouts/application
+Rendering meals/index
+  [4;35;1mRecipe Load (0.4ms)[0m   [0mSELECT * FROM "recipes" WHERE ("recipes"."id" = 41) [0m
+Rendered meals/_meal (10.4ms)
+  [4;36;1mRecipe Load (0.4ms)[0m   [0;1mSELECT * FROM "recipes" WHERE ("recipes"."id" = 42) [0m
+Rendered meals/_meal (1.7ms)
+Rendered layouts/_header (0.3ms)
+Rendered layouts/_footer (0.4ms)
+Completed in 39ms (View: 19, DB: 2) | 200 OK [http://localhost/users/3/meals]
+
+
+Processing MealsController#new (for 127.0.0.1 at 2010-05-01 11:48:42) [GET]
+  Parameters: {"action"=>"new", "controller"=>"meals", "day"=>"Apr-30-2010", "user_id"=>"3"}
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 3) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 3) [0m
+  [4;35;1mRecipe Load (1.1ms)[0m   [0mSELECT * FROM "recipes" WHERE ("recipes"."user_id" = 3) ORDER BY upper(title) ASC[0m
+Rendering template within layouts/application
+Rendering meals/new
+Rendered layouts/_header (0.3ms)
+Rendered layouts/_footer (0.4ms)
+Completed in 39ms (View: 13, DB: 1) | 200 OK [http://localhost/users/3/meals/new?day=Apr-30-2010]
+
+
+Processing RecipesController#recipe_by_link (for 127.0.0.1 at 2010-05-01 11:48:46) [GET]
+  Parameters: {"action"=>"recipe_by_link", "controller"=>"recipes", "link"=>"test"}
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 3) [0m
+
+Errno::EISDIR (Is a directory - test):
+  hpricot (0.8.2) lib/hpricot/parse.rb:33:in `read'
+  hpricot (0.8.2) lib/hpricot/parse.rb:33:in `scan'
+  hpricot (0.8.2) lib/hpricot/parse.rb:33:in `make'
+  hpricot (0.8.2) lib/hpricot/parse.rb:4:in `Hpricot'
+  lib/recipe_scraper.rb:11:in `load_recipe'
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/open-uri.rb:32:in `open_uri_original_open'
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/open-uri.rb:32:in `open'
+  lib/recipe_scraper.rb:11:in `load_recipe'
+  app/controllers/recipes_controller.rb:39:in `recipe_by_link'
+  haml (2.2.23) lib/sass/plugin/rails.rb:20:in `process'
+
+Rendered rescues/_trace (45.7ms)
+Rendered rescues/_request_and_response (0.4ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing MealsController#new (for 127.0.0.1 at 2010-05-01 11:50:37) [GET]
+  Parameters: {"action"=>"new", "controller"=>"meals", "day"=>"Apr-30-2010", "user_id"=>"3"}
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 3) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 3) [0m
+  [4;35;1mRecipe Load (1.1ms)[0m   [0mSELECT * FROM "recipes" WHERE ("recipes"."user_id" = 3) ORDER BY upper(title) ASC[0m
+Rendering template within layouts/application
+Rendering meals/new
+Rendered layouts/_header (0.3ms)
+Rendered layouts/_footer (0.4ms)
+Completed in 38ms (View: 14, DB: 1) | 200 OK [http://localhost/users/3/meals/new?day=Apr-30-2010]
+
+
+Processing RecipesController#recipe_by_link (for 127.0.0.1 at 2010-05-01 11:50:42) [GET]
+  Parameters: {"action"=>"recipe_by_link", "controller"=>"recipes", "link"=>""}
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 3) [0m
+
+Errno::ENOENT (No such file or directory - ):
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/open-uri.rb:32:in `initialize'
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/open-uri.rb:32:in `open_uri_original_open'
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/open-uri.rb:32:in `open'
+  lib/recipe_scraper.rb:11:in `load_recipe'
+  app/controllers/recipes_controller.rb:39:in `recipe_by_link'
+  haml (2.2.23) lib/sass/plugin/rails.rb:20:in `process'
+
+Rendered rescues/_trace (45.2ms)
+Rendered rescues/_request_and_response (0.4ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing RecipesController#recipe_by_link (for 127.0.0.1 at 2010-05-01 11:50:47) [GET]
+  Parameters: {"action"=>"recipe_by_link", "controller"=>"recipes", "link"=>"lkjlkj"}
+  [4;35;1mUser Load (0.4ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 3) [0m
+
+Errno::ENOENT (No such file or directory - lkjlkj):
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/open-uri.rb:32:in `initialize'
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/open-uri.rb:32:in `open_uri_original_open'
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/open-uri.rb:32:in `open'
+  lib/recipe_scraper.rb:11:in `load_recipe'
+  app/controllers/recipes_controller.rb:39:in `recipe_by_link'
+  haml (2.2.23) lib/sass/plugin/rails.rb:20:in `process'
+
+Rendered rescues/_trace (44.4ms)
+Rendered rescues/_request_and_response (0.4ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing RecipesController#recipe_by_link (for 127.0.0.1 at 2010-05-01 11:51:10) [GET]
+  Parameters: {"action"=>"recipe_by_link", "controller"=>"recipes", "link"=>"lkjlkj"}
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 3) [0m
+
+Errno::ENOENT (No such file or directory - lkjlkj):
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/open-uri.rb:32:in `initialize'
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/open-uri.rb:32:in `open_uri_original_open'
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/open-uri.rb:32:in `open'
+  lib/recipe_scraper.rb:11:in `load_recipe'
+  app/controllers/recipes_controller.rb:39:in `recipe_by_link'
+  haml (2.2.23) lib/sass/plugin/rails.rb:20:in `process'
+
+Rendered rescues/_trace (110.6ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing RecipesController#recipe_by_link (for 127.0.0.1 at 2010-05-01 11:51:33) [GET]
+  Parameters: {"action"=>"recipe_by_link", "controller"=>"recipes", "link"=>"http://www.epicurious.com/recipes/food/views/Bakewell-Tart-with-Raspberry-Preserves-358564"}
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 3) [0m
+Completed in 614ms (View: 1, DB: 0) | 200 OK [http://localhost/recipe_by_link?link=http%3A%2F%2Fwww.epicurious.com%2Frecipes%2Ffood%2Fviews%2FBakewell-Tart-with-Raspberry-Preserves-358564]
+
+
+Processing MealsController#new (for 127.0.0.1 at 2010-05-01 11:51:51) [GET]
+  Parameters: {"action"=>"new", "controller"=>"meals", "day"=>"Apr-30-2010", "user_id"=>"3"}
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 3) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 3) [0m
+  [4;36;1mRecipe Load (1.1ms)[0m   [0;1mSELECT * FROM "recipes" WHERE ("recipes"."user_id" = 3) ORDER BY upper(title) ASC[0m
+Rendering template within layouts/application
+Rendering meals/new
+Rendered layouts/_header (0.3ms)
+Rendered layouts/_footer (0.4ms)
+Completed in 38ms (View: 14, DB: 1) | 200 OK [http://localhost/users/3/meals/new?day=Apr-30-2010]
+
+
+Processing RecipesController#recipe_by_link (for 127.0.0.1 at 2010-05-01 11:51:56) [GET]
+  Parameters: {"action"=>"recipe_by_link", "controller"=>"recipes", "link"=>"http://www.epicurious.com/recipes/food/views/Bakewell-Tart-with-Raspberry-Preserves-358564"}
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 3) [0m
+Completed in 1086ms (View: 1, DB: 0) | 200 OK [http://localhost/recipe_by_link?link=http%3A%2F%2Fwww.epicurious.com%2Frecipes%2Ffood%2Fviews%2FBakewell-Tart-with-Raspberry-Preserves-358564]
+
+
+Processing RecipesController#recipe_by_link (for 127.0.0.1 at 2010-05-01 11:52:02) [GET]
+  Parameters: {"action"=>"recipe_by_link", "controller"=>"recipes", "link"=>"k"}
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 3) [0m
+
+Errno::ENOENT (No such file or directory - k):
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/open-uri.rb:32:in `initialize'
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/open-uri.rb:32:in `open_uri_original_open'
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/open-uri.rb:32:in `open'
+  lib/recipe_scraper.rb:11:in `load_recipe'
+  app/controllers/recipes_controller.rb:39:in `recipe_by_link'
+  haml (2.2.23) lib/sass/plugin/rails.rb:20:in `process'
+
+Rendered rescues/_trace (43.7ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing RecipesController#recipe_by_link (for 127.0.0.1 at 2010-05-01 11:52:05) [GET]
+  Parameters: {"action"=>"recipe_by_link", "controller"=>"recipes", "link"=>"http://www.epicurious.com/recipes/food/views/Bakewell-Tart-with-Raspberry-Preserves-358564"}
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 3) [0m
+Completed in 500ms (View: 1, DB: 0) | 200 OK [http://localhost/recipe_by_link?link=http%3A%2F%2Fwww.epicurious.com%2Frecipes%2Ffood%2Fviews%2FBakewell-Tart-with-Raspberry-Preserves-358564]
+
+
+Processing MealsController#new (for 127.0.0.1 at 2010-05-01 11:52:28) [GET]
+  Parameters: {"action"=>"new", "controller"=>"meals", "day"=>"Apr-30-2010", "user_id"=>"3"}
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 3) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 3) [0m
+  [4;36;1mRecipe Load (1.1ms)[0m   [0;1mSELECT * FROM "recipes" WHERE ("recipes"."user_id" = 3) ORDER BY upper(title) ASC[0m
+Rendering template within layouts/application
+Rendering meals/new
+Rendered layouts/_header (0.3ms)
+Rendered layouts/_footer (0.4ms)
+Completed in 38ms (View: 14, DB: 1) | 200 OK [http://localhost/users/3/meals/new?day=Apr-30-2010]
+
+
+Processing RecipesController#recipe_by_link (for 127.0.0.1 at 2010-05-01 11:52:31) [GET]
+  Parameters: {"action"=>"recipe_by_link", "controller"=>"recipes", "link"=>"k"}
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 3) [0m
+
+Errno::ENOENT (No such file or directory - k):
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/open-uri.rb:32:in `initialize'
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/open-uri.rb:32:in `open_uri_original_open'
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/open-uri.rb:32:in `open'
+  lib/recipe_scraper.rb:11:in `load_recipe'
+  app/controllers/recipes_controller.rb:39:in `recipe_by_link'
+  haml (2.2.23) lib/sass/plugin/rails.rb:20:in `process'
+
+Rendered rescues/_trace (43.4ms)
+Rendered rescues/_request_and_response (0.4ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing RecipesController#recipe_by_link (for 127.0.0.1 at 2010-05-01 11:52:33) [GET]
+  Parameters: {"action"=>"recipe_by_link", "controller"=>"recipes", "link"=>"http://www.epicurious.com/recipes/food/views/Bakewell-Tart-with-Raspberry-Preserves-358564"}
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 3) [0m
+Completed in 491ms (View: 1, DB: 0) | 200 OK [http://localhost/recipe_by_link?link=http%3A%2F%2Fwww.epicurious.com%2Frecipes%2Ffood%2Fviews%2FBakewell-Tart-with-Raspberry-Preserves-358564]
+
+
+Processing MealsController#new (for 127.0.0.1 at 2010-05-01 11:52:52) [GET]
+  Parameters: {"action"=>"new", "controller"=>"meals", "day"=>"Apr-30-2010", "user_id"=>"3"}
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 3) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 3) [0m
+  [4;35;1mRecipe Load (1.1ms)[0m   [0mSELECT * FROM "recipes" WHERE ("recipes"."user_id" = 3) ORDER BY upper(title) ASC[0m
+Rendering template within layouts/application
+Rendering meals/new
+Rendered layouts/_header (0.3ms)
+Rendered layouts/_footer (0.4ms)
+Completed in 38ms (View: 13, DB: 1) | 200 OK [http://localhost/users/3/meals/new?day=Apr-30-2010]
+
+
+Processing MealsController#new (for 127.0.0.1 at 2010-05-01 11:52:52) [GET]
+  Parameters: {"action"=>"new", "controller"=>"meals", "day"=>"Apr-30-2010", "user_id"=>"3"}
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 3) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 3) [0m
+  [4;36;1mRecipe Load (1.1ms)[0m   [0;1mSELECT * FROM "recipes" WHERE ("recipes"."user_id" = 3) ORDER BY upper(title) ASC[0m
+Rendering template within layouts/application
+Rendering meals/new
+Rendered layouts/_header (0.3ms)
+Rendered layouts/_footer (0.4ms)
+Completed in 39ms (View: 15, DB: 1) | 200 OK [http://localhost/users/3/meals/new?day=Apr-30-2010]
+
+
+Processing RecipesController#recipe_by_link (for 127.0.0.1 at 2010-05-01 11:52:55) [GET]
+  Parameters: {"action"=>"recipe_by_link", "controller"=>"recipes", "link"=>"http://www.epicurious.com/recipes/food/views/Bakewell-Tart-with-Raspberry-Preserves-358564"}
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 3) [0m
+Completed in 1211ms (View: 1, DB: 0) | 200 OK [http://localhost/recipe_by_link?link=http%3A%2F%2Fwww.epicurious.com%2Frecipes%2Ffood%2Fviews%2FBakewell-Tart-with-Raspberry-Preserves-358564]
+
+
+Processing MealsController#new (for 127.0.0.1 at 2010-05-01 11:53:27) [GET]
+  Parameters: {"action"=>"new", "controller"=>"meals", "day"=>"Apr-30-2010", "user_id"=>"3"}
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 3) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 3) [0m
+  [4;36;1mRecipe Load (1.1ms)[0m   [0;1mSELECT * FROM "recipes" WHERE ("recipes"."user_id" = 3) ORDER BY upper(title) ASC[0m
+Rendering template within layouts/application
+Rendering meals/new
+Rendered layouts/_header (0.3ms)
+Rendered layouts/_footer (0.4ms)
+Completed in 45ms (View: 14, DB: 1) | 200 OK [http://localhost/users/3/meals/new?day=Apr-30-2010]
+
+
+Processing RecipesController#recipe_by_link (for 127.0.0.1 at 2010-05-01 11:53:29) [GET]
+  Parameters: {"action"=>"recipe_by_link", "controller"=>"recipes", "link"=>"http://www.epicurious.com/recipes/food/views/Bakewell-Tart-with-Raspberry-Preserves-358564"}
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 3) [0m
+Completed in 774ms (View: 1, DB: 0) | 200 OK [http://localhost/recipe_by_link?link=http%3A%2F%2Fwww.epicurious.com%2Frecipes%2Ffood%2Fviews%2FBakewell-Tart-with-Raspberry-Preserves-358564]
+
+
+Processing MealsController#new (for 127.0.0.1 at 2010-05-01 11:53:43) [GET]
+  Parameters: {"action"=>"new", "controller"=>"meals", "day"=>"Apr-30-2010", "user_id"=>"3"}
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 3) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 3) [0m
+  [4;36;1mRecipe Load (1.1ms)[0m   [0;1mSELECT * FROM "recipes" WHERE ("recipes"."user_id" = 3) ORDER BY upper(title) ASC[0m
+Rendering template within layouts/application
+Rendering meals/new
+Rendered layouts/_header (0.3ms)
+Rendered layouts/_footer (0.4ms)
+Completed in 40ms (View: 14, DB: 1) | 200 OK [http://localhost/users/3/meals/new?day=Apr-30-2010]
+
+
+Processing MealsController#new (for 127.0.0.1 at 2010-05-01 11:53:46) [GET]
+  Parameters: {"action"=>"new", "controller"=>"meals", "day"=>"Apr-30-2010", "user_id"=>"3"}
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 3) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 3) [0m
+  [4;35;1mRecipe Load (1.1ms)[0m   [0mSELECT * FROM "recipes" WHERE ("recipes"."user_id" = 3) ORDER BY upper(title) ASC[0m
+Rendering template within layouts/application
+Rendering meals/new
+Rendered layouts/_header (0.5ms)
+Rendered layouts/_footer (1.0ms)
+Completed in 40ms (View: 15, DB: 1) | 200 OK [http://localhost/users/3/meals/new?day=Apr-30-2010]
+
+
+Processing RecipesController#recipe_by_link (for 127.0.0.1 at 2010-05-01 11:53:49) [GET]
+  Parameters: {"action"=>"recipe_by_link", "controller"=>"recipes", "link"=>"http://www.epicurious.com/recipes/food/views/Bakewell-Tart-with-Raspberry-Preserves-358564"}
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 3) [0m
+Completed in 325ms (View: 1, DB: 0) | 200 OK [http://localhost/recipe_by_link?link=http%3A%2F%2Fwww.epicurious.com%2Frecipes%2Ffood%2Fviews%2FBakewell-Tart-with-Raspberry-Preserves-358564]
+
+
+Processing RecipesController#recipe_by_link (for 127.0.0.1 at 2010-05-01 11:54:08) [GET]
+  Parameters: {"action"=>"recipe_by_link", "controller"=>"recipes", "link"=>"j"}
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 3) [0m
+
+Errno::ENOENT (No such file or directory - j):
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/open-uri.rb:32:in `initialize'
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/open-uri.rb:32:in `open_uri_original_open'
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/open-uri.rb:32:in `open'
+  lib/recipe_scraper.rb:11:in `load_recipe'
+  app/controllers/recipes_controller.rb:39:in `recipe_by_link'
+  haml (2.2.23) lib/sass/plugin/rails.rb:20:in `process'
+
+Rendered rescues/_trace (104.5ms)
+Rendered rescues/_request_and_response (0.4ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing MealsController#new (for 127.0.0.1 at 2010-05-01 11:54:09) [GET]
+  Parameters: {"action"=>"new", "controller"=>"meals", "day"=>"Apr-30-2010", "user_id"=>"3"}
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 3) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 3) [0m
+  [4;36;1mRecipe Load (1.4ms)[0m   [0;1mSELECT * FROM "recipes" WHERE ("recipes"."user_id" = 3) ORDER BY upper(title) ASC[0m
+Rendering template within layouts/application
+Rendering meals/new
+Rendered layouts/_header (0.3ms)
+Rendered layouts/_footer (0.4ms)
+Completed in 41ms (View: 15, DB: 2) | 200 OK [http://localhost/users/3/meals/new?day=Apr-30-2010]
+
+
+Processing RecipesController#recipe_by_link (for 127.0.0.1 at 2010-05-01 11:54:11) [GET]
+  Parameters: {"action"=>"recipe_by_link", "controller"=>"recipes", "link"=>"http://www.epicurious.com/recipes/food/views/Bakewell-Tart-with-Raspberry-Preserves-358564"}
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 3) [0m
+Completed in 500ms (View: 1, DB: 0) | 200 OK [http://localhost/recipe_by_link?link=http%3A%2F%2Fwww.epicurious.com%2Frecipes%2Ffood%2Fviews%2FBakewell-Tart-with-Raspberry-Preserves-358564]
+
+
+Processing MealsController#new (for 127.0.0.1 at 2010-05-01 11:54:59) [GET]
+  Parameters: {"action"=>"new", "controller"=>"meals", "day"=>"Apr-30-2010", "user_id"=>"3"}
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 3) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 3) [0m
+  [4;36;1mRecipe Load (1.1ms)[0m   [0;1mSELECT * FROM "recipes" WHERE ("recipes"."user_id" = 3) ORDER BY upper(title) ASC[0m
+Rendering template within layouts/application
+Rendering meals/new
+Rendered layouts/_header (0.3ms)
+Rendered layouts/_footer (0.4ms)
+Completed in 39ms (View: 14, DB: 1) | 200 OK [http://localhost/users/3/meals/new?day=Apr-30-2010]
+
+
+Processing RecipesController#recipe_by_link (for 127.0.0.1 at 2010-05-01 11:55:01) [GET]
+  Parameters: {"action"=>"recipe_by_link", "controller"=>"recipes", "link"=>"  $('textarea').autogrow({     minHeight: '100px',     maxHeight: '500px'   });"}
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 3) [0m
+
+Errno::ENOENT (No such file or directory -   $('textarea').autogrow({     minHeight: '100px',     maxHeight: '500px'   });):
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/open-uri.rb:32:in `initialize'
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/open-uri.rb:32:in `open_uri_original_open'
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/open-uri.rb:32:in `open'
+  lib/recipe_scraper.rb:11:in `load_recipe'
+  app/controllers/recipes_controller.rb:39:in `recipe_by_link'
+  haml (2.2.23) lib/sass/plugin/rails.rb:20:in `process'
+
+Rendered rescues/_trace (49.2ms)
+Rendered rescues/_request_and_response (0.4ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing RecipesController#recipe_by_link (for 127.0.0.1 at 2010-05-01 11:55:06) [GET]
+  Parameters: {"action"=>"recipe_by_link", "controller"=>"recipes", "link"=>""}
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 3) [0m
+
+Errno::ENOENT (No such file or directory - ):
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/open-uri.rb:32:in `initialize'
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/open-uri.rb:32:in `open_uri_original_open'
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/open-uri.rb:32:in `open'
+  lib/recipe_scraper.rb:11:in `load_recipe'
+  app/controllers/recipes_controller.rb:39:in `recipe_by_link'
+  haml (2.2.23) lib/sass/plugin/rails.rb:20:in `process'
+
+Rendered rescues/_trace (42.9ms)
+Rendered rescues/_request_and_response (0.4ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing RecipesController#recipe_by_link (for 127.0.0.1 at 2010-05-01 11:55:23) [GET]
+  Parameters: {"action"=>"recipe_by_link", "controller"=>"recipes", "link"=>"http://www.epicurious.com/recipes/food/views/Mango-Bread-Pudding-358629"}
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 3) [0m
+Completed in 300ms (View: 1, DB: 0) | 200 OK [http://localhost/recipe_by_link?link=http%3A%2F%2Fwww.epicurious.com%2Frecipes%2Ffood%2Fviews%2FMango-Bread-Pudding-358629]
+
+
+Processing MealsController#new (for 127.0.0.1 at 2010-05-01 11:56:18) [GET]
+  Parameters: {"action"=>"new", "controller"=>"meals", "day"=>"Apr-30-2010", "user_id"=>"3"}
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 3) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 3) [0m
+  [4;36;1mRecipe Load (1.1ms)[0m   [0;1mSELECT * FROM "recipes" WHERE ("recipes"."user_id" = 3) ORDER BY upper(title) ASC[0m
+Rendering template within layouts/application
+Rendering meals/new
+Rendered layouts/_header (0.3ms)
+Rendered layouts/_footer (0.4ms)
+Completed in 39ms (View: 14, DB: 1) | 200 OK [http://localhost/users/3/meals/new?day=Apr-30-2010]
+
+
+Processing MealsController#new (for 127.0.0.1 at 2010-05-01 11:56:19) [GET]
+  Parameters: {"action"=>"new", "controller"=>"meals", "day"=>"Apr-30-2010", "user_id"=>"3"}
+  [4;35;1mUser Load (0.4ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 3) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 3) [0m
+  [4;35;1mRecipe Load (1.1ms)[0m   [0mSELECT * FROM "recipes" WHERE ("recipes"."user_id" = 3) ORDER BY upper(title) ASC[0m
+Rendering template within layouts/application
+Rendering meals/new
+Rendered layouts/_header (0.3ms)
+Rendered layouts/_footer (0.4ms)
+Completed in 39ms (View: 14, DB: 1) | 200 OK [http://localhost/users/3/meals/new?day=Apr-30-2010]
+
+
+Processing MealsController#new (for 127.0.0.1 at 2010-05-01 11:56:34) [GET]
+  Parameters: {"action"=>"new", "controller"=>"meals", "day"=>"Apr-30-2010", "user_id"=>"3"}
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 3) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 3) [0m
+  [4;36;1mRecipe Load (1.1ms)[0m   [0;1mSELECT * FROM "recipes" WHERE ("recipes"."user_id" = 3) ORDER BY upper(title) ASC[0m
+Rendering template within layouts/application
+Rendering meals/new
+Rendered layouts/_header (0.3ms)
+Rendered layouts/_footer (0.4ms)
+Completed in 38ms (View: 13, DB: 1) | 200 OK [http://localhost/users/3/meals/new?day=Apr-30-2010]
+
+
+Processing MealsController#new (for 127.0.0.1 at 2010-05-01 11:56:51) [GET]
+  Parameters: {"action"=>"new", "controller"=>"meals", "day"=>"Apr-30-2010", "user_id"=>"3"}
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 3) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 3) [0m
+  [4;35;1mRecipe Load (1.1ms)[0m   [0mSELECT * FROM "recipes" WHERE ("recipes"."user_id" = 3) ORDER BY upper(title) ASC[0m
+Rendering template within layouts/application
+Rendering meals/new
+Rendered layouts/_header (0.4ms)
+Rendered layouts/_footer (0.5ms)
+Completed in 40ms (View: 15, DB: 1) | 200 OK [http://localhost/users/3/meals/new?day=Apr-30-2010]
+
+
+Processing RecipesController#recipe_by_link (for 127.0.0.1 at 2010-05-01 11:56:54) [GET]
+  Parameters: {"action"=>"recipe_by_link", "controller"=>"recipes", "link"=>"fd"}
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 3) [0m
+
+Errno::ENOENT (No such file or directory - fd):
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/open-uri.rb:32:in `initialize'
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/open-uri.rb:32:in `open_uri_original_open'
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/open-uri.rb:32:in `open'
+  lib/recipe_scraper.rb:11:in `load_recipe'
+  app/controllers/recipes_controller.rb:39:in `recipe_by_link'
+  haml (2.2.23) lib/sass/plugin/rails.rb:20:in `process'
+
+Rendered rescues/_trace (43.5ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing RecipesController#recipe_by_link (for 127.0.0.1 at 2010-05-01 11:56:55) [GET]
+  Parameters: {"action"=>"recipe_by_link", "controller"=>"recipes", "link"=>"http://www.epicurious.com/recipes/food/views/Mango-Bread-Pudding-358629"}
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 3) [0m
+Completed in 292ms (View: 1, DB: 0) | 200 OK [http://localhost/recipe_by_link?link=http%3A%2F%2Fwww.epicurious.com%2Frecipes%2Ffood%2Fviews%2FMango-Bread-Pudding-358629]
+
+
+Processing MealsController#new (for 127.0.0.1 at 2010-05-01 12:00:00) [GET]
+  Parameters: {"action"=>"new", "controller"=>"meals", "day"=>"Apr-30-2010", "user_id"=>"3"}
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 3) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 3) [0m
+  [4;36;1mRecipe Load (1.2ms)[0m   [0;1mSELECT * FROM "recipes" WHERE ("recipes"."user_id" = 3) ORDER BY upper(title) ASC[0m
+Rendering template within layouts/application
+Rendering meals/new
+Rendered layouts/_header (0.3ms)
+Rendered layouts/_footer (0.4ms)
+Completed in 38ms (View: 14, DB: 1) | 200 OK [http://localhost/users/3/meals/new?day=Apr-30-2010]
+
+
+Processing MealsController#new (for 127.0.0.1 at 2010-05-01 12:00:02) [GET]
+  Parameters: {"action"=>"new", "controller"=>"meals", "day"=>"Apr-30-2010", "user_id"=>"3"}
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 3) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 3) [0m
+  [4;35;1mRecipe Load (1.1ms)[0m   [0mSELECT * FROM "recipes" WHERE ("recipes"."user_id" = 3) ORDER BY upper(title) ASC[0m
+Rendering template within layouts/application
+Rendering meals/new
+Rendered layouts/_header (0.3ms)
+Rendered layouts/_footer (0.4ms)
+Completed in 39ms (View: 15, DB: 1) | 200 OK [http://localhost/users/3/meals/new?day=Apr-30-2010]
+
+
+Processing RecipesController#recipe_by_link (for 127.0.0.1 at 2010-05-01 12:00:26) [GET]
+  Parameters: {"action"=>"recipe_by_link", "controller"=>"recipes", "link"=>"http://www.epicurious.com/recipes/food/views/Avocado-with-Savory-Tomato-Sorbet-and-Chips-358691"}
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 3) [0m
+Completed in 508ms (View: 1, DB: 0) | 200 OK [http://localhost/recipe_by_link?link=http%3A%2F%2Fwww.epicurious.com%2Frecipes%2Ffood%2Fviews%2FAvocado-with-Savory-Tomato-Sorbet-and-Chips-358691]
+
+
+Processing MealsController#new (for 127.0.0.1 at 2010-05-01 12:01:19) [GET]
+  Parameters: {"action"=>"new", "controller"=>"meals", "day"=>"Apr-30-2010", "user_id"=>"3"}
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 3) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 3) [0m
+  [4;35;1mRecipe Load (1.4ms)[0m   [0mSELECT * FROM "recipes" WHERE ("recipes"."user_id" = 3) ORDER BY upper(title) ASC[0m
+Rendering template within layouts/application
+Rendering meals/new
+Rendered layouts/_header (0.3ms)
+Rendered layouts/_footer (0.4ms)
+Completed in 41ms (View: 14, DB: 2) | 200 OK [http://localhost/users/3/meals/new?day=Apr-30-2010]
+
+
+Processing MealsController#new (for 127.0.0.1 at 2010-05-01 12:01:20) [GET]
+  Parameters: {"action"=>"new", "controller"=>"meals", "day"=>"Apr-30-2010", "user_id"=>"3"}
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 3) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 3) [0m
+  [4;36;1mRecipe Load (1.1ms)[0m   [0;1mSELECT * FROM "recipes" WHERE ("recipes"."user_id" = 3) ORDER BY upper(title) ASC[0m
+Rendering template within layouts/application
+Rendering meals/new
+Rendered layouts/_header (0.3ms)
+Rendered layouts/_footer (0.4ms)
+Completed in 39ms (View: 14, DB: 1) | 200 OK [http://localhost/users/3/meals/new?day=Apr-30-2010]
+
+
+Processing RecipesController#recipe_by_link (for 127.0.0.1 at 2010-05-01 12:01:22) [GET]
+  Parameters: {"action"=>"recipe_by_link", "controller"=>"recipes", "link"=>""}
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 3) [0m
+
+Errno::ENOENT (No such file or directory - ):
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/open-uri.rb:32:in `initialize'
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/open-uri.rb:32:in `open_uri_original_open'
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/open-uri.rb:32:in `open'
+  lib/recipe_scraper.rb:11:in `load_recipe'
+  app/controllers/recipes_controller.rb:39:in `recipe_by_link'
+  haml (2.2.23) lib/sass/plugin/rails.rb:20:in `process'
+
+Rendered rescues/_trace (43.1ms)
+Rendered rescues/_request_and_response (0.4ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing RecipesController#recipe_by_link (for 127.0.0.1 at 2010-05-01 12:01:24) [GET]
+  Parameters: {"action"=>"recipe_by_link", "controller"=>"recipes", "link"=>"$(\"#meal_recipe_attributes_link\").bind(\"change\", doAjaxRecipeScraping);"}
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 3) [0m
+
+Errno::ENOENT (No such file or directory - $("#meal_recipe_attributes_link").bind("change", doAjaxRecipeScraping);):
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/open-uri.rb:32:in `initialize'
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/open-uri.rb:32:in `open_uri_original_open'
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/open-uri.rb:32:in `open'
+  lib/recipe_scraper.rb:11:in `load_recipe'
+  app/controllers/recipes_controller.rb:39:in `recipe_by_link'
+  haml (2.2.23) lib/sass/plugin/rails.rb:20:in `process'
+
+Rendered rescues/_trace (43.7ms)
+Rendered rescues/_request_and_response (0.4ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing RecipesController#recipe_by_link (for 127.0.0.1 at 2010-05-01 12:01:25) [GET]
+  Parameters: {"action"=>"recipe_by_link", "controller"=>"recipes", "link"=>"$(\"#meal_recipe_attributes_link\").bind(\"change\", doAjaxRecipeScraping);"}
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 3) [0m
+
+Errno::ENOENT (No such file or directory - $("#meal_recipe_attributes_link").bind("change", doAjaxRecipeScraping);):
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/open-uri.rb:32:in `initialize'
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/open-uri.rb:32:in `open_uri_original_open'
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/open-uri.rb:32:in `open'
+  lib/recipe_scraper.rb:11:in `load_recipe'
+  app/controllers/recipes_controller.rb:39:in `recipe_by_link'
+  haml (2.2.23) lib/sass/plugin/rails.rb:20:in `process'
+
+Rendered rescues/_trace (45.0ms)
+Rendered rescues/_request_and_response (0.4ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing MealsController#new (for 127.0.0.1 at 2010-05-01 12:01:28) [GET]
+  Parameters: {"action"=>"new", "controller"=>"meals", "day"=>"Apr-30-2010", "user_id"=>"3"}
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 3) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 3) [0m
+  [4;36;1mRecipe Load (1.0ms)[0m   [0;1mSELECT * FROM "recipes" WHERE ("recipes"."user_id" = 3) ORDER BY upper(title) ASC[0m
+Rendering template within layouts/application
+Rendering meals/new
+Rendered layouts/_header (70.6ms)
+Rendered layouts/_footer (0.5ms)
+Completed in 110ms (View: 85, DB: 1) | 200 OK [http://localhost/users/3/meals/new?day=Apr-30-2010]
+
+
+Processing MealsController#new (for 127.0.0.1 at 2010-05-01 12:01:30) [GET]
+  Parameters: {"action"=>"new", "controller"=>"meals", "day"=>"Apr-30-2010", "user_id"=>"3"}
+  [4;35;1mUser Load (0.4ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 3) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 3) [0m
+  [4;35;1mRecipe Load (1.1ms)[0m   [0mSELECT * FROM "recipes" WHERE ("recipes"."user_id" = 3) ORDER BY upper(title) ASC[0m
+Rendering template within layouts/application
+Rendering meals/new
+Rendered layouts/_header (0.3ms)
+Rendered layouts/_footer (0.4ms)
+Completed in 39ms (View: 14, DB: 1) | 200 OK [http://localhost/users/3/meals/new?day=Apr-30-2010]
+
+
+Processing RecipesController#recipe_by_link (for 127.0.0.1 at 2010-05-01 12:01:31) [GET]
+  Parameters: {"action"=>"recipe_by_link", "controller"=>"recipes", "link"=>""}
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 3) [0m
+
+Errno::ENOENT (No such file or directory - ):
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/open-uri.rb:32:in `initialize'
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/open-uri.rb:32:in `open_uri_original_open'
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/open-uri.rb:32:in `open'
+  lib/recipe_scraper.rb:11:in `load_recipe'
+  app/controllers/recipes_controller.rb:39:in `recipe_by_link'
+  haml (2.2.23) lib/sass/plugin/rails.rb:20:in `process'
+
+Rendered rescues/_trace (45.0ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing RecipesController#recipe_by_link (for 127.0.0.1 at 2010-05-01 12:01:33) [GET]
+  Parameters: {"action"=>"recipe_by_link", "controller"=>"recipes", "link"=>"$(\"#meal_recipe_attributes_link\").bind(\"change\", doAjaxRecipeScraping);"}
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 3) [0m
+
+Errno::ENOENT (No such file or directory - $("#meal_recipe_attributes_link").bind("change", doAjaxRecipeScraping);):
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/open-uri.rb:32:in `initialize'
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/open-uri.rb:32:in `open_uri_original_open'
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/open-uri.rb:32:in `open'
+  lib/recipe_scraper.rb:11:in `load_recipe'
+  app/controllers/recipes_controller.rb:39:in `recipe_by_link'
+  haml (2.2.23) lib/sass/plugin/rails.rb:20:in `process'
+
+Rendered rescues/_trace (115.0ms)
+Rendered rescues/_request_and_response (0.4ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing RecipesController#recipe_by_link (for 127.0.0.1 at 2010-05-01 12:01:33) [GET]
+  Parameters: {"action"=>"recipe_by_link", "controller"=>"recipes", "link"=>"$(\"#meal_recipe_attributes_link\").bind(\"change\", doAjaxRecipeScraping);"}
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 3) [0m
+
+Errno::ENOENT (No such file or directory - $("#meal_recipe_attributes_link").bind("change", doAjaxRecipeScraping);):
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/open-uri.rb:32:in `initialize'
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/open-uri.rb:32:in `open_uri_original_open'
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/open-uri.rb:32:in `open'
+  lib/recipe_scraper.rb:11:in `load_recipe'
+  app/controllers/recipes_controller.rb:39:in `recipe_by_link'
+  haml (2.2.23) lib/sass/plugin/rails.rb:20:in `process'
+
+Rendered rescues/_trace (43.5ms)
+Rendered rescues/_request_and_response (0.4ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing MealsController#new (for 127.0.0.1 at 2010-05-01 12:01:40) [GET]
+  Parameters: {"action"=>"new", "controller"=>"meals", "day"=>"Apr-30-2010", "user_id"=>"3"}
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 3) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 3) [0m
+  [4;35;1mRecipe Load (1.1ms)[0m   [0mSELECT * FROM "recipes" WHERE ("recipes"."user_id" = 3) ORDER BY upper(title) ASC[0m
+Rendering template within layouts/application
+Rendering meals/new
+Rendered layouts/_header (0.3ms)
+Rendered layouts/_footer (0.4ms)
+Completed in 38ms (View: 13, DB: 1) | 200 OK [http://localhost/users/3/meals/new?day=Apr-30-2010]
+
+
+Processing RecipesController#recipe_by_link (for 127.0.0.1 at 2010-05-01 12:01:41) [GET]
+  Parameters: {"action"=>"recipe_by_link", "controller"=>"recipes", "link"=>""}
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 3) [0m
+
+Errno::ENOENT (No such file or directory - ):
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/open-uri.rb:32:in `initialize'
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/open-uri.rb:32:in `open_uri_original_open'
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/open-uri.rb:32:in `open'
+  lib/recipe_scraper.rb:11:in `load_recipe'
+  app/controllers/recipes_controller.rb:39:in `recipe_by_link'
+  haml (2.2.23) lib/sass/plugin/rails.rb:20:in `process'
+
+Rendered rescues/_trace (45.2ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing RecipesController#recipe_by_link (for 127.0.0.1 at 2010-05-01 12:01:44) [GET]
+  Parameters: {"action"=>"recipe_by_link", "controller"=>"recipes", "link"=>"http://www.epicurious.com/recipes/food/views/Avocado-with-Savory-Tomato-Sorbet-and-Chips-358691"}
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 3) [0m
+Completed in 372ms (View: 1, DB: 0) | 200 OK [http://localhost/recipe_by_link?link=http%3A%2F%2Fwww.epicurious.com%2Frecipes%2Ffood%2Fviews%2FAvocado-with-Savory-Tomato-Sorbet-and-Chips-358691]
+
+
+Processing MealsController#new (for 127.0.0.1 at 2010-05-01 12:02:01) [GET]
+  Parameters: {"action"=>"new", "controller"=>"meals", "day"=>"Apr-30-2010", "user_id"=>"3"}
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 3) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 3) [0m
+  [4;36;1mRecipe Load (1.1ms)[0m   [0;1mSELECT * FROM "recipes" WHERE ("recipes"."user_id" = 3) ORDER BY upper(title) ASC[0m
+Rendering template within layouts/application
+Rendering meals/new
+Rendered layouts/_header (0.3ms)
+Rendered layouts/_footer (0.4ms)
+Completed in 39ms (View: 14, DB: 1) | 200 OK [http://localhost/users/3/meals/new?day=Apr-30-2010]
+
+
+Processing RecipesController#recipe_by_link (for 127.0.0.1 at 2010-05-01 12:02:02) [GET]
+  Parameters: {"action"=>"recipe_by_link", "controller"=>"recipes", "link"=>""}
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 3) [0m
+
+Errno::ENOENT (No such file or directory - ):
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/open-uri.rb:32:in `initialize'
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/open-uri.rb:32:in `open_uri_original_open'
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/open-uri.rb:32:in `open'
+  lib/recipe_scraper.rb:11:in `load_recipe'
+  app/controllers/recipes_controller.rb:39:in `recipe_by_link'
+  haml (2.2.23) lib/sass/plugin/rails.rb:20:in `process'
+
+Rendered rescues/_trace (43.1ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing RecipesController#recipe_by_link (for 127.0.0.1 at 2010-05-01 12:02:04) [GET]
+  Parameters: {"action"=>"recipe_by_link", "controller"=>"recipes", "link"=>"http://www.epicurious.com/recipes/food/views/Avocado-with-Savory-Tomato-Sorbet-and-Chips-358691"}
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 3) [0m
+Completed in 517ms (View: 1, DB: 0) | 200 OK [http://localhost/recipe_by_link?link=http%3A%2F%2Fwww.epicurious.com%2Frecipes%2Ffood%2Fviews%2FAvocado-with-Savory-Tomato-Sorbet-and-Chips-358691]
+
+
+Processing MealsController#new (for 127.0.0.1 at 2010-05-01 12:04:15) [GET]
+  Parameters: {"action"=>"new", "controller"=>"meals", "day"=>"Apr-30-2010", "user_id"=>"3"}
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 3) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 3) [0m
+  [4;35;1mRecipe Load (1.1ms)[0m   [0mSELECT * FROM "recipes" WHERE ("recipes"."user_id" = 3) ORDER BY upper(title) ASC[0m
+Rendering template within layouts/application
+Rendering meals/new
+Rendered layouts/_header (0.3ms)
+Rendered layouts/_footer (0.5ms)
+Completed in 93ms (View: 68, DB: 1) | 200 OK [http://localhost/users/3/meals/new?day=Apr-30-2010]
+
+
+Processing RecipesController#recipe_by_link (for 127.0.0.1 at 2010-05-01 12:04:16) [GET]
+  Parameters: {"action"=>"recipe_by_link", "controller"=>"recipes", "link"=>"http://www.epicurious.com/recipes/food/views/Avocado-with-Savory-Tomato-Sorbet-and-Chips-358691"}
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 3) [0m
+Completed in 490ms (View: 1, DB: 0) | 200 OK [http://localhost/recipe_by_link?link=http%3A%2F%2Fwww.epicurious.com%2Frecipes%2Ffood%2Fviews%2FAvocado-with-Savory-Tomato-Sorbet-and-Chips-358691]
+
+
+Processing RecipesController#recipe_by_link (for 127.0.0.1 at 2010-05-01 12:04:16) [GET]
+  Parameters: {"action"=>"recipe_by_link", "controller"=>"recipes", "link"=>"http://www.epicurious.com/recipes/food/views/Avocado-with-Savory-Tomato-Sorbet-and-Chips-358691"}
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 3) [0m
+Completed in 344ms (View: 1, DB: 0) | 200 OK [http://localhost/recipe_by_link?link=http%3A%2F%2Fwww.epicurious.com%2Frecipes%2Ffood%2Fviews%2FAvocado-with-Savory-Tomato-Sorbet-and-Chips-358691]
+
+
+Processing RecipesController#recipe_by_link (for 127.0.0.1 at 2010-05-01 12:04:17) [GET]
+  Parameters: {"action"=>"recipe_by_link", "controller"=>"recipes", "link"=>"http://www.epicurious.com/recipes/food/views/Avocado-with-Savory-Tomato-Sorbet-and-Chips-358691"}
+  [4;36;1mUser Load (0.5ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 3) [0m
+Completed in 382ms (View: 1, DB: 1) | 200 OK [http://localhost/recipe_by_link?link=http%3A%2F%2Fwww.epicurious.com%2Frecipes%2Ffood%2Fviews%2FAvocado-with-Savory-Tomato-Sorbet-and-Chips-358691]
+
+
+Processing MealsController#new (for 127.0.0.1 at 2010-05-01 12:04:17) [GET]
+  Parameters: {"action"=>"new", "controller"=>"meals", "day"=>"Apr-30-2010", "user_id"=>"3"}
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 3) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 3) [0m
+  [4;35;1mRecipe Load (1.2ms)[0m   [0mSELECT * FROM "recipes" WHERE ("recipes"."user_id" = 3) ORDER BY upper(title) ASC[0m
+Rendering template within layouts/application
+Rendering meals/new
+Rendered layouts/_header (0.4ms)
+Rendered layouts/_footer (0.5ms)
+Completed in 110ms (View: 14, DB: 2) | 200 OK [http://localhost/users/3/meals/new?day=Apr-30-2010]
+
+
+Processing RecipesController#recipe_by_link (for 127.0.0.1 at 2010-05-01 12:04:18) [GET]
+  Parameters: {"action"=>"recipe_by_link", "controller"=>"recipes", "link"=>"http://www.epicurious.com/recipes/food/views/Avocado-with-Savory-Tomato-Sorbet-and-Chips-358691"}
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 3) [0m
+Completed in 383ms (View: 1, DB: 0) | 200 OK [http://localhost/recipe_by_link?link=http%3A%2F%2Fwww.epicurious.com%2Frecipes%2Ffood%2Fviews%2FAvocado-with-Savory-Tomato-Sorbet-and-Chips-358691]
+
+
+Processing RecipesController#recipe_by_link (for 127.0.0.1 at 2010-05-01 12:04:20) [GET]
+  Parameters: {"action"=>"recipe_by_link", "controller"=>"recipes", "link"=>"$(\"#meal_recipe_attributes_link\").val()"}
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 3) [0m
+
+Errno::ENOENT (No such file or directory - $("#meal_recipe_attributes_link").val()):
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/open-uri.rb:32:in `initialize'
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/open-uri.rb:32:in `open_uri_original_open'
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/open-uri.rb:32:in `open'
+  lib/recipe_scraper.rb:11:in `load_recipe'
+  app/controllers/recipes_controller.rb:39:in `recipe_by_link'
+  haml (2.2.23) lib/sass/plugin/rails.rb:20:in `process'
+
+Rendered rescues/_trace (43.7ms)
+Rendered rescues/_request_and_response (0.4ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing RecipesController#recipe_by_link (for 127.0.0.1 at 2010-05-01 12:04:20) [GET]
+  Parameters: {"action"=>"recipe_by_link", "controller"=>"recipes", "link"=>"$(\"#meal_recipe_attributes_link\").val()"}
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 3) [0m
+
+Errno::ENOENT (No such file or directory - $("#meal_recipe_attributes_link").val()):
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/open-uri.rb:32:in `initialize'
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/open-uri.rb:32:in `open_uri_original_open'
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/open-uri.rb:32:in `open'
+  lib/recipe_scraper.rb:11:in `load_recipe'
+  app/controllers/recipes_controller.rb:39:in `recipe_by_link'
+  haml (2.2.23) lib/sass/plugin/rails.rb:20:in `process'
+
+Rendered rescues/_trace (44.2ms)
+Rendered rescues/_request_and_response (0.4ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing RecipesController#recipe_by_link (for 127.0.0.1 at 2010-05-01 12:04:20) [GET]
+  Parameters: {"action"=>"recipe_by_link", "controller"=>"recipes", "link"=>"$(\"#meal_recipe_attributes_link\").val()"}
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 3) [0m
+
+Errno::ENOENT (No such file or directory - $("#meal_recipe_attributes_link").val()):
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/open-uri.rb:32:in `initialize'
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/open-uri.rb:32:in `open_uri_original_open'
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/open-uri.rb:32:in `open'
+  lib/recipe_scraper.rb:11:in `load_recipe'
+  app/controllers/recipes_controller.rb:39:in `recipe_by_link'
+  haml (2.2.23) lib/sass/plugin/rails.rb:20:in `process'
+
+Rendered rescues/_trace (115.0ms)
+Rendered rescues/_request_and_response (0.4ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing RecipesController#recipe_by_link (for 127.0.0.1 at 2010-05-01 12:04:20) [GET]
+  Parameters: {"action"=>"recipe_by_link", "controller"=>"recipes", "link"=>"$(\"#meal_recipe_attributes_link\").val()"}
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 3) [0m
+
+Errno::ENOENT (No such file or directory - $("#meal_recipe_attributes_link").val()):
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/open-uri.rb:32:in `initialize'
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/open-uri.rb:32:in `open_uri_original_open'
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/open-uri.rb:32:in `open'
+  lib/recipe_scraper.rb:11:in `load_recipe'
+  app/controllers/recipes_controller.rb:39:in `recipe_by_link'
+  haml (2.2.23) lib/sass/plugin/rails.rb:20:in `process'
+
+Rendered rescues/_trace (44.0ms)
+Rendered rescues/_request_and_response (0.4ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing RecipesController#recipe_by_link (for 127.0.0.1 at 2010-05-01 12:04:20) [GET]
+  Parameters: {"action"=>"recipe_by_link", "controller"=>"recipes", "link"=>"$(\"#meal_recipe_attributes_link\").val()"}
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 3) [0m
+
+Errno::ENOENT (No such file or directory - $("#meal_recipe_attributes_link").val()):
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/open-uri.rb:32:in `initialize'
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/open-uri.rb:32:in `open_uri_original_open'
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/open-uri.rb:32:in `open'
+  lib/recipe_scraper.rb:11:in `load_recipe'
+  app/controllers/recipes_controller.rb:39:in `recipe_by_link'
+  haml (2.2.23) lib/sass/plugin/rails.rb:20:in `process'
+
+Rendered rescues/_trace (120.3ms)
+Rendered rescues/_request_and_response (0.4ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing RecipesController#recipe_by_link (for 127.0.0.1 at 2010-05-01 12:04:20) [GET]
+  Parameters: {"action"=>"recipe_by_link", "controller"=>"recipes", "link"=>"$(\"#meal_recipe_attributes_link\").val()"}
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 3) [0m
+
+Errno::ENOENT (No such file or directory - $("#meal_recipe_attributes_link").val()):
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/open-uri.rb:32:in `initialize'
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/open-uri.rb:32:in `open_uri_original_open'
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/open-uri.rb:32:in `open'
+  lib/recipe_scraper.rb:11:in `load_recipe'
+  app/controllers/recipes_controller.rb:39:in `recipe_by_link'
+  haml (2.2.23) lib/sass/plugin/rails.rb:20:in `process'
+
+Rendered rescues/_trace (44.1ms)
+Rendered rescues/_request_and_response (0.4ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing RecipesController#recipe_by_link (for 127.0.0.1 at 2010-05-01 12:04:20) [GET]
+  Parameters: {"action"=>"recipe_by_link", "controller"=>"recipes", "link"=>"$(\"#meal_recipe_attributes_link\").val()"}
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 3) [0m
+
+Errno::ENOENT (No such file or directory - $("#meal_recipe_attributes_link").val()):
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/open-uri.rb:32:in `initialize'
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/open-uri.rb:32:in `open_uri_original_open'
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/open-uri.rb:32:in `open'
+  lib/recipe_scraper.rb:11:in `load_recipe'
+  app/controllers/recipes_controller.rb:39:in `recipe_by_link'
+  haml (2.2.23) lib/sass/plugin/rails.rb:20:in `process'
+
+Rendered rescues/_trace (45.0ms)
+Rendered rescues/_request_and_response (0.8ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing RecipesController#recipe_by_link (for 127.0.0.1 at 2010-05-01 12:04:20) [GET]
+  Parameters: {"action"=>"recipe_by_link", "controller"=>"recipes", "link"=>"$(\"#meal_recipe_attributes_link\").val()"}
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 3) [0m
+
+Errno::ENOENT (No such file or directory - $("#meal_recipe_attributes_link").val()):
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/open-uri.rb:32:in `initialize'
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/open-uri.rb:32:in `open_uri_original_open'
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/open-uri.rb:32:in `open'
+  lib/recipe_scraper.rb:11:in `load_recipe'
+  app/controllers/recipes_controller.rb:39:in `recipe_by_link'
+  haml (2.2.23) lib/sass/plugin/rails.rb:20:in `process'
+
+Rendered rescues/_trace (44.0ms)
+Rendered rescues/_request_and_response (0.4ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing RecipesController#recipe_by_link (for 127.0.0.1 at 2010-05-01 12:04:21) [GET]
+  Parameters: {"action"=>"recipe_by_link", "controller"=>"recipes", "link"=>"$(\"#meal_recipe_attributes_link\").val()"}
+  [4;35;1mUser Load (0.7ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 3) [0m
+
+Errno::ENOENT (No such file or directory - $("#meal_recipe_attributes_link").val()):
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/open-uri.rb:32:in `initialize'
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/open-uri.rb:32:in `open_uri_original_open'
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/open-uri.rb:32:in `open'
+  lib/recipe_scraper.rb:11:in `load_recipe'
+  app/controllers/recipes_controller.rb:39:in `recipe_by_link'
+  haml (2.2.23) lib/sass/plugin/rails.rb:20:in `process'
+
+Rendered rescues/_trace (46.3ms)
+Rendered rescues/_request_and_response (0.4ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing RecipesController#recipe_by_link (for 127.0.0.1 at 2010-05-01 12:04:21) [GET]
+  Parameters: {"action"=>"recipe_by_link", "controller"=>"recipes", "link"=>"$(\"#meal_recipe_attributes_link\").val()"}
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 3) [0m
+
+Errno::ENOENT (No such file or directory - $("#meal_recipe_attributes_link").val()):
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/open-uri.rb:32:in `initialize'
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/open-uri.rb:32:in `open_uri_original_open'
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/open-uri.rb:32:in `open'
+  lib/recipe_scraper.rb:11:in `load_recipe'
+  app/controllers/recipes_controller.rb:39:in `recipe_by_link'
+  haml (2.2.23) lib/sass/plugin/rails.rb:20:in `process'
+
+Rendered rescues/_trace (120.9ms)
+Rendered rescues/_request_and_response (0.8ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing RecipesController#recipe_by_link (for 127.0.0.1 at 2010-05-01 12:04:21) [GET]
+  Parameters: {"action"=>"recipe_by_link", "controller"=>"recipes", "link"=>"$(\"#meal_recipe_attributes_link\").val()"}
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 3) [0m
+
+Errno::ENOENT (No such file or directory - $("#meal_recipe_attributes_link").val()):
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/open-uri.rb:32:in `initialize'
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/open-uri.rb:32:in `open_uri_original_open'
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/open-uri.rb:32:in `open'
+  lib/recipe_scraper.rb:11:in `load_recipe'
+  app/controllers/recipes_controller.rb:39:in `recipe_by_link'
+  haml (2.2.23) lib/sass/plugin/rails.rb:20:in `process'
+
+Rendered rescues/_trace (42.9ms)
+Rendered rescues/_request_and_response (0.4ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing RecipesController#recipe_by_link (for 127.0.0.1 at 2010-05-01 12:04:21) [GET]
+  Parameters: {"action"=>"recipe_by_link", "controller"=>"recipes", "link"=>"$(\"#meal_recipe_attributes_link\").val()"}
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 3) [0m
+
+Errno::ENOENT (No such file or directory - $("#meal_recipe_attributes_link").val()):
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/open-uri.rb:32:in `initialize'
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/open-uri.rb:32:in `open_uri_original_open'
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/open-uri.rb:32:in `open'
+  lib/recipe_scraper.rb:11:in `load_recipe'
+  app/controllers/recipes_controller.rb:39:in `recipe_by_link'
+  haml (2.2.23) lib/sass/plugin/rails.rb:20:in `process'
+
+Rendered rescues/_trace (114.2ms)
+Rendered rescues/_request_and_response (0.4ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing RecipesController#recipe_by_link (for 127.0.0.1 at 2010-05-01 12:04:21) [GET]
+  Parameters: {"action"=>"recipe_by_link", "controller"=>"recipes", "link"=>"$(\"#meal_recipe_attributes_link\").val()"}
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 3) [0m
+
+Errno::ENOENT (No such file or directory - $("#meal_recipe_attributes_link").val()):
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/open-uri.rb:32:in `initialize'
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/open-uri.rb:32:in `open_uri_original_open'
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/open-uri.rb:32:in `open'
+  lib/recipe_scraper.rb:11:in `load_recipe'
+  app/controllers/recipes_controller.rb:39:in `recipe_by_link'
+  haml (2.2.23) lib/sass/plugin/rails.rb:20:in `process'
+
+Rendered rescues/_trace (44.0ms)
+Rendered rescues/_request_and_response (0.4ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing RecipesController#recipe_by_link (for 127.0.0.1 at 2010-05-01 12:04:26) [GET]
+  Parameters: {"action"=>"recipe_by_link", "controller"=>"recipes", "link"=>"http://www.epicurious.com/recipes/food/views/Avocado-with-Savory-Tomato-Sorbet-and-Chips-358691"}
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 3) [0m
+Completed in 442ms (View: 1, DB: 0) | 200 OK [http://localhost/recipe_by_link?link=http%3A%2F%2Fwww.epicurious.com%2Frecipes%2Ffood%2Fviews%2FAvocado-with-Savory-Tomato-Sorbet-and-Chips-358691]
+
+
+Processing RecipesController#recipe_by_link (for 127.0.0.1 at 2010-05-01 12:04:27) [GET]
+  Parameters: {"action"=>"recipe_by_link", "controller"=>"recipes", "link"=>"http://www.epicurious.com/recipes/food/views/Avocado-with-Savory-Tomato-Sorbet-and-Chips-358691"}
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 3) [0m
+Completed in 453ms (View: 1, DB: 0) | 200 OK [http://localhost/recipe_by_link?link=http%3A%2F%2Fwww.epicurious.com%2Frecipes%2Ffood%2Fviews%2FAvocado-with-Savory-Tomato-Sorbet-and-Chips-358691]
+
+
+Processing RecipesController#recipe_by_link (for 127.0.0.1 at 2010-05-01 12:04:28) [GET]
+  Parameters: {"action"=>"recipe_by_link", "controller"=>"recipes", "link"=>"http://www.epicurious.com/recipes/food/views/Avocado-with-Savory-Tomato-Sorbet-and-Chips-358691"}
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 3) [0m
+Completed in 462ms (View: 1, DB: 0) | 200 OK [http://localhost/recipe_by_link?link=http%3A%2F%2Fwww.epicurious.com%2Frecipes%2Ffood%2Fviews%2FAvocado-with-Savory-Tomato-Sorbet-and-Chips-358691]
+
+
+Processing RecipesController#recipe_by_link (for 127.0.0.1 at 2010-05-01 12:04:28) [GET]
+  Parameters: {"action"=>"recipe_by_link", "controller"=>"recipes", "link"=>"http://www.epicurious.com/recipes/food/views/Avocado-with-Savory-Tomato-Sorbet-and-Chips-358691"}
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 3) [0m
+Completed in 1710ms (View: 1, DB: 0) | 200 OK [http://localhost/recipe_by_link?link=http%3A%2F%2Fwww.epicurious.com%2Frecipes%2Ffood%2Fviews%2FAvocado-with-Savory-Tomato-Sorbet-and-Chips-358691]
+
+
+Processing RecipesController#recipe_by_link (for 127.0.0.1 at 2010-05-01 12:04:30) [GET]
+  Parameters: {"action"=>"recipe_by_link", "controller"=>"recipes", "link"=>"http://www.epicurious.com/recipes/food/views/Avocado-with-Savory-Tomato-Sorbet-and-Chips-358691"}
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 3) [0m
+Completed in 1536ms (View: 1, DB: 0) | 200 OK [http://localhost/recipe_by_link?link=http%3A%2F%2Fwww.epicurious.com%2Frecipes%2Ffood%2Fviews%2FAvocado-with-Savory-Tomato-Sorbet-and-Chips-358691]
+
+
+Processing RecipesController#recipe_by_link (for 127.0.0.1 at 2010-05-01 12:04:32) [GET]
+  Parameters: {"action"=>"recipe_by_link", "controller"=>"recipes", "link"=>"http://www.epicurious.com/recipes/food/views/Avocado-with-Savory-Tomato-Sorbet-and-Chips-358691"}
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 3) [0m
+Completed in 1535ms (View: 1, DB: 0) | 200 OK [http://localhost/recipe_by_link?link=http%3A%2F%2Fwww.epicurious.com%2Frecipes%2Ffood%2Fviews%2FAvocado-with-Savory-Tomato-Sorbet-and-Chips-358691]
+
+
+Processing RecipesController#recipe_by_link (for 127.0.0.1 at 2010-05-01 12:04:34) [GET]
+  Parameters: {"action"=>"recipe_by_link", "controller"=>"recipes", "link"=>"http://www.epicurious.com/recipes/food/views/Avocado-with-Savory-Tomato-Sorbet-and-Chips-358691"}
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 3) [0m
+Completed in 347ms (View: 1, DB: 0) | 200 OK [http://localhost/recipe_by_link?link=http%3A%2F%2Fwww.epicurious.com%2Frecipes%2Ffood%2Fviews%2FAvocado-with-Savory-Tomato-Sorbet-and-Chips-358691]
+
+
+Processing RecipesController#recipe_by_link (for 127.0.0.1 at 2010-05-01 12:04:35) [GET]
+  Parameters: {"action"=>"recipe_by_link", "controller"=>"recipes", "link"=>"http://www.epicurious.com/recipes/food/views/Avocado-with-Savory-Tomato-Sorbet-and-Chips-358691"}
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 3) [0m
+Completed in 393ms (View: 1, DB: 0) | 200 OK [http://localhost/recipe_by_link?link=http%3A%2F%2Fwww.epicurious.com%2Frecipes%2Ffood%2Fviews%2FAvocado-with-Savory-Tomato-Sorbet-and-Chips-358691]
+
+
+Processing RecipesController#recipe_by_link (for 127.0.0.1 at 2010-05-01 12:04:35) [GET]
+  Parameters: {"action"=>"recipe_by_link", "controller"=>"recipes", "link"=>"http://www.epicurious.com/recipes/food/views/Avocado-with-Savory-Tomato-Sorbet-and-Chips-358691"}
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 3) [0m
+Completed in 480ms (View: 1, DB: 0) | 200 OK [http://localhost/recipe_by_link?link=http%3A%2F%2Fwww.epicurious.com%2Frecipes%2Ffood%2Fviews%2FAvocado-with-Savory-Tomato-Sorbet-and-Chips-358691]
+
+
+Processing RecipesController#recipe_by_link (for 127.0.0.1 at 2010-05-01 12:04:36) [GET]
+  Parameters: {"action"=>"recipe_by_link", "controller"=>"recipes", "link"=>"http://www.epicurious.com/recipes/food/views/Avocado-with-Savory-Tomato-Sorbet-and-Chips-358691"}
+  [4;35;1mUser Load (0.4ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 3) [0m
+Completed in 491ms (View: 1, DB: 0) | 200 OK [http://localhost/recipe_by_link?link=http%3A%2F%2Fwww.epicurious.com%2Frecipes%2Ffood%2Fviews%2FAvocado-with-Savory-Tomato-Sorbet-and-Chips-358691]
+
+
+Processing RecipesController#recipe_by_link (for 127.0.0.1 at 2010-05-01 12:04:36) [GET]
+  Parameters: {"action"=>"recipe_by_link", "controller"=>"recipes", "link"=>"http://www.epicurious.com/recipes/food/views/Avocado-with-Savory-Tomato-Sorbet-and-Chips-358691"}
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 3) [0m
+Completed in 492ms (View: 1, DB: 0) | 200 OK [http://localhost/recipe_by_link?link=http%3A%2F%2Fwww.epicurious.com%2Frecipes%2Ffood%2Fviews%2FAvocado-with-Savory-Tomato-Sorbet-and-Chips-358691]
+
+
+Processing RecipesController#recipe_by_link (for 127.0.0.1 at 2010-05-01 12:04:38) [GET]
+  Parameters: {"action"=>"recipe_by_link", "controller"=>"recipes", "link"=>"http://www.epicurious.com/recipes/food/views/Avocado-with-Savory-Tomato-Sorbet-and-Chips-358691"}
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 3) [0m
+Completed in 437ms (View: 1, DB: 0) | 200 OK [http://localhost/recipe_by_link?link=http%3A%2F%2Fwww.epicurious.com%2Frecipes%2Ffood%2Fviews%2FAvocado-with-Savory-Tomato-Sorbet-and-Chips-358691]
+
+
+Processing RecipesController#recipe_by_link (for 127.0.0.1 at 2010-05-01 12:04:38) [GET]
+  Parameters: {"action"=>"recipe_by_link", "controller"=>"recipes", "link"=>"http://www.epicurious.com/recipes/food/views/Avocado-with-Savory-Tomato-Sorbet-and-Chips-358691"}
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 3) [0m
+Completed in 1135ms (View: 1, DB: 0) | 200 OK [http://localhost/recipe_by_link?link=http%3A%2F%2Fwww.epicurious.com%2Frecipes%2Ffood%2Fviews%2FAvocado-with-Savory-Tomato-Sorbet-and-Chips-358691]
+
+
+Processing RecipesController#recipe_by_link (for 127.0.0.1 at 2010-05-01 12:04:40) [GET]
+  Parameters: {"action"=>"recipe_by_link", "controller"=>"recipes", "link"=>"http://www.epicurious.com/recipes/food/views/Avocado-with-Savory-Tomato-Sorbet-and-Chips-358691"}
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 3) [0m
+Completed in 2500ms (View: 1, DB: 0) | 200 OK [http://localhost/recipe_by_link?link=http%3A%2F%2Fwww.epicurious.com%2Frecipes%2Ffood%2Fviews%2FAvocado-with-Savory-Tomato-Sorbet-and-Chips-358691]
+
+
+Processing RecipesController#recipe_by_link (for 127.0.0.1 at 2010-05-01 12:04:43) [GET]
+  Parameters: {"action"=>"recipe_by_link", "controller"=>"recipes", "link"=>"http://www.epicurious.com/recipes/food/views/Avocado-with-Savory-Tomato-Sorbet-and-Chips-358691"}
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 3) [0m
+Completed in 1210ms (View: 1, DB: 0) | 200 OK [http://localhost/recipe_by_link?link=http%3A%2F%2Fwww.epicurious.com%2Frecipes%2Ffood%2Fviews%2FAvocado-with-Savory-Tomato-Sorbet-and-Chips-358691]
+
+
+Processing RecipesController#recipe_by_link (for 127.0.0.1 at 2010-05-01 12:04:44) [GET]
+  Parameters: {"action"=>"recipe_by_link", "controller"=>"recipes", "link"=>"http://www.epicurious.com/recipes/food/views/Avocado-with-Savory-Tomato-Sorbet-and-Chips-358691"}
+  [4;35;1mUser Load (0.4ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 3) [0m
+Completed in 424ms (View: 1, DB: 0) | 200 OK [http://localhost/recipe_by_link?link=http%3A%2F%2Fwww.epicurious.com%2Frecipes%2Ffood%2Fviews%2FAvocado-with-Savory-Tomato-Sorbet-and-Chips-358691]
+
+
+Processing RecipesController#recipe_by_link (for 127.0.0.1 at 2010-05-01 12:04:45) [GET]
+  Parameters: {"action"=>"recipe_by_link", "controller"=>"recipes", "link"=>"http://www.epicurious.com/recipes/food/views/Avocado-with-Savory-Tomato-Sorbet-and-Chips-358691"}
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 3) [0m
+Completed in 450ms (View: 1, DB: 0) | 200 OK [http://localhost/recipe_by_link?link=http%3A%2F%2Fwww.epicurious.com%2Frecipes%2Ffood%2Fviews%2FAvocado-with-Savory-Tomato-Sorbet-and-Chips-358691]
+
+
+Processing RecipesController#recipe_by_link (for 127.0.0.1 at 2010-05-01 12:04:45) [GET]
+  Parameters: {"action"=>"recipe_by_link", "controller"=>"recipes", "link"=>"http://www.epicurious.com/recipes/food/views/Avocado-with-Savory-Tomato-Sorbet-and-Chips-358691"}
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 3) [0m
+Completed in 447ms (View: 1, DB: 0) | 200 OK [http://localhost/recipe_by_link?link=http%3A%2F%2Fwww.epicurious.com%2Frecipes%2Ffood%2Fviews%2FAvocado-with-Savory-Tomato-Sorbet-and-Chips-358691]
+
+
+Processing RecipesController#recipe_by_link (for 127.0.0.1 at 2010-05-01 12:04:46) [GET]
+  Parameters: {"action"=>"recipe_by_link", "controller"=>"recipes", "link"=>"http://www.epicurious.com/recipes/food/views/Avocado-with-Savory-Tomato-Sorbet-and-Chips-358691"}
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 3) [0m
+Completed in 390ms (View: 1, DB: 0) | 200 OK [http://localhost/recipe_by_link?link=http%3A%2F%2Fwww.epicurious.com%2Frecipes%2Ffood%2Fviews%2FAvocado-with-Savory-Tomato-Sorbet-and-Chips-358691]
+
+
+Processing RecipesController#recipe_by_link (for 127.0.0.1 at 2010-05-01 12:04:47) [GET]
+  Parameters: {"action"=>"recipe_by_link", "controller"=>"recipes", "link"=>"http://www.epicurious.com/recipes/food/views/Avocado-with-Savory-Tomato-Sorbet-and-Chips-358691"}
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 3) [0m
+Completed in 443ms (View: 1, DB: 0) | 200 OK [http://localhost/recipe_by_link?link=http%3A%2F%2Fwww.epicurious.com%2Frecipes%2Ffood%2Fviews%2FAvocado-with-Savory-Tomato-Sorbet-and-Chips-358691]
+
+
+Processing RecipesController#recipe_by_link (for 127.0.0.1 at 2010-05-01 12:04:48) [GET]
+  Parameters: {"action"=>"recipe_by_link", "controller"=>"recipes", "link"=>"http://www.epicurious.com/recipes/food/views/Avocado-with-Savory-Tomato-Sorbet-and-Chips-358691"}
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 3) [0m
+Completed in 438ms (View: 1, DB: 0) | 200 OK [http://localhost/recipe_by_link?link=http%3A%2F%2Fwww.epicurious.com%2Frecipes%2Ffood%2Fviews%2FAvocado-with-Savory-Tomato-Sorbet-and-Chips-358691]
+
+
+Processing RecipesController#recipe_by_link (for 127.0.0.1 at 2010-05-01 12:04:48) [GET]
+  Parameters: {"action"=>"recipe_by_link", "controller"=>"recipes", "link"=>"http://www.epicurious.com/recipes/food/views/Avocado-with-Savory-Tomato-Sorbet-and-Chips-358691"}
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 3) [0m
+Completed in 349ms (View: 1, DB: 0) | 200 OK [http://localhost/recipe_by_link?link=http%3A%2F%2Fwww.epicurious.com%2Frecipes%2Ffood%2Fviews%2FAvocado-with-Savory-Tomato-Sorbet-and-Chips-358691]
+
+
+Processing RecipesController#recipe_by_link (for 127.0.0.1 at 2010-05-01 12:04:49) [GET]
+  Parameters: {"action"=>"recipe_by_link", "controller"=>"recipes", "link"=>"http://www.epicurious.com/recipes/food/views/Avocado-with-Savory-Tomato-Sorbet-and-Chips-358691"}
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 3) [0m
+Completed in 297ms (View: 1, DB: 0) | 200 OK [http://localhost/recipe_by_link?link=http%3A%2F%2Fwww.epicurious.com%2Frecipes%2Ffood%2Fviews%2FAvocado-with-Savory-Tomato-Sorbet-and-Chips-358691]
+
+
+Processing RecipesController#recipe_by_link (for 127.0.0.1 at 2010-05-01 12:04:49) [GET]
+  Parameters: {"action"=>"recipe_by_link", "controller"=>"recipes", "link"=>"http://www.epicurious.com/recipes/food/views/Avocado-with-Savory-Tomato-Sorbet-and-Chips-358691"}
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 3) [0m
+Completed in 322ms (View: 1, DB: 0) | 200 OK [http://localhost/recipe_by_link?link=http%3A%2F%2Fwww.epicurious.com%2Frecipes%2Ffood%2Fviews%2FAvocado-with-Savory-Tomato-Sorbet-and-Chips-358691]
+
+
+Processing RecipesController#recipe_by_link (for 127.0.0.1 at 2010-05-01 12:04:50) [GET]
+  Parameters: {"action"=>"recipe_by_link", "controller"=>"recipes", "link"=>"http://www.epicurious.com/recipes/food/views/Avocado-with-Savory-Tomato-Sorbet-and-Chips-358691"}
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 3) [0m
+Completed in 353ms (View: 1, DB: 0) | 200 OK [http://localhost/recipe_by_link?link=http%3A%2F%2Fwww.epicurious.com%2Frecipes%2Ffood%2Fviews%2FAvocado-with-Savory-Tomato-Sorbet-and-Chips-358691]
+
+
+Processing RecipesController#recipe_by_link (for 127.0.0.1 at 2010-05-01 12:04:51) [GET]
+  Parameters: {"action"=>"recipe_by_link", "controller"=>"recipes", "link"=>"http://www.epicurious.com/recipes/food/views/Avocado-with-Savory-Tomato-Sorbet-and-Chips-358691"}
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 3) [0m
+Completed in 366ms (View: 1, DB: 0) | 200 OK [http://localhost/recipe_by_link?link=http%3A%2F%2Fwww.epicurious.com%2Frecipes%2Ffood%2Fviews%2FAvocado-with-Savory-Tomato-Sorbet-and-Chips-358691]
+
+
+Processing RecipesController#recipe_by_link (for 127.0.0.1 at 2010-05-01 12:04:51) [GET]
+  Parameters: {"action"=>"recipe_by_link", "controller"=>"recipes", "link"=>"http://www.epicurious.com/recipes/food/views/Avocado-with-Savory-Tomato-Sorbet-and-Chips-358691"}
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 3) [0m
+Completed in 347ms (View: 1, DB: 0) | 200 OK [http://localhost/recipe_by_link?link=http%3A%2F%2Fwww.epicurious.com%2Frecipes%2Ffood%2Fviews%2FAvocado-with-Savory-Tomato-Sorbet-and-Chips-358691]
+
+
+Processing RecipesController#recipe_by_link (for 127.0.0.1 at 2010-05-01 12:04:52) [GET]
+  Parameters: {"action"=>"recipe_by_link", "controller"=>"recipes", "link"=>"http://www.epicurious.com/recipes/food/views/Avocado-with-Savory-Tomato-Sorbet-and-Chips-358691"}
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 3) [0m
+Completed in 284ms (View: 1, DB: 0) | 200 OK [http://localhost/recipe_by_link?link=http%3A%2F%2Fwww.epicurious.com%2Frecipes%2Ffood%2Fviews%2FAvocado-with-Savory-Tomato-Sorbet-and-Chips-358691]
+
+
+Processing RecipesController#recipe_by_link (for 127.0.0.1 at 2010-05-01 12:04:52) [GET]
+  Parameters: {"action"=>"recipe_by_link", "controller"=>"recipes", "link"=>"http://www.epicurious.com/recipes/food/views/Avocado-with-Savory-Tomato-Sorbet-and-Chips-358691"}
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 3) [0m
+Completed in 281ms (View: 1, DB: 0) | 200 OK [http://localhost/recipe_by_link?link=http%3A%2F%2Fwww.epicurious.com%2Frecipes%2Ffood%2Fviews%2FAvocado-with-Savory-Tomato-Sorbet-and-Chips-358691]
+
+
+Processing RecipesController#recipe_by_link (for 127.0.0.1 at 2010-05-01 12:04:53) [GET]
+  Parameters: {"action"=>"recipe_by_link", "controller"=>"recipes", "link"=>"http://www.epicurious.com/recipes/food/views/Avocado-with-Savory-Tomato-Sorbet-and-Chips-358691"}
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 3) [0m
+Completed in 308ms (View: 1, DB: 0) | 200 OK [http://localhost/recipe_by_link?link=http%3A%2F%2Fwww.epicurious.com%2Frecipes%2Ffood%2Fviews%2FAvocado-with-Savory-Tomato-Sorbet-and-Chips-358691]
+
+
+Processing RecipesController#recipe_by_link (for 127.0.0.1 at 2010-05-01 12:04:53) [GET]
+  Parameters: {"action"=>"recipe_by_link", "controller"=>"recipes", "link"=>"http://www.epicurious.com/recipes/food/views/Avocado-with-Savory-Tomato-Sorbet-and-Chips-358691"}
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 3) [0m
+Completed in 351ms (View: 1, DB: 0) | 200 OK [http://localhost/recipe_by_link?link=http%3A%2F%2Fwww.epicurious.com%2Frecipes%2Ffood%2Fviews%2FAvocado-with-Savory-Tomato-Sorbet-and-Chips-358691]
+
+
+Processing RecipesController#recipe_by_link (for 127.0.0.1 at 2010-05-01 12:04:54) [GET]
+  Parameters: {"action"=>"recipe_by_link", "controller"=>"recipes", "link"=>"http://www.epicurious.com/recipes/food/views/Avocado-with-Savory-Tomato-Sorbet-and-Chips-358691"}
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 3) [0m
+Completed in 331ms (View: 1, DB: 0) | 200 OK [http://localhost/recipe_by_link?link=http%3A%2F%2Fwww.epicurious.com%2Frecipes%2Ffood%2Fviews%2FAvocado-with-Savory-Tomato-Sorbet-and-Chips-358691]
+
+
+Processing RecipesController#recipe_by_link (for 127.0.0.1 at 2010-05-01 12:04:54) [GET]
+  Parameters: {"action"=>"recipe_by_link", "controller"=>"recipes", "link"=>"http://www.epicurious.com/recipes/food/views/Avocado-with-Savory-Tomato-Sorbet-and-Chips-358691"}
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 3) [0m
+Completed in 320ms (View: 1, DB: 0) | 200 OK [http://localhost/recipe_by_link?link=http%3A%2F%2Fwww.epicurious.com%2Frecipes%2Ffood%2Fviews%2FAvocado-with-Savory-Tomato-Sorbet-and-Chips-358691]
+
+
+Processing RecipesController#recipe_by_link (for 127.0.0.1 at 2010-05-01 12:04:55) [GET]
+  Parameters: {"action"=>"recipe_by_link", "controller"=>"recipes", "link"=>"http://www.epicurious.com/recipes/food/views/Avocado-with-Savory-Tomato-Sorbet-and-Chips-358691"}
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 3) [0m
+Completed in 445ms (View: 1, DB: 0) | 200 OK [http://localhost/recipe_by_link?link=http%3A%2F%2Fwww.epicurious.com%2Frecipes%2Ffood%2Fviews%2FAvocado-with-Savory-Tomato-Sorbet-and-Chips-358691]
+
+
+Processing RecipesController#recipe_by_link (for 127.0.0.1 at 2010-05-01 12:04:55) [GET]
+  Parameters: {"action"=>"recipe_by_link", "controller"=>"recipes", "link"=>"http://www.epicurious.com/recipes/food/views/Avocado-with-Savory-Tomato-Sorbet-and-Chips-358691"}
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 3) [0m
+Completed in 476ms (View: 1, DB: 0) | 200 OK [http://localhost/recipe_by_link?link=http%3A%2F%2Fwww.epicurious.com%2Frecipes%2Ffood%2Fviews%2FAvocado-with-Savory-Tomato-Sorbet-and-Chips-358691]
+
+
+Processing RecipesController#recipe_by_link (for 127.0.0.1 at 2010-05-01 12:04:56) [GET]
+  Parameters: {"action"=>"recipe_by_link", "controller"=>"recipes", "link"=>"http://www.epicurious.com/recipes/food/views/Avocado-with-Savory-Tomato-Sorbet-and-Chips-358691"}
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 3) [0m
+Completed in 365ms (View: 1, DB: 0) | 200 OK [http://localhost/recipe_by_link?link=http%3A%2F%2Fwww.epicurious.com%2Frecipes%2Ffood%2Fviews%2FAvocado-with-Savory-Tomato-Sorbet-and-Chips-358691]
+
+
+Processing RecipesController#recipe_by_link (for 127.0.0.1 at 2010-05-01 12:04:57) [GET]
+  Parameters: {"action"=>"recipe_by_link", "controller"=>"recipes", "link"=>"http://www.epicurious.com/recipes/food/views/Avocado-with-Savory-Tomato-Sorbet-and-Chips-358691"}
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 3) [0m
+Completed in 381ms (View: 1, DB: 0) | 200 OK [http://localhost/recipe_by_link?link=http%3A%2F%2Fwww.epicurious.com%2Frecipes%2Ffood%2Fviews%2FAvocado-with-Savory-Tomato-Sorbet-and-Chips-358691]
+
+
+Processing RecipesController#recipe_by_link (for 127.0.0.1 at 2010-05-01 12:04:58) [GET]
+  Parameters: {"action"=>"recipe_by_link", "controller"=>"recipes", "link"=>"http://www.epicurious.com/recipes/food/views/Avocado-with-Savory-Tomato-Sorbet-and-Chips-358691"}
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 3) [0m
+Completed in 362ms (View: 1, DB: 0) | 200 OK [http://localhost/recipe_by_link?link=http%3A%2F%2Fwww.epicurious.com%2Frecipes%2Ffood%2Fviews%2FAvocado-with-Savory-Tomato-Sorbet-and-Chips-358691]
+
+
+Processing RecipesController#recipe_by_link (for 127.0.0.1 at 2010-05-01 12:04:58) [GET]
+  Parameters: {"action"=>"recipe_by_link", "controller"=>"recipes", "link"=>"http://www.epicurious.com/recipes/food/views/Avocado-with-Savory-Tomato-Sorbet-and-Chips-358691"}
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 3) [0m
+Completed in 432ms (View: 1, DB: 0) | 200 OK [http://localhost/recipe_by_link?link=http%3A%2F%2Fwww.epicurious.com%2Frecipes%2Ffood%2Fviews%2FAvocado-with-Savory-Tomato-Sorbet-and-Chips-358691]
+
+
+Processing RecipesController#recipe_by_link (for 127.0.0.1 at 2010-05-01 12:04:59) [GET]
+  Parameters: {"action"=>"recipe_by_link", "controller"=>"recipes", "link"=>"http://www.epicurious.com/recipes/food/views/Avocado-with-Savory-Tomato-Sorbet-and-Chips-358691"}
+  [4;35;1mUser Load (0.5ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 3) [0m
+Completed in 393ms (View: 1, DB: 0) | 200 OK [http://localhost/recipe_by_link?link=http%3A%2F%2Fwww.epicurious.com%2Frecipes%2Ffood%2Fviews%2FAvocado-with-Savory-Tomato-Sorbet-and-Chips-358691]
+
+
+Processing RecipesController#recipe_by_link (for 127.0.0.1 at 2010-05-01 12:05:00) [GET]
+  Parameters: {"action"=>"recipe_by_link", "controller"=>"recipes", "link"=>"http://www.epicurious.com/recipes/food/views/Avocado-with-Savory-Tomato-Sorbet-and-Chips-358691"}
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 3) [0m
+Completed in 438ms (View: 1, DB: 0) | 200 OK [http://localhost/recipe_by_link?link=http%3A%2F%2Fwww.epicurious.com%2Frecipes%2Ffood%2Fviews%2FAvocado-with-Savory-Tomato-Sorbet-and-Chips-358691]
+
+
+Processing RecipesController#recipe_by_link (for 127.0.0.1 at 2010-05-01 12:05:00) [GET]
+  Parameters: {"action"=>"recipe_by_link", "controller"=>"recipes", "link"=>"http://www.epicurious.com/recipes/food/views/Avocado-with-Savory-Tomato-Sorbet-and-Chips-358691"}
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 3) [0m
+Completed in 405ms (View: 1, DB: 0) | 200 OK [http://localhost/recipe_by_link?link=http%3A%2F%2Fwww.epicurious.com%2Frecipes%2Ffood%2Fviews%2FAvocado-with-Savory-Tomato-Sorbet-and-Chips-358691]
+
+
+Processing RecipesController#recipe_by_link (for 127.0.0.1 at 2010-05-01 12:05:01) [GET]
+  Parameters: {"action"=>"recipe_by_link", "controller"=>"recipes", "link"=>"http://www.epicurious.com/recipes/food/views/Avocado-with-Savory-Tomato-Sorbet-and-Chips-358691"}
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 3) [0m
+Completed in 430ms (View: 1, DB: 0) | 200 OK [http://localhost/recipe_by_link?link=http%3A%2F%2Fwww.epicurious.com%2Frecipes%2Ffood%2Fviews%2FAvocado-with-Savory-Tomato-Sorbet-and-Chips-358691]
+
+
+Processing RecipesController#recipe_by_link (for 127.0.0.1 at 2010-05-01 12:05:01) [GET]
+  Parameters: {"action"=>"recipe_by_link", "controller"=>"recipes", "link"=>"http://www.epicurious.com/recipes/food/views/Avocado-with-Savory-Tomato-Sorbet-and-Chips-358691"}
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 3) [0m
+Completed in 427ms (View: 1, DB: 0) | 200 OK [http://localhost/recipe_by_link?link=http%3A%2F%2Fwww.epicurious.com%2Frecipes%2Ffood%2Fviews%2FAvocado-with-Savory-Tomato-Sorbet-and-Chips-358691]
+
+
+Processing MealsController#new (for 127.0.0.1 at 2010-05-01 12:05:02) [GET]
+  Parameters: {"action"=>"new", "controller"=>"meals", "day"=>"Apr-30-2010", "user_id"=>"3"}
+  [4;36;1mUser Load (0.5ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 3) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 3) [0m
+  [4;36;1mRecipe Load (1.2ms)[0m   [0;1mSELECT * FROM "recipes" WHERE ("recipes"."user_id" = 3) ORDER BY upper(title) ASC[0m
+Rendering template within layouts/application
+Rendering meals/new
+Rendered layouts/_header (0.3ms)
+Rendered layouts/_footer (0.5ms)
+Completed in 45ms (View: 15, DB: 2) | 200 OK [http://localhost/users/3/meals/new?day=Apr-30-2010]
+
+
+Processing RecipesController#recipe_by_link (for 127.0.0.1 at 2010-05-01 12:05:02) [GET]
+  Parameters: {"action"=>"recipe_by_link", "controller"=>"recipes", "link"=>"http://www.epicurious.com/recipes/food/views/Avocado-with-Savory-Tomato-Sorbet-and-Chips-358691"}
+  [4;35;1mUser Load (0.4ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 3) [0m
+Completed in 407ms (View: 1, DB: 0) | 200 OK [http://localhost/recipe_by_link?link=http%3A%2F%2Fwww.epicurious.com%2Frecipes%2Ffood%2Fviews%2FAvocado-with-Savory-Tomato-Sorbet-and-Chips-358691]
+
+
+Processing RecipesController#recipe_by_link (for 127.0.0.1 at 2010-05-01 12:05:05) [GET]
+  Parameters: {"action"=>"recipe_by_link", "controller"=>"recipes", "link"=>""}
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 3) [0m
+
+Errno::ENOENT (No such file or directory - ):
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/open-uri.rb:32:in `initialize'
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/open-uri.rb:32:in `open_uri_original_open'
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/open-uri.rb:32:in `open'
+  lib/recipe_scraper.rb:11:in `load_recipe'
+  app/controllers/recipes_controller.rb:39:in `recipe_by_link'
+  haml (2.2.23) lib/sass/plugin/rails.rb:20:in `process'
+
+Rendered rescues/_trace (43.7ms)
+Rendered rescues/_request_and_response (0.4ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing RecipesController#recipe_by_link (for 127.0.0.1 at 2010-05-01 12:05:07) [GET]
+  Parameters: {"action"=>"recipe_by_link", "controller"=>"recipes", "link"=>"http://www.epicurious.com/recipes/food/views/Avocado-with-Savory-Tomato-Sorbet-and-Chips-358691"}
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 3) [0m
+Completed in 457ms (View: 1, DB: 0) | 200 OK [http://localhost/recipe_by_link?link=http%3A%2F%2Fwww.epicurious.com%2Frecipes%2Ffood%2Fviews%2FAvocado-with-Savory-Tomato-Sorbet-and-Chips-358691]
+
+
+Processing RecipesController#recipe_by_link (for 127.0.0.1 at 2010-05-01 12:05:33) [GET]
+  Parameters: {"action"=>"recipe_by_link", "controller"=>"recipes", "link"=>"http://www.epicurious.com/recipes/food/views/Beet-and-Cabbage-Salads-358592"}
+  [4;36;1mUser Load (0.4ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 3) [0m
+Completed in 568ms (View: 1, DB: 0) | 200 OK [http://localhost/recipe_by_link?link=http%3A%2F%2Fwww.epicurious.com%2Frecipes%2Ffood%2Fviews%2FBeet-and-Cabbage-Salads-358592]
+
+
+Processing MealsController#new (for 127.0.0.1 at 2010-05-01 12:06:46) [GET]
+  Parameters: {"action"=>"new", "controller"=>"meals", "day"=>"Apr-30-2010", "user_id"=>"3"}
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 3) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 3) [0m
+  [4;35;1mRecipe Load (1.1ms)[0m   [0mSELECT * FROM "recipes" WHERE ("recipes"."user_id" = 3) ORDER BY upper(title) ASC[0m
+Rendering template within layouts/application
+Rendering meals/new
+Rendered layouts/_header (0.3ms)
+Rendered layouts/_footer (0.5ms)
+Completed in 48ms (View: 23, DB: 1) | 200 OK [http://localhost/users/3/meals/new?day=Apr-30-2010]
+
+
+Processing RecipesController#recipe_by_link (for 127.0.0.1 at 2010-05-01 12:06:46) [GET]
+  Parameters: {"action"=>"recipe_by_link", "controller"=>"recipes", "link"=>"http://www.epicurious.com/recipes/food/views/Beet-and-Cabbage-Salads-358592"}
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 3) [0m
+Completed in 355ms (View: 1, DB: 0) | 200 OK [http://localhost/recipe_by_link?link=http%3A%2F%2Fwww.epicurious.com%2Frecipes%2Ffood%2Fviews%2FBeet-and-Cabbage-Salads-358592]
+
+
+Processing MealsController#new (for 127.0.0.1 at 2010-05-01 12:07:14) [GET]
+  Parameters: {"action"=>"new", "controller"=>"meals", "day"=>"Apr-30-2010", "user_id"=>"3"}
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 3) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 3) [0m
+  [4;35;1mRecipe Load (1.2ms)[0m   [0mSELECT * FROM "recipes" WHERE ("recipes"."user_id" = 3) ORDER BY upper(title) ASC[0m
+Rendering template within layouts/application
+Rendering meals/new
+Rendered layouts/_header (0.3ms)
+Rendered layouts/_footer (0.9ms)
+Completed in 133ms (View: 107, DB: 1) | 200 OK [http://localhost/users/3/meals/new?day=Apr-30-2010]
+
+
+Processing RecipesController#recipe_by_link (for 127.0.0.1 at 2010-05-01 12:07:15) [GET]
+  Parameters: {"action"=>"recipe_by_link", "controller"=>"recipes", "link"=>"http://www.epicurious.com/recipes/food/views/Beet-and-Cabbage-Salads-358592"}
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 3) [0m
+Completed in 463ms (View: 1, DB: 0) | 200 OK [http://localhost/recipe_by_link?link=http%3A%2F%2Fwww.epicurious.com%2Frecipes%2Ffood%2Fviews%2FBeet-and-Cabbage-Salads-358592]
+
+
+Processing RecipesController#recipe_by_link (for 127.0.0.1 at 2010-05-01 12:07:23) [GET]
+  Parameters: {"action"=>"recipe_by_link", "controller"=>"recipes", "link"=>""}
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 3) [0m
+
+Errno::ENOENT (No such file or directory - ):
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/open-uri.rb:32:in `initialize'
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/open-uri.rb:32:in `open_uri_original_open'
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/open-uri.rb:32:in `open'
+  lib/recipe_scraper.rb:11:in `load_recipe'
+  app/controllers/recipes_controller.rb:39:in `recipe_by_link'
+  haml (2.2.23) lib/sass/plugin/rails.rb:20:in `process'
+
+Rendered rescues/_trace (44.9ms)
+Rendered rescues/_request_and_response (0.4ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing RecipesController#recipe_by_link (for 127.0.0.1 at 2010-05-01 12:07:25) [GET]
+  Parameters: {"action"=>"recipe_by_link", "controller"=>"recipes", "link"=>"http://www.epicurious.com/recipes/food/views/Beet-and-Cabbage-Salads-358592"}
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 3) [0m
+Completed in 438ms (View: 1, DB: 0) | 200 OK [http://localhost/recipe_by_link?link=http%3A%2F%2Fwww.epicurious.com%2Frecipes%2Ffood%2Fviews%2FBeet-and-Cabbage-Salads-358592]
+
+
+Processing RecipesController#recipe_by_link (for 127.0.0.1 at 2010-05-01 12:10:12) [GET]
+  Parameters: {"action"=>"recipe_by_link", "controller"=>"recipes", "link"=>"http://www.epicurious.com/recipes/food/views/Bakewell-Tart-with-Raspberry-Preserves-358564"}
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 3) [0m
+Completed in 500ms (View: 1, DB: 0) | 200 OK [http://localhost/recipe_by_link?link=http://www.epicurious.com/recipes/food/views/Bakewell-Tart-with-Raspberry-Preserves-358564]
+
+
+Processing MealsController#new (for 127.0.0.1 at 2010-05-01 12:10:33) [GET]
+  Parameters: {"action"=>"new", "controller"=>"meals", "day"=>"Apr-30-2010", "user_id"=>"3"}
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 3) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 3) [0m
+  [4;36;1mRecipe Load (1.3ms)[0m   [0;1mSELECT * FROM "recipes" WHERE ("recipes"."user_id" = 3) ORDER BY upper(title) ASC[0m
+Rendering template within layouts/application
+Rendering meals/new
+Rendered layouts/_header (0.3ms)
+Rendered layouts/_footer (0.4ms)
+Completed in 40ms (View: 14, DB: 2) | 200 OK [http://localhost/users/3/meals/new?day=Apr-30-2010]
+
+
+Processing RecipesController#recipe_by_link (for 127.0.0.1 at 2010-05-01 12:10:36) [GET]
+  Parameters: {"action"=>"recipe_by_link", "controller"=>"recipes", "link"=>"$(\"#meal_recipe_attributes_ingredients\").val(data.ingredients);"}
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 3) [0m
+
+Errno::ENOENT (No such file or directory - $("#meal_recipe_attributes_ingredients").val(data.ingredients);):
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/open-uri.rb:32:in `initialize'
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/open-uri.rb:32:in `open_uri_original_open'
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/open-uri.rb:32:in `open'
+  lib/recipe_scraper.rb:11:in `load_recipe'
+  app/controllers/recipes_controller.rb:39:in `recipe_by_link'
+  haml (2.2.23) lib/sass/plugin/rails.rb:20:in `process'
+
+Rendered rescues/_trace (42.4ms)
+Rendered rescues/_request_and_response (0.4ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing RecipesController#recipe_by_link (for 127.0.0.1 at 2010-05-01 12:10:38) [GET]
+  Parameters: {"action"=>"recipe_by_link", "controller"=>"recipes", "link"=>""}
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 3) [0m
+
+Errno::ENOENT (No such file or directory - ):
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/open-uri.rb:32:in `initialize'
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/open-uri.rb:32:in `open_uri_original_open'
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/open-uri.rb:32:in `open'
+  lib/recipe_scraper.rb:11:in `load_recipe'
+  app/controllers/recipes_controller.rb:39:in `recipe_by_link'
+  haml (2.2.23) lib/sass/plugin/rails.rb:20:in `process'
+
+Rendered rescues/_trace (118.6ms)
+Rendered rescues/_request_and_response (0.4ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing RecipesController#recipe_by_link (for 127.0.0.1 at 2010-05-01 12:10:48) [GET]
+  Parameters: {"action"=>"recipe_by_link", "controller"=>"recipes", "link"=>"http://www.epicurious.com/recipes/food/views/Beet-and-Cabbage-Salads-358592"}
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 3) [0m
+Completed in 308ms (View: 1, DB: 0) | 200 OK [http://localhost/recipe_by_link?link=http%3A%2F%2Fwww.epicurious.com%2Frecipes%2Ffood%2Fviews%2FBeet-and-Cabbage-Salads-358592]
+
+
+Processing MealsController#create (for 127.0.0.1 at 2010-05-01 12:10:52) [POST]
+  Parameters: {"commit"=>"add and schedule recipe", "meal"=>{"recipe_attributes"=>{"title"=>"Beet and Cabbage Salads", "prep_time"=>"", "ingredients"=>"2 tablespoons Sherry wine vinegar\r\n2 teaspoons Dijon mustard\r\n5 tablespoons safflower oil\r\n3 large raw beets, peeled, coarsely grated\r\n1/4 cup distilled white vinegar\r\n1 tablespoon soy sauce\r\n1 tablespoon sugar\r\n5 tablespoons safflower oil\r\n6 cups very thinly sliced green cabbage\r\n2 tablespoons chopped fresh mint\r\n", "directions"=>"For beet salad:  \r\n                Whisk vinegar and mustard in\r\nlarge bowl. Gradually whisk in oil, then mix\r\nin beets. Season with salt and pepper.\r\n\r\nFor cabbage salad: \r\n                Whisk vinegar, soy\r\nsauce, and sugar in another large bowl.\r\nGradually whisk in oil. Mix in cabbage and\r\nmint. Season with salt and pepper. Let\r\nsalads stand 30 minutes and up to 2 hours\r\nat room temperature, tossing occasionally.\r\n\r\n", "yield"=>"Makes 6 to 8 servings", "link"=>"http://www.epicurious.com/recipes/food/views/Beet-and-Cabbage-Salads-358592"}, "day"=>"Apr-30-2010"}, "action"=>"create", "authenticity_token"=>"vHPlWi2McLaHjPqRhUsrRMIZMocno8g+JLuvn/SEQ2k=", "controller"=>"meals", "user_id"=>"3"}
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 3) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 3) [0m
+  [4;36;1mRecipe Create (0.5ms)[0m   [0;1mINSERT INTO "recipes" ("updated_at", "title", "directions", "ingredients", "yield", "prep_time", "user_id", "link", "created_at") VALUES('2010-05-01 16:10:52', 'Beet and Cabbage Salads', 'For beet salad: 
+ Whisk vinegar and mustard in
+large bowl. Gradually whisk in oil, then mix
+in beets. Season with salt and pepper.
+
+For cabbage salad: 
+ Whisk vinegar, soy
+sauce, and sugar in another large bowl.
+Gradually whisk in oil. Mix in cabbage and
+mint. Season with salt and pepper. Let
+salads stand 30 minutes and up to 2 hours
+at room temperature, tossing occasionally.
+
+', '2 tablespoons Sherry wine vinegar
+2 teaspoons Dijon mustard
+5 tablespoons safflower oil
+3 large raw beets, peeled, coarsely grated
+1/4 cup distilled white vinegar
+1 tablespoon soy sauce
+1 tablespoon sugar
+5 tablespoons safflower oil
+6 cups very thinly sliced green cabbage
+2 tablespoons chopped fresh mint
+', 'Makes 6 to 8 servings', '', 3, 'http://www.epicurious.com/recipes/food/views/Beet-and-Cabbage-Salads-358592', '2010-05-01 16:10:52')[0m
+  [4;35;1mMeal Create (0.2ms)[0m   [0mINSERT INTO "meals" ("updated_at", "recipe_id", "day", "user_id", "created_at") VALUES('2010-05-01 16:10:52', 44, '2010-04-30', 3, '2010-05-01 16:10:52')[0m
+Redirected to http://localhost:3000/users/3/meals
+Completed in 36ms (DB: 1) | 302 Found [http://localhost/users/3/meals]
+
+
+Processing MealsController#index (for 127.0.0.1 at 2010-05-01 12:10:52) [GET]
+  Parameters: {"action"=>"index", "controller"=>"meals", "user_id"=>"3"}
+  [4;36;1mUser Load (0.4ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 3) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 3) [0m
+  [4;36;1mMeal Load (0.4ms)[0m   [0;1mSELECT * FROM "meals" WHERE (user_id = 3) AND ("meals"."day" = '2010-04-30') [0m
+  [4;35;1mMeal Load (0.3ms)[0m   [0mSELECT * FROM "meals" WHERE (user_id = 3) AND ("meals"."day" = '2010-05-01') [0m
+  [4;36;1mMeal Load (0.4ms)[0m   [0;1mSELECT * FROM "meals" WHERE (user_id = 3) AND ("meals"."day" = '2010-05-02') [0m
+Rendering template within layouts/application
+Rendering meals/index
+  [4;35;1mRecipe Load (0.4ms)[0m   [0mSELECT * FROM "recipes" WHERE ("recipes"."id" = 44) [0m
+Rendered meals/_meal (10.3ms)
+  [4;36;1mRecipe Load (0.4ms)[0m   [0;1mSELECT * FROM "recipes" WHERE ("recipes"."id" = 41) [0m
+Rendered meals/_meal (1.8ms)
+  [4;35;1mRecipe Load (0.3ms)[0m   [0mSELECT * FROM "recipes" WHERE ("recipes"."id" = 42) [0m
+Rendered meals/_meal (1.7ms)
+Rendered layouts/_header (0.4ms)
+Rendered layouts/_footer (0.4ms)
+Completed in 48ms (View: 22, DB: 3) | 200 OK [http://localhost/users/3/meals]
+
+
+Processing MealsController#show (for 127.0.0.1 at 2010-05-01 12:10:54) [GET]
+  Parameters: {"action"=>"show", "id"=>"80", "controller"=>"meals", "user_id"=>"3"}
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 3) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 3) [0m
+  [4;36;1mMeal Load (0.3ms)[0m   [0;1mSELECT * FROM "meals" WHERE ("meals"."id" = 80) [0m
+Rendering template within layouts/application
+Rendering meals/show
+  [4;35;1mRecipe Load (0.4ms)[0m   [0mSELECT * FROM "recipes" WHERE ("recipes"."id" = 44) [0m
+Rendered layouts/_header (1.4ms)
+Rendered layouts/_footer (0.4ms)
+Completed in 41ms (View: 26, DB: 1) | 200 OK [http://localhost/users/3/meals/80]
+
+
+Processing MealsController#index (for 127.0.0.1 at 2010-05-01 12:10:58) [GET]
+  Parameters: {"action"=>"index", "d"=>"2010-04-30", "controller"=>"meals", "user_id"=>"3"}
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 3) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 3) [0m
+  [4;36;1mMeal Load (0.3ms)[0m   [0;1mSELECT * FROM "meals" WHERE (user_id = 3) AND ("meals"."day" = '2010-04-29') [0m
+  [4;35;1mMeal Load (0.3ms)[0m   [0mSELECT * FROM "meals" WHERE (user_id = 3) AND ("meals"."day" = '2010-04-30') [0m
+  [4;36;1mMeal Load (0.3ms)[0m   [0;1mSELECT * FROM "meals" WHERE (user_id = 3) AND ("meals"."day" = '2010-05-01') [0m
+Rendering template within layouts/application
+Rendering meals/index
+  [4;35;1mRecipe Load (0.4ms)[0m   [0mSELECT * FROM "recipes" WHERE ("recipes"."id" = 41) [0m
+Rendered meals/_meal (10.4ms)
+  [4;36;1mRecipe Load (0.4ms)[0m   [0;1mSELECT * FROM "recipes" WHERE ("recipes"."id" = 44) [0m
+Rendered meals/_meal (1.6ms)
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "recipes" WHERE ("recipes"."id" = 41) [0m
+Rendered meals/_meal (1.1ms)
+Rendered layouts/_header (0.3ms)
+Rendered layouts/_footer (0.4ms)
+Completed in 41ms (View: 21, DB: 2) | 200 OK [http://localhost/users/3/meals?d=2010-04-30]
