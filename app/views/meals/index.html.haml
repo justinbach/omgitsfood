@@ -1,19 +1,17 @@
-%h1 What's cooking?
+%h1= "What's cooking?" unless @user != current_user
+%h1= "Browsing #{@user.username}'s meals" unless @user == current_user
 #mealDays
   .mealDay
-    %h2= (@centerDate - 1).strftime("%a %b %d, %Y")
-    = link_to "add a meal", { :day => (@centerDate - 1).strftime("%b-%d-%Y"), :controller => "meals", :action => "new", :user_id => current_user }, :class => "addMealLink"
+    = dayTitle @centerDate - 1
+    = addMealLink @centerDate - 1
     = render :partial => 'meal', :collection => @left_meals
   .mealDay
-    - if @centerDate == Date.today
-      %h2.today= @centerDate.strftime("%a %b %d, %Y")
-    - else
-      %h2= @centerDate.strftime("%a %b %d, %Y")
-    = link_to "add a meal", { :day => @centerDate.strftime("%b-%d-%Y"), :controller => "meals", :action => "new", :user_id => current_user }, :class => "addMealLink"
+    = dayTitle @centerDate
+    = addMealLink @centerDate
     = render :partial => 'meal', :collection => @center_meals
   .mealDay.lastMealDay
-    %h2= (@centerDate + 1).strftime("%a %b %d, %Y")
-    = link_to "add a meal", { :day => (@centerDate + 1).strftime("%b-%d-%Y"), :controller => "meals", :action => "new", :user_id => current_user }, :class => "addMealLink"
+    = dayTitle @centerDate + 1
+    = addMealLink @centerDate + 1
     = render :partial => 'meal', :collection => @right_meals
 .clearDiv
 #dateLinks

@@ -12,9 +12,10 @@
       = link_to "Log out", logout_path
     - else
       = link_to "Sign up", signup_path
-  #nav
-    = link_to "plan meals", user_meals_path(current_user)
-    = link_to "manage recipes", recipes_path
-    = link_to "browse users", users_path
+  - if current_user
+    #nav
+      = link_to "plan meals", user_meals_path(current_user)
+      = link_to "manage recipes", recipes_path
+      = link_to "browse users", users_path
 .clearDiv
   

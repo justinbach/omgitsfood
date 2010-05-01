@@ -7,11 +7,11 @@ class MealsController < ApplicationController
   def index
     @centerDate = params[:d] ? Date.parse(params[:d]) : Date.today
     @left_meals = Meal.find_all_by_day(@centerDate - 1, 
-                              :conditions => ['user_id = ?', current_user])
+                              :conditions => ['user_id = ?', @user])
     @center_meals = Meal.find_all_by_day(@centerDate,
-                              :conditions => ['user_id = ?', current_user])
+                              :conditions => ['user_id = ?', @user])
     @right_meals = Meal.find_all_by_day(@centerDate + 1,
-                              :conditions => ['user_id = ?', current_user])
+                              :conditions => ['user_id = ?', @user])
   end
   
   def show

@@ -18,7 +18,7 @@
         = recipe_form.text_area :directions
         %br
       = submit_tag 'add and schedule recipe'
-  - if @recipes
+  - if @recipes.length > 0
     #recipePickerForm
       - form_for @meal, :url => { :action => "create"} do |meal_form|
         = hidden_field(:meal, :day)
