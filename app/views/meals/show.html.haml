@@ -7,10 +7,21 @@
 - form_for @meal, :url => { :action => "update"} do |meal_form|
   = text_field(:meal, :day, :value => @meal.day.strftime('%m/%d/%Y'))
 #viewMeal
+  #externalLink
+    -if @meal.recipe.link && @meal.recipe.link != ""
+      %h3= "Link: #{link_to @meal.recipe.link, @meal.recipe.link, :target => 'blank'}"
+  #prepTime
+    -if @meal.recipe.prep_time && @meal.recipe.prep_time != ""
+      %h3 Preparation Time
+      %p= @meal.recipe.prep_time
   #ingredients
     %h3 Ingredients
     %p= @meal.recipe.ingredients.gsub(/\n/,'<br/>')
   #directions
     %h3 Directions
     %p= @meal.recipe.directions.gsub(/\n/,'<br/>')
+  #yield
+    -if @meal.recipe.yield && @meal.recipe.yield != ""
+      %h3 Yield
+      %p= @meal.recipe.yield
   #backLink= link_to "&larr; back to meals", url_for(:controller => 'meals', :action => 'index', :d => @meal.day), :class => "utilityLink"

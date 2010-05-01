@@ -225,6 +225,9 @@ input[disabled] {
       width: 200px;
       display: block; }
 
+#externalLink h3 a {
+  text-decoration: none; }
+
 #viewMeal h3 {
   margin: 10px 0;
   text-decoration: underline; }

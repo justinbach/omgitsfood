@@ -9,6 +9,9 @@
         = label(:recipe, :title)
         = recipe_form.text_field :title
         %br
+        = label(:recipe, "Link (if applicable)")
+        = recipe_form.text_field :link
+        %br
         = label(:recipe, :prep_time)
         = recipe_form.text_field :prep_time
         %br

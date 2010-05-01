@@ -1,6 +1,9 @@
 %h1= "Recipe: #{@recipe.title}"
 #editRecipeLink= edit_recipe_link_display
 #viewMeal
+  #externalLink
+    -if @recipe.link && @recipe.link != ""
+      %h3= "Link: #{link_to @recipe.link, @recipe.link, :target => 'blank'}"
   #prepTime
     -if @recipe.prep_time && @recipe.prep_time != ""
       %h3 Preparation Time
