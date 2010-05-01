@@ -10,13 +10,50 @@ module RecipeScraper
   def load_recipe url 
     if !url.match(/epicurious.com/)
       EpicuriousScraper.new.load_recipe url
-    #elsif !url.match(/cooks.com/)
-     # CooksScraper.new.load_recipe url
+    elsif !url.match(/cooks.com/)
+      CooksScraper.new.load_recipe url
     else
       nil
     end
   end
-
+  
+  # for scraping from Cooks.com
+  class CooksScraper
+    def load_recipe url
+      recipe = open(url) { |f| Hpricot(f) }
+      @recipe = Recipe.new
+      @recipe.title = get_title recipe
+      @recipe.ingredients = get_ingredients recipe
+      @recipe.directions = get_directions recipe
+      @recipe.yield = get_yield recipe
+      if @recipe.title == '' || @recipe.ingredients == '' || @recipe.directions == ''
+        nil
+      else
+        @recipe
+      end
+    end
+  
+    def get_title recipe
+        get_sanitized_innerHTML(recipe.at('td.title'))
+    end
+  
+    def get_ingredients recipe
+      get_sanitized_innerHTML(recipe.at('div[@style="padding-left: 20px; color: BLACK;"]'))
+    end
+  
+    def get_directions recipe
+      get_sanitized_innerHTML(recipe.at('div[@style="color: #772222;"]'))
+    end
+  
+    def get_yield recipe
+      get_sanitized_innerHTML(recipe.at('span.yield'))
+    end
+  
+    def get_sanitized_innerHTML e
+      decoder = HTMLEntities.new
+      decoder.decode(e.innerHTML.to_s.strip.gsub(/<\/?[^>]*>/, "")) rescue ''
+    end  
+  end  
   
   # for scraping from Epicurious
   class EpicuriousScraper
@@ -68,7 +105,7 @@ module RecipeScraper
   
     def get_sanitized_innerHTML e
       decoder = HTMLEntities.new
-      decoder.decode(e.innerHTML.to_s.strip.gsub(/<\/?[^>]*>/, ""))
+      decoder.decode(e.innerHTML.to_s.strip.gsub(/<\/?[^>]*>/, "")) rescue ''
     end  
   end
 end
