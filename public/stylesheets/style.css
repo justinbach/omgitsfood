@@ -140,7 +140,7 @@ h1 {
     font-size: 20px;
     margin-bottom: 10px; }
   .mealDay h2.today {
-    text-decoration: underline; }
+    color: #fa6900; }
 
 input, textarea {
   border-thickness: 1px;
