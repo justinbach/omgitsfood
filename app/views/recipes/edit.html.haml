@@ -9,11 +9,17 @@
         = label(:recipe, :title)
         = recipe_form.text_field :title
         %br
+        = label(:recipe, :prep_time)
+        = recipe_form.text_field :prep_time
+        %br
         = label(:recipe, :ingredients)
         = recipe_form.text_area :ingredients
         %br
         = label(:recipe, :directions)
         = recipe_form.text_area :directions
+        %br
+        = label(:recipe, :yield)
+        = recipe_form.text_field :yield
         %br
         = submit_tag 'update recipe'
 #backLink= link_to "&larr; back to #{@recipe.title}", :back, :class => "utilityLink"

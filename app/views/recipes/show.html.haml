@@ -1,10 +1,18 @@
 %h1= "Recipe: #{@recipe.title}"
 #editRecipeLink= edit_recipe_link_display
 #viewMeal
+  #prepTime
+    -if @recipe.prep_time && @recipe.prep_time != ""
+      %h3 Preparation Time
+      %p= @recipe.prep_time
   #ingredients
     %h3 Ingredients
     %p= @recipe.ingredients.gsub(/\n/,'<br/>')
   #directions
     %h3 Directions
     %p= @recipe.directions.gsub(/\n/,'<br/>')
+  #yield
+    -if @recipe.yield && @recipe.yield != ""
+      %h3 Yield
+      %p= @recipe.yield
   #backLink= link_to "&larr; Back to recipes", {:action => "index"}, :class => "utilityLink"
