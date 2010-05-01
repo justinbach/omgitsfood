@@ -8,9 +8,9 @@ module RecipeScraper
   # using a factory pattern-ish design here
   # ruby is duck-typed so interfaces / abstract base classes aren't used
   def load_recipe url 
-    if !url.match(/epicurious.com/)
+    if url.include? "epicurious.com"
       EpicuriousScraper.new.load_recipe url
-    elsif !url.match(/cooks.com/)
+    elsif url.include? "cooks.com"
       CooksScraper.new.load_recipe url
     else
       nil
@@ -51,7 +51,7 @@ module RecipeScraper
   
     def get_sanitized_innerHTML e
       decoder = HTMLEntities.new
-      decoder.decode(e.innerHTML.to_s.strip.gsub(/<\/?[^>]*>/, "")) rescue ''
+      decoder.decode(e.innerHTML.to_s.strip.gsub(/<br \/>|<\/p>|<p>/,"\n").gsub(/<\/?[^>]*>/, "")) rescue ''
     end  
   end  
   

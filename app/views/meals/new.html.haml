@@ -5,7 +5,7 @@
 #recipeForms
   #recipeForm
     %h2 Create a new recipe
-    %h3 NEW: Try pasting in a link from Epicurious!
+    %h3 NEW: Try pasting in a link from Epicurious or Cooks.com!
     - form_for @meal, :url => { :action => "create" } do |meal_form|
       = hidden_field(:meal, :day)
       - meal_form.fields_for :recipe do |recipe_form|
