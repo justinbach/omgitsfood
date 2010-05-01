@@ -3,7 +3,9 @@ ActionController::Routing::Routes.draw do |map|
   map.logout 'logout', :controller => 'sessions', :action => 'destroy'
   map.login 'login', :controller => 'sessions', :action => 'new'
   map.resources :sessions
-  map.resources :users
+  map.resources :users do |users|
+      users.resources :meals
+  end
 
   # The priority is based upon order of creation: first created -> highest priority.
 
@@ -48,10 +50,9 @@ ActionController::Routing::Routes.draw do |map|
   map.connect ':day/meals/new', :controller => 'meals', :action => 'new'
   map.connect ':day/meals/create', :controller => 'meals', :action => 'create'
   
-  map.resources :meals
   map.resources :recipes
 
   map.users 'users', :controller => 'users', :action => 'index'
 
-  map.root :controller => "meals"
+  map.root :controller => "users"
 end

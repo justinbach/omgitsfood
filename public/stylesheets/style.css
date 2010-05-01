@@ -147,14 +147,15 @@ input, textarea {
   border-style: solid;
   border-color: #999999; }
 
-input[type=submit] {
-  border-thickness: 2px;
+input[type=submit], .addMealLink {
   border-color: #fa6900;
+  border-width: 2px;
   border-style: solid;
+  margin: 3px 0;
   padding: 3px;
   -webkit-border-radius: 5px;
   background-color: #FFF; }
-  input[type=submit]:hover {
+  input[type=submit]:hover, .addMealLink:hover {
     color: #FFF;
     background-color: #fa6900;
     cursor: pointer; }

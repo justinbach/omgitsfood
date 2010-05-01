@@ -2,6 +2,7 @@ class MealsController < ApplicationController
 
   before_filter :login_required
   before_filter :store_return_point, :only => [:index]
+  before_filter :get_user
   
   def index
     @centerDate = params[:d] ? Date.parse(params[:d]) : Date.today
@@ -59,5 +60,8 @@ class MealsController < ApplicationController
   
   private
 
+  def get_user
+    @user = User.find(params[:user_id])
+  end
 
 end

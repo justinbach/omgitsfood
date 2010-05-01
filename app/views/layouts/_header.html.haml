@@ -13,8 +13,8 @@
     - else
       = link_to "Sign up", signup_path
   #nav
-    = nav_link_to "plan meals", meals_path, "meals"
-    = nav_link_to "manage recipes", recipes_path, "recipes"
-    = nav_link_to "browse users", users_path, "users"
+    = link_to "plan meals", user_meals_path(current_user)
+    = link_to "manage recipes", recipes_path
+    = link_to "browse users", users_path
 .clearDiv
   

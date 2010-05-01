@@ -2,18 +2,18 @@
 #mealDays
   .mealDay
     %h2= (@centerDate - 1).strftime("%a %b %d, %Y")
-    = button_to "add a meal", "/" +(@centerDate - 1).strftime("%b-%d-%Y").downcase+"/meals/new/", :method => :get
+    = link_to "add a meal", { :day => (@centerDate - 1).strftime("%b-%d-%Y"), :controller => "meals", :action => "new", :user_id => current_user }, :class => "addMealLink"
     = render :partial => 'meal', :collection => @left_meals
   .mealDay
     - if @centerDate == Date.today
       %h2.today= @centerDate.strftime("%a %b %d, %Y")
     - else
       %h2= @centerDate.strftime("%a %b %d, %Y")
-    = button_to "add a meal", "/" + @centerDate.strftime("%b-%d-%Y").downcase+"/meals/new/", :method => :get
+    = link_to "add a meal", { :day => @centerDate.strftime("%b-%d-%Y"), :controller => "meals", :action => "new", :user_id => current_user }, :class => "addMealLink"
     = render :partial => 'meal', :collection => @center_meals
   .mealDay.lastMealDay
     %h2= (@centerDate + 1).strftime("%a %b %d, %Y")
-    = button_to "add a meal", "/"+ (@centerDate + 1).strftime("%b-%d-%Y").downcase+"/meals/new/", :method => :get
+    = link_to "add a meal", { :day => (@centerDate + 1).strftime("%b-%d-%Y"), :controller => "meals", :action => "new", :user_id => current_user }, :class => "addMealLink"
     = render :partial => 'meal', :collection => @right_meals
 .clearDiv
 #dateLinks
