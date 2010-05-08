@@ -11,3 +11,16 @@ class ApplicationController < ActionController::Base
   # Scrub sensitive parameters from your log
   # filter_parameter_logging :password
 end
+
+# monkey patching to add a convenient helper method to dealing with Arrays
+class Array
+  def uniq_by(&blk)
+    transforms = []
+    self.select do |el|
+      should_keep = !transforms.include?(t=blk[el])
+      transforms << t
+      should_keep
+    end
+  end
+end
+

@@ -7,9 +7,25 @@ class RecipesController < ApplicationController
   def index
     @user_recipes = Recipe.find_all_by_user_id(current_user, 
                                             :order => "upper(title) ASC")
-    @other_recipes = Recipe.find(:all, 
-      :conditions => [ "user_id != :user_id", {:user_id => current_user}], 
-                                            :order => "upper(title) ASC")
+                                            
+    @made_recipes = @user_recipes.select do |r|
+      Meal.find(:all, 
+        :conditions => ["user_id = :user_id and day < :day", 
+          {:user_id => current_user, :day => Date.today}]).include? r
+    end
+
+    @planned_recipes = @user_recipes.select do |r|
+      Meal.find(:all, 
+        :conditions => ["user_id = :user_id and day >= :day", 
+          {:user_id => current_user, :day => Date.today}]).include? r
+    end
+   
+    @unplanned_recipes = @user_recipes.reject do |r|
+      Meal.find_all_by_user_id(current_user).include? r
+    end
+  
+    @other_recipes = get_other_recipes
+
   end
   
   def edit
@@ -58,5 +74,15 @@ class RecipesController < ApplicationController
   end
   
   private
+  
+  def get_other_recipes  
+    recipes = Recipe.find(:all, 
+      :conditions => [ "user_id != :user_id", {:user_id => current_user}], 
+                                            :order => "upper(title) ASC",
+                                            :group => "original_recipe_id")
+    recipes.reject{ |r| 
+                    @user_recipes.map { |u| 
+                      u.original_recipe_id}.include? r.original_recipe_id}
+  end
   
 end

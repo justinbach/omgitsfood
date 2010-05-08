@@ -54,6 +54,14 @@ h1 {
 .utilityLink {
   color: #fa6900; }
 
+#flash {
+  margin-bottom: 20px;
+  padding: 10px;
+  background-color: #69d2e7;
+  width: auto;
+  height: auto;
+  color: #FFF; }
+
 #header {
   height: 60px;
   width: 100%;
@@ -266,25 +274,26 @@ h1 {
     width: auto; }
   #recipeIndex label {
     margin: 10px 0 0 0; }
-  #recipeIndex #userRecipes {
-    border-right: 1px black solid;
+  #recipeIndex #yourRecipes {
     float: left;
-    width: 400px; }
-    #recipeIndex #userRecipes label {
+    width: 700px; }
+    #recipeIndex #yourRecipes label {
       width: 200px;
       display: block; }
   #recipeIndex #otherRecipes {
-    padding-left: 25px;
-    float: left;
-    width: 400px; }
-    #recipeIndex #otherRecipes label {
-      display: block; }
-    #recipeIndex #otherRecipes input[type=submit] {
-      margin-top: 20px; }
-    #recipeIndex #otherRecipes select {
-      margin-top: 20px;
-      width: 300px;
-      border: 2px solid gray; }
+    display: none; }
+
+#subnav li {
+  list-style-type: none;
+  display: inline;
+  margin-right: 10px; }
+  #subnav li a {
+    padding: 5px; }
+    #subnav li a:hover {
+      color: #fa6900; }
+  #subnav li a.active {
+    background-color: #fa6900;
+    color: #FFF; }
 
 #editRecipeForm #recipeForms #recipeForm {
   border: none;

@@ -1,10 +1,21 @@
+= javascript_include_tag('recipe_index')
 %h1 Browsing Recipes
-#flash= flash[:notice]
+= showFlash
+#subnav
+  %ul
+    %li <a href="#" id="yourRecipesLink" class="active">your recipes</a>
+    %li <a href="#" id="otherRecipesLink">other recipes</a>
 #recipeIndex
-  #userRecipes
-    %h2 Your Recipes
-    - @user_recipes.each do |r|
-      %li= link_to r.title, r
+  #yourRecipes
+    %h2 Stuff You've Made
+    - @made_recipes.each do |r|
+      %li= "#{link_to r.title, r} - last made on #{r.created_at.strftime('%a %b %d, %Y')}"
+    %h2 Stuff You're Gonna Make
+    - @planned_recipes.each do |r|
+      %li= "#{link_to r.title, r} - planned for #{r.created_at.strftime('%a %b %d, %Y')}"
+    %h2 Stuff You Haven't Decided To Make Yet
+    - @unplanned_recipes.each do |r|
+      %li= "#{link_to r.title, r} - added on #{r.created_at.strftime('%a %b %d, %Y')}"
   #otherRecipes
     %h2 Other Recipes
     - @other_recipes.each do |r|

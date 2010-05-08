@@ -66,7 +66,14 @@ h1
 .utilityLink
   color = !accentColor
 
-
+#flash
+  :margin-bottom 20px
+  :padding 10px
+  background-color = !backgroundColor
+  :width auto
+  :height auto
+  :color #FFF
+  
 // header and nav  ************************************************************
 
 #header
@@ -292,25 +299,29 @@ h1
     :width auto
   label
     :margin 10px 0 0 0
-  #userRecipes
-    :border-right 1px black solid
+  #yourRecipes
     :float left
-    :width 400px
+    :width 700px
     label
       :width 200px
       :display block
   #otherRecipes
-    :padding-left 25px
-    :float left
-    :width 400px
-    label
-      :display block
-    input[type=submit]
-      :margin-top 20px
-    select
-      :margin-top 20px
-      :width 300px
-      :border 2px solid gray
+    :display none
+
+#subnav
+  li
+    :list-style-type none
+    :display inline
+    :margin-right 10px
+    a
+      padding: 5px
+      &:hover
+        color = !accentColor
+    a.active
+      background-color = !accentColor
+      :color #FFF
+    
+    
 
 // recipes view/edit **********************************************************
 

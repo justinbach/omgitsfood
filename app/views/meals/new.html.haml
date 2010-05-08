@@ -1,6 +1,7 @@
 = javascript_include_tag('jquery.autogrow')
 = javascript_include_tag('meal_add')
 %h1= "Schedule recipe for " + @meal.day.strftime("%A, %B %d, %Y")
+= showFlash
 = error_messages_for :meal
 #recipeForms
   #recipeForm
