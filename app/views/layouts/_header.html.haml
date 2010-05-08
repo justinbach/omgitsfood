@@ -14,8 +14,8 @@
       = link_to "Sign up", signup_path
   - if current_user
     #nav
-      = link_to "plan meals", user_meals_path(current_user)
-      = link_to "browse recipes", recipes_path
-      = link_to "find users", users_path
+      = navLink "plan meals", user_meals_path(current_user), "meals"
+      = navLink "browse recipes", recipes_path, "recipes"
+      = navLink "find users", users_path, "users"
 .clearDiv
   
