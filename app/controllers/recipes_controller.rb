@@ -44,6 +44,19 @@ class RecipesController < ApplicationController
     end
   end
   
+  def add_to_collection
+    @recipe = Recipe.new(Recipe.find(params[:id]).attributes)
+    @recipe.original_recipe = Recipe.find(params[:id])
+    @recipe.user = current_user
+    if @recipe.save
+      flash[:notice] = "'#{@recipe.title}' has been successfully added to your collection."
+      redirect_to :action => "index"
+    else
+      flash[:notice] = "We were unable to add '#{@recipe.title}' to your collection."
+      redirect_to :action => "index"
+    end
+  end
+  
   private
   
 end

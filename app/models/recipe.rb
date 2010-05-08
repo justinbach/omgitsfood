@@ -3,6 +3,7 @@ class Recipe < ActiveRecord::Base
   
   has_many :meals
   belongs_to :user
+  belongs_to :original_recipe, :class_name => 'Recipe'
   validates_presence_of :title, :directions, :ingredients 
   
   def to_json

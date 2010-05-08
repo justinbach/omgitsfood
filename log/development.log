@@ -30288,3 +30288,166 @@ Rendered meals/_meal (1.1ms)
 Rendered layouts/_header (0.3ms)
 Rendered layouts/_footer (0.4ms)
 Completed in 41ms (View: 21, DB: 2) | 200 OK [http://localhost/users/3/meals?d=2010-04-30]
+  [4;36;1mSQL (0.7ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.6ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.5ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreateRecipes (20100417153810)
+Migrating to CreateIngredients (20100417153832)
+Migrating to CreateMeals (20100417153847)
+Migrating to CreateIngredientships (20100417155529)
+Migrating to AddRecipeToMeal (20100417160001)
+Migrating to AddBodyToRecipe (20100417160708)
+Migrating to AddMealIdToRecipes (20100417214431)
+Migrating to RemoveRecipeIdFromMeals (20100418133952)
+Migrating to CreateUsers (20100421000826)
+Migrating to AddUserIdToMeals (20100421004439)
+Migrating to AddUserIdToRecipes (20100421004459)
+Migrating to FixRecipeMealRelationship (20100424174623)
+Migrating to AddIngredientsToRecipes (20100425152920)
+Migrating to RenameBodyToDirections (20100425200026)
+Migrating to AddYieldToRecipes (20100501132932)
+Migrating to AddPrepTimeToRecipes (20100501133154)
+Migrating to AddLinkToRecipes (20100501135835)
+Migrating to AddRecipeIdToRecipes (20100508125549)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;35;1mSQL (22.0ms)[0m   [0mALTER TABLE "recipes" ADD "recipe_id" integer[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20100508125549')[0m
+  [4;35;1mSQL (0.5ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (0.3ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mPRAGMA index_list("ingredients")[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mPRAGMA index_list("ingredientships")[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mPRAGMA index_list("meals")[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mPRAGMA index_list("recipes")[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mPRAGMA index_list("users")[0m
+  [4;36;1mSQL (0.6ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mRecipe Load (0.4ms)[0m   [0mSELECT * FROM "recipes" LIMIT 1[0m
+  [4;36;1mRecipe Load (0.4ms)[0m   [0;1mSELECT * FROM "recipes" LIMIT 1[0m
+  [4;35;1mRecipe Load (0.4ms)[0m   [0mSELECT * FROM "recipes" LIMIT 1[0m
+  [4;36;1mRecipe Load (0.2ms)[0m   [0;1mSELECT * FROM "recipes" LIMIT 1[0m
+  [4;35;1mRecipe Load (0.4ms)[0m   [0mSELECT * FROM "recipes" LIMIT 1[0m
+  [4;36;1mRecipe Load (0.2ms)[0m   [0;1mSELECT * FROM "recipes" LIMIT 1[0m
+  [4;35;1mRecipe Load (0.5ms)[0m   [0mSELECT * FROM "recipes" LIMIT 1[0m
+  [4;36;1mRecipe Load (0.4ms)[0m   [0;1mSELECT * FROM "recipes" LIMIT 1[0m
+  [4;35;1mRecipe Load (0.3ms)[0m   [0mSELECT * FROM "recipes" WHERE ("recipes".recipe_id = 27) [0m
+  [4;36;1mRecipe Update (0.6ms)[0m   [0;1mUPDATE "recipes" SET "recipe_id" = 27, "updated_at" = '2010-05-08 12:56:58' WHERE "id" = 27[0m
+  [4;35;1mRecipe Load (1.8ms)[0m   [0mSELECT * FROM "recipes" [0m
+  [4;36;1mRecipe Update (0.6ms)[0m   [0;1mUPDATE "recipes" SET "recipe_id" = 28, "updated_at" = '2010-05-08 12:57:38' WHERE "id" = 28[0m
+  [4;35;1mRecipe Update (0.3ms)[0m   [0mUPDATE "recipes" SET "recipe_id" = 29, "updated_at" = '2010-05-08 12:57:38' WHERE "id" = 29[0m
+  [4;36;1mRecipe Update (0.3ms)[0m   [0;1mUPDATE "recipes" SET "recipe_id" = 30, "updated_at" = '2010-05-08 12:57:38' WHERE "id" = 30[0m
+  [4;35;1mRecipe Update (0.5ms)[0m   [0mUPDATE "recipes" SET "recipe_id" = 32, "updated_at" = '2010-05-08 12:57:38' WHERE "id" = 32[0m
+  [4;36;1mRecipe Update (0.5ms)[0m   [0;1mUPDATE "recipes" SET "recipe_id" = 34, "updated_at" = '2010-05-08 12:57:38' WHERE "id" = 34[0m
+  [4;35;1mRecipe Update (0.4ms)[0m   [0mUPDATE "recipes" SET "recipe_id" = 35, "updated_at" = '2010-05-08 12:57:38' WHERE "id" = 35[0m
+  [4;36;1mRecipe Update (0.4ms)[0m   [0;1mUPDATE "recipes" SET "recipe_id" = 36, "updated_at" = '2010-05-08 12:57:38' WHERE "id" = 36[0m
+  [4;35;1mRecipe Update (0.6ms)[0m   [0mUPDATE "recipes" SET "recipe_id" = 37, "updated_at" = '2010-05-08 12:57:38' WHERE "id" = 37[0m
+  [4;36;1mRecipe Update (0.5ms)[0m   [0;1mUPDATE "recipes" SET "recipe_id" = 38, "updated_at" = '2010-05-08 12:57:38' WHERE "id" = 38[0m
+  [4;35;1mRecipe Update (0.3ms)[0m   [0mUPDATE "recipes" SET "recipe_id" = 39, "updated_at" = '2010-05-08 12:57:38' WHERE "id" = 39[0m
+  [4;36;1mRecipe Update (0.4ms)[0m   [0;1mUPDATE "recipes" SET "recipe_id" = 40, "updated_at" = '2010-05-08 12:57:38' WHERE "id" = 40[0m
+  [4;35;1mRecipe Update (0.4ms)[0m   [0mUPDATE "recipes" SET "recipe_id" = 41, "updated_at" = '2010-05-08 12:57:38' WHERE "id" = 41[0m
+  [4;36;1mRecipe Update (0.5ms)[0m   [0;1mUPDATE "recipes" SET "recipe_id" = 42, "updated_at" = '2010-05-08 12:57:38' WHERE "id" = 42[0m
+  [4;35;1mRecipe Update (0.4ms)[0m   [0mUPDATE "recipes" SET "recipe_id" = 43, "updated_at" = '2010-05-08 12:57:38' WHERE "id" = 43[0m
+  [4;36;1mRecipe Update (0.3ms)[0m   [0;1mUPDATE "recipes" SET "recipe_id" = 44, "updated_at" = '2010-05-08 12:57:38' WHERE "id" = 44[0m
+  [4;35;1mRecipe Load (0.4ms)[0m   [0mSELECT * FROM "recipes" LIMIT 1[0m
+  [4;36;1mRecipe Load (0.4ms)[0m   [0;1mSELECT * FROM "recipes" LIMIT 1[0m
+  [4;35;1mRecipe Load (0.3ms)[0m   [0mSELECT * FROM "recipes" WHERE ("recipes"."id" = 27) [0m
+  [4;36;1mRecipe Load (0.4ms)[0m   [0;1mSELECT * FROM "recipes" LIMIT 1[0m
+  [4;35;1mRecipe Load (0.3ms)[0m   [0mSELECT * FROM "recipes" WHERE ("recipes"."id" = 27) [0m
+  [4;36;1mRecipe Load (0.3ms)[0m   [0;1mSELECT * FROM "recipes" WHERE ("recipes"."id" = 27) [0m
+  [4;35;1mRecipe Load (0.4ms)[0m   [0mSELECT * FROM "recipes" LIMIT 1[0m
+  [4;36;1mRecipe Load (0.3ms)[0m   [0;1mSELECT * FROM "recipes" WHERE ("recipes"."id" = 27) [0m
+  [4;35;1mRecipe Load (0.3ms)[0m   [0mSELECT * FROM "recipes" WHERE ("recipes"."id" = 27) [0m
+  [4;36;1mRecipe Load (0.3ms)[0m   [0;1mSELECT * FROM "recipes" WHERE ("recipes"."id" = 27) [0m
+  [4;35;1mRecipe Load (0.3ms)[0m   [0mSELECT * FROM "recipes" LIMIT 1[0m
+  [4;36;1mRecipe Load (0.2ms)[0m   [0;1mSELECT * FROM "recipes" WHERE ("recipes"."id" = 27) [0m
+  [4;35;1mRecipe Load (0.2ms)[0m   [0mSELECT * FROM "recipes" WHERE ("recipes"."id" = 27) [0m
+  [4;36;1mRecipe Load (0.2ms)[0m   [0;1mSELECT * FROM "recipes" WHERE ("recipes"."id" = 27) [0m
+  [4;35;1mRecipe Load (0.2ms)[0m   [0mSELECT * FROM "recipes" WHERE ("recipes"."id" = 27) [0m
+  [4;36;1mRecipe Load (0.2ms)[0m   [0;1mSELECT * FROM "recipes" WHERE ("recipes"."id" = 27) [0m
+  [4;35;1mRecipe Load (0.2ms)[0m   [0mSELECT * FROM "recipes" WHERE ("recipes"."id" = 27) [0m
+  [4;36;1mSQL (0.6ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.5ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreateRecipes (20100417153810)
+Migrating to CreateIngredients (20100417153832)
+Migrating to CreateMeals (20100417153847)
+Migrating to CreateIngredientships (20100417155529)
+Migrating to AddRecipeToMeal (20100417160001)
+Migrating to AddBodyToRecipe (20100417160708)
+Migrating to AddMealIdToRecipes (20100417214431)
+Migrating to RemoveRecipeIdFromMeals (20100418133952)
+Migrating to CreateUsers (20100421000826)
+Migrating to AddUserIdToMeals (20100421004439)
+Migrating to AddUserIdToRecipes (20100421004459)
+Migrating to FixRecipeMealRelationship (20100424174623)
+Migrating to AddIngredientsToRecipes (20100425152920)
+Migrating to RenameBodyToDirections (20100425200026)
+Migrating to AddYieldToRecipes (20100501132932)
+Migrating to AddPrepTimeToRecipes (20100501133154)
+Migrating to AddLinkToRecipes (20100501135835)
+Migrating to AddRecipeIdToRecipes (20100508125549)
+Migrating to RenamedRecipeIdToOriginalRecipeId (20100508125845)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mCREATE TEMPORARY TABLE "altered_recipes" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar(255), "created_at" datetime, "updated_at" datetime, "directions" text, "user_id" integer, "ingredients" text, "yield" varchar(255), "prep_time" varchar(255), "link" varchar(255), "original_recipe_id" integer) [0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mPRAGMA index_list("recipes")[0m
+  [4;35;1mSQL (35.0ms)[0m   [0mDROP TABLE "recipes"[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mCREATE TABLE "recipes" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar(255), "created_at" datetime, "updated_at" datetime, "directions" text, "user_id" integer, "ingredients" text, "yield" varchar(255), "prep_time" varchar(255), "link" varchar(255), "original_recipe_id" integer) [0m
+  [4;35;1mSQL (0.0ms)[0m   [0mPRAGMA index_list("altered_recipes")[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mDROP TABLE "altered_recipes"[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20100508125845')[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.5ms)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mPRAGMA index_list("ingredients")[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mPRAGMA index_list("ingredientships")[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mPRAGMA index_list("meals")[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mPRAGMA index_list("recipes")[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mPRAGMA index_list("users")[0m
+  [4;36;1mRecipe Load (0.6ms)[0m   [0;1mSELECT * FROM "recipes" LIMIT 1[0m
+  [4;35;1mRecipe Load (0.4ms)[0m   [0mSELECT * FROM "recipes" LIMIT 1[0m
+  [4;36;1mRecipe Load (0.6ms)[0m   [0;1mSELECT * FROM "recipes" LIMIT 1[0m
+  [4;35;1mRecipe Load (0.4ms)[0m   [0mSELECT * FROM "recipes" LIMIT 1[0m
+  [4;36;1mRecipe Load (0.4ms)[0m   [0;1mSELECT * FROM "recipes" WHERE ("recipes"."id" = 27) [0m
+  [4;35;1mRecipe Load (0.4ms)[0m   [0mSELECT * FROM "recipes" LIMIT 1[0m
+  [4;36;1mRecipe Load (0.3ms)[0m   [0;1mSELECT * FROM "recipes" WHERE ("recipes"."id" = 27) [0m
+  [4;35;1mRecipe Load (0.4ms)[0m   [0mSELECT * FROM "recipes" LIMIT 1[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mRecipe Load (0.4ms)[0m   [0mSELECT * FROM "recipes" LIMIT 1[0m
+  [4;36;1mRecipe Load (1.6ms)[0m   [0;1mSELECT * FROM "recipes" [0m
+  [4;35;1mRecipe Load (0.4ms)[0m   [0mSELECT * FROM "recipes" LIMIT 1[0m
+  [4;36;1mRecipe Load (0.3ms)[0m   [0;1mSELECT * FROM "recipes" WHERE ("recipes"."id" = 27) [0m
+  [4;35;1mRecipe Load (0.4ms)[0m   [0mSELECT * FROM "recipes" LIMIT 1[0m
+  [4;36;1mRecipe Load (0.4ms)[0m   [0;1mSELECT * FROM "recipes" WHERE ("recipes"."id" = 27) [0m
+  [4;35;1mRecipe Load (1.8ms)[0m   [0mSELECT * FROM "recipes" [0m
+  [4;36;1mRecipe Update (0.8ms)[0m   [0;1mUPDATE "recipes" SET "original_recipe_id" = 29, "updated_at" = '2010-05-08 13:05:06' WHERE "id" = 27[0m
+  [4;35;1mRecipe Update (0.7ms)[0m   [0mUPDATE "recipes" SET "original_recipe_id" = 27, "updated_at" = '2010-05-08 13:05:25' WHERE "id" = 27[0m
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;35;1mRecipe Load (0.4ms)[0m   [0mSELECT * FROM "recipes" WHERE ("recipes"."id" = 44) [0m
+  [4;36;1mRecipe Load (0.4ms)[0m   [0;1mSELECT * FROM "recipes" WHERE ("recipes"."id" = 44) [0m
+  [4;35;1mRecipe Load (0.4ms)[0m   [0mSELECT * FROM "recipes" WHERE ("recipes"."id" = 44) [0m
+WARNING: Can't mass-assign these protected attributes: id
