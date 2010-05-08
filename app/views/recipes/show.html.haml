@@ -1,11 +1,11 @@
 %h1= "Recipe: #{@recipe.title}"
 = showFlash
-#editRecipeLink= edit_recipe_link_display
+#editRecipeLink= editRecipeLinkDisplay
+#recipeDetails
+  - if @recipe.user != current_user
+    %h4= "Uploaded by #{@recipe.user.username} on #{@recipe.created_at.strftime('%a %b %d, %Y')}"
+    =button_to "Add this recipe to your collection", {:controller => "recipes", :action => "add_to_collection"}, :class => "utilityLink"
 #viewMeal
-  #recipeDetails
-    - if @recipe.user != current_user
-      %h4= "Uploaded by #{@recipe.user.username} on #{@recipe.created_at.strftime('%a %b %d, %Y')}"
-      =link_to "Add this recipe to your collection", :controller => "recipes", :action => "add_to_collection"
   #externalLink
     -if @recipe.link && @recipe.link != ""
       %h3= "Link: #{link_to @recipe.link, @recipe.link, :target => 'blank'}"

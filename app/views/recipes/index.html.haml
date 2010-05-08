@@ -5,6 +5,7 @@
   %ul
     %li <a href="#" id="yourRecipesLink" class="active">your recipes</a>
     %li <a href="#" id="otherRecipesLink">other recipes</a>
+    %li= link_to "add a recipe", new_recipe_path
 #recipeIndex
   #yourRecipes
     - if !@made_recipes.empty?
@@ -12,13 +13,13 @@
         %h2 Stuff You've Made
         - @made_recipes.each do |r|
           %ul
-            %li= "#{link_to r.title, r, :class => "recipeLink"} - last made on #{recipe_meal_link r}"
+            %li= "#{link_to r.title, r, :class => "recipeLink"} - last made on #{recipeMealLink r}"
     - if !@planned_recipes.empty?
       .recipeGroupContainer
         %h2 Stuff You're Gonna Make
         - @planned_recipes.each do |r|
           %ul
-            %li= "#{link_to r.title, r, :class => "recipeLink"} - planned for  #{recipe_meal_link r}"
+            %li= "#{link_to r.title, r, :class => "recipeLink"} - planned for  #{recipeMealLink r}"
     - if !@unplanned_recipes.empty?
       .recipeGroupContainer
         %h2 Stuff You Haven't Decided To Make Yet

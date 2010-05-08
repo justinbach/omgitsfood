@@ -1,11 +1,11 @@
 module RecipesHelper
-  def edit_recipe_link_display
+  def editRecipeLinkDisplay
     if @recipe.user == current_user
       link_to "Edit this recipe", {:action => "edit", :id => @recipe}, :class => "utilityLink"
     end
   end
   
-  def recipe_meal_link r
+  def recipeMealLink r
     link_to (r.meals.select { |m| 
         m.user_id == current_user.id 
         }.last.day.strftime('%a %b %d, %Y'), 
@@ -15,4 +15,5 @@ module RecipesHelper
           }.last),
       :class => 'recipeMealLink')
   end  
+  
 end

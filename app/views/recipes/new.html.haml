@@ -1,12 +1,12 @@
 = javascript_include_tag('jquery.autogrow')
 = javascript_include_tag('recipe_edit')
-%h1= "Edit Recipe: #{@recipe.title}"
+%h1= "Add a Recipe"
 = showFlash
 = error_messages_for :recipe
 #editRecipeForm
   #recipeForms
     #recipeForm
-      - form_for @recipe, :url => { :action => "update" } do |recipe_form|
+      - form_for @recipe, :url => { :action => "create" } do |recipe_form|
         = hidden_field(:recipe, :id)
         = label(:recipe, :title)
         = recipe_form.text_field :title
@@ -26,5 +26,5 @@
         = label(:recipe, :yield)
         = recipe_form.text_field :yield
         %br
-        = submit_tag 'update recipe'
+        = submit_tag 'add recipe'
 #backLink= link_to "&larr; back to #{@recipe.title}", :back, :class => "utilityLink"

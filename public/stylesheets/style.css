@@ -199,6 +199,38 @@ input[disabled] {
   #dateLinks .newer {
     float: right; }
 
+#viewMeal {
+  width: auto;
+  padding: 20px;
+  border: 3px solid #E0E4CC;
+  margin: 0px 0px 20px 0px;
+  -webkit-border-radius: 25px;
+  -moz-border-radius: 25px;
+  background-color: #F6F6F6; }
+  #viewMeal h3 {
+    margin: 10px 0;
+    text-decoration: underline; }
+  #viewMeal p {
+    padding-left: 30px;
+    width: 400px; }
+
+#backLink {
+  margin-top: 20px; }
+
+#meal_day {
+  visibility: hidden;
+  width: 0px;
+  height: 0px; }
+
+#rescheduleLink {
+  cursor: pointer; }
+
+h2 {
+  font-size: 20px; }
+
+h1 {
+  margin-bottom: 20px; }
+
 #recipeForms {
   margin: 40px 0 20px 0; }
   #recipeForms h2 {
@@ -233,40 +265,8 @@ input[disabled] {
       width: 200px;
       display: block; }
 
-#externalLink h3 a {
+#externalLink h3 {
   text-decoration: none; }
-
-#viewMeal {
-  width: auto;
-  padding: 20px;
-  border: 3px solid #E0E4CC;
-  margin: 0px 0px 20px 0px;
-  -webkit-border-radius: 25px;
-  -moz-border-radius: 25px;
-  background-color: #F6F6F6; }
-  #viewMeal h3 {
-    margin: 10px 0;
-    text-decoration: underline; }
-  #viewMeal p {
-    padding-left: 30px;
-    width: 400px; }
-
-#backLink {
-  margin-top: 20px; }
-
-#meal_day {
-  visibility: hidden;
-  width: 0px;
-  height: 0px; }
-
-#rescheduleLink {
-  cursor: pointer; }
-
-h2 {
-  font-size: 20px; }
-
-h1 {
-  margin-bottom: 20px; }
 
 #recipeIndex {
   margin: 40px 0 20px 0; }

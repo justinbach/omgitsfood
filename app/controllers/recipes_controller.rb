@@ -11,6 +11,22 @@ class RecipesController < ApplicationController
     @other_recipes = Recipe.other_recipes_by_user current_user
   end
   
+  def new
+    @recipe = Recipe.new
+    @recipe = Recipe.new
+  end
+  
+  def create
+    @recipe = Recipe.new(params[:recipe])
+    @recipe.user = current_user
+    if @recipe.save 
+      flash[:notice] = "'#{@recipe.title}' was successfully added to your recipes."
+      redirect_to :action => 'index'
+    else
+      render :action => "new"
+    end
+  end
+  
   def edit
     @recipe = Recipe.find(params[:id])
     if @recipe.user == current_user

@@ -30,7 +30,7 @@ class MealsController < ApplicationController
     @meal.recipe = Recipe.find(params[:recipe][:id]) unless params[:recipe].nil?
     @meal.user = current_user
     @meal.recipe.user = current_user unless @meal.recipe.nil?
-    if(@meal.save)
+    if @meal.save
       redirect_back :action => 'index'
     else
       @recipes = Recipe.find_all_by_user_id(current_user, :order => "upper(title) ASC")
