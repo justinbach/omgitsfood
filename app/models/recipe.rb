@@ -43,8 +43,7 @@ class Recipe < ActiveRecord::Base
     user_recipes = get_user_recipes user
     recipes = Recipe.find(:all, 
       :conditions => [ "user_id != :user_id", {:user_id => user}], 
-                                            :order => "upper(title) ASC",
-                                            :group => "original_recipe_id")
+                                            :order => "upper(title) ASC")
     recipes.reject{ |r| 
                     user_recipes.map { |u| 
                       u.original_recipe_id}.include? r.original_recipe_id}

@@ -21,6 +21,8 @@ class RecipesController < ApplicationController
     @recipe.user = current_user
     if @recipe.save 
       flash[:notice] = "'#{@recipe.title}' was successfully added to your recipes."
+      @recipe.original_recipe_id = @recipe.id
+      @recipe.save
       redirect_to :action => 'index'
     else
       render :action => "new"
