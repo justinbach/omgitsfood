@@ -295,6 +295,21 @@ h1 {
     background-color: #fa6900;
     color: #FFF; }
 
+.recipeGroupContainer {
+  width: auto;
+  padding: 20px;
+  border: 3px solid #E0E4CC;
+  margin: 0px 0px 20px 0px;
+  -webkit-border-radius: 25px;
+  -moz-border-radius: 25px;
+  background-color: #F6F6F6; }
+  .recipeGroupContainer h2 {
+    text-decoration: underline; }
+  .recipeGroupContainer a.recipeLink {
+    color: #fa6900; }
+  .recipeGroupContainer li {
+    margin-bottom: 5px; }
+
 #editRecipeForm #recipeForms #recipeForm {
   border: none;
   float: none; }

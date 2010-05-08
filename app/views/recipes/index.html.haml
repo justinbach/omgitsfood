@@ -7,16 +7,26 @@
     %li <a href="#" id="otherRecipesLink">other recipes</a>
 #recipeIndex
   #yourRecipes
-    %h2 Stuff You've Made
-    - @made_recipes.each do |r|
-      %li= "#{link_to r.title, r} - last made on #{r.created_at.strftime('%a %b %d, %Y')}"
-    %h2 Stuff You're Gonna Make
-    - @planned_recipes.each do |r|
-      %li= "#{link_to r.title, r} - planned for #{r.created_at.strftime('%a %b %d, %Y')}"
-    %h2 Stuff You Haven't Decided To Make Yet
-    - @unplanned_recipes.each do |r|
-      %li= "#{link_to r.title, r} - added on #{r.created_at.strftime('%a %b %d, %Y')}"
+    - if !@made_recipes.empty?
+      .recipeGroupContainer
+        %h2 Stuff You've Made
+        - @made_recipes.each do |r|
+          %ul
+            %li= "#{link_to r.title, r, :class => "recipeLink"} - last made on #{recipe_meal_link r}"
+    - if !@planned_recipes.empty?
+      .recipeGroupContainer
+        %h2 Stuff You're Gonna Make
+        - @planned_recipes.each do |r|
+          %ul
+            %li= "#{link_to r.title, r, :class => "recipeLink"} - planned for  #{recipe_meal_link r}"
+    - if !@unplanned_recipes.empty?
+      .recipeGroupContainer
+        %h2 Stuff You Haven't Decided To Make Yet
+        - @unplanned_recipes.each do |r|
+          %ul
+            %li= "#{link_to r.title, r, :class => "recipeLink"} - added on #{r.created_at.strftime('%a %b %d, %Y')}"
   #otherRecipes
-    %h2 Other Recipes
-    - @other_recipes.each do |r|
-      %li= link_to r.title, r      
+    .recipeGroupContainer
+      %h2 Other Recipes
+      - @other_recipes.each do |r|
+        %li= "#{link_to r.title, r, :class => "recipeLink"} - added on #{r.created_at.strftime('%a %b %d, %Y')} by #{r.user.username}"

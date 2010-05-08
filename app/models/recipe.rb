@@ -13,4 +13,48 @@ class Recipe < ActiveRecord::Base
     end
     result.to_json
   end
+  
+  def self.recipes_made_by_user user
+    user_recipes = get_user_recipes user
+    user_recipes.select do |r|
+      Meal.find(:all, 
+        :conditions => ["user_id = :user_id and day < :day", 
+          {:user_id => user, :day => Date.today}]).map{ |m| m.recipe }.include? r
+    end
+  end
+  
+  def self.recipes_planned_by_user user
+    user_recipes = get_user_recipes user
+    user_recipes.select do |r|
+      Meal.find(:all, 
+        :conditions => ["user_id = :user_id and day >= :day", 
+          {:user_id => user, :day => Date.today}]).map{ |m| m.recipe }.include? r
+    end
+  end
+  
+  def self.recipes_unplanned_by_user user
+    user_recipes = get_user_recipes user
+    user_recipes.reject do |r|
+      Meal.find_all_by_user_id(user).map{ |m| m.recipe }.include? r
+    end
+  end
+  
+  def self.other_recipes_by_user user
+    user_recipes = get_user_recipes user
+    recipes = Recipe.find(:all, 
+      :conditions => [ "user_id != :user_id", {:user_id => user}], 
+                                            :order => "upper(title) ASC",
+                                            :group => "original_recipe_id")
+    recipes.reject{ |r| 
+                    user_recipes.map { |u| 
+                      u.original_recipe_id}.include? r.original_recipe_id}
+  end
+  
+  
+  private 
+  
+  def self.get_user_recipes user
+    Recipe.find_all_by_user_id(user, :order => "upper(title) ASC")
+  end
+  
 end
