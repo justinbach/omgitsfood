@@ -6,7 +6,7 @@ module RecipesHelper
   end
   
   def recipeMealLink r
-    link_to (r.meals.select { |m| 
+    link_to(r.meals.select { |m| 
         m.user_id == current_user.id 
         }.last.day.strftime('%a %b %d, %Y'), 
       user_meal_path(current_user.id, 

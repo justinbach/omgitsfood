@@ -1,9 +1,9 @@
 %h1= "Recipe: #{@recipe.title}"
 = showFlash
 -if !@meals.empty?
-  %h2= "Prepared #{@meals.length} time#{@meals.length > 1 ? 's' : ''} - last on #{link_to @meals.first.day.strftime("%a %b %d, %Y"), user_meal_path(@recipe.user, @meals.first)}"
+  %h2= "Scheduled #{@meals.length} time#{@meals.length > 1 ? 's' : ''} - last on #{link_to @meals.first.day.strftime("%a %b %d, %Y"), user_meal_path(@recipe.user, @meals.first)}"
 -else
-  %h2= "Prepared 0 times"
+  %h2= "Scheduled 0 times"
 #editRecipeLink= editRecipeLinkDisplay
 #recipeDetails
   - if @recipe.user != current_user

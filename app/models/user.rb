@@ -4,6 +4,8 @@ class User < ActiveRecord::Base
   
   has_many :meals
   has_many :recipes
+  has_many :followings
+  has_many :followees, :through => :followings, :foreign_key => "followee_id"
   
   attr_accessor :password
   before_save :prepare_password
