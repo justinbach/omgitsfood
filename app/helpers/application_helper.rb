@@ -7,11 +7,26 @@ module ApplicationHelper
     end
   end
   
-  def navLink text, path, controller 
+  # this is hackish
+  def navLink text, path, controller
+    if controller == "meals"
+      if @user == current_user
+        return link_to text, path, :class => 'navActive'        
+      else
+        return link_to text, path
+      end
+    end
+    if controller == "users"
+      if params[:controller] == "meals" && @user != current_user
+        return link_to text, path, :class => 'navActive'
+      else
+        return link_to text, path
+      end
+    end
     if params[:controller] == controller
-      link_to text, path, :class => 'navActive'
+      return link_to text, path, :class => 'navActive'
     else
-      link_to text, path
+      return link_to text, path
     end
   end
   
