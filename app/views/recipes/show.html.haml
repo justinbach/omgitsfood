@@ -23,4 +23,5 @@
     -if @recipe.yield && @recipe.yield != ""
       %h3 Yield
       %p= @recipe.yield
+= render :partial => "recipe_reviews"
 #backLink= link_to "&larr; Back to recipes", {:action => "index"}, :class => "utilityLink"

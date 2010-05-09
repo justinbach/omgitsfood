@@ -11,10 +11,10 @@
         = submit_tag 'publish review'  
 - else
   %h2.reviewHeader= "Review (written on #{@review.created_at.strftime("%a %b %d, %Y")})"
-  #review
+  .review
     //= '<a href="#" id="editReviewLink">edit review</a>' unless @user != current_user
     = '<a href="#" id="editReviewLink">edit review</a>'
-    %p= @review.body
+    %p= @review.body.gsub(/\n/,'<br/>')
   #editReview
     #reviewForm
       - form_for @review, :url => { :controller => "reviews", :action => "update", :id => @review.id} do |review_form|

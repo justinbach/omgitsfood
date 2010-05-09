@@ -13,7 +13,6 @@ class RecipesController < ApplicationController
   
   def new
     @recipe = Recipe.new
-    @recipe = Recipe.new
   end
   
   def create
@@ -40,6 +39,7 @@ class RecipesController < ApplicationController
   
   def show
     @recipe = Recipe.find(params[:id])
+    @meals = Meal.find_all_by_recipe_id(params[:id], :order => 'day DESC')
   end
   
   def update

@@ -65,6 +65,9 @@ h1 {
   height: auto;
   color: #FFF; }
 
+input, textarea {
+  font-family: Arial, Helvetica, sans-serif; }
+
 #header {
   height: 60px;
   width: 100%;
@@ -298,6 +301,8 @@ h1 {
 #editReviewLink {
   color: #fa6900; }
 
+.review p {
+  width: 400px; }
 
 #externalLink h3 {
   text-decoration: none; }

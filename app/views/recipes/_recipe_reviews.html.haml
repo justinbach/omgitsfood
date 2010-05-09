@@ -1,0 +1,8 @@
+-reviewerName = @recipe.user == current_user ? "Your" : @recipe.user.username + "'s"
+-if !@meals.empty?
+  -@meals.each do |m| 
+    -if !m.review.nil?
+      .review
+        %h2.reviewHeader= "#{reviewerName} review from #{link_to m.day.strftime("%a %b %d, %Y"), user_meal_path(@recipe.user, m)}:"
+        %p= m.review.body
+      
