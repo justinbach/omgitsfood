@@ -6,13 +6,14 @@
         = label(:review, :body, "type review here")
         = review_form.text_area :body
         = hidden_field(:review, :meal_id, :value => @meal.id)
-        = hidden_field(:review, :user_id, :value => current_user.id)
+        = hidden_field(:review, :user_id, :value => @meal.user.id)
         %br
         = submit_tag 'publish review'  
 - else
   %h2.reviewHeader= "Review (written on #{@review.created_at.strftime("%a %b %d, %Y")})"
   #review
-    <a href="#" id="editReviewLink">edit review</a>
+    //= '<a href="#" id="editReviewLink">edit review</a>' unless @user != current_user
+    = '<a href="#" id="editReviewLink">edit review</a>'
     %p= @review.body
   #editReview
     #reviewForm
@@ -20,6 +21,6 @@
         = label(:review, :body, "edit your review")
         = review_form.text_area :body
         = hidden_field(:review, :meal_id, :value => @meal.id)
-        = hidden_field(:review, :user_id, :value => current_user.id)
+        = hidden_field(:review, :user_id, :value => @meal.user.id)
         %br
         = submit_tag 'update review'
