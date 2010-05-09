@@ -292,6 +292,12 @@ h1 {
   #reviewForm input[type=submit] {
     margin-top: 0px; }
 
+#editReview {
+  display: none; }
+
+#editReviewLink {
+  color: #fa6900; }
+
 
 #externalLink h3 {
   text-decoration: none; }

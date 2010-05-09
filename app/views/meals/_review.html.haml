@@ -10,6 +10,16 @@
         %br
         = submit_tag 'publish review'  
 - else
+  %h2.reviewHeader= "Review (written on #{@review.created_at.strftime("%a %b %d, %Y")})"
   #review
-    %h2.reviewHeader= "Review (written on #{@review.created_at.strftime("%a %b %d, %Y")})"
+    <a href="#" id="editReviewLink">edit review</a>
     %p= @review.body
+  #editReview
+    #reviewForm
+      - form_for @review, :url => { :controller => "reviews", :action => "update", :id => @review.id} do |review_form|
+        = label(:review, :body, "edit your review")
+        = review_form.text_area :body
+        = hidden_field(:review, :meal_id, :value => @meal.id)
+        = hidden_field(:review, :user_id, :value => current_user.id)
+        %br
+        = submit_tag 'update review'
