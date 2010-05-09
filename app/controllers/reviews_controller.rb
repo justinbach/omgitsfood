@@ -1,5 +1,6 @@
 class ReviewsController < ApplicationController
   
+  before_filter :login_required
   before_filter :check_user  
   
   def new

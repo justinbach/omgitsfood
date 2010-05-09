@@ -205,6 +205,9 @@ input[disabled] {
   #dateLinks .newer {
     float: right; }
 
+.followButton {
+  display: inline; }
+
 #viewMeal {
   width: auto;
   padding: 20px;

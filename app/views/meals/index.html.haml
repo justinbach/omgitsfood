@@ -1,6 +1,7 @@
 %h1= "What's cooking?" unless @user != current_user
+%h1= "Spying on #{@user.username}'s meals" unless @user == current_user
 = showFlash
-%h1= "Browsing #{@user.username}'s meals" unless @user == current_user
+= render :partial => "follow_stuff" unless @user == current_user
 #mealDays
   .mealDay
     = dayTitle @centerDate - 1

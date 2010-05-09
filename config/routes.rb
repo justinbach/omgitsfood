@@ -49,6 +49,8 @@ ActionController::Routing::Routes.draw do |map|
   
   map.resources :recipes
   map.resources :reviews
+  map.connect "followings/destroy", :controller => "followings", :action => "destroy"
+  map.resources :followings
 
   map.users 'users', :controller => 'users', :action => 'index'
 

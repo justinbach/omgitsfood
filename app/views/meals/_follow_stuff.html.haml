@@ -1,0 +1,4 @@
+-if current_user.followees.include? @user
+  =button_to "stop following #{@user.username}", {:controller => "followings", :action => "destroy", :followee => @user.id}, :confirm => "Are you sure you want to stop following #{@user.username}?", :method => "post", :class => "followButton"
+-else
+  =button_to "follow #{@user.username}", {:controller => "followings", :action => "create", :followee => @user.id}, :confirm => "Are you sure you want to start following #{@user.username}?", :method => "post", :class => "followButton"
