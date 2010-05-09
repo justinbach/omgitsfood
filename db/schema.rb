@@ -9,21 +9,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20100508125845) do
-
-  create_table "ingredients", :force => true do |t|
-    t.string   "name"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-  end
-
-  create_table "ingredientships", :force => true do |t|
-    t.integer  "recipe_id"
-    t.integer  "ingredient_id"
-    t.string   "quantity"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-  end
+ActiveRecord::Schema.define(:version => 20100509122529) do
 
   create_table "meals", :force => true do |t|
     t.date     "day"
