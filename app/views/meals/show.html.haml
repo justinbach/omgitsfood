@@ -1,7 +1,8 @@
 = stylesheet_link_tag 'ui-lightness/jquery-ui', :media => "screen"
 = javascript_include_tag('jquery-ui')
+= javascript_include_tag('jquery.autogrow')
 = javascript_include_tag('meal_show')
-%h1= @meal.recipe.title
+%h1= link_to @meal.recipe.title, @meal.recipe
 = showFlash
 %h2= "Scheduled for #{@meal.day.strftime("%a %b %d, %Y")}"
 %a(id="rescheduleLink" class="utilityLink")= "Reschedule" unless current_user != @user
@@ -25,4 +26,5 @@
     -if @meal.recipe.yield && @meal.recipe.yield != ""
       %h3 Yield
       %p= @meal.recipe.yield
+= render :partial => "review"
 #backLink= link_to "&larr; back to meals", url_for(:controller => 'meals', :action => 'index', :d => @meal.day), :class => "utilityLink"

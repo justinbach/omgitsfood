@@ -1,0 +1,26 @@
+-if @meal.review.nil?
+  -if current_user == @meal.user
+    %h2.reviewHeader Add a Review
+    #reviewForm
+      - form_for @review, :url => { :controller => "reviews", :action => "create"} do |review_form|
+        = label(:review, :body, "type review here")
+        = review_form.text_area :body
+        = hidden_field(:review, :meal_id, :value => @meal.id)
+        = hidden_field(:review, :user_id, :value => @meal.user.id)
+        %br
+        = submit_tag 'publish review'  
+- else
+  %h2.reviewHeader= "Review (written on #{@review.created_at.strftime("%a %b %d, %Y")})"
+  .review
+    //= '<a href="#" id="editReviewLink">edit review</a>' unless @user != current_user
+    = '<a href="#" id="editReviewLink">edit review</a>'
+    %p= @review.body.gsub(/\n/,'<br/>')
+  #editReview
+    #reviewForm
+      - form_for @review, :url => { :controller => "reviews", :action => "update", :id => @review.id} do |review_form|
+        = label(:review, :body, "edit your review")
+        = review_form.text_area :body
+        = hidden_field(:review, :meal_id, :value => @meal.id)
+        = hidden_field(:review, :user_id, :value => @meal.user.id)
+        %br
+        = submit_tag 'update review'

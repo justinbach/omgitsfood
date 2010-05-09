@@ -12,7 +12,7 @@ body {
 p {
   margin: 15px 0px;
   font-family: Arial, Helvetica, sans-serif;
-  font-size: 11px; }
+  font-size: 14px; }
 
 a {
   text-decoration: none;
@@ -64,6 +64,9 @@ h1 {
   width: auto;
   height: auto;
   color: #FFF; }
+
+input, textarea {
+  font-family: Arial, Helvetica, sans-serif; }
 
 #header {
   height: 60px;
@@ -232,6 +235,9 @@ input[disabled] {
 h2 {
   font-size: 20px; }
 
+h2.reviewHeader {
+  margin: 20px 0; }
+
 h1 {
   margin-bottom: 20px; }
 
@@ -268,6 +274,35 @@ h1 {
     #recipeForms #recipeForm label {
       width: 200px;
       display: block; }
+
+#reviewForm {
+  margin: 40px 0 20px 0;
+  width: 400px; }
+  #reviewForm h2 {
+    font-size: 20px;
+    margin-bottom: 15px; }
+  #reviewForm input, #reviewForm textarea {
+    margin: 0 0 10px 0;
+    width: 500px; }
+  #reviewForm textarea {
+    height: 100px; }
+  #reviewForm input[type=submit] {
+    width: auto; }
+  #reviewForm label {
+    margin: 10px 0 0 0; }
+  #reviewForm label {
+    display: block; }
+  #reviewForm input[type=submit] {
+    margin-top: 0px; }
+
+#editReview {
+  display: none; }
+
+#editReviewLink {
+  color: #fa6900; }
+
+.review p {
+  width: 400px; }
 
 #externalLink h3 {
   text-decoration: none; }
