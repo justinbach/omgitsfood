@@ -25,4 +25,5 @@
     -if @meal.recipe.yield && @meal.recipe.yield != ""
       %h3 Yield
       %p= @meal.recipe.yield
+= render :partial => "review"
 #backLink= link_to "&larr; back to meals", url_for(:controller => 'meals', :action => 'index', :d => @meal.day), :class => "utilityLink"

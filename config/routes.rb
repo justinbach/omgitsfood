@@ -48,6 +48,7 @@ ActionController::Routing::Routes.draw do |map|
   # consider removing or commenting them out if you're using named routes and resources.
   
   map.resources :recipes
+  map.resources :reviews
 
   map.users 'users', :controller => 'users', :action => 'index'
 

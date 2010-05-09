@@ -16,6 +16,7 @@ class MealsController < ApplicationController
   
   def show
     @meal = Meal.find(params[:id])
+    @review = @meal.review.nil? ? Review.new : @meal.review
   end
 
   def new

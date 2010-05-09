@@ -1,0 +1,15 @@
+-if @meal.review.nil?
+  -if current_user == @meal.user
+    %h2.reviewHeader Add a Review
+    #reviewForm
+      - form_for @review, :url => { :controller => "reviews", :action => "create"} do |review_form|
+        = label(:review, :body, "type review here")
+        = review_form.text_area :body
+        = hidden_field(:review, :meal_id, :value => @meal.id)
+        = hidden_field(:review, :user_id, :value => current_user.id)
+        %br
+        = submit_tag 'publish review'  
+- else
+  #review
+    %h2.reviewHeader= "Review (written on #{@review.created_at.strftime("%a %b %d, %Y")})"
+    %p= @review.body
