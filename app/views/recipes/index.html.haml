@@ -1,5 +1,5 @@
 = javascript_include_tag('recipe_index')
-%h1 Browsing Recipes
+%h1 Something tasty?
 = showFlash
 #subnav
   %ul
@@ -8,26 +8,32 @@
     %li= link_to "add a recipe", new_recipe_path
 #recipeIndex
   #yourRecipes
-    - if !@made_recipes.empty?
-      .recipeGroupContainer
-        %h2 Stuff You've Made
-        - @made_recipes.each do |r|
-          %ul
-            %li= "#{link_to r.title, r, :class => "recipeLink"} - last made on #{recipeMealLink r}"
-    - if !@planned_recipes.empty?
-      .recipeGroupContainer
-        %h2 Stuff You're Gonna Make
-        - @planned_recipes.each do |r|
-          %ul
-            %li= "#{link_to r.title, r, :class => "recipeLink"} - planned for  #{recipeMealLink r}"
-    - if !@unplanned_recipes.empty?
-      .recipeGroupContainer
-        %h2 Stuff You Haven't Decided To Make Yet
-        - @unplanned_recipes.each do |r|
-          %ul
-            %li= "#{link_to r.title, r, :class => "recipeLink"} - added on #{r.created_at.strftime('%a %b %d, %Y')}"
+    - if @made_recipes.empty? && @planned_recipes.empty? && @unplanned_recipes.empty?
+      %h3 You haven't collected any recipes yet!
+    - else
+      - if !@made_recipes.empty?
+        .recipeGroupContainer
+          %h2 Stuff You've Made
+          - @made_recipes.each do |r|
+            %ul
+              %li= "#{link_to r.title, r, :class => "recipeLink"} - last made on #{recipeMealLink r}"
+      - if !@planned_recipes.empty?
+        .recipeGroupContainer
+          %h2 Stuff You're Gonna Make
+          - @planned_recipes.each do |r|
+            %ul
+              %li= "#{link_to r.title, r, :class => "recipeLink"} - planned for  #{recipeMealLink r}"
+      - if !@unplanned_recipes.empty?
+        .recipeGroupContainer
+          %h2 Stuff You Haven't Decided To Make Yet
+          - @unplanned_recipes.each do |r|
+            %ul
+              %li= "#{link_to r.title, r, :class => "recipeLink"} - added on #{r.created_at.strftime('%a %b %d, %Y')}"
   #otherRecipes
-    .recipeGroupContainer
-      %h2 Other Recipes
-      - @other_recipes.each do |r|
-        %li= "#{link_to r.title, r, :class => "recipeLink"} - added on #{r.created_at.strftime('%a %b %d, %Y')} by #{r.user.username}"
+    - if @other_recipes.empty?
+      %h3 You've already got every recipe in your collection!
+    - else
+      .recipeGroupContainer
+        %h2 Other Recipes
+        - @other_recipes.each do |r|
+          %li= "#{link_to r.title, r, :class => "recipeLink"} - added on #{r.created_at.strftime('%a %b %d, %Y')} by #{r.user.username}"
