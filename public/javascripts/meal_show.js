@@ -19,7 +19,7 @@ $(document).ready(function() {
   
   // logic for hiding/showing review form
   $("#editReviewLink").click(function() {
-    $("#review").fadeOut('300', function() {
+    $(".review").fadeOut('300', function() {
       $('#editReview').css('display','block');
       $('#editReview').fadeIn('300');
     })
