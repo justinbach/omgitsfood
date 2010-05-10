@@ -1,6 +1,24 @@
+= javascript_include_tag('users_index')
 %h1 Looking for someone?
 = showFlash
+#subnav
+  %ul
+    %li <a href="#" id="followedUsersLink" class="active">foodies you're following</a>
+    %li <a href="#" id="otherUsersLink">everyone else</a>
 #userIndex
-  %h2 All Users
-  - @users.each do |u|
-    %li= link_to u.username, u
+  #followedUsers
+    -if @followed_users.empty?
+      %h3= "You're not currently following any foodies."
+    -else
+      .userGroupContainer 
+        %h2= "Foodies you're following"
+        - @followed_users.each do |u|
+          %li= link_to u.username, u
+  #otherUsers
+    -if @other_users.empty?
+      %h3= "You're following everyone!"
+    -else
+      .userGroupContainer
+        %h2= "Foodies you're not following"
+        - @other_users.each do |u|
+          %li= link_to u.username, u  

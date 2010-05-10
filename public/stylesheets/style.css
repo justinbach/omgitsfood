@@ -367,3 +367,41 @@ h1 {
     width: 400px; }
   #editRecipeForm #recipeForms #recipeForm input[type=submit] {
     width: auto; }
+
+#userIndex {
+  margin: 40px 0 20px 0; }
+  #userIndex h2 {
+    font-size: 20px;
+    margin-bottom: 15px; }
+  #userIndex input, #userIndex textarea {
+    margin: 0 0 10px 0;
+    width: 300px; }
+  #userIndex textarea {
+    height: 100px; }
+  #userIndex input[type=submit] {
+    width: auto; }
+  #userIndex label {
+    margin: 10px 0 0 0; }
+  #userIndex #followedUsers {
+    float: left;
+    width: 700px; }
+    #userIndex #followedUsers label {
+      width: 200px;
+      display: block; }
+  #userIndex #otherUsers {
+    display: none; }
+
+.userGroupContainer {
+  width: auto;
+  padding: 20px;
+  border: 3px solid #E0E4CC;
+  margin: 0px 0px 20px 0px;
+  -webkit-border-radius: 25px;
+  -moz-border-radius: 25px;
+  background-color: #F6F6F6; }
+  .userGroupContainer h2 {
+    text-decoration: underline; }
+  .userGroupContainer a.recipeLink {
+    color: #fa6900; }
+  .userGroupContainer li {
+    margin-bottom: 5px; }

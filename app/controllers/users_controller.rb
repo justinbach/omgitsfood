@@ -5,6 +5,12 @@ class UsersController < ApplicationController
   def index
     @users = User.find(:all, 
                 :conditions => ["username != :username", {:username => current_user.username}])
+    @followed_users = current_user.followees
+    @other_users = @users.reject { |u| 
+                      @followed_users.map { |fu| 
+                        fu.id}.include? u.id}
+    
+
   end
   
   def show
